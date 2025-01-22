@@ -1,0 +1,249 @@
+/* --------- Common --------- */
+@media (min-width: 767.98px) {
+  .pc {
+    display: block;
+  }
+
+  .tb {
+    display: block;
+  }
+
+  .sp {
+    display: none;
+  }
+}
+/* --------- Header --------- */
+@media (min-width: 767.98px) {
+  .top_kv {
+    max-height: 800px;
+  }
+  
+  .top_kv picture img {
+    height: 800px;
+  }
+  
+  .top_logo {
+    animation: fadeInLogoDesktop 2s ease-out forwards;
+  }
+  
+  .top_logo img {
+    max-width: 608px;
+  }
+  
+  @keyframes fadeInLogoDesktop {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .top_kv picture img {
+    height: 380px;
+  }
+  
+  .top_logo img {
+    min-width: 250px;
+  }
+}
+/* --------- Main --------- */
+/* Hero */
+@media (min-width: 767.98px) {
+  .hero {
+    padding: 120px 0 161px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .hero .hero_title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.02px;
+    letter-spacing: 1.2px;
+  }
+  .hero_inner {
+    margin-top: 43px;
+  }
+  .hero .hero_time {
+    font-size: 3.2rem;
+    line-height: 1.7;
+    letter-spacing: 0.96px;
+  }
+  .hero_time::before,
+  .hero_time::after {
+    width: 154.96px;
+    height: 194.52px;
+  }
+  .hero_time::before {
+    background: url(../img/heroleft_pc.svg) no-repeat;
+    left: -190px;
+    top: -40px;
+  }
+  .hero_time::after {
+    background: url(../img/heroright_pc.svg) no-repeat;
+    right: -150px;
+    top: -45px;
+  }
+}
+/* order */
+@media (min-width: 767.98px) {
+  .order {
+    padding-top: 91px;
+  }
+  .order_inner {
+    max-width: 1080px;
+    margin: 78px auto 60px;
+  }
+  .order_title {
+    font-size: 4rem;
+    line-height: 1.35;
+    letter-spacing: 1.2px;
+  }
+  .order_inner h2 {
+    font-size: 4rem;
+    line-height: 1.02;
+    letter-spacing: 1.2px;
+    padding-top: 81px;
+  }
+  .order_inner h2 span {
+    margin-top: 22px;
+    font-size: 3.2rem;
+    line-height: 1.275;
+    letter-spacing: 0.96px;
+  }
+  .order_inner h2 span::after {
+    width: 525px;
+    height: 20px;
+    background: #fdff93;
+  }
+  .member {
+    margin: 76px 0 48px;
+    gap: 40px;
+    padding: 0;
+  }
+  .member .level {
+    gap: 20px;
+    max-width: 184px;
+  }
+  .level__set {
+    width: 96px;
+    height: 96px;
+    font-size: 60px;
+    line-height: 0.68;
+    letter-spacing: 1.8px;
+  }
+  .level__name {
+    font-size: 2.4rem;
+    line-height: 1.35;
+    letter-spacing: 0.72px;
+  }
+  .level__time p:first-child {
+    padding-top: 18px;
+    font-size: 2.4rem;
+    line-height: 1.45;
+    letter-spacing: 0.72px;
+  }
+  .level__time p:last-child {
+    font-size: 1.6rem;
+    line-height: 2.55;
+    letter-spacing: 0.48px;
+    margin: 14px 22px 24px;
+    padding: 0 13px;
+  }
+  .note {
+    font-size: 2.4rem;
+    line-height: 1.7;
+    letter-spacing: 0.72px;
+    padding: 0 0 80px;
+  }
+  .note p span::after {
+    width: 210px;
+    height: 18px;
+    bottom: -5px;
+  }
+}
+/* plan */
+@media (min-width: 767.98px) {
+  .slider-wrapper img {
+    min-width: 450px;
+    min-height: 253px;
+    object-fit: cover;
+  }
+  .plan_detail {
+    padding: 120px 0 113px;
+  }
+  .plan_detail h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: 1.2px;
+  }
+  .info {
+    margin-top: 85px;
+    gap: 80px;
+  }
+  .info li {
+    max-width: 440px;
+  }
+  li .info_img img {
+    height: 243px;
+  }
+  .inner .info_title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.475;
+    letter-spacing: 0.72px;
+    margin-top: 32px;
+  }
+  .inner .info_text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.7;
+    margin-top: 24px;
+  }
+  .inner .info_time {
+    margin-top: 25px;
+  }
+  .inner .btn {
+    margin: 30px 0 49px;
+  }
+  .inner .btn a {
+    font-size: 2.4rem;
+    line-height: 1.7;
+    letter-spacing: 0.72px;
+  }
+}
+/* --------- Footer --------- */
+@media (min-width: 767.98px) {
+  .hotel_logo {
+    margin-top: 97px;
+  }
+  .hotel_info {
+    margin-top: 40px;
+  }
+  .hotel_info p {
+    margin-top: 18px;
+  }
+  footer .btn {
+    margin-top: 40px;
+  }
+  footer nav {
+    margin-top: 40px;
+  }
+  footer nav ul li a {
+    font-size: 1.4rem;
+  }
+}
+/* copyright */
+@media (min-width: 767.98px) {
+  .copyright {
+    padding: 20px 0;
+  }
+  .copyright p {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+/* ---------------------------------------------------
+	header
+---------------------------------------------------- */
+.header {
+  position: relative;
+}
+
+.headerParts {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__title {
+  width: 59.64219%;
+  top: 7.14767%;
+}
+
+.header__lead {
+  width: 100%;
+  color: rgb(var(--wht));
+  font-family: var(--mincho);
+  font-size: 2.5vw;
+  text-align: center;
+  letter-spacing: 0.05em;
+  top: 43.42549%;
+}
+
+.header__image {
+  width: 71.48438%;
+  top: 53.80984%;
+}
+
+@media screen and (max-width: 768px) {
+  .header__title {
+    width: 62%;
+    top: 5%;
+  }
+
+  .header__lead {
+    font-size: 3.73333vw;
+    top: 41.5%;
+  }
+
+  .header__image {
+    width: 75%;
+    top: 56.5%;
+  }
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.delay01 {
+  animation-delay: 0.5s;
+}
+
+.delay02 {
+  animation-delay: 1s;
+}
+
+.delay03 {
+  animation-delay: 1.5s;
+}
+
+/* ---------------------------------------------------
+	footer
+---------------------------------------------------- */
+.footer {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 13.33333vw;
+  }
+}
+
+/*
+	hotelNav
+------------------------------ */
+.footer__hotelNav {
+  line-height: 1;
+  color: rgb(var(--blk));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__hotelNav li {
+  margin: 0 0 1rem;
+  text-indent: 0;
+  display: flex;
+  position: relative;
+}
+
+.footer__hotelNav li:first-of-type::before,
+.footer__hotelNav li::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer__hotelNav li:first-of-type::before {
+  left: 0;
+  content: "|";
+}
+
+.footer__hotelNav li::after {
+  right: 0;
+  content: "|";
+}
+
+.footer__hotelNav li a {
+  padding: 0 1em;
+  color: rgb(var(--blk));
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer__hotelNav li a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__hotelNav {
+    text-align: center;
+    display: block;
+  }
+
+  .footer__hotelNav li:first-of-type::before,
+  .footer__hotelNav li::after {
+    content: "";
+  }
+
+  .footer__hotelNav li {
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+
+  .footer__hotelNav li a {
+    display: inline-block;
+    position: relative;
+  }
+
+  .footer__hotelNav li a::before,
+  .footer__hotelNav li a::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "|";
+  }
+
+  .footer__hotelNav li a::before {
+    left: 0;
+  }
+
+  .footer__hotelNav li a::after {
+    right: 0;
+  }
+}
+
+/*
+	copy
+------------------------------ */
+.copy {
+  padding: 2rem 0 3rem;
+  color: rgba(var(--blk), 0.5);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .copy {
+    font-size: 2.93333vw;
+  }
+}
+
+/*
+	footer__address
+------------------------------ */
+.footer__address {
+  text-align: center;
+}
+
+.footer__address .hotelName {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.footer__address .hotelAddress {
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+
+.footer__address .sns {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__address .sns li {
+  margin: 0 1rem;
+}
+.footer__address .hotel_logo {
+  max-width: 12%;
+  margin: 0 auto 20px;
+}
+@media screen and (max-width: 768px) {
+  .footer__address .hotelName {
+    font-size: 6.13333vw;
+    font-weight: normal;
+  }
+
+  .footer__address .hotelAddress {
+    margin-bottom: 2rem;
+    font-size: 4.26667vw;
+  }
+	.footer__address .hotel_logo {
+		max-width: 50%;
+		margin: 0 auto 20px;
+	}
+}
+
+/*
+	map
+------------------------------ */
+.map {
+  margin-bottom: 4rem;
+}
+
+.map iframe {
+  width: 100%;
+  height: 360px;
+}
