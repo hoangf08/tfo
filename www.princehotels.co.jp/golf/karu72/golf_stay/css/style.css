@@ -246,7 +246,7 @@ ul.no-bullet, ol.no-bullet {
 }
 
 .title__content {
-  background: url(../img/hometitle-20@2x.jpg) 0 0/cover no-repeat;
+  background: url(../img/hometitle-20@2x_new.jpg) 0 0/cover no-repeat;
   display: block;
   height: 100%;
   width: 100%;
@@ -1351,6 +1351,9 @@ td.border_left_dashd{
 
 /* Additional */
 .spgr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 30px;
 }
 .spgr a:hover {
