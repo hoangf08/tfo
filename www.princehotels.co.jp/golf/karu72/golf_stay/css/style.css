@@ -168,7 +168,7 @@ summary {
   width: 120px;
 }
 .prince-header .prince-header-phr > .link {
-  background-image: url(../img/logo-phr@2x.png);
+  background-image: url(../img/logo-phr@2x_new.png);
 }
 .prince-header .prince-header-sgr {
   height: 32px;
@@ -1347,4 +1347,15 @@ td.border_left_dashd{
 }
 .s2{
   background-color: #ec863d;
+}
+
+/* Additional */
+.spgr {
+  margin-top: 30px;
+}
+.spgr a:hover {
+  opacity: 0.7;
+}
+.spgr img {
+  width: 100%;
 }
