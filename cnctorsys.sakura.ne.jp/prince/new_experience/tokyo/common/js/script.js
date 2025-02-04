@@ -10,7 +10,7 @@ if (slideLength01 > 1) {
         allowTouchMove: true,
         slidesPerView: "auto",
         centeredSlides: true,
-        initialSlide: 1, 
+        initialSlide: 0, 
         breakpoints: { 
             0: { // 画面幅0px以上で適用
                 spaceBetween: 10,
