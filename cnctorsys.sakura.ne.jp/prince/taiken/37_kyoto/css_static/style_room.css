@@ -1,0 +1,93 @@
+.room-search-head h3.type{width:891px}.room-top .room-list-cont .inner{background-color:#f7f7f7;overflow:hidden;padding:40px}.pressbn-header{margin:-59px auto 0}.pressbn-block{border-top:0!important;padding-top:0!important}.pressbn-block .p-tab-head li{background-color:#f8f8f8;border:0;border-bottom:2px solid #222;height:41px;text-decoration:underline;width:200px}.pressbn-block .p-tab-head li.active{background-color:#fff;border:2px solid #222;border-bottom:2px solid #fff;text-decoration:none}.pressbn-block .p-tab-head li a{color:#222;font-size:12px}.pressbn-block .p-tab-body{padding-top:30px}.pressbn-search-head{background-color:#222;color:#fff;font-size:14px;text-align:center;padding:18px;margin-bottom:40px}.pressbn-search-head span{display:inline-block;padding-right:20px}.pressbn-search-head select{background:url(/images_static/common/icon_arrow_bottom_03.png) 95% center no-repeat #fff;-webkit-appearance:none;-moz-appearance:none;appearance:none;color:#000;border:0;border-radius:3px;padding:9px 16px 8px;width:270px}@media screen and (max-width:736px){.pressbn-header{margin-top:20px}.pressbn-block .p-tab-head li{background-color:#e6e6e6;border:2px solid #e6e6e6;height:32px;margin-bottom:5px;width:24%}.pressbn-block .p-tab-head li a{font-size:11px;letter-spacing:0}.pressbn-block .p-tab-head li.active{border-bottom:2px solid #222}.pressbn-block .p-tab-body{border:0;padding-top:18px}.room-search-head h3.type{width:100%}}
+.area .header-login{
+  width: 150px;
+}
+.header-login > p{
+  background: url(/images_static/common/icon_arrow_right_02.png) 93% center no-repeat #6F6F6F;
+}
+.header-login p.open:before{
+  content: "\f007";
+  font-size: 15px;
+}
+.header-login.active .close{
+  width: 150px;
+}
+.nav-local__right .wedding-nav-fix.fixed .btn-gradient{
+  padding: 13px 25px 13px 5px;
+}
+.club-block li:last-child{
+  background: transparent;
+}
+.header-nav {
+  overflow: hidden;
+}
+.header-nav .fs_12 {
+  font-size: 12px;
+}
+@media screen and (max-width: 736px){
+  .area .header-login{
+    width: 130px;
+  }
+  .header-login > p {
+    background: url(/images_static/common/icon_arrow_right_02.png) 95% center no-repeat #6F6F6F;
+    padding-right: 12px;
+  }
+  .header-login p.open:before {
+    content: none;
+  }
+  .header-login a:before{
+    content: "\f007";
+    font-size: 15px;
+    padding-right: 5px;
+  }
+  .area .sp-header-nav .lv02-head.active span{
+        background: url(/images_static/wedding/wedding_icon_close_01.png) 98% center no-repeat #fff;
+  }
+  .sp-header-nav li a{
+    line-height: 1.2;
+  }
+  .room-top .room-list-cont .inner{
+    padding: 10px;
+  }
+}
+.footer-top {
+    margin: 0 auto;
+}
+.area .footer-sns {
+  width: 580px;
+}
+.room-header-top .inner {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 7px;
+  width: 1260px;
+}
+@media screen and (max-width: 736px){
+    .area .footer-sns {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    .area-club-business h2 {
+      background-size: auto! important;
+    }
+}
+@media screen and (max-width: 736px){
+	.room-detail-data .facility-body {
+		font-size: 14px;
+	}
+	.room-header-bottom h2 .name{
+		display: table-cell;
+		float: none;
+	}
+	.room-header-bottom h2 .label{
+		display: table-cell;
+		float: none;
+	}
+	.room-bnr .inner{
+		background: none;
+	}
+	.area-club-time .wrp-heading{
+		padding: 0 2.7%;
+	}
+}
