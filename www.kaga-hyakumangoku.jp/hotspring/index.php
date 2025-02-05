@@ -149,7 +149,7 @@
 				<table class="tbl_basic">
 					<tr>
 						<th>営業時間</th>
-						<td>15:00〜翌9:00</td>
+						<td>15：00～24：00、5：00～10：30</td>
 					</tr>
 					<tr>
 						<th>場所</th>
@@ -180,7 +180,7 @@
 				<table class="tbl_basic">
 					<tr>
 						<th>営業時間</th>
-						<td>15:00〜翌9:00</td>
+						<td>15：00～24：00、5：00～10：30</td>
 					</tr>
 					<tr>
 						<th>場所</th>
@@ -213,7 +213,7 @@
 					<table class="tbl_basic">
 						<tr>
 							<th>営業時間</th>
-							<td>15:00〜翌10:00</td>
+							<td>15：00～24：00、5：00～10：30</td>
 						</tr>
 						<tr>
 							<th>場所</th>
@@ -244,7 +244,7 @@
 					<table class="tbl_basic">
 						<tr>
 							<th>営業時間</th>
-							<td>15:00〜翌10:00</td>
+							<td>15：00～24：00、5：00～10：30</td>
 						</tr>
 						<tr>
 							<th>場所</th>
@@ -275,7 +275,7 @@
 					<table class="tbl_basic">
 						<tr>
 							<th>営業時間</th>
-							<td>15:00〜翌10:00</td>
+							<td>15：00～24：00、5：00～10：30</td>
 						</tr>
 						<tr>
 							<th>場所</th>

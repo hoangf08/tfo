@@ -232,6 +232,10 @@ ul.no-bullet, ol.no-bullet {
   margin: 0;
 }
 
+li {
+  list-style-type: none;
+}
+
 .text-bold {
   font-weight: bold;
 }
