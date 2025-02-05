@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path id="iconArrow_in" class="cls-1" d="M0,128H28L100,33l72,95h28L100,0,0,128Z"/>
+  </g>
+</svg>

@@ -1,0 +1,2 @@
+User-Agent: *
+Disallow: /shain-seibu/pdf/golf.pdf
