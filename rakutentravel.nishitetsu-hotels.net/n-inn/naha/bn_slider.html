@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+  <body>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .wrapper {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .inner {
+        width: calc(100% - 100px);
+        max-width: 750px;
+        height: 100px;
+      }
+      .slide_bnr > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px !important;
+        color: #3498db;
+        font-size: 36px;
+        font-weight: bold;
+      }
+      .slick-slide img {
+        width: 100%;
+      }
+
+      /* arrow */
+      .slick-arrow {
+        z-index: 2;
+        top: 50%;
+        margin-top: -10px;
+        width: 20px;
+        height: 20px;
+        border-top: 3px solid #3498db;
+        border-right: 3px solid #3498db;
+        opacity: 0.8;
+      }
+      .slick-arrow::before {
+        content: "";
+      }
+      .slick-prev {
+        left: 30px;
+        transform: rotate(-135deg);
+      }
+      .slick-next {
+        right: 30px;
+        transform: rotate(45deg);
+      }
+      /* dots */
+      .slick-dots {
+        bottom: -25px;
+      }
+      .slick-dots li,
+      .slick-dots li button,
+      .slick-dots li button::before {
+        width: 10px;
+        height: 10px;
+      }
+      .slick-dots li {
+        margin: 0 7px;
+      }
+      .slick-dots li button {
+        background-color: #173188;
+        opacity: 0.8;
+        border-radius: 100%;
+      }
+      .slick-dots li.slick-active button {
+        opacity: 0.4;
+      }
+      .slick-dots li button::before {
+        content: "";
+      }
+    </style>
+
+    <div class="wrapper">
+      <div class="inner">
+        <div class="slider" id="js-slick">
+          <!-- <div class="slide_bnr">
+            <span>
+              <a href="https://travel.rakuten.co.jp/special/end-of-month/" target="_blank"> <img src="https://img.travel.rakuten.co.jp/special/end-of-month/bnr/730_90.jpg" /></a>
+            </span>
+          </div> -->
+          <!-- <div class="slide_bnr">
+            <span>
+              <a href="https://travel.rakuten.co.jp/camp/tokutabi/" target="_blank"> <img src="https://img.travel.rakuten.co.jp/camp/tokutabi/202501/bnr/730_90_blue.jpg" /></a>
+            </span>
+          </div> -->
+          <!-- <div class="slide_bnr">
+            <span>
+              <a href="https://travel.rakuten.co.jp/camp/tokutabi/" target="_blank"> <img src="https://img.travel.rakuten.co.jp/camp/tokutabi/202501/bnr/730_90_green.jpg" /></a>
+            </span>
+          </div> -->
+          <div class="slide_bnr">
+            <span>
+              <a href="https://travel.rakuten.co.jp/camp/enquete/" target="_blank"> <img src="https://travel.rakuten.co.jp/camp/enquete/201910/bnr/730_90.jpg" /></a>
+            </span>
+          </div>
+          <div class="slide_bnr">
+            <span>
+              <a href="https://coupon.travel.rakuten.co.jp/coupon/hotel/130025" target="_blank"> <img src="https://img.travel.rakuten.co.jp/coupon/yado/bnr/730_90.gif" /></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $("#js-slick").slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+      });
+    </script>
+  </body>
+</html>
