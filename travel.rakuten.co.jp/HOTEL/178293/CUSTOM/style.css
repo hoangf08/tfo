@@ -1,0 +1,383 @@
+/* ----------------------------------------------------
+　　
+ ▼　体験できること_sp ▼
+
+---------------------------------------------------- */
+#page{margin: 0!important;  font-family: '游ゴシック','Yu Gothic','YuGothic','Meiryo UI','メイリオ','Meiryo UI',sans-serif;background-color: #fff!important;line-height: 1.6;font-size: 16px;margin: 0 auto;color: #333;letter-spacing: .02em;}
+.kv {position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #c4a193;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html, body, div, section, p, img {
+    margin: 0;
+    padding: 0;}
+.kv img{width: 100%;}
+.title {position: absolute;}
+.title h2 {color: #fff;text-align: center;font-size: 18px;margin-bottom: 0;text-shadow: 0 1px 10px #606060; letter-spacing: 1.7px;}
+p {font-size: 14px; margin: 0 18px;}
+/* ----------------------------------------------------
+　　キャプション
+---------------------------------------------------- */
+.caption_prince {margin: 40px auto 0; padding-bottom: 40px;}
+.caption_prince h1{font-size: 24px;color: #F768D6;font-weight: 600;text-align: center;}
+.caption_prince h3{color: #1a1a1a;font-size: 18px;text-align: center;font-weight: 600;margin: 16px auto 20px;}
+
+/* ----------------------------------------------------
+　　リード画像
+---------------------------------------------------- */
+.read {width: 96%; margin: 0 auto 5px; display: flex;     justify-content: center;}
+.read_box {position: relative;overflow: hidden;width: 33.3%; height: 149px; background: #c4a193;}
+.read_box img{width: 100%;}
+.read_text{position: absolute;left: 40%;width: 100%;bottom: 0;background: rgba(0, 0, 0, 0.7);text-align: left;-webkit-transform: translate(-40%,0);transform: translate(-40%,0);}
+.read_box h2 {color: #fff;text-align: left;font-size: 10px;padding: 6px;margin-bottom: 0; letter-spacing: 1.7px;}
+p {font-size: 14px; margin: 0 18px;}
+
+/* ----------------------------------------------------
+	体験できることコンテンツ
+---------------------------------------------------- */
+section {width: 100%;}
+.lp_wrap * {box-sizing: border-box;}
+.lp_main img {width: 100%; height: auto;}
+.lp_cont {
+    padding: 0 10px;
+}
+.lp_cont .lp_inner {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    max-width: 890px;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #F768D6;
+}
+.lp_cont .lp_cont-title {
+    line-height: 1.7;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.lp_cont .lp_cont-title::before {
+    height: 100px;
+    margin-top: 30px;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+}
+
+.lp_cont .lp_cont-image {
+    margin-bottom: 6.77083vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.lp_cont .lp_cont-image .lp_cont-item {
+    width: 48.9%;
+}
+.lp_cont .lp_cont-image .lp_cont-item:first-child {
+    width: 100%;
+}
+.lp_cont .lp_cont-image .lp_cont-item:nth-child(2) {
+    margin-right: 2.2%;
+    width: 48.9%;
+}
+.lp_cont .lp_cont-wrap {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+.lp_cont .lp_cont-wrap .lp_cont-text {
+    line-height: 1.8;
+}
+.lp_cont .lp_cont-wrap .lp_cont-link :hover{
+    opacity: 0.7;
+    transition: all 0.5s ease 0s;
+}
+.lp_btn, .lp_btn ._black {
+    background-image: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/fd03ba2838e7451331fc3b3c0782b268ee2e375c.47.9.26.3.jpg)!important;
+    background-position: right 20px center!important;
+    background-repeat: no-repeat!important;
+    background-size: auto 20px!important;
+    padding: 1.5em 0!important;
+    color: #fff!important;
+    text-align: center!important;
+    display: block!important;
+}
+.lp_btn._black{
+    background: rgba(0, 0, 0, 1);
+}
+.toggle span, .lp_nav, .lp_btn {
+    background: rgba(198, 171, 156, 1);
+}
+.lp_lead-title, .lp_cont-title::before, .lp_spot-title {
+    color: #F768D6;
+}
+.lp_cont .lp_cont-link .comingsoon {
+    background-image: none;
+    position: relative;
+    pointer-events: none;
+}
+.lp_cont .lp_cont-link .comingsoon::before {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+}
+.lp_main .lp_cont:nth-child(1) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/178293/LARGE/42703563facd377ae4191e16a73b08c9975ae846.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(2) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/178293/LARGE/9dded2a902a48fc409569b394ec27e7ba4afabba.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(3) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/178293/LARGE/8eeacc3a77dcb4d509c2e202d717c3bec5037258.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(4) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/178293/LARGE/dec5d65d9f920a962981eb2aea98a929d914b52d.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(5) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/178293/LARGE/fcc0b14aec587cf14eb0dc11b5ae34c816c4a549.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(6) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/178293/LARGE/1c3d809f434b84af7e60fff0f83b550356ba5500.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+
+/* ----------------------------------------------------
+	lp_spot　周辺の見どころ
+---------------------------------------------------- */
+.lp_spot {
+	padding: 50px 10px 0px;
+}
+.lp_spot  img {width: 100%;}
+
+.lp_spot .lp_inner {
+	margin: 0 auto;
+	max-width: 880px;
+	width: 100%;
+}
+
+.lp_spot .lp_spot-title {
+	margin-bottom: 60px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+.lp_spot .lp_spot-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lp_spot .lp_spot-list .lp_spot-item {
+	margin: 0 2.2% 40px 0;
+	width: 48.9%;
+}
+
+.lp_spot .lp_spot-list .lp_spot-item:nth-child(even) {
+	margin-right: 0;
+}
+
+.lp_spot .lp_spot-detail {
+	margin-top: 10px;
+}
+
+.lp_spot .lp_spot-detail dt {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.lp_spot .lp_spot-detail dd p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+.lp_spot .lp_spot-detail dd a {
+	padding-right: 1.2em;
+	text-decoration: underline;
+	position: relative;
+}
+
+.lp_spot .lp_spot-detail dd a::before {
+	content: "＞";
+}
+
+.lp_spot .lp_spot-detail dd a::after {
+	background: url(../img/icon01.png) center center no-repeat;
+	background-size: 100% auto;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	content: "";
+}
+
+/* ----------------------------------------------------
+	lp_guide アクセス
+---------------------------------------------------- */
+.lp_guide {
+	background: rgba(240, 240, 240, 0.7);
+	padding: 40px 10px 60px;
+}
+
+.lp_guide .lp_inner {
+	margin: 0 auto;
+	max-width: 1260px;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-logo {
+	margin: 0 auto 20px;
+	max-width: 140px;
+	width: 100%;
+}
+.lp_guide .lp_guide-logo img{width: 100%;}
+
+.lp_guide .lp_guide-lead {
+	margin: 0 auto 30px;
+	max-width: 780px;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-lead dt {
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.lp_guide .lp_guide-lead dd {
+	margin-bottom: 20px;
+	line-height: 1.8;
+}
+
+.lp_guide .lp_guide-lead dd .lp_text { 
+        font-size: 13.1px;
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-lead dd address {
+	margin-bottom: 20px;
+	font-style: normal;
+	text-align: center;
+	display: block;
+}
+
+.lp_guide .lp_guide-linkList {
+	margin: 0 auto 40px;
+	max-width: 780px;
+	display: flex;
+	justify-content: center;
+}
+
+.lp_guide .lp_guide-linkItem {
+	margin-right: 5%;
+	width: calc((100% - 5%) / 2);
+	text-align: center;
+}
+
+.lp_guide .lp_guide-linkItem.mr0 {
+	margin-right: 0;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-linkItem:nth-child(even) {
+	margin-right: 0;
+}
+/* ----------------------------------------------------
+　　
+ ▼ 施設紹介_SP ▼
+
+---------------------------------------------------- */
+
+#cus_contents {margin-left: auto;}
+#cus_page h2 {
+font-size: 18px;
+color: #222;
+border-bottom: 1px solid #222;
+margin: 0 auto 30px auto;
+padding-bottom: 15px;
+text-align: center;
+width: 220px;
+display: block;
+}
+#cus_page .row2 {
+display:flex;
+flex-wrap: wrap;
+}
+#cus_page .row2 .img {
+display:flex;
+align-items: center;
+width: 50%;
+}
+#cus_page .row2 .img img {
+width:100%;
+overflow:hidden;
+}
+.content {margin-top: 60px;}
+.content p {margin:30px 15px !important;}
+.planbox{
+margin: 40px 0 50px;
+}
+.planbox img{
+width:100%;
+}
+.planbox .plan_ttl{
+font-size: 16px;
+font-weight: bold;
+margin: 15px auto !important;
+padding: 0 15px;
+}
+.planbox .plan_txt{
+margin: 0 15px 15px!important;
+}
+.plan_more {
+text-align: center;
+background: #000;
+margin: 15px;
+padding: 15px;
+}
+.plan_more a{
+color: #fff;
+}
+#cus_page .btn2 {
+background-color: #c2ac9e;
+text-decoration: none;
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: -20px 15px 0;
+padding: 15px 30px;
+}
+footer {
+background-color: #000;
+text-align: center;
+color: #fff;
+margin-top: 60px;
+padding: 40px 15px;
+}
+footer #name{
+margin-bottom: 15px;
+}
+section.cst-module-carousel .cst-module-carousel-images img {
+    width: 100%;
+}
