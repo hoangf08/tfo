@@ -1,0 +1,4 @@
+const slideLength01=document.querySelectorAll('.contentlayout__slide__image .swiper-slide').length
+if(slideLength01>1){const swiper01=new Swiper('.contentlayout__slide__image',{slidesPerView:1,centeredSlides:true,allowTouchMove:true,centerInsufficientSlides:true,speed:600,loop:"true",loopAdditionalSlides:2,breakpoints:{0:{slidesPerView:1,},768:{slidesPerView:1,}},pagination:{el:'.swiper-pagination',type:'bullets',clickable:true,},navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev',},});}
+$(window).on('scroll',function(){if($(this).scrollTop()>375){$('.header').addClass('fixed');}else{$('.header').removeClass('fixed');}
+return false;});
