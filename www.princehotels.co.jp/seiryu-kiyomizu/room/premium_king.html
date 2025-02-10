@@ -56,6 +56,31 @@
   <script
     src="//assets.adobedtm.com/db19aef962f6cf21aa61efda5e55a418d7613c67/satelliteLib-9954c899989b16c99bd6e82bffe178382f3997e2.js"></script>
   <!-- End Dynamic Tag Management by Adobe head -->
+  <style>
+    .layout .slick-list {
+      width: 100%;
+      margin-left: 0;
+    }
+    .layout .slick-dots {
+      transform: translateY(50%);
+    }
+    .layout .slick-dots li button::before {
+      background: #6f6f6f;
+    }
+    .layout .slick-dots li.slick-active button::before {
+      background: #000;
+    }
+    .layout .slick-arrow {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .layout .slick-arrow img {
+      width: auto;
+      height: auto;
+    }
+  </style>
 </head>
 
 <body class="area">
@@ -78,13 +103,13 @@
               <p class="room-header-back"><a href="/seiryu-kiyomizu/room/">客室一覧へ</a></p>
             </div>
             <div class="p-header-slider">
-              <div class="box"><img src="/seiryu-kiyomizu/room/images_static/premium_king_listSlider1.jpg" alt=""
+              <div class="box"><img src="/seiryu-kiyomizu/room/images_static/premium_king_detailSlider1.jpg" alt=""
                   class="ofi"></div>
-              <div class="box"><img src="/seiryu-kiyomizu/room/images_static/premium_king_listSlider2.jpg" alt=""
+              <div class="box"><img src="/seiryu-kiyomizu/room/images_static/premium_king_detailSlider2.jpg" alt=""
                   class="ofi"></div>
-              <div class="box"><img src="/seiryu-kiyomizu/room/images_static/premium_king_listSlider3.jpg" alt=""
+              <div class="box"><img src="/seiryu-kiyomizu/room/images_static/premium_king_detailSlider3.jpg" alt=""
                   class="ofi"></div>
-              <div class="box"><img src="/seiryu-kiyomizu/room/images_static/premium_king_listSlider4.jpg" alt=""
+              <div class="box"><img src="/seiryu-kiyomizu/room/images_static/premium_king_detailSlider4.jpg" alt=""
                   class="ofi"></div>
             </div>
           </div>
@@ -93,7 +118,7 @@
               <h2><span class="name">プレミアムキング</span><span id="view_timer" data-start-date="2018/1/31 22:00"
                   data-end-date="2018/2/1 22:00" class="label">リニューアル</span></h2>
               <p class="note">The Hotel Seiryu Kyoto Kiyomizu</p>
-              <p class="info">品格と落ち着きのあるキングベッド1台の客室。47㎡とミニマムな客室ながらも、エキストラベッドを追加してファミリーでの滞在にも最適です。広々としたバスルームをしつらえ、快適な滞在をさらに印象深く彩ります。<br>
+              <p class="info">品格と落ち着きのあるキングベッド1台の客室。47㎡とミニマムな客室ながらも、エキストラベッドを追加してファミリーでの滞在にも最適です。広々としたバスルームをしつらえ、快適な滞在をさらに印象深く彩ります。<br><br>
                 ※スーペリアキング パゴダビューは客室名称をプレミアムキングに変更しました。
               </p>
             </div>
@@ -177,7 +202,14 @@
                       <h3 class="h3-type01">レイアウト</h3>
                     </div>
                     <div class="layout">
-                      <img src="/seiryu-kiyomizu/room/images_static/premium_king_listLayout1.jpg" alt="" class="mfi">
+                      <div class="p-asset05 p-acc-slider">
+                        <div>
+                          <img src="/seiryu-kiyomizu/room/images_static/premium_king_listLayout1.jpg" alt="">
+                        </div>
+                        <div>
+                          <img src="/seiryu-kiyomizu/room/images_static/premium_king_listLayout2.jpg" alt="">
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
