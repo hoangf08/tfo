@@ -1503,45 +1503,66 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.lp_guide2 {
-	background: rgba(255, 255, 255);
-	padding: 75px 20px;
+.g-hotel {
+  display: flex;
+  width: 890px;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 75px 20px;
 }
 
-.lp_guide2 .lp_guide-linkList2 {
-	margin: 0 auto;
-	max-width: 890px;
-	display: flex;
-	justify-content: center;
+.g-hotel a {
+  width: calc((100% - 40px) / 3);
+  display: block;
+  position: relative;
+  background: rgba(198, 171, 156, 1);
+  padding: 1.5rem 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.lp_guide2 .lp_guide-linkItem2 {
-	margin-right: 2%;
-	width: calc((100% - 5%) / 2);
-	text-align: center;
+.g-hotel a span {
+  display: block;
+  width: 80%;
+  text-align: center;
 }
 
-.lp_guide2 .lp_guide-linkItem2.mr0 {
-	margin-right: 0;
-	width: 76%;
+.g-hotel a:after {
+  content: "";
+  width: 20%;
+  min-height: 50px;
+  display: block;
+  background-image: url(../img/svg/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: auto 20px;
+  background-position: left;
 }
 
-.lp_guide2 .lp_guide-linkItem2:last-child {
-	margin-right: 0;
-}
-.lp_btn{
-	background-image: url(../img/svg/arrow.svg);
-	background-position: right 20px center;
-	background-repeat: no-repeat;
-	background-size: auto 20px;
-	padding: 1.5em 0;
-	color: #fff !important;
-	text-align: center;
-	display: block;
-  background-color: rgba(198, 171, 156, 1);
-  text-decoration: none;
-  transition: all 0.5s ease 0s;
-}
-.lp_btn:hover {
+.g-hotel a:hover {
   opacity: 0.7;
+}
+.g-hotel a:hover:after {
+  animation: slideRight 1s linear infinite;
+}
+
+@keyframes slideRight {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .g-hotel {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .g-hotel a {
+    width: 100%;
+  }
 }
