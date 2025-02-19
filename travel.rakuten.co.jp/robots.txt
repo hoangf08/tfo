@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /cgi-bin/
+Disallow: /B2B/
+Disallow: /*_trvmkt*
+
+
+Disallow: /package/jr/reserveStep/*
