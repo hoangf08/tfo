@@ -1,0 +1,771 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------
+	基本設定
+---------------------------------------------------- */
+/*
+	#font
+------------------------------ */
+body {
+	background-color: #fff;
+	line-height: 1.5;
+	color: #3E3A39;
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 16px;
+	font-feature-settings: "pkna";
+	letter-spacing: 0.05em;
+}
+
+/*
+	#reset
+------------------------------ */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.5s ease 0s;
+}
+
+a:hover {
+	opacity: 0.7;
+}
+
+area {
+	border: none;
+	outline: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+/*
+	SP,PC表示切り替え
+------------------------------ */
+.pc {
+	display: block;
+}
+
+.sp {
+	display: none;
+}
+
+@media(max-width:768px) {
+	.pc {
+		display: none;
+	}
+
+	.sp {
+		display: block;
+	}
+}
+
+
+/* ----------------------------------------------------
+	#header
+---------------------------------------------------- */
+#header {
+	background: #ff912e;
+	padding: 0 24px;
+	width: 100vh;
+	height: 66px;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 66px;
+	transform-origin: left top;
+	transform: rotate(90deg);
+	z-index: 10;
+}
+
+#header .site_name {
+	line-height: 1;
+	font-size: 16px;
+}
+
+#header .site_name a {
+	color: #fff;
+}
+
+#header .instagram {
+	width: 24px;
+	height: 24px;
+	transform: rotate(-90deg);
+}
+
+@media(max-width: 768px) {
+	#header {
+		width: 100%;
+		left: 0;
+		transform: rotate(0);
+	}
+
+	#header .instagram {
+		transform: rotate(0);
+	}
+}
+
+@media(max-width: 480px) {
+	#header {
+		padding: 0 5vw;
+	}
+
+	#header .site_name {
+		font-size: 3.33333vw;
+	}
+}
+
+/* ----------------------------------------------------
+	hero
+---------------------------------------------------- */
+#hero {
+	margin: 0 0 0 66px;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+#hero .hero_title {
+	width: 46.45454%;
+	position: absolute;
+	top: 12.54545%;
+	left: 10%;
+	z-index: 3;
+}
+
+#hero .hero_lead {
+	line-height: 2.5;
+	color: #fff;
+	font-size: 1.25vw;
+	letter-spacing: 0.3em;
+	writing-mode: vertical-rl;
+	position: absolute;
+	top: 5.18182%;
+	right: 18.36364%;
+	z-index: 3;
+}
+
+#hero .kv {
+	width: 100%;
+	animation: zoom 3s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1.1);
+	}
+}
+
+@media (max-width: 768px) {
+	#hero {
+		margin: 66px 0 0 0;
+	}
+
+	#hero .hero_title {
+		width: 83.98438%;
+		right: auto;
+		bottom: 7.5%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	#hero .hero_lead {
+		font-size: 3.125vw;
+		top: 6.5%;
+		right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+/* ----------------------------------------------------
+	main
+---------------------------------------------------- */
+main {
+	padding: 0 0 0 66px;
+}
+
+/*
+	contents_header
+------------------------------ */
+.contents_header {
+	padding: 0 0 0 19.54546%;
+}
+
+.contents_header {
+	margin: 80px 0 100px;
+}
+
+.contents_header .title {
+	margin-bottom: 48px;
+	line-height: 1;
+	color: #ff912e;
+	/* font-size: 18px; */
+	font-size: 1.125vw;
+}
+
+.contents_header .lead {
+	line-height: 2;
+	/* font-size: 16px; */
+	font-size: 1vw;
+}
+
+@media (max-width: 1280px) {
+	.contents_header .title {
+		font-size: 1.40625vw;
+	}
+
+	.contents_header .lead {
+		font-size: 1.25vw;
+	}
+}
+
+@media (max-width: 1024px) {
+	.contents_header .title {
+		font-size: 1.75781vw;
+	}
+
+	.contents_header .lead {
+		font-size: 1.5625vw;
+	}
+}
+
+@media (max-width: 768px) {
+	main {
+		padding: 0;
+	}
+
+	.contents_header {
+		padding: 0 9.11458vw;
+	}
+
+	.contents_header {
+		margin: 9.89583vw 0 5vw;
+	}
+
+	.contents_header .title {
+		margin-bottom: 8.20313vw;
+		font-size: 3.125vw;
+	}
+
+	.contents_header .lead {
+		font-size: 2.60417vw;
+	}
+}
+
+/*
+	contents
+------------------------------ */
+.contents {
+	margin-bottom: 135px;
+	position: relative;
+	overflow: hidden;
+}
+
+.contents:last-of-type {
+	margin-bottom: 0;
+}
+
+.contents::before {
+	background: #f8f0de;
+	width: 100%;
+	height: 66%;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	content: "";
+}
+
+@media (max-width: 768px) {
+	.contents {
+		margin-bottom: 12vw;
+	}
+
+	.contents::before {
+		height: 75%;
+	}
+}
+
+/* contents_title ---------- */
+.contents .contents_title {
+	width: 26vw;
+	position: absolute;
+	top: 46vw;
+	right: 10.18182vw;
+	z-index: 3;
+}
+
+.contents .contents_title-picture {
+	margin-bottom: 10.0909vw;
+	padding: 0 0 0 19.54546%;
+	position: relative;
+	z-index: 2;
+}
+
+@media (max-width: 768px) {
+	.contents .contents_title {
+		margin: 0 auto 3.90625vw;
+		width: 60.88657%;
+		position: relative;
+		top: 0;
+		right: auto;
+	}
+
+	.contents .contents_title-picture {
+		margin: 0 auto 3.90625vw;
+		padding: 0 9.11458vw;
+		width: 100%;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+/* contents_detail ---------- */
+.contents .contents_detail {
+	margin: 0 auto;
+	padding-bottom: 90px;
+	width: 84.54546%;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+}
+
+.contents .contents_detail .image {
+	width: 52.27273%;
+}
+
+.contents .contents_detail .text_area {
+	width: 42%;
+	display: flex;
+	flex-direction: column;
+}
+
+.contents .contents_detail .text_area .detail {
+	margin-bottom: 30px;
+	margin-top: auto;
+	width: 100%;
+	line-height: 1.8;
+}
+
+.contents .contents_detail .text_area .detail dt {
+	margin-bottom: 24px;
+	font-size: 1.5vw;
+	font-weight: bold;
+}
+
+.contents .contents_detail .text_area .detail dd {
+	font-size: 1.125vw;
+}
+
+.contents .contents_detail .text_area .btn a {
+	background: #ff912e;
+	width: 100%;
+	height: 5vw;
+	color: #fff;
+	font-size: 1.25vw;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.contents .contents_detail .text_area .btn a::after {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 2.125vw 2.125vw;
+	border-color: transparent transparent #ffa758 transparent;
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	content: "";
+}
+
+.contents .contents_detail .text_area .btn a:hover {
+	background: #ffa758;
+	opacity: 1;
+}
+
+.contents .contents_detail .text_area .btn a:hover::after {
+	border-color: transparent transparent #ff912e transparent;
+}
+
+@media (max-width: 1280px) {
+	.contents .contents_detail .text_area .detail {
+		margin-bottom: 2.34375vw;
+	}
+
+	.contents .contents_detail .text_area .detail dt {
+		margin-bottom: 1.5625vw;
+		font-size: 1.5625vw;
+	}
+
+	.contents .contents_detail .text_area .detail dd {
+		font-size: 1.25vw;
+	}
+
+	.contents .contents_detail .text_area .btn a {
+		height: 6.25vw;
+		font-size: 1.40625vw;
+	}
+}
+
+@media (max-width: 1024px) {
+	.contents .contents_detail .text_area .detail {
+		margin-bottom: 1.75781vw;
+		line-height: 1.5;
+	}
+
+	.contents .contents_detail .text_area .detail dt {
+		margin-bottom: 1.36719vw;
+		font-size: 1.75781vw;
+	}
+
+	.contents .contents_detail .text_area .detail dd {
+		font-size: 1.5625vw;
+	}
+
+	.contents .contents_detail .text_area .btn a {
+		height: 4.88281vw;
+		font-size: 1.5625vw;
+	}
+}
+
+@media (max-width: 768px) {
+	.contents .contents_detail {
+		padding: 0 9.11458vw 15.64537vw;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contents .contents_detail .image {
+		width: 100%;
+	}
+
+	.contents .contents_detail .text_area {
+		width: 100%;
+	}
+
+	.contents .contents_detail .text_area .detail {
+		margin: 3.90625vw 0;
+		width: 100%;
+		line-height: 1.5;
+	}
+
+	.contents .contents_detail .text_area .detail dt {
+		margin-bottom: 3.90625vw;
+		font-size: 3.90625vw;
+	}
+
+	.contents .contents_detail .text_area .detail dd {
+		font-size: 3.125vw;
+	}
+
+	.contents .contents_detail .text_area .btn a {
+		height: 16.94915vw;
+		font-size: 3.90625vw;
+	}
+
+	.contents .contents_detail .text_area .btn a::after {
+		border-width: 0 0 5vw 5vw;
+	}
+}
+
+/* contents_note ---------- */
+.contents_note {
+	margin: 0 auto;
+	padding: 1em 0;
+	width: 84.54546%;
+}
+
+@media (max-width: 768px) {
+	.contents_note {
+		font-size: 2.08333vw;
+	}
+}
+
+
+/* ---------------------------------------------------
+	footer
+---------------------------------------------------- */
+#footer {
+	padding: 60px 0 20px 66px;
+}
+
+#footer .inner {
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 100%;
+	text-align: center;
+}
+
+#footer .footer_logo {
+	margin: 0 auto 35px;
+	max-width: 170px;
+}
+
+#footer .hotel_name {
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+#footer .hotel_name small {
+	font-size: 0.75em;
+	display: block;
+}
+
+#footer address {
+	margin-bottom: 35px;
+}
+
+#footer address a {
+	color: #3E3A39;
+	pointer-events: none;
+}
+
+#footer .link_btn {
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+#footer .link_btn li {
+	margin: 0 15px;
+	max-width: 370px;
+	width: calc((100% - 60px) / 2);
+}
+
+#footer .link_btn li a {
+	background: #000;
+	width: 100%;
+	height: 64px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#footer .link_btn li a::after {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 30px 30px;
+	border-color: transparent transparent #595757 transparent;
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	content: "";
+}
+
+#footer .link_btn li a:hover {
+	background: #595757;
+	opacity: 1;
+}
+
+#footer .link_btn li a:hover::after {
+	border-color: transparent transparent #000 transparent;
+}
+
+#footer .map {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+
+#footer .map iframe {
+	width: 100%;
+	height: 900px;
+}
+
+#footer .hotel_list {
+	padding: 45px 0 20px;
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+}
+
+#footer .hotel_list::before {
+	content: "｜";
+}
+
+#footer .hotel_list li::after {
+	content: "｜";
+}
+
+#footer .hotel_list li a {
+	padding: 0 1em;
+	color: #595757;
+	display: inline-block;
+}
+
+@media (max-width: 768px) {
+	#footer {
+		padding: 0 0 20px;
+	}
+
+	#footer .inner {
+		padding: 40px 9.11458vw 20px;
+	}
+
+	#footer .hotel_name {
+		font-size: 3.64583vw;
+	}
+
+	#footer address {
+		font-size: 3.125vw;
+	}
+
+	#footer address a {
+		pointer-events: auto;
+	}
+
+	#footer .link_btn {
+		margin-bottom: 20px;
+		display: block;
+	}
+
+	#footer .link_btn li {
+		margin: 0 0 10px;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	#footer .link_btn li a {
+		height: 48px;
+		font-size: 3.125vw;
+	}
+
+	#footer .hotel_list {
+		font-size: 3.125vw;
+	}
+}
+
+/* ----------------------------------------------------
+	pagetop
+---------------------------------------------------- */
+#pageTop a {
+	background: #ff912e;
+	width: 64px;
+	height: 64px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 10;
+}
+
+#pageTop a img {
+	width: 18px;
+}
+
+/* ----------------------------------------------------
+	fadeIn
+---------------------------------------------------- */
+/*
+	共通初期設定
+	パターン1：透明度が変化
+------------------------------ */
+.fadeBlock {
+	opacity: 0;
+	transition: all 1s;
+}
+
+.fadeBlock.fadeIn {
+	opacity: 1;
+}
+
+/*
+	パターン2：下から
+------------------------------ */
+.fadeBottom {
+	transform: translateY(100px);
+}
+
+.fadeBottom.fadeIn {
+	transform: translateY(0);
+}
+
+/*
+	パターン3：右から
+------------------------------ */
+.fadeRight {
+	transform: translateX(100px);
+}
+
+.fadeRight.fadeIn {
+	transform: translateX(0);
+}
+
+/*
+	パターン4：左から
+------------------------------ */
+.fadeLeft {
+	transform: translateX(-100px);
+}
+
+.fadeLeft.fadeIn {
+	transform: translateX(0);
+}
