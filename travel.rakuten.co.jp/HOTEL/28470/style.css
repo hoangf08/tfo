@@ -1,0 +1,1171 @@
+/* ----------------------------------------------------
+　　
+ ▼　体験できること_sp ▼
+
+---------------------------------------------------- */
+#page {margin: 0!important;  font-family: '游ゴシック','Yu Gothic','YuGothic','Meiryo UI','メイリオ','Meiryo UI',sans-serif;background-color: #fff!important;line-height: 1.6;font-size: 16px;margin: 0 auto;color: #333;letter-spacing: .02em;}
+.kv {position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #c4a193;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html, body, div, section, p, img {
+    margin: 0;
+    padding: 0;}
+.kv img{width: 100%;}
+.title {position: absolute;}
+.title h2 {color: #fff;text-align: center;font-size: 18px;margin-bottom: 0;text-shadow: 0 1px 10px #606060; letter-spacing: 1.7px;}
+p {font-size: 14px; margin: 0 18px;}
+
+/* ----------------------------------------------------
+　　キャプション
+---------------------------------------------------- */
+.caption_prince {margin: 40px auto 0; padding-bottom: 40px;}
+.caption_prince h1{font-size: 24px;color: #c6ab9c;font-weight: 600;text-align: center;}
+.caption_prince h3{color: #1a1a1a;font-size: 18px;text-align: center;font-weight: 600;margin: 16px auto 20px;}
+
+/* ----------------------------------------------------
+　　リード画像
+---------------------------------------------------- */
+.read {width: 96%; margin: 0 auto 5px; display: flex;     justify-content: center;}
+.read_box {position: relative;overflow: hidden;width: 33.3%; background: #c4a193;}
+.read_box img{width: 100%;}
+.read_text{position: absolute;left: 40%;width: 100%;bottom: 0;background: rgba(0, 0, 0, 0.7);text-align: left;-webkit-transform: translate(-40%,0);transform: translate(-40%,0);}
+.read_box h2 {color: #fff;text-align: left;font-size: 10px;padding: 6px;margin-bottom: 0; letter-spacing: 1.7px;}
+p {font-size: 14px; margin: 0 18px;}
+
+/* ----------------------------------------------------
+	体験できることコンテンツ
+---------------------------------------------------- */
+section {width: 100%;}
+.lp_wrap * {box-sizing: border-box;}
+.lp_main img {width: 100%; height: auto;}
+.lp_cont {
+    padding: 0 10px;
+}
+.lp_cont .lp_inner {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    max-width: 890px;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgba(198, 171, 156, 1);
+}
+.lp_cont .lp_cont-title {
+    line-height: 1.7;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.lp_cont .lp_cont-title::before {
+    height: 100px;
+    margin-top: 30px;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+}
+
+.lp_cont .lp_cont-image {
+    margin-bottom: 6.77083vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.lp_cont .lp_cont-image .lp_cont-item {
+    width: 48.9%;
+}
+.lp_cont .lp_cont-image .lp_cont-item:first-child {
+    width: 100%;
+}
+.lp_cont .lp_cont-image .lp_cont-item:nth-child(2) {
+    margin-right: 2.2%;
+    width: 48.9%;
+}
+.lp_cont .lp_cont-wrap {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+.lp_cont .lp_cont-wrap .lp_cont-text {
+    line-height: 1.8;
+}
+.lp_cont .lp_cont-wrap .lp_cont-link :hover{
+    opacity: 0.7;
+    transition: all 0.5s ease 0s;
+}
+.lp_btn, .lp_btn ._black {
+    background-image: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/fd03ba2838e7451331fc3b3c0782b268ee2e375c.47.9.26.3.jpg)!important;
+    background-position: right 20px center!important;
+    background-repeat: no-repeat!important;
+    background-size: auto 20px!important;
+    padding: 1.5em 0!important;
+    color: #fff!important;
+    text-align: center!important;
+    display: block!important;
+}
+.lp_btn._black{
+    background: rgba(0, 0, 0, 1);
+}
+.toggle span, .lp_nav, .lp_btn {
+    background: rgba(198, 171, 156, 1);
+}
+.lp_lead-title, .lp_cont-title::before, .lp_spot-title {
+    color: rgba(198, 171, 156, 1);
+}
+.lp_cont .lp_cont-link .comingsoon {
+    background-image: none;
+    position: relative;
+    pointer-events: none;
+}
+.lp_cont .lp_cont-link .comingsoon::before {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+}
+.lp_main .lp_cont:nth-child(1) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/efbed63ca809f6d1794eb9fa7563b14df176f1d8.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(2) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/4623b27421f17e08aef841627764fb434afae17a.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(3) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/b3409d1cfcce40dc3358717d931e0f68040ed1fb.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(4) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/6c6b48e1be0da6567069328aeeaba086b0cc0d0a.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(5) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/01279f6791282d1eb2a9557c1e4d16d5cc201d88.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(6) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/446f6a40fb301f62795140de22bffc4ddbb441a5.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+
+/* ----------------------------------------------------
+	lp_spot　周辺の見どころ
+---------------------------------------------------- */
+.lp_spot {
+	padding: 50px 10px 0px;
+}
+.lp_spot  img {width: 100%;}
+
+.lp_spot .lp_inner {
+	margin: 0 auto;
+	max-width: 880px;
+	width: 100%;
+}
+
+.lp_spot .lp_spot-title {
+	margin-bottom: 60px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+.lp_spot .lp_spot-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lp_spot .lp_spot-list .lp_spot-item {
+	margin: 0 2.2% 40px 0;
+	width: 48.9%;
+}
+
+.lp_spot .lp_spot-list .lp_spot-item:nth-child(even) {
+	margin-right: 0;
+}
+
+.lp_spot .lp_spot-detail {
+	margin-top: 10px;
+}
+
+.lp_spot .lp_spot-detail dt {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.lp_spot .lp_spot-detail dd p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+.lp_spot .lp_spot-detail dd a {
+	padding-right: 1.2em;
+	text-decoration: underline;
+	position: relative;
+}
+
+.lp_spot .lp_spot-detail dd a::before {
+	content: "＞";
+}
+
+.lp_spot .lp_spot-detail dd a::after {
+	background: url(../img/icon01.png) center center no-repeat;
+	background-size: 100% auto;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	content: "";
+}
+
+/* ----------------------------------------------------
+	lp_guide アクセス
+---------------------------------------------------- */
+.lp_guide {
+	background: rgba(240, 240, 240, 0.7);
+	padding: 40px 10px 60px;
+}
+
+.lp_guide .lp_inner {
+	margin: 0 auto;
+	max-width: 1260px;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-logo {
+	margin: 0 auto 20px;
+	max-width: 140px;
+	width: 100%;
+}
+.lp_guide .lp_guide-logo img{width: 100%;}
+
+.lp_guide .lp_guide-lead {
+	margin: 0 auto 30px;
+	max-width: 780px;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-lead dt {
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.lp_guide .lp_guide-lead dd {
+	margin-bottom: 20px;
+	line-height: 1.8;
+}
+
+.lp_guide .lp_guide-lead dd .lp_text { 
+        font-size: 13.1px;
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-lead dd address {
+	margin-bottom: 20px;
+	font-style: normal;
+	text-align: center;
+	display: block;
+}
+
+.lp_guide .lp_guide-linkList {
+	margin: 0 auto 40px;
+	max-width: 780px;
+	display: flex;
+	justify-content: center;
+}
+
+.lp_guide .lp_guide-linkItem {
+	margin-right: 5%;
+	width: calc((100% - 5%) / 2);
+	text-align: center;
+}
+
+.lp_guide .lp_guide-linkItem.mr0 {
+	margin-right: 0;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-linkItem:nth-child(even) {
+	margin-right: 0;
+}・・
+
+#cus_contents {margin-left: auto;}
+#cus_page h2 {
+font-size: 18px;
+color: #222;
+border-bottom: 1px solid #222;
+margin: 0 auto 30px auto;
+padding-bottom: 15px;
+text-align: center;
+width: 232px;
+display: block;
+}
+#cus_page .row2 {
+display:flex;
+flex-wrap: wrap;
+}
+#cus_page .row2 .img {
+display:flex;
+align-items: center;
+width: 50%;
+}
+#cus_page .row2 .img img {
+width:100%;
+overflow:hidden;
+}
+.content {margin-top: 60px;}
+.content p {margin:30px 15px !important;}
+.planbox{
+margin: 40px 0 50px;
+}
+.planbox img{
+width:100%;
+}
+.planbox .plan_ttl{
+font-size: 16px;
+font-weight: bold;
+margin: 15px auto !important;
+padding: 0 15px;
+}
+.planbox .plan_txt{
+margin: 0 15px 15px!important;
+}
+.plan_more {
+text-align: center;
+background: #000;
+margin: 15px;
+padding: 15px;
+}
+.plan_more a{
+color: #fff;
+}
+#cus_page .btn2 {
+background-color: #c2ac9e;
+text-decoration: none;
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: -20px 15px 0;
+padding: 15px 30px;
+}
+footer {
+background-color: #000;
+text-align: center;
+color: #fff;
+margin-top: 60px;
+padding: 40px 15px;
+}
+footer #name{
+margin-bottom: 15px;
+}
+section.cst-module-carousel .cst-module-carousel-images img {
+    width: 100%;
+}
+
+/* ----------------------------------------------------
+　　
+ ▼　ルーフトップバー_sp ▼
+
+---------------------------------------------------- */
+#rooftopbar header {
+background:rgba(8, 24, 41, 0.8);
+height:5.6rem;
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:1;
+}
+header .inner {
+padding:2.1rem 2.2rem 0
+}
+header label {
+width:5.6rem;
+height:5.6rem;
+position:absolute;
+top:0;
+right:0;
+appearance:none;
+border:0;
+background:none;
+}
+header nav {
+background:#fff;
+position:fixed;
+top:5.6rem;
+left:0;
+right:0;
+max-height:100%;
+overflow:auto;
+}
+header nav ul {
+list-style:none; padding:0
+}
+#mv .text {
+width:100%;
+position:absolute;
+top:10.6rem;
+color:#fff;
+}
+#mv .date span{
+padding:0.1rem 0.2rem;
+letter-spacing:0.1em;
+font-weight:500;
+border:1px solid #fff;
+display:inline-block;
+vertical-align:0.8rem;
+}
+#rooftopbar * {
+box-sizing: border-box;
+}
+#rooftopbar .title {
+position: unset;
+text-align: center;
+}
+#rooftopbar  h2.title {
+font-size: 16px!important;
+margin-bottom: 1rem;
+}
+#rooftopbar p {
+margin: 0;
+}
+#rooftopbar img {
+width: 100%;
+display: block;
+}
+.mincho {
+font-family: "Zen Old Mincho", serif;
+}
+.yu_gothic {
+font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+"Noto Sans JP", sans-serif;
+}
+.inner {
+max-width: 100rem;
+margin: 0 auto;
+}
+#enjoy {
+background-color: #06355a;
+color: #fff;
+}
+#enjoy .inner {
+padding:4rem 2rem;
+}
+#enjoy .title img {
+width:21.6rem; margin:0 auto 1rem
+}
+#enjoy .box {
+width:auto;
+padding:2.3rem 0.5rem;
+max-width:59.2rem;
+margin:0 auto;
+background:#fff;
+position:relative;
+}
+#enjoy .box ol {
+margin:0 0.5rem 0 1rem;
+padding:0;
+list-style:none;
+}
+
+#menu {
+background:#081829;
+color:white
+}
+#menu .inner {
+padding:5rem 2rem 3.9rem;
+}
+#menu .title {
+margin-bottom:4.2rem;
+font-size:1.4rem;
+letter-spacing:0.05em;
+}
+#menu .title img{
+width:8.1rem; margin:0 auto 1.1rem
+}
+#menu .bg_box {
+margin:2.7rem 0 3.9rem;
+padding-bottom:0.8rem;
+display:block;
+background:#06355a;
+}
+#menu ul {
+padding-left: 1.5rem;
+}
+#menu ul li{
+list-style: disc;
+}
+#open {
+background:#06355a;
+color:#fff;
+padding:3.5rem 2rem 5.1rem;
+text-align:center;
+}
+#open ol {
+list-style:none;
+margin:0 auto 2.5rem;
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+color:#06355a;
+padding-left:0
+}
+#access {
+background-color:#081829;
+padding:4rem 2rem 5.4rem;
+}
+#access h2.title {
+margin:0; margin-bottom:3rem;
+font-size:1.4rem;
+text-align:center;
+color:#fff;
+font-weight:500
+}
+#access .box{
+width:auto;
+max-width:59.2rem;
+padding:.2rem .2rem 1.7rem;
+margin:3rem 0 3.3rem;
+background:#fff;
+position:relative
+}
+#notice {
+background-color: #f2f1ed;
+}
+#notice .inner {
+padding: 2.3rem 2rem 3rem;
+}
+#notice h2 img {
+width: 10rem;
+margin: 0 auto .6rem;
+}
+header label::before,
+header label::after,
+header label span {
+content: "";
+display: block;
+width: 2.5rem;
+height: 0.1rem;
+background: #fff;
+position: absolute;
+left: 0;
+right: 0;
+top: 1.8rem;
+margin: 0 auto;
+transition: transform 0.3s, opacity 0.3s, top 0.3s;
+opacity: 1;
+}
+
+header label::after {
+top: 3.5rem;
+}
+
+#gnav:checked + label::before {
+transform: rotate(45deg);
+top: 2.6rem;
+}
+
+#gnav:checked + label span {
+opacity: 0;
+}
+
+#gnav:checked + label::after {
+transform: rotate(-45deg);
+top: 2.6rem;
+}
+
+#rooftopbar nav {
+height: 0px;
+overflow: hidden;;
+}
+
+#gnav:checked + label + nav {
+transition: height 1s;
+height: 340px;
+}
+
+#rooftopbar nav li {
+border-bottom: 1px solid #06355a;
+position: relative;
+}
+
+#rooftopbar nav a {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 5.2rem;
+font-size: 1.7rem;
+font-weight: 500;
+color: #06355a;
+text-align: center;
+padding-left: 15.5rem;
+letter-spacing: 0.05em;
+font-feature-settings: "palt";
+text-decoration: none;
+}
+
+#rooftopbar nav img {
+width: auto;
+height: 1.75rem;
+position: absolute;
+left: 3.3rem;
+top: 0;
+bottom: 0;
+margin: auto 0;
+display: block;
+}
+.before {
+display: block;
+width: 100%;
+top: 320px;
+left: 0px;
+position: absolute;
+mix-blend-mode: lighten;
+z-index: 1;
+}
+.slide-images {
+display: flex;
+position: relative;
+}
+.slide-images img {
+width: 100%;
+position: absolute;
+opacity: 0;
+}
+.slide-images img:first-of-type {
+position: relative;
+}
+input {
+display: none;
+}
+input[name$="slide"]:checked + img {
+transition: opacity 1s;
+opacity: 1;
+}
+.slide-btn {
+display: flex;
+justify-content: center;
+}
+.slide-btn label {
+margin: 5px 10px;
+display: block;
+width: 3rem;
+height: 3rem;
+border: solid 1px #606060;
+border-radius: 50%;
+}
+.slide-btn label::before {
+position: relative;
+top: 0.4rem;
+left: 0.9rem;
+}
+.slide-btn label:nth-child(1)::before {
+content: "1";
+}
+.slide-btn label:nth-child(2)::before {
+content: "2";
+}
+.slide-btn label:nth-child(3)::before {
+content: "3";
+}
+#about .item .image {
+width: 92%;
+}
+#about .item .text {
+width: calc(100% - 2.75rem);
+margin: -1.65rem 0 3rem 2.75rem;
+padding: 2.1rem 2rem 2.1rem 2.9rem;
+background: #fff;
+color: #06355a;
+position: relative;
+}
+#about .item .text::before {
+content: "";
+display: block;
+position: absolute;
+top: 0.3rem;
+left: 0.4rem;
+right: 0.4rem;
+bottom: 0.3rem;
+border: 1px solid #06355a;
+pointer-events: none;
+}
+#enjoy .box::before {
+content: "";
+display: block;
+position: absolute;
+top: 0.3rem;
+left: 0.3rem;
+right: 0.3rem;
+bottom: 0.3rem;
+border: 1px solid #06355a;
+}
+#access ol li,
+#enjoy ol li {
+display: flex;
+}
+#access .image img,
+#enjoy .image img {
+width: 40vw;
+}
+#access .text,
+#enjoy .text {
+padding: 0 0 0 1.8rem;
+font-size: 1.3rem;
+letter-spacing: 0.06em;
+line-height: 1.6;
+color: #06355a;
+}
+#access ol li + li,
+#enjoy ol li + li {
+margin-top: 1.4rem;
+}
+#access .text img,
+#enjoy .text img {
+width: 4.4rem;
+margin: auto;
+}
+#about .title span,
+#menu .title span {
+background: linear-gradient(to right, #f0e2ab, #eac663);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+#menu .alacarte img{
+width: auto;
+}
+#menu .recommended img {
+width: auto;
+}
+#menu .drinks img {
+width: auto;
+}
+#menu .drinks::before,
+#menu .drinks::after,
+#menu .recommended::before,
+#menu .recommended::after,
+#menu .alacarte::before,
+#menu .alacarte::after {
+content: "";
+display: block;
+height: 0.1rem;
+background: #eac562;
+}
+#menu .recommended::before,
+#menu .recommended::after {
+width: 8.35rem;
+}
+#menu .alacarte::before,
+#menu .alacarte::after {
+width: 8.35rem;
+}
+#menu .drinks::before,
+#menu .drinks::after {
+width: 8.35rem;
+}
+#menu .recommended,
+#menu .alacarte,
+#menu .drinks {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 1.5rem;
+}
+#menu .item .image {
+margin-bottom: 0.8rem;
+}
+#menu span {
+font-size: 1.57rem;
+font-weight: bold;
+color: #f0e1a8;
+}
+#menu span img {
+display: inline;
+height: 1.3rem;
+margin-left: 0.4rem;
+width: auto;
+}
+#menu .item .box p {
+line-height: 3rem;
+}
+#menu .bg_box .box {
+width: auto;
+padding: 1.5rem 1.7rem 1.2rem;
+position: relative;
+}
+#menu .box > span {
+display: block;
+text-align: center;
+}
+#menu .item p img,
+#menu .bg_box img {
+height: 1.2rem;
+width: auto;
+display: inline-block;
+margin: 0 .2rem;
+vertical-align: 0;
+}
+#menu .bg_box .box + .box::before {
+content: '';
+display: block;
+width: auto;
+height: .11rem;
+background: #839aad;
+position: absolute;
+top: 0;
+bottom: auto;
+left: 1.5rem;
+right: 1.5rem;
+}
+#open .date {
+font-size: 24px;
+font-weight: 600;
+}
+#open h4 {
+background: #f0e1a8;
+font-size: 1.7rem;
+padding: .7rem 1rem .4rem;
+}
+#open h3 {
+margin: 16px 0;
+}
+#open ol li {
+width: 47.6831%;
+margin: 0 0 1.9rem;
+padding-bottom: .9rem;
+background: #fff;
+
+}
+#open ol p {
+font-size: 1.4rem;
+letter-spacing: -.08em;line-height: 1.85;
+font-weight: bold;
+color: #06355a;
+font-feature-settings: "palt";
+}
+#access .box::before {
+content: '';
+display: block;
+position: absolute;
+top: .2rem;
+left: .2rem;
+right: .2rem;
+bottom: .2rem;
+border: 1px solid #06355a;
+pointer-events: none;
+}
+#notice ul {
+max-width: 62.8rem;
+background: #fff;
+color: #06355a;
+margin: 0 auto;
+font-size: 1.2rem;
+padding: 1.3rem 2rem 1.8rem 1rem;
+line-height: 1.67;
+}
+#rooftopbar footer ul li,
+#notice ul li{
+list-style: none;
+text-align: left;
+letter-spacing: .045em;
+font-feature-settings: "palt";
+margin-left: 1em;
+text-indent: -1em;
+}
+#rooftopbar footer {
+background-color: #a99d8f;
+margin: 0;
+font-size: 15px;
+}
+#rooftopbar footer ul{
+padding: 0;
+}
+#rooftopbar footer .logo {
+width: 24.5rem;
+margin: 3rem auto 0;
+}
+/* ----------------------------------------------------
+　　
+ ▼ sp-page共有 ▼
+
+---------------------------------------------------- */
+/* ▼  all  ▼ */
+.sp-page {
+    width: 100%;
+    background-color: #fff;
+}
+.sp-page * {
+    box-sizing: border-box;
+    margin: 0;
+    letter-spacing: 1px;
+}
+/* ▲  all  ▲ */
+
+/* ▼  header  ▼ */
+.sp-page header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vw;
+    overflow: hidden;
+}
+.sp-page header img {
+    height: 50vw;
+}
+.sp-page header h1 {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 4px 20px #333;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-align: center;
+}
+/* ▲  header  ▲ */
+
+/* ▼  slider  ▼ */
+.sp-page .slider {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sp-page .images {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    touch-action: pan-y;
+    margin-top: 40px;
+}
+.sp-page .images::-webkit-scrollbar {
+    display: none;
+}
+.sp-page .images > div {
+    width: 100%;
+    flex-shrink: 0;
+    background: #eee;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+.sp-page .slider img {
+    width: 100%;
+}
+
+.sp-page .slider > a {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    background: #e0e0e0;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 1rem 0.5rem;
+    position: relative;
+    margin-top: 1em;
+    font-size: 1rem;
+}
+/* ▲  slider  ▲ */
+
+/* ▼  slider_v2  ▼ */
+.sp-page .slider_v2 {
+    position: relative;
+    width: 100%;
+    min-height: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #000;
+}
+.sp-page .slider_v2 .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0s;
+    z-index: 1;
+    clip-path: circle(0px);
+}
+.sp-page .slider_v2 input[type="radio"]:checked + .imgBx {
+    z-index: 10;
+    clip-path: circle(600px at center);
+    transition-delay: 0.75s;
+}
+.sp-page .slider_v2 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sp-page .slider_v2 input[type="radio"] {
+    position: relative;
+    z-index: 1000;
+    margin: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    cursor: pointer;
+}
+/* ▲  slider_v2  ▲ */
+
+/* ▼  table  ▼ */
+.sp-page .table > table {
+    border-collapse: collapse;
+    margin: 1em auto;
+    width: 100%;
+}
+.sp-page .table > table > tbody > tr > td {
+    padding: 0.3em;
+    width: 2.5em;
+}
+.sp-page .table .bar {
+    border: solid 1px black;
+}
+/* ▲  table  ▲ */
+
+/* ▼　main　▼ */
+.sp-page main {
+    margin: 32px 16px;
+}
+.sp-page .lead {
+    margin: 32px 0;
+    text-align: center;
+}
+/* ▲  main  ▲ */
+
+/* ▼　footer　▼ */
+.sp-page footer h3 {
+    margin: 16px 0;
+    letter-spacing: 3px;
+}
+/* ▲　footer　▲ */
+
+/* ----------------------------------------------------
+　　
+ ▼ 客室 ▼
+
+---------------------------------------------------- */
+.rooms .lead {
+    display: flex;
+}
+.rooms .lead > div{
+    width: 50%;
+    text-align: center;
+    margin: 2em 5%;
+    border-bottom: solid 1px black;
+    position: relative;
+}
+.rooms .lead a{
+    color: #000;
+    text-decoration: none;
+}
+.rooms .lead h5::after{
+   content: "";
+    position: absolute;
+    width: 0.5em;
+    height: 0.5em;
+    border-bottom: solid 2px #707070;
+    border-right: solid 2px #707070;
+    transform: rotate(45deg);
+    left: calc(50% - 0.5em);
+    bottom: -1.3em;
+}
+.rooms .type {
+    margin-bottom: 80px;
+}
+.rooms .room > h5 {
+    margin-top: 2em;
+}
+.rooms .room .content {
+    margin-top: 1em;
+}
+.rooms h3 {
+    text-align: center;
+    margin: 1em;
+}
+.rooms .facilities div {
+    margin-bottom: 1em;
+}
+.rooms .facilities > div > h5 {
+   text-align: center;
+    border-bottom: solid 1px #000;
+    margin: 5% auto;
+    padding-bottom: 1em;
+    width: 150px;
+}
+.rooms .facilities h5 {
+    margin: 5% 0;
+}
+/* ----------------------------------------------------
+　　
+ ▼ レストラン ▼
+
+---------------------------------------------------- */
+.restaurant .content {
+    margin: 32px 16px;
+}
+.restaurant img {
+    width: 100%;
+}
+.restaurant .list-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.restaurant .list-container a:hover{
+    opacity: 0.65;
+}
+.restaurant .list-item {
+    width: calc(50% - 0.5rem);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.restaurant .cont-container .logo {
+    width: 50%;
+    margin: 32px auto 24px;
+}
+.restaurant .images {
+    margin: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.restaurant .images > .image {
+    width: 50%;
+}
+.restaurant pre {
+    font-size: 16px;
+}
+.restaurant .table p {
+    margin: 0!important;
+}
