@@ -1,0 +1,108 @@
+.SSmainTtl{height:60px;background-color: #009933;color: #fff;font-weight: bold;font-size:24px;margin-left:-17px;display: table;vertical-align: middle;position: relative;width: 100%;line-height: 1.2;}
+.SSmainTtl:before {position: absolute;border: 3px solid #003300;position: absolute;border-color: #003300  transparent  transparent #003300;right: -33px;bottom: -6px;content: '';}
+.SSmainTtl:after {position: absolute;border: 3px solid #003300;position: absolute;border-color: #003300 #003300 transparent transparent;left: 0px;bottom: -6px;content: '';}
+.SSmainTtl span {display:table-cell;vertical-align: middle;padding:5px 0 5px 30px; text-align:left;}
+.SSmainTtl span:before { height:100%;width:33px; content: "";min-height: 60px; position: absolute; right: -33px; top: 0px; background-color: #009933;}
+
+
+
+div.kbhbody {background-color:#fff;text-align:center;font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;color:#333;}
+
+.kbhbody h1 { margin:1em 0;padding:1em 0.25em 0 0.25em;font-size:150%;line-height:1.75em;}
+.kbhbody h2 { margin:1em 0;padding:0 0.25em;font-size:125%;color:#BA8F5B;}
+.kbhbody h3 { margin:1em 0;padding:0 0.25em;font-size:110%;font-weight:bold;line-height:1,5em;}
+.kbhbody h4 { margin:1em 0;padding:0 0.25em;font-size:100%;font-weight:bold;line-height:1,5em;}
+.kbhbody p { margin:1em 0.25em;font-size:100%;line-height:1.5em;}
+
+.kbhbody div{padding:1em 0;}
+
+div.bctsection { margin:3em 0;}
+span.glayfont { color:#666;}
+
+table.roomspec {margin:1em 0.5em;width:95%;}
+table.roomspec td {border-collapse: collapse;padding: 0.25em;border:1px solid #999;font-size:90%;text-align:center;}
+table.roomspec td.roomspectitle {background-color:#F5F0E6;"}
+
+/**ここから↓ 202302yamamoto**/
+#sp{margin:auto;padding-top: 0; min-width:375px;color:#231815;box-sizing:borderbox;font-family: 'Noto Serif JP', "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif !important; background-color:#fff;}
+#sp img{text-align:center; width:100%;}
+#sp section{margin-bottom:60px; width:100%;}
+#sp .con{ width:90%; margin-left: auto; margin-right: auto;}
+#sp p{ font-size:14px; color:#2F2F2F; line-height:25.2px; text-align:center;}
+#sp .mb20{ margin-bottom:20px;}
+.catch {text-align: center;margin: 20px auto 60px;}
+.catch p {font-size: 18px !important; line-height:31px;margin-bottom: 30px !important;background: none !important; font-weight:normal; margin: auto; color:#2F2F2F !important; letter-spacing:-0.18px;}
+.catch p span{font-size: 30px;}
+#sp h2{ font-size:18px; color:#2F2F2F; letter-spacing:0.9px; line-height:31px; text-align:center; margin-bottom:45px; font-weight:normal;}
+#sp h2 span{ font-size:14px; color:#B28246; line-height:24px; letter-spacing:1.12px; display:block;}
+#sp h3{ font-size:18px; color:#B28246; letter-spacing:0.9px; line-height:31px; font-weight:normal; text-align:center;}
+.apeal{ margin-top:45px;}
+.apeal h4{ font-size:18px; color: #B28246; font-weight:normal; margin:15px 0 5px 0;}
+.apeal p{ text-align:left !important; margin:0;}
+#plan{ background:url(https://img.travel.rakuten.co.jp/share/image_up/685/LARGE/1a557cf985f7d960b938ada925574d28f4d0e732.47.9.26.3.jpg) top left repeat; border-top:10px #B28246 solid; border-bottom:10px #B28246 solid;padding-top: 50px;}
+#plan p{ margin:15px 0 0 0;}
+#plan .con .img{ display:flex;align-items: center; max-height:270px; overflow:hidden}
+#plan .readmore-button-box{ margin-top:-35px;}
+#room{background:url(https://img.travel.rakuten.co.jp/share/image_up/685/LARGE/f9d217e5fcc4e0a15af852dd2ece319be6cc2f75.47.9.26.3.jpg) top left repeat;margin-top: -60px; padding-top: 50px; padding-bottom:50px;}
+#room .con{ margin-bottom:50px;}
+#room h5{ font-size:16px; text-align:center; line-height:23px; font-weight:normal; letter-spacing:1.28px; margin-bottom:30px;}
+#room h5 span{ color:#B6AC9F; display:block;}
+#room p{ margin:15px 0 0 0;}
+
+.readmore-button-box {padding: 50px 0;}
+.readmore-button {text-decoration: none;display: block;border: #B28246 1px solid;width: 300px;padding:25px 0;text-align: center;color: #B28246 !important;background-color: white;margin: 0 auto;font-size: 14px; font-weight:normal;}
+#sp #footer{ background-color:#2F2F2F; text-align:center; padding:45px 0; margin:auto;}
+#sp #footer img{width:27%;}
+#sp #footer p{margin: 40px 0 0 0; color:#707070; font-size:15px; text-align:left; width:auto; display:inline-block;}
+#sp ul{ margin:0; padding:0;}
+.common-carousel-3images {width: 1035px;}
+.common-carousel .common-carousel-3images {height: 200px; left: 0; top: 0; overflow: hidden;display: flex;align-items: center;}
+.common-carousel .common-carousel-3images li{width: 345px; height: auto !important; float: left;list-style:none;}
+.common-carousel .common-carousel-3images a{display: block; overflow: hidden; -webkit-tap-highlight-color: transparent;}
+.common-carousel-3images img {width: 100%; position: relative; left: 0px; top: 0px; z-index: 0; height: auto !important;}
+
+.common-carousel-5images {width: 1875px;}
+.common-carousel .common-carousel-5images {height:auto; left: 0; top: 0;overflow: hidden;display: flex;align-items: flex-start;}
+.common-carousel .common-carousel-5images li{width: 375px; height: auto !important; float: left;list-style:none;}
+.common-carousel .common-carousel-5images a{display: block; overflow: hidden; -webkit-tap-highlight-color: transparent;}
+.common-carousel-5images img {width: 100%; position: relative; left: 0px; top: 0px; z-index: 0; height: auto !important;}
+.common-carousel-5images p{ padding:20px;}
+
+.common-carousel {position: relative; width: 100%; text-align: center; margin-bottom: 10px;}
+.common-carousel-flick {overflow:scroll; width: 100%;}
+.common-carousel div.common-pagenation {position: relative; overflow: hidden; top: -18px;}
+.common-controller li.common-controller-next, .common-controller li.common-controller-prev {list-style: none;}
+.common-controller li a{height: auto !important; display: block; width: 40px; text-indent: 100%; white-space: nowrap; overflow: hidden; top: 0; position: absolute; z-index: 5; -webkit-tap-highlight-color: transparent;}
+.common-controller li.common-controller-prev a {background-position: 17px 67px; left: 0; top: 50%;}
+.common-controller li.common-controller-prev a span:after {display: block; position: absolute; top: 50%; left: 15px; width: 7px; height: 7px; margin-top: -5px; border-right: 3px solid #ccc; border-top: 3px solid #ccc; transform: rotate(225deg); content: "";}
+.common-controller li.common-controller-next a span, .common-controller li.common-controller-prev a span {display: block; height: 100%; position: relative;}
+.common-controller li.common-controller-next a {background-position: 11px -53px;right: 0; top: 50%;}
+.common-controller li.common-controller-next a span:after {display: block;  position: absolute; top: 50%; right: 15px; width: 7px; height: 7px; margin-top: -5px; border-top: 3px solid #ccc; border-right: 3px solid #ccc; -webkit-transform: rotate(45deg); transform: rotate(45deg); content: "";}
+.common-carousel .common-pagenation ul {position: relative; float: left; left: 50%; display: block;}
+.common-carousel .common-pagenation:after {content: ""; display: block; clear: both;}
+.common-carousel .common-pagenation li {position: relative; float: left; left: -50%; width: 6px; height: 6px; margin: 0 2px; z-index: 1; list-style: none;}
+.common-carousel .common-pagenation li.common-active a {background: #fff;}
+.common-carousel .common-pagenation li a {display: block; width: 6px; height: 6px; background: rgba(0,0,0,.8); border-radius: 3px; text-indent: -9999px; overflow: hidden; -webkit-tap-highlight-color: transparent;}
+.common-carousel span {font-size: 15px;}
+section.cst-module-carousel .cst-module-carousel-images {
+	height: auto !important;
+}
+section.cst-module-carousel .cst-module-carousel-images li a img{
+	height: auto !important;
+}
+.cst-module-controller li a {
+    height: 195px;
+}
+.cst-iframe, iframe, .iframe {
+height: 100vh !important;
+}
+section.cst-module-carousel .cst-module-carousel-images li{
+	height:auto !important;
+}
+ul.cst-module-carousel-images {
+    display: flex;
+    align-items: flex-end;
+    background-color: transparent !important;}
+section.cst-module-carousel {
+    margin-bottom: 20px !important;
+}
