@@ -1,0 +1,38 @@
+/********************************
+CUSTOM CSS FOR LANGUAGE EN
+********************************/
+body {
+  word-break: break-word;
+}
+
+#summary .main-btn.btn-3,
+#cta .btn_box .main-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#summary .main-btn.btn-3 {
+  height: 66px;
+}
+
+#cta .btn_box .main-btn {
+  height: 63px;
+}
+
+.schedule_list .location {
+  min-width: 200px;
+  width: max-content;
+  padding: 5px 15px;
+}
+
+/* .tag_box_group {
+  display: flex;
+  order: 2;
+} */
+
+@media screen and (min-width: 768px) {
+  .pagetop::before {
+      content: 'Back TOP';
+  }
+}
