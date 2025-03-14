@@ -1,0 +1,964 @@
+@font-face {
+    font-family:"Shippori Mincho" ;
+    src: url(../font/ShipporiMincho-Regular.ttf) format("truetype");;
+    font-weight: 400;
+    line-height: 28.8px;
+}
+@font-face {
+    font-family:"Shippori Mincho" ;
+    src: url(../font/ShipporiMincho-Bold.ttf) format("truetype");;
+    font-weight: 700;
+    line-height: 36px;
+}
+@font-face {
+    font-family:"Noto Serif JP" ;
+    src: url(../font/NotoSerifJP-Bold.ttf) format("truetype");;
+    font-weight: 700;
+}
+/*ーーーーーーーーーーーーーーーー 
+reset.css▼
+ーーーーーーーーーーーーーーーー */
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    text-decoration: none;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*ーーーーーーーーーーーーーーーー 
+reset.css▲
+ーーーーーーーーーーーーーーーー */
+
+
+
+
+/*----------------------------------------------------
+    共通パーツ
+-----------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+main{
+    color: #312D2A;
+    overflow: hidden;
+    position: relative;
+}
+
+.back-to-top {
+    position: fixed;
+    top: 70%;
+    z-index: 1000;
+    right: 0;
+    width: 110px;
+    height: 132px;
+    background-color: #951102;
+    border-top-left-radius: 65px;
+    border-bottom-left-radius: 65px;
+    border: 1px #fff solid;
+}
+
+.back-to-top::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 50%;
+    height: 50%;
+    left: 52%;
+    top: 35%;
+    transform: translate(-45%, -50%); 
+    background-image: url(../img/mvlogo.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.back-to-top h1 {
+    position: absolute;
+    top: 65%;
+    left: 30%;
+    font-size: 25px;
+    color: #fff;
+    font-family:"Noto Serif JP" ;
+}
+
+.back-to-top:hover {
+    opacity: 0.8;
+}
+
+p {
+    padding: 2px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .back-to-top {
+        width: 77px;
+        height: 92px;
+    }
+
+    .back-to-top h1 {
+        font-size: 20px;
+    }
+}
+
+/* タイトル */
+._title{
+    position: relative;
+    text-align: center;
+}
+._title::after{
+    content: '';
+    width: 44px;
+    height: 54px;
+    display: block;
+    background-image: url(../img/title.webp);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    transform: translate(-50%,-100%);
+}
+._text-box{
+    width: 100%;
+    max-width: 540px;
+}
+._text-box h3{
+    font-family: "Shippori Mincho";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+}
+._text-box p{
+    font-family: "Shippori Mincho";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+}
+._text-box ._bold{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    h3 {
+        font-size: 17px !important;
+    }
+
+
+    p {
+        font-size: 15px !important;
+    }
+}
+/*--------------------------
+    スライド
+---------------------------*/
+.swiper{
+    width: 100%;
+    max-width: 702px;
+    height: 420px;
+    margin: 0;
+}
+.swiper-wrapper {
+    width: 100%;
+    position: relative;
+}
+.swiper-slide{
+    width: 20%;
+}
+.swiper-pagination{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    z-index: 99;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+}
+.swiper-pagination-bullet{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #E5E3D8;
+}
+.swiper-pagination-bullet-active{
+    background: #C1B59A;
+    pointer-events: none;
+}
+
+
+.content {
+    width: 100%;
+    max-width: 100vw;
+    height: 395px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.wrapper li {
+    list-style: none;
+    cursor: pointer;
+}
+/* btn */
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px;
+    width: 70%;
+    max-width: 362px;
+    height:50px ;
+    font-family: "Shippori Mincho";
+}
+.btn p{
+    font-family: "Shippori Mincho";
+    font-weight: 700;
+}
+/*--------------------------
+    mv
+---------------------------*/
+section.mv{
+    background: url(../img/mv.webp) lightgray 50% / cover no-repeat;
+    width: 100%;
+    position: relative;
+    aspect-ratio: 16 / 9;
+}
+.mv .mv-img{
+    position: absolute;
+    top: 50%;
+    right:55%;
+    transform: translateY(-50%);
+    width: 36%;
+}
+/*--------------------------
+    top
+---------------------------*/
+/* タイトル */
+.top-title{
+    width: 80%;
+    max-width: 1080px;
+    margin: 160px auto 98px;
+    text-align: center;
+}
+.top-title h1{
+    font-family: "Shippori Mincho";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+    margin-bottom: 26px;
+}
+.top-title h1 span{
+    font-weight: 400;
+}
+.top-title p{
+    font-family: "Shippori Mincho";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; 
+}
+.top-contents{
+    background-image:url(../img/background1.webp) ;
+    background-size: cover;
+    background-position: center;
+    padding: 90px 0;
+    overflow: hidden;
+}
+.top-content2{
+    background-image:url(../img/background2.webp) ;
+}
+.top-content3{
+    background-image:url(../img/background3.webp) ;
+}
+.top-contents_inner{ 
+    position: relative;
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right; 
+    gap:7.5% ;                                                                                                                                                                                                                                                                                                                                                                                                             
+}
+.top-contents_inner ._text-box h3{
+    margin-bottom: 28px;
+}
+.top-contents_inner ._text-box p{
+    margin-bottom: 8px;
+}
+.top-contents_inner ._text-box a {
+    margin-top: 25px;
+}
+.top-contents_inner ._text-box ._bold{
+    margin-bottom: 0;
+}
+/* スライド */
+.top-content1 .content1 {
+    background-image: url(../img/slide1-2.webp);
+}
+.top-content1 .content2 {
+    background-image: url(../img/slide1-1.webp);
+}
+.top-content1 .content3 {
+    background-image: url(../img/slide1-3.webp);
+}
+.top-content1 .content4 {
+    background-image: url(../img/slide1-4.webp);
+}
+.top-content1 .content5 {
+    background-image: url(../img/slide1-5.webp);
+}
+.top-contents .swiper{
+    width: 100vw;
+    margin-left:calc(60% - 50vw); 
+}
+.top-content1 .swiper-pagination-bullet{
+    background: #5c0900;
+}
+.top-content1 .swiper-pagination-bullet-active{
+    background: #fff;
+}
+
+.top-content2 .content1 {
+    background-image: url(../img/slide1-2-1.webp);
+}
+.top-content2 .content2 {
+    background-image: url(../img/slide1-2-2.webp);
+}
+.top-content2 .content3 {
+    background-image: url(../img/slide1-2-3.webp);
+}
+.top-content2 .content4 {
+    background-image: url(../img/slide1-2-4.webp);
+}
+.top-content2 .content5 {
+    background-image: url(../img/slide1-2-5.webp);
+}
+.top-content2 .content6 {
+    background-image: url(../img/slide1-2-6.webp);
+}
+.top-content2 .swiper-pagination-bullet{
+    background: #747474;
+}
+.top-content2 .swiper-pagination-bullet-active{
+    background: #fff;
+}
+
+.top-content3 .content1 {
+    background-image: url(../img/slide1-3-1.webp);
+}
+.top-content3 .content2 {
+    background-image: url(../img/slide1-3-2.webp);
+}
+.top-content3 .content3 {
+    background-image: url(../img/slide1-3-3.webp);
+}
+.top-content3 .content4 {
+    background-image: url(../img/slide1-3-4.webp);
+}
+.top-content3 .content5 {
+    background-image: url(../img/slide1-3-5.webp);
+}
+.top-content3 .content6 {
+    background-image: url(../img/slide1-3-6.webp);
+}
+.top-content3 .swiper-pagination-bullet{
+    background: #EC89B4;
+}
+.top-content3 .swiper-pagination-bullet-active{
+    background: #fff;
+}
+
+
+.top-contents_inner ._text-box .present{
+    content: '';
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    width: 12%;
+}
+
+._text-box {
+    color: #fff;
+}
+.top-content3 ._text-box{
+    color:#DC0049 ;
+}
+._text-box .btn{
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    border-radius: 26px;
+    width: 66%;
+    max-width: 362px;
+    min-width: 222px;
+}
+.top-content2 ._text-box .btn,.top-content3 ._text-box .btn{
+    width: 100%;
+    max-width: 540px;
+}
+.top-contents_inner ._text-box .btn {
+    margin-top: 25px;
+}
+.top-contents_inner ._text-box .btn p{
+    color: #951102;
+    margin-bottom: 0;
+}
+.top-content2 ._text-box .btn p{
+    color: #000;
+}
+.top-content3 ._text-box .btn p{
+    color: #DC0049;
+}
+.btn-present a{
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .top-contents_inner ._text-box .sp-present{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .top-contents_inner ._text-box .sp-present img{
+        height: 82px;
+    }
+
+    .top-contents_inner ._text-box .a{
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .btn-present {
+        display: flex;
+        justify-content: center;
+    }
+
+    .top-contents_inner ._text-box h3{
+        margin-bottom: 5px;
+    }
+}
+/*--------------------------
+    bottom
+---------------------------*/
+
+/*--------------------------
+    bottom-suggest
+---------------------------*/
+.bottom-suggest{
+    position: relative;
+    padding-top: 146px;
+    background-image: url(../img/background-img.webp);
+    background-size: cover;
+    background-position: bottom;
+}
+.suggest-contents{
+    display: flex;
+    justify-content: left;
+    gap: 2%;
+    padding-bottom: 90px;
+    margin:0 auto 50px;
+    width: 80%;
+    max-width: 1080px;
+}
+.suggest-ribbon{
+    position: absolute;
+    width: auto;
+    height: 48px;
+    top: 66px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* スライド２ */
+.bottom-suggest .content1 {
+    background-image: url(../img/slide2-1_new.png);
+}
+.bottom-suggest .content2 {
+    background-image: url(../img/slide2-2_new.png);
+}
+.bottom-suggest .content3 {
+    background-image: url(../img/slide2-3_new.png);
+}
+.bottom-suggest .swiper{
+    width: 100vw;
+    margin-right:calc(60% - 50vw); 
+}
+/* テキスト */
+.bottom-suggest h2{
+    color: #366E1C;
+    text-align: center;
+    font-family: "Shippori Mincho";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+    margin-bottom: 24px;
+}
+.suggest-contents ._text-box{
+    color: #312D2A;
+}
+.suggest-contents ._text-box h3{
+    margin-bottom: 16px;
+}
+.suggest-contents ._text-box ._bold{
+    margin-bottom: 22px;
+}
+.suggest-contents ._text-box .btn{
+    color: #fff;
+    background: #366E1C;
+}
+/* bar */
+.bottom-bar img{
+    width:100% ;
+}
+
+@media screen and (max-width: 768px) {
+    .suggest-contents ._text-box ._bold{
+        margin-bottom: 5px;
+    }
+
+    .suggest-contents ._text-box h3{
+        font-size: 18px !important;
+        margin-bottom: 8px;
+    }
+
+    .bottom-bar h2.sp-only {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .bottom-bar h2.sp-only {
+        font-size: 15.5px !important;
+    }
+
+    .suggest-contents ._text-box h3{
+        font-size: 17px !important;
+        margin-bottom: 5px;
+    }
+}
+
+
+/*--------------------------
+    bottom-history
+---------------------------*/
+.bottom-history{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 48px;
+}
+.history-title{
+    margin-bottom: 38px;
+}
+.history-title h2{
+    text-align: center;
+    font-family: "Shippori Mincho";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+}
+.history-title h2 span{
+    font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+    .history-title .sub-text {
+        font-size: 14px !important;
+        font-weight: bold;
+    }
+}
+/* スライド3 */
+.swiper3{
+    width: 100%;
+    max-width: 1080px;
+    height: 340px;
+    margin:0 auto 90px;
+}
+.swiper3 .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 23%;
+    height: 308px;
+    box-shadow: 4px 4px 9px 0px rgba(139, 139, 139, 0.25);
+}
+.swiper3 .swiper-slide img{
+    width: 100%;
+}
+.swiper3 .slide-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 128px;
+}
+.swiper3 .slide-text p{
+    font-family: "Shippori Mincho";
+}
+
+/*--------------------------
+    bottom-bar
+---------------------------*/
+.bottom-bar {
+    text-align: center;
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.bottom-bar h2{
+    font-family: "Shippori Mincho";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+    margin-bottom: 26px;
+}
+.bottom-bar p{
+    width: 60%;
+    margin:0 auto;
+}
+.bottom-bar p{
+    font-family: "Shippori Mincho";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+}
+.bottom-bar img{
+    width: 100%;
+    margin-top: 26px;
+}
+.bar-background{
+    background: #F2F2F2;
+    width:100%;
+    box-sizing: border-box;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    margin-top: 48px;
+}
+.bar-background p{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*--------------------------
+    bottom-sns
+---------------------------*/
+.bottom-sns{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 80px;
+    margin-bottom: 108px;
+}
+.sns-flex{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid #252424;
+    padding: 22px 20px;
+}
+.sns-flex img{
+    width: 55px;
+}
+.sns-flex p{
+    color: #252424;
+    font-family: "Noto Serif JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/*--------------------------
+    bottom-sns
+---------------------------*/
+footer{
+    background: #EDE8DD;
+    text-align: center;
+}
+footer img{
+    width: 30%;
+    max-width: 296px;
+    margin: 74px auto 55px;
+}
+footer p{
+    color: #000;
+    text-align: center;
+    font-family: "Shippori Mincho";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+}
+footer iframe{
+    width: 80%;
+    max-width: 1080px;
+    height: 350px;
+    margin: 40px auto 160px;
+}
+footer .copyright{
+    background: #F1F1F1;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .copyright p{
+    color: #949494;
+    text-align: center;
+    font-family: "Shippori Mincho";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+.pc-only{
+    display: block;
+}
+.sp-only{
+    display: none;
+}
+@media screen and (max-width:1080px) {
+    .pc-only{
+        display: none;
+    }
+    .sp-only{
+        display: block;
+    }
+}
+@media screen and (max-width:900px) {
+    /*--------------------------
+    共通
+    ---------------------------*/
+    .swiper{
+        width: 100%;
+        height: 232px;
+    }
+    .content{
+        height: 210px;
+    }
+    .swiper-pagination{
+        gap: 10px;
+    }
+    .pc-only{
+        display: none;
+    }
+    /*--------------------------
+    mv
+    ---------------------------*/
+    section.mv{
+        height: auto;
+        background-position: center;
+    }
+
+    .mv .mv-img {
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%,-50%);
+    }
+    /*--------------------------
+    top
+    ---------------------------*/
+    .top-title{
+        width: 90%;
+    }
+    .top-contents_inner{
+        width: 91%;
+        max-width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .top-contents .swiper{
+        width: 100%;
+        margin-left: auto;
+    }
+    .top-contents_inner ._text-box .present{
+        width: 30%;
+    }
+    .top-contents_inner ._text-box ._bold{
+        margin-bottom: 8px;
+    }
+    /*--------------------------
+    bottom-suggest
+    ---------------------------*/
+    .bottom-suggest h2{
+        font-size: 26px;
+    }
+    .suggest-contents{
+        flex-direction: column-reverse;
+        width: 90%;
+        padding-bottom: 80px;
+    }
+    /* スライド */
+    .bottom-suggest .swiper{
+        width: 100%;
+        margin-right: auto;
+        margin-bottom: 16px;
+    }
+    .suggest-contents ._text-box h3{
+        font-size: 17px;
+    }
+    /*--------------------------
+    bottom-history
+    ---------------------------*/
+    .bottom-history{
+        width: 90%;
+    }
+    /* slide */
+    .swiper3{
+        height: 300px;
+        margin: 0 auto 80px;
+    }
+    .swiper3 .swiper-slide{
+        height: 240px;
+    }
+    .swiper3 .slide-text{
+        height: 118px;
+    }
+    /*--------------------------
+    bottom-bar
+    ---------------------------*/
+    .bottom-bar{
+        width: 90%;
+    }
+    .bottom-bar p{
+        width: 100%;
+    }
+    .bottom-bar img{
+        object-fit:cover ;
+    }
+    .bar-background{
+        text-align: left;
+        padding: 28px 16px;
+    }
+    /*--------------------------
+    bottom-bar
+    ---------------------------*/
+    .bottom-sns{
+        flex-direction: column;
+        width: 90%;
+        margin: 60px auto 80px;
+    }
+    /*--------------------------
+    footer
+    ---------------------------*/
+    footer img{
+        width: 60%;
+        margin-bottom: 30px;
+    }
+    footer iframe{
+        width: 90%;
+        margin-bottom: 60px;
+    }
+    footer .copyright p{
+        font-size: 12px !important;
+    }
+}
