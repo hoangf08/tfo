@@ -373,6 +373,9 @@ section.mv{
 .top-content3{
     background-image:url(../img/background3.webp) ;
 }
+.top-content4{
+    background-image:url(../img/background4.webp) ;
+}
 .top-contents_inner{ 
     position: relative;
     width: 80%;
@@ -471,6 +474,28 @@ section.mv{
     background: #fff;
 }
 
+.top-content4 .content1 {
+    background-image: url(../img/recomment_plan_slide01_image01.webp);
+}
+.top-content4 .content2 {
+    background-image: url(../img/recomment_plan_slide01_image02.webp);
+}
+.top-content4 .content3 {
+    background-image: url(../img/recomment_plan_slide01_image03.webp);
+}
+.top-content4 .content4 {
+    background-image: url(../img/recomment_plan_slide01_image04.webp);
+}
+.top-content4 .content5 {
+    background-image: url(../img/recomment_plan_slide01_image05.webp);
+}
+.top-content4 .swiper-pagination-bullet{
+    background: #9ec2e9;
+}
+.top-content4 .swiper-pagination-bullet-active{
+    background: #fff;
+}
+
 
 .top-contents_inner ._text-box .present{
     content: '';
@@ -485,6 +510,9 @@ section.mv{
 }
 .top-content3 ._text-box{
     color:#DC0049 ;
+}
+.top-content4 ._text-box{
+    color:#b8c058 ;
 }
 ._text-box .btn{
     display: flex;
@@ -511,6 +539,9 @@ section.mv{
 }
 .top-content3 ._text-box .btn p{
     color: #DC0049;
+}
+.top-content4 ._text-box .btn p{
+    color: #b8c058;
 }
 .btn-present a{
     margin-top: 25px;
