@@ -1,0 +1,210 @@
+var obj;var isLogin=-1;$(function(){$(document).on('click','.header-login.logined > p',function(){$('.header-login .header-login-cont').fadeToggle();$(this).parent().toggleClass('active');$('.header-tel,.header-reserve').removeClass('active');$('.header-tel-cont,.header-reserve-cont').hide();});$(document).on('click','.golf-fix .tel > p',function(){$('.golf-tel-cont').fadeToggle();$(this).parent().toggleClass('active');$('.golf-fix .searchbox').removeClass('active');$('.golf-searchbox-cont').hide();});});function setLoginContent(contentType){var successflg=false;if(isLogin==-1){$.ajax({type:'POST',url:'/getSpcParameter/',async:false,data:{contenttype:contentType},dataType:'html',success:function(data){var searchTag='<contents>'
+var json=data.slice(data.indexOf(searchTag)+searchTag.length,data.indexOf('</contents>'));if(json!==''){obj=JSON.parse(json);if(obj.StatusId!=null){isLogin=1;}else{isLogin=0;}
+successflg=true;}else{isLogin=0;successflg=true;}},error:function(data){obj=null;successflg=false;}});}else{successflg=true;}
+return successflg;}
+function setView(){$('.searchBox').attr("type","text");$('.inputtext').attr("type","text");var viewInterval=setInterval(function(){if(isLogin!=-1){if(obj!=null){if(isLogin==1){setStatusBar(obj);setHeaderLogin(obj);setHeaderTel(obj);setHeaderTelOffice(obj);setHeaderTelOther(obj);setGolfTelPopup(obj);setGolfTelSp(obj);}
+if(obj.recommend!=null){setRecommendEngine(obj);}}
+$(".load").removeClass("load");clearInterval(viewInterval);}},100);}
+function setStatusBar(obj){if($('section.mypage-status:not(.mypage-club)').length){var point=(obj.Point&&obj.Point!="null")?obj.Point:"－";var div='<section class="mypage-status mypage-status-'+obj.StatusId+'">\
+                <a href="/member/">\
+                <div class="inner">\
+                <div class="card">\
+                    <img src="/images/mypage/mypage_status_card_'+obj.StatusId+'.png" alt="">\
+                </div>\
+                <div class="center">\
+                    <div class="name">\
+                    <p>ようこそ  <span>'+obj.MemberName+'</span><span class="small">さま</span></p>\
+                    </div>\
+                    <div class="rank">\
+                    <p>'+obj.Status+'</p>\
+                    </div>\
+                </div>\
+                <div class="right">\
+                    <div class="medal">\
+                    <dl>\
+                        <dt>保有メダル数</dt>\
+                        <dd>'+obj.Medal+'<span>メダル</span></dd>\
+                    </dl>\
+                    </div>\
+                    <div class="point">\
+                    <dl>\
+                        <dt>保有ポイント(用途限定含む)</dt>\
+                        <dd>'+point+'<span>ポイント</span></dd>\
+                    </dl>\
+                    </div>\
+                </div>\
+                </div>\
+                </a>\
+            </section>';$('section.mypage-status').replaceWith(div);}}
+function setHeaderLogin(obj){if($("div.header-login.cv-link.replace-content #header-login-cont").length){var statusNote=obj.StatusNote?'（'+obj.StatusNote+'）':'';var point=(obj.Point&&obj.Point!="null")?obj.Point:"－";var pointNote=(obj.PointNote&&obj.PointNote!="null")?"（"+obj.PointNote+"）":"";var div='<div class="mfp-close"></div>\
+                    <div class="head">\
+                        <p>ようこそ<br class="pc-fix"><span>'+obj.MemberName+'</span>さま</p>\
+                    </div>\
+                    <div class="mypage-club mypage-status mypage-status-'+obj.StatusId+'">\
+                        <h3>Seibu Prince Global Rewards<br class="sp-fix">（SEIBU PRINCE CLUB）</h3>\
+                        <div class="body">\
+                            <div class="rank">\
+                                <dl>\
+                                    <dt><p>Seibu Prince Global Rewards</p></dt>\
+                                    <dd>'+obj.Status+'</dd>\
+                                </dl>\
+                            </div>\
+                            <div class="left">\
+                                <img src="/images/mypage/mypage_club_card_'+obj.StatusId+'.png" alt="">\
+                            </div>\
+                            <div class="right">\
+                                <div class="cf num pc-fix">\
+                                    <div class="medal">\
+                                        <dl>\
+                                            <dt>保有メダル数</dt>\
+                                            <dd>'+obj.Medal+'<span>メダル</span></dd>\
+                                        </dl>\
+                                    </div>\
+                                    <div class="point">\
+                                        <dl>\
+                                            <dt>保有ポイント(用途限定含む)</dt>\
+                                            <dd>'+point+'<span>ポイント</span></dd>\
+                                            <dd class="note">'+pointNote+'</dd>\
+                                            <dd class="link"><span><a href="https://club.seibugroup.jp/mypage/login/" target="_blank">ポイントの詳細はこちら</a></span></dd>\
+                                        </dl>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                                <div class="cf num sp-fix">\
+                                    <div class="medal">\
+                                        <dl>\
+                                            <dt>保有メダル数</dt>\
+                                            <dd>'+obj.Medal+'<span>メダル</span></dd>\
+                                        </dl>\
+                                    </div>\
+                                    <div class="point">\
+                                        <dl>\
+                                            <dt>保有ポイント(用途限定含む)</dt>\
+                                            <dd>'+point+'<span>ポイント</span></dd>\
+                                            <dd class="note">'+pointNote+'</dd>\
+                                            <dd class="link"><a href="https://club.seibugroup.jp/mypage/login/" target="_blank">ポイントの詳細はこちら</a></dd>\
+                                        </dl>\
+                                    </div>\
+                                </div>\
+                            <div class="btn">\
+                                <ul>\
+                                    <li><a href="'+obj.BenefitsLink+'" class="btn btn-type03">'+obj.Status+'の特典</a></li>\
+                                    <li class="pc-fix"><a href="/member/" class="btn btn-mypage">メンバーページ</a></li>\
+                                </ul>\
+                            </div>\
+                        </div>\
+                    </div>\
+                    <div class="bottom">\
+                        <div class="btn">\
+                            <ul>\
+                                <li class="sp-fix mypage-btn"><a href="/member/" class="btn btn-mypage">メンバーページ</a></li>\
+                                <li class="seibu-btn"><a href="https://www.member.seibuprince.com/ja/member-portal/" class="btn btn-type05">Seibu Prince Global Rewardsメンバーページ<br>（興味・関心事の入力はこちら）</a></li>\
+                                <li><a href="https://club.seibugroup.jp/" class="btn btn-type05">会員情報変更・確認</a></li>\
+                                <li><a href="/logout_ncrm.jsp" class="btn btn-logout">ログアウト</a></li>\
+                            </ul>\
+                        </div>\
+                    </div>\
+                    <div class="mfp-close-bottom">\
+                        <div class="mfp-close"></div>\
+                    </div>';$("div.header-login.cv-link.replace-content p.pc-fix").text(obj.MemberName+'さま');$("div.header-login.cv-link.replace-content p.sp-fix a").text(obj.MemberName+'さま');$("div.header-login.cv-link.replace-content #header-login-cont").html(div);$("div.header-login.cv-link.replace-content #header-login-cont").addClass("status-login");$("div.header-login.cv-link.replace-content #header-login-cont").removeClass("status-logout");$("div.header-login.cv-link.replace-content").addClass("status-login");$("div.header-login.cv-link.replace-content").removeClass("replace-content");$("div.header-login.cv-link.status-login").prepend('<div id="IS-Member-id" style="display: none; visibility: hidden;">'+obj.MemberId.slice(-8)+'</div>');}}
+function setHeaderTel(obj){var dir=location.pathname.split("/");var dir2=dir[1];if($('div.sp-tel-block.sp-modal.home-tel').length>0&&dir2!="golf"){var div='<div class="sp-tel-block sp-modal login" id="sp-tel-block">\
+                <div class="mfp-close"></div>\
+                <div class="sp-reserve-head">\
+                <h2><span>電話での宿泊予約</span></h2>\
+                </div>\
+                <div class="member-cont">\
+                <div class="sp-reserve-head status-head">\
+                    <h3 class="head">'+resanitize(obj.DeskContact)+'</h3>\
+                    <p class="lead">'+obj.DeskDescription+'</p>\
+                </div>\
+                <div class="sp-tel-info status-'+obj.StatusId+'">\
+                    <p class="num"><span class="pc-tel">'+obj.DeskTel+'</span><a href="tel:'+obj.DeskTel+'" class="sp-tel">'+obj.DeskTel+'</a></p>\
+                    <p class="note">'+obj.DeskReception+'</p>\
+                </div>\
+                </div>\
+                <div class="main-cont">\
+                <div class="sp-reserve-head">\
+                    <h3 class="head">西武プリンスホテルズ＆リゾーツ 予約センター</h3>\
+                    <p>全国の西武プリンスホテルズ&リゾーツの宿泊予約を<br class="sp-fix">お電話ひとつでご案内。<br class="pc-fix">24時間安心サポート！</p>\
+                </div>\
+                <div class="sp-tel-info">\
+                    <p class="num"><img src="/images/common/icon_free.png" alt="フリーダイヤル"><span class="pc-tel">0120-00-8686</span><a href="tel:0120008686" class="sp-tel">0120-00-8686</a></p>\
+                    <p class="note">年中無休（24時間対応）</p>\
+                </div>\
+                <div class="sp-reserve-bottom">\
+                    <p class="notice">※PHSや一部の携帯電話・IP電話・海外からのお電話などで「フリーダイヤル」への通話ができない場合はTEL：<span class="pc-tel">03-6741-9155</span><a href="tel:0367419155" class="sp-tel">03-6741-9155</a>をご利用ください。<br><br class="pc-fix">\
+                    ※西武プリンスホテルズ＆リゾーツ 予約センターではお客さまサービス向上のため、通話を記録させていただいております。</p>\
+                    <div class="sp-header-util">\
+                    <ul>\
+                    <li><a href="/support/faq/">よくある質問</a></li>\
+                    <li><a href="/support/">お問合せ先一覧</a></li>\
+                    </ul>\
+                    </div>\
+                </div>\
+                </div>\
+                <div class="mfp-close-bottom">\
+                <div class="mfp-close"></div>\
+                </div>\
+            </div>';$('div.sp-tel-block.sp-modal.home-tel').replaceWith(div);}}
+function setHeaderTelOffice(obj){if($("div.member-cont.office-tel").length>0){var dir=location.pathname.split("/");var dir2=dir[1];if(dir2==null||dir2==''||dir2=='sanyo-so'){dir2='support';}
+var div='<div class="member-cont">\
+		<div class="sp-reserve-head status-head">\
+		  <h3 class="head">'+resanitize(obj.DeskContact)+'</h3>\
+		  <p class="lead">'+obj.DeskDescription+'</p>\
+		</div>\
+		<div class="sp-tel-info status-'+obj.StatusId+'">\
+		  <p class="num"><span class="pc-tel">'+obj.DeskTel+'</span><a href="tel:'+obj.DeskTel+'" class="sp-tel">'+obj.DeskTel+'</a></p>\
+		  <p class="note">'+obj.DeskReception+'</p>\
+		</div>\
+	  </div>';$("div.member-cont.office-tel").replaceWith(div);}
+if($("div.sp-reserve-bottom.office-tel").length>0){var bottom='<div class="sp-reserve-bottom">\
+            <div class="sp-header-util">\
+            <ul>\
+                <li><a href="/'+dir2+'/faq/">よくある質問</a></li>\
+                <li><a href="/support/">お問合せ先一覧</a></li>\
+            </ul>\
+            </div>\
+        </div>';$("div.sp-reserve-bottom.office-tel").replaceWith(bottom);}
+if($('div.sp-tel-block.sp-modal').length>0){$('div.sp-tel-block.sp-modal').addClass('login');}}
+function setHeaderTelOther(obj){var dir=location.pathname.split("/");var dir2=dir[1];if($("div.login-replace-tel").length>0&&(dir2!="golf"||obj.StatusId!="blue")){var div='<p class="open pc-fix"><span>電話予約</span></p>\
+            <p class="open sp-fix"><a href="#sp-golf-tel-block" class="open-popup">電話予約</a></p>\
+            <p class="close"></p>';$("div.login-replace-tel").replaceWith(div);}
+if($("div.replace-content-tel").length>0){var div='<div class="member-cont">\
+                <div class="sp-reserve-head status-head">\
+                    <h3>'+resanitize(obj.DeskContact)+'</h3>\
+                    <p class="lead">'+obj.DeskDescription+'</p>\
+                </div>\
+                <div class="sp-tel-info status-'+obj.StatusId+'">\
+                    <p class="num"><span class="pc-tel">'+obj.DeskTel+'</span><a href="tel:'+obj.DeskTel.replace(/-/g,'')+'" class="sp-tel">'+obj.DeskTel+'</a></p>\
+                    <p class="note">'+obj.DeskReception+'</p>\
+                </div>\
+            </div>';$("div.replace-content-tel").replaceWith(div);}}
+function setRecommendEngine(obj){if($("section.recommend-engine").length>0){$("section.recommend-engine").html(resanitize(obj.recommend));}}
+function setGolfTelPopup(obj){if($("div.golf-popup-content").length>0&&obj.StatusId!="blue"){var div='<li class="tel popup-menu">\
+                <p class="open pc-fix"><span>電話予約</span></p>\
+                <p class="open sp-fix"><a href="#sp-golf-tel-block" class="open-popup">電話予約</a></p>\
+                <p class="close"></p>\
+                <div class="popup-menu-cont golf-tel-cont">\
+                    <div class="sp-modal golf-tel-block" id="sp-golf-tel-block">\
+                        <div class="mfp-close"></div>\
+                        <div class="open-popup-cont">\
+                            <h2>電話でのご予約</h2>\
+                            <div class="member-cont">\
+                                <div class="sp-reserve-head status-head">\
+                                    <h3>'+resanitize(obj.DeskContact)+'</h3>\
+                                    <p class="lead">'+obj.DeskDescription+'</p>\
+                                </div>\
+                                <div class="sp-tel-info status-'+obj.StatusId+'">\
+                                    <p class="num"><span class="pc-tel">'+obj.DeskTel+'</span><a href="tel:'+obj.DeskTel.replace(/-/g,'')+'" class="sp-tel">'+obj.DeskTel+'</a></p>\
+                                    <p class="note">'+obj.DeskReception+'</p>\
+                                </div>\
+                            </div>\
+                            <div class="mfp-close-bottom">\
+                                <div class="mfp-close"></div>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </li>';$("div.golf-popup-content").replaceWith(div);}}
+function setGolfTelSp(obj){if($("div.sp-fixed-btn.no-login").length>0&&$("div.sp-fixed-btn.hidden").length>0&&obj.StatusId!="blue"){$("div.sp-fixed-btn.hidden").removeClass("hidden");$("div.sp-fixed-btn.no-login").addClass("hidden");}}
+function resanitize(str){return $('<div>').html(str).text();}

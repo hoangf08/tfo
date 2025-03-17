@@ -1,0 +1,1841 @@
+.info-block .p-tab-width li {
+  width: 149px;
+}
+
+.area-top .info-block .p-tab-head li a {
+  font-size: 11px;
+}
+
+.area .p-header02 {
+  box-shadow: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 35px !important;
+}
+
+.area .p-header02 .text {
+  margin-top: -67px !important;
+}
+
+.h2-type03-adjust {
+  margin: 0 !important;
+}
+
+.info-article-header .cat-restaurant {
+  background-color: #222222;
+}
+
+@media screen and (max-width: 736px) {
+  .info-block .p-tab-width li {
+    width: 24% !important;
+  }
+
+  .p-article .inner .p-article {
+    width: 100% !important;
+  }
+
+  .area .p-header02 {
+    padding-bottom: 15px !important;
+  }
+}
+
+
+.stay-top .room-list-cont .inner .box .p-acc-slider {
+  max-height: 304px !important;
+}
+
+.stay-top .room-list-cont .box img{
+    max-height: 304px !important;
+}
+@media screen and (max-width: 736px) {
+    .stay-top .room-list-cont .inner .box .p-acc-slider {
+        max-height: 370px !important;
+    }
+
+    .stay-top .room-list-cont .box img{
+        max-height: 370px !important;
+    }
+}
+
+.stay-top .plan-pickup {
+  background-size: 100% 250px;
+}
+
+.club-block .club-inner {
+   background-position: center center !important;
+}
+.stay-detail .plan-meal .p-asset10 .block .box img {
+  max-width: 412px;
+  max-height: 240px;
+}
+.p-asset06 dt:before {
+  content: '' !important;
+}
+.p-asset08 .box:nth-child(4n+1) {
+  margin-left: 0;
+}
+
+.restaurant .shop-search .submit button:hover {
+  opacity: 0.5;
+}
+
+.text-gp {
+  word-wrap: break-word;
+  margin-bottom: 30px;
+}
+
+.lowie {
+  text-align: center;
+}
+
+.hotel-map .sp-refine-block .refine-map-body .info .info-bottom {
+  height: 50%;
+}
+
+.datepicker {
+  width: 340px;
+}
+
+.datepicker span {
+  padding-left: 4px;
+}
+
+.win7 .datepicker span {
+  padding-left: 0px;
+}
+
+.reserve-body-input .num {
+  margin-left: 9px;
+}
+
+.lodging-slide-text {
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  bottom: 25px;
+  left: 15px;
+}
+
+.refine-list dd .block:nth-child(2n+1) {
+    margin-right: 11px;
+}
+
+.refine-list dd .block:nth-child(n+3) {
+    margin-top: 10px;
+}
+
+.restaurant .shop-list .p-tab-block .p-tab-body .box .areatopic {
+    display:none;
+}
+
+.restaurant .shop-list .p-tab-block .p-tab-body .box h3 {
+    margin-top: 20px;
+}
+
+.refine-list dd .block .name {
+  border-bottom: initial;
+  max-width: 255px;
+  word-wrap: break-word;
+}
+
+.hotel .refine-map-body .middle .lead {
+  height: auto;
+}
+
+.hotel .refine-map-body .info{
+  position: relative;
+}
+
+.hotel .refine-map-body .bottom {
+  position: absolute;
+  bottom: 22px;
+  width: 314px;
+}
+
+.hotel .refine-block .p-tab-block .block {
+  height: initial;
+}
+
+@media screen and (min-width: 737px) {
+
+    .area-top .service-slider-02 .box {
+        width: 307px !important;
+    }
+    .area .price-list .price span {
+      white-space: nowrap;
+    }
+
+    .p-article .movie {
+      max-width: 890px;
+      padding-top: 42.6%;
+      margin: 0 auto 35px;
+      position: relative;
+    }
+
+    .p-asset02 .middle .budget {
+      width: 250px;
+    }
+
+    .stay-detail .p-article .inner .res-list-cont.cont-type02 .block {
+        width: 1166px;
+        margin: 0px 40px 5px;
+    }
+    .stay-detail .inner .res-list-cont {
+        padding: 30px 0px;
+        margin: 0px -35px 30px;
+    }
+
+    .stay-detail .p-article .inner .res-list-head {
+      margin: 30px -35px;
+    }
+
+    body.stay-detail.area .price-list .num {
+      width: 72px;
+    }
+
+    body.event-detail .event-detail-plan .head li {
+      margin-right: 30px;
+    }
+
+    body.event-detail .event-detail-plan .head li:last-child {
+      margin-right: 0px;
+    }
+
+    body.area-home .area-home-sns .fb {
+      height: 435px;
+      margin-left: 57px;
+      width: 500px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .bnr-block:not(.office-bnr) .bnr-slider-wrap .bnr-slider .slick-list .slick-track {
+        width: initial !important;
+    }
+    .region-block .p-asset03-slider .slick-list .slick-track {
+            margin-left: initial !important;
+            margin-right: initial !important;
+    }
+    .p-article .movie {
+      max-width: 890px;
+      padding-top: 52.25%;
+      margin: 0 auto 35px;
+      position: relative;
+    }
+
+    .p-article .general-parts-movie {
+      max-width: 890px;
+      margin: 0 auto 35px;
+      position: relative;
+    }
+
+    .p-article .general-parts-movie iframe {
+      width: 100% !important;
+      height: 315px !important;
+    }
+
+    body.event-detail .event-detail-plan .head li {
+      margin-right: 20px;
+    }
+
+    body.event-detail .event-detail-plan .head li:nth-child(2n) {
+      margin-right: 0px;
+    }
+    body.wedding-top .sp-fixed-block.sp-fix .sp-fixed-tel a {
+      padding-left: 10px;
+    }
+    body.wedding-top .wedding-menu .wedding-fix li a {
+      padding-left: 0px !important;
+      text-align: center;
+      white-space: nowrap;
+    }
+}
+
+.p-article .general-parts-movie {
+  text-align: center;
+}
+
+.p-article .movie iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.trip_advisor-add div div{
+    margin: 0 auto !important;
+}
+
+.area-top .share-block-top div div,
+.res-shop .share-plan .share-block div{
+    display:inline;
+}
+
+.area-top .mv-slider02 .slick-prev {
+  z-index: 1041;
+}
+
+.area-top .mv-slider02 .slick-next {
+  z-index: 1041;
+
+}
+
+/* .share-block{
+  padding: 55px 0 40px 0;
+} */
+.area-info-detail .share-block{
+  padding: 55px 0 40px 0;
+}
+.area-top .share-block .bnr,
+.res-shop .share-block .bnr {
+  padding: 0px 20px 15px 0;
+}
+.area-top .share-block .trip_advisor-other{
+  padding: 15px 20px 15px 0;
+}
+.area-top .share-block .sns,
+.res-shop .share-block .sns {
+  padding: 55px 0 40px 0;
+}
+@media screen and (max-width: 736px) {
+    .area-top .share-block .bnr,
+    .res-shop .share-block .bnr{
+        padding: 20px 0 0 0;
+    }
+}
+body.area-top .mv{
+    margin-top: 5px;
+}
+
+body.ski-course .ski-course-rec .box img {
+    width: 100%;
+    height: auto;
+}
+
+body.area-home .area-home-enjoy .area-home-enjoy-tab .p-tab-body .box:not(.slick-slide) {
+  display: block !important;
+  visibility: hidden;
+  height: 0px;
+}
+
+body.area-home .area-home-enjoy .area-home-enjoy-tab .p-tab-body .box.active {
+  visibility: visible !important;
+  height: auto !important;
+}
+
+.area-home-news .p-asset04 .box .pdf {
+  background: url(/images/common/icon_pdf.png) 98.5% center no-repeat #f6f6f6;
+  background-size: 24px auto;
+}
+
+.area-home-news .p-asset04 .box .blank {
+  background: url(/images/common/icon_blank.png) 98.5% center no-repeat #f6f6f6;
+  background-size: 24px auto;
+}
+
+body.area-home .main .area-home-recommended {
+  margin-top: 30px;
+}
+
+body.area-home .main .area-home-region {
+  margin-top: 30px;
+}
+
+body.area-home .area-home-enjoy .area-home-enjoy-tab .box:not(.active) .bg {
+  margin: 0px !important;
+}
+
+.p-article table.p-table td.sideth {
+  background-color: #F6F6F6;
+  font-weight: bold;
+  text-align: left;
+}
+
+body.golf.area.info .p-tab-head{
+  width: 970px !important;
+}
+
+body.golf.area.info .info-block .p-tab-width li{
+  width: 239px !important;
+  background-color: #F8F8F8;
+}
+body.golf.area.info .p-tab-head li.active{
+  border-color: #0E7134;
+  border-bottom-color: #fff;
+  background-color: #fff;
+}
+body.ski.area.info .info-block .p-tab-width li{
+  width: 239px !important;
+  background-color: #F8F8F8;
+}
+body.ski.area.info .p-tab-head li.active{
+  border-color: #507BCC;
+  border-bottom-color: #fff;
+  background-color: #fff;
+}
+body.wedding.area.info .info-block .p-tab-width li{
+  width: 239px !important;
+  background-color: #F8F8F8;
+}
+body.wedding.area.info .p-tab-head li.active{
+  border-color: #907A0F;
+  border-bottom-color: #fff;
+  background-color: #fff;
+}
+body.wedding.area.info .p-tab-head li:first-child{
+  margin-right: 0px;
+}
+body.wedding.area.info .info-list-lv02 > .p-tab-head li:first-child{
+  margin-left: 0px;
+}
+
+.ski-top.area .important-news dl {
+  max-width:500px;
+}
+
+.wedding-top.area .p-asset04 .cat-plan {
+  background-color: #907A0F;
+}
+.wedding-top.area .p-asset04 .cat-fair {
+  background-color: #907A0F;
+}
+.wedding-top.area .p-asset04 .cat-event {
+  background-color: #907A0F;
+}
+
+.area .plan-meal{
+  width: 1260px;
+  margin: 0 auto;
+}
+
+body.res-shop .room-search-form ul {
+  display: block;
+}
+
+body.stay-detail .p-asset09 .box:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+
+body.wedding-top .wedding-reason .box {
+  height: auto;
+}
+
+.ski-info-msg-cont .p-article {
+  width: auto;
+}
+.ski-info-msg-cont .p-article .h3-type02 {
+  border-left: 5px solid #E6E6E6;
+  font-size: 18px;
+  margin-bottom: 34px;
+  padding: 5px 0 5px 27px;
+  font-weight: normal;
+}
+.ski-info-msg-cont .p-article .h4-type02 {
+  background: url(/images/common/h3_line_01.png) 0 5px no-repeat;
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+  padding-left: 33px;
+  border-left: 0;
+}
+.ski-info-msg-cont .p-article .movie {
+  max-width: 890px;
+  padding-top: 42.6%;
+  margin: 0 auto 35px;
+  position: relative;
+}
+.ski-info-msg-cont .p-article .movie iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.ski-info-msg-cont .p-article .info-article-body .col2-block .box {
+  float: left;
+  width: 553px;
+}
+.ski-info-msg-cont .p-article .col1-img-block .img {
+  width: 553px;
+}
+.ski-info-msg-cont .p-article .col1-img-block .text {
+  width: 553px;
+}
+.ski-info-msg-cont .p-article .col2-img-block .img {
+  width: 276px;
+  margin-right: 10px  !important;
+}
+.ski-info-msg-cont .p-article .col2-img-block .text {
+  width: 276px;
+}
+.ski-info-msg-cont .p-article .p-asset06 dl {
+  width: auto;
+}
+.ski-info-msg-cont .p-article .p-asset06 dd .img {
+  margin-right: 20px !important;
+}
+.ski-info-msg-cont .p-article section > .inner {
+  width: auto;
+}
+@media screen and (max-width: 737px) {
+  .ski-info-msg-cont .p-article .info-article-body .col2-block .box {
+    width: 46%;
+  }
+  .ski-info-msg-cont .p-article .col1-img-block .img {
+    width: 48%;
+  }
+  .ski-info-msg-cont .p-article .col1-img-block .text {
+    width: 48%;
+  }
+}
+
+body.ski-course .ski-course-service .box:nth-child(4n+1) {
+  margin-left: 0;
+}
+
+body.ski-top .ski-info-live .p-tab-body .img img {
+  max-height:311px;
+}
+
+body.area-access .p-asset06 dt.access-train::before {
+  content: '\f238' !important;
+}
+
+.ski-summer .ski-info-weather p {
+  width: 163px;
+}
+
+.area-facility-detail .news-block {
+    margin-top: 30px;
+}
+
+body.wedding.info .info-list .box{
+  margin-bottom: 10px;
+}
+
+body.wedding.info .info-list-lv02 .p-asset04 .box {
+  padding: 10px 20px;
+}
+
+body.ski.area.info .p-tab-head {
+  width: 1240px !important;
+}
+body.ski.area.info .info-block .p-tab-width li {
+  width: 200px !important;
+}
+
+@media screen and (max-width: 736px) {
+  body.area.info .p-tab-head.p-tab-width{
+    width: 100% !important;
+  }
+  body.area.info .info-block .p-tab-width li{
+    width: 24% !important;
+  }
+  body.area.info .p-article .inner .p-article{
+    width: 100% !important;
+  }
+  body.area.info .area.info .p-header02{
+    padding-bottom: 15px !important;
+  }
+
+  body.area-top .p-tab-head.p-tab-width{
+    width: 100% !important;
+  }
+  body.area-top .info-block .p-tab-width li{
+    width: 24% !important;
+  }
+  body.area-top .p-article .inner .p-article{
+    width: 100% !important;
+  }
+  body.area-top .area.info .p-header02{
+    padding-bottom: 15px !important;
+  }
+
+  body.area-home.info .p-tab-head.p-tab-width{
+    width: 100% !important;
+  }
+  body.area-home.info .info-block .p-tab-width li{
+    width: 24% !important;
+  }
+  body.area-home.info .p-article .inner .p-article{
+    width: 100% !important;
+  }
+  body.area-home.info .area.info .p-header02{
+    padding-bottom: 15px !important;
+  }
+
+  body.golf.area.info .p-tab-head.p-tab-width{
+    width: 100% !important;
+  }
+  body.golf.area.info .info-block .p-tab-width li{
+    width: 24% !important;
+  }
+  body.golf.area.info .p-article .inner .p-article{
+    width: 100% !important;
+  }
+  body.golf.area.info .area.info .p-header02{
+    padding-bottom: 15px !important;
+  }
+
+  body.ski.area.info .p-tab-head.p-tab-width{
+    width: 100% !important;
+  }
+  body.ski.area.info .info-block .p-tab-width li{
+    width: 24% !important;
+  }
+  body.ski.area.info .p-article .inner .p-article{
+    width: 100% !important;
+  }
+  body.ski.area.info .area.info .p-header02{
+    padding-bottom: 15px !important;
+  }
+  body.ski.area.info .p-tab-head li:first-child {
+    margin-right: 0px !important;
+  }
+
+  body.wedding.area.info .p-tab-head.p-tab-width{
+    width: 100% !important;
+  }
+  body.wedding.area.info .info-block .p-tab-width li{
+    width: 24% !important;
+  }
+  body.wedding.area.info .p-article .inner .p-article{
+    width: 100% !important;
+  }
+  body.wedding.area.info .area.info .p-header02{
+    padding-bottom: 15px !important;
+  }
+
+}
+
+.ski-top .movie {
+  position:relative;
+  padding-bottom:56.25%;
+  height:0;
+  overflow:hidden;
+}
+.ski-top .movie iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+@media screen and (max-width: 736px) {
+  .ski .p-asset04 .box.pdf {
+    background-size: 25px auto;
+  }
+  .ski .p-asset04 .box.blank {
+    background-size: 15px auto;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .wedding.area .wedding-menu .right .wedding-fix > li.harf {
+    width: 50%;
+  }
+  .wedding.area .wedding-menu .right .wedding-fix > li.full {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  body.area-top .area-home-line .block p{
+    width: 60%;
+  }
+}
+
+body.area-access {
+  font-size:0;
+}
+
+body.area-access {
+  font-size:0;
+}
+
+.p-asset06 dt{
+  font-size: 16px;
+}
+
+@media screen and (max-width: 736px) {
+  body.res-top .sp-tel-block.sp-modal, .reserve-body.sp-modal{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  body.res-top .reserve-body form{
+    padding: 0;
+  }
+
+  body.res-top .reserve-body-input .top > div{
+    width: 100%;
+  }
+
+  body.res-top .reserve-body-input .top .room-num{
+    width: 45%;
+  }
+
+  body.res-top .reserve-body-input .top .datepicker{
+    width: 340px;
+  }
+}
+
+body.res-detail .plan-meal .box.meal-left-block{
+  margin-left: 0px;
+}
+
+body.area-home .area-home-news-list .p-asset04 .img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 736px) {
+  body.res-detail .plan-meal .box.meal-left-block{
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  body.area-top .mv .mv-nav{
+    bottom: 50px;
+  }
+   body.area-top .mv-link {
+    display: block;
+    bottom: 145px !important;
+  }
+}
+
+.wedding-menu .right li.tel .open a::before, .wedding-menu .right li.tel .open span::before{
+  font-size: 17px;
+}
+
+@media screen and (max-width: 736px) {
+  #ski-entry-popup {
+    width: auto;
+  }
+  #ski-entry-popup .sp-reserve-bottom .sp-header-util li {
+    margin-bottom: 20px;
+    width: 284px;
+  }
+  #ski-entry-popup .reserve-body-input .top > div {
+    margin-left: 0px;
+  }
+  #ski-entry-popup .reserve-body-input .place select {
+    width: auto;
+  }
+  #ski-entry-popup.reserve-popup-cont .mfp-close-bottom {
+    height: 88px;
+  }
+  .area #ski-entry-popup .mfp-close-bottom .mfp-close:after {
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  body.golf-facility .golf-guidance .box iframe{
+    width:100% !important;
+    height:168px !important;
+  }
+}
+
+.ski-search .p-slider-type01.pc-fix {
+  background-color: #000;
+}
+
+#sp-access-block.sp-tel-block h2 span:before {
+  content: '';
+}
+
+.area #sp-access-block .sp-reserve-head .hotel-tel .num:before {
+  content: '';
+}
+
+.area .header-login.status-login {
+  width: 135px;
+}
+
+body.golf .golf-line .block p {
+  width: 60%;
+}
+
+.ski.area .header-access {
+  margin-right: 5px;
+  width: 170px;
+}
+
+.ski.area .header-access p.open:before {
+  margin-right: 4px;
+  position: static;
+  vertical-align: middle;
+}
+
+.ski.area .header-access > p {
+  background: url(/images/common/icon_arrow_bottom_01.png) 93.52% center no-repeat #294C8D;
+  color: #fff;
+  padding-left: 0;
+  text-align: center;
+}
+
+.ski.area .header-access.active .close {
+  background: url(/images/common/modal_close_02.png) center center no-repeat #D4DEF2;
+  width: 170px;
+}
+
+.ski.area .header-access-cont {
+  padding-top: 0;
+}
+
+.ski.area .sp-access-block {
+  background-color: #F1F4FA;
+  padding-bottom: 30px;
+}
+
+.ski.area .header-access-cont .sp-reserve-bottom {
+  background-color: #F1F4FA;
+}
+
+.ski.area .header-access-cont .sp-reserve-bottom .sp-header-util {
+  background-color: transparent;
+}
+
+.ski.area .header-access-cont .sp-reserve-bottom a {
+  background-image: url(/images/ski/ski_icon_arrow_right_17.png);
+  color: #222;
+  text-align: left;
+}
+
+.ski.area .header-access-cont .sp-reserve-bottom {
+  padding: 17px 0 36px;
+}
+
+.ski.area .header-access-cont .member-cont .sp-reserve-head {
+  padding-top: 0;
+}
+
+.ski.area .header-access-cont .member-cont {
+  margin-bottom: 0;
+}
+
+.ski.area .header-access-cont .member-cont .sp-reserve-head h3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ski.area .header-access-cont .member-cont .sp-tel-info {
+  margin-bottom: 0;
+}
+
+.ski-summer.area .header-access > p {
+  background-color: #385417;
+}
+
+.ski-summer.area .header-access.active .close {
+  background-color: #D8F2BD;
+}
+
+.header-fix.fixed .header-access > p {
+  height: 40px;
+  line-height: 40px;
+}
+
+.header-fix.fixed .header-access p.open:before {
+  top: 10px;
+}
+
+.header-fix.fixed .header-access p.close {
+  height: 40px;
+}
+
+.header-fix.fixed .header-access-cont {
+  top: 40px;
+}
+
+.header-access {
+  color: #000;
+  display: table;
+  float: left;
+  height: 32px;
+  margin: 0 4px 0 0;
+  position: relative;
+  table-layout: fixed;
+  width: 180px;
+}
+
+.header-access > p {
+  background: url(/images/common/icon_arrow_bottom_02.png) 95.38% center no-repeat #E6E6E6;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  line-height: 32px;
+  padding-left: 37px;
+}
+
+.header-access > p.open:hover {
+  opacity: .7;
+}
+
+.header-access p.open:before {
+  content: '';
+  font-family: FontAwesome;
+  font-size: 19px;
+  left: 17px;
+  line-height: 1;
+  position: absolute;
+  top: 7px;
+}
+
+.header-access-cont {
+  box-shadow:0px 3px 4px 0px rgba(0,0,0,0.22);
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  z-index: 10;
+  width: 744px;
+}
+
+.header-access .close {
+  display: none;
+}
+
+.header-access.active .close {
+  background: url(/images/common/modal_close_02.png) center center no-repeat #e6e6e6;
+  display: block;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+}
+
+.header-access-cont {
+  padding-top: 20px;
+}
+
+.header-access-cont .member-cont {
+  margin-bottom: 24px;
+}
+
+.header-access-cont .login .main-cont {
+  background-color: #585858;
+  color: #fff;
+  padding: 24px 0 0;
+}
+
+.header-access-cont .login .main-cont .notice {
+  color: #fff;
+}
+
+.header-access-cont .login .main-cont h3.head {
+  border-bottom: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.header-access-cont .sp-reserve-head {
+  text-align: center;
+}
+
+.header-access-cont .sp-reserve-head h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.header-access-cont .sp-reserve-head h2 span:before {
+  content: '';
+  font-family: FontAwesome;
+  font-size: 23px;
+  margin-right: 10px;
+}
+
+.header-access-cont .sp-reserve-head p {
+  line-height: 1.375;
+  margin-bottom: 15px;
+}
+
+.header-access-cont .sp-tel-info {
+  /* background-color: #222; */
+  color: #fff;
+  margin: 0 20px 0;
+  padding: 20px 20px 15px;
+  text-align: center;
+}
+
+.header-access-cont .sp-tel {
+  display: none;
+}
+
+.header-access-cont .num {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.header-access-cont .num img {
+  margin-right: 10px;
+}
+
+.header-access-cont .main-cont .note {
+  color: #B9B9B9;
+  margin-bottom: 15px;
+}
+
+.header-access-cont .main-cont .note span {
+  margin-right: 1em;
+}
+
+.header-access-cont .navi {
+  font-size: 18px;
+}
+
+.header-access-cont .bottom {
+  background-color: #585858;
+  color: #fff;
+}
+
+.header-access-cont .sp-reserve-bottom {
+  color: #222;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.header-access-cont .sp-reserve-bottom .notice {
+  padding: 15px 30px;
+}
+
+.header-access-cont .sp-reserve-bottom .sp-header-util {
+  color: #fff;
+  background-color: #585858;
+  padding: 22px;
+}
+
+.header-access-cont .sp-reserve-bottom a {
+  color: #fff;
+}
+
+.header-access-cont .sp-reserve-bottom .head {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.area .header-access-cont .sp-reserve-head {
+  margin-bottom: 20px;
+}
+
+.area .header-access-cont .sp-reserve-head h2 {
+  margin-bottom: 10px;
+}
+
+.area .header-access-cont .sp-reserve-head p {
+  margin-bottom: 10px;
+}
+
+.area .header-access-cont .sp-reserve-bottom {
+  background-color: #585858;
+  color: #fff;
+  padding: 18px 20px 0;
+}
+
+.area .header-access-cont .sp-tel-info {
+  margin: 0 0 25px;
+}
+
+.area .sp-reserve-bottom .head {
+  text-align: center;
+}
+
+.area .header-access-cont {
+  padding-top: 10px;
+}
+
+.golf .sp-fixed-tel{
+  text-align: center;
+}
+
+.golf .sp-fixed-searchbox{
+  text-align: center;
+}
+
+.golf .sp-fixed-my{
+  text-align: center;
+}
+
+.ski.area .sp-access-block .sp-reserve-bottom a {
+  color: #222;
+}
+
+@media screen and (max-width: 736px) {
+  .sp-access-block .pc-tel {
+    display: none;
+  }
+
+  .ski.area .sp-access-block.sp-modal {
+    padding: 0;
+  }
+
+  .sp-access-block.sp-modal .mfp-close {
+    background-position: center 11px;
+    background-image: url(/images/common/modal_close_02.png);
+    left: inherit;
+    right: 10px;
+  }
+
+  .ski.area .sp-access-block.sp-modal > .mfp-close {
+    background-color: #1F5499;
+    background-image: url(/images/common/modal_close.png);
+    height: 50px !important;
+    right: 0;
+    width: 60px !important;
+  }
+
+  .ski.area .sp-access-block .sp-reserve-head h2 span:before {
+    content: '';
+    font-family: FontAwesome;
+    font-size: 19px;
+    padding-right: 8px;
+  }
+
+  .sp-access-block.sp-modal .mfp-close-bottom .mfp-close {
+    left: 50%;
+    margin-left: -20px;
+  }
+
+  .sp-access-block.sp-modal .mfp-close-bottom .mfp-close {
+    background-image: url(/images/common/modal_close.png);
+  }
+
+  .ski-summer.area .sp-access-block.sp-modal > .mfp-close,
+  .ski-summer.area .sp-access-block .mfp-close-bottom {
+    background-color: #385417;
+  }
+}
+
+.ski-summer.area .sp-access-block {
+  background-color: #F1F6EC;
+}
+
+.ski-summer.area .sp-reserve-bottom,
+.ski-summer.area .sp-access-block .sp-header-util {
+  background-color: #F1F6EC;
+}
+
+.header-login-cont .form input[type="password"] {
+  border: 1px solid #D4DCE5;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 40px;
+  padding: 0 18px;
+  width: 100%;
+}
+
+.header-login-cont .form .body {
+  margin: 0 auto;
+  width: 322px;
+}
+
+@media screen and (max-width: 736px) {
+  .header-login-cont .form .body {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.ski .header-login-cont .btn {
+  width: auto;
+  height: auto;
+}
+
+.ski-top .ski-news .important-news {
+  margin-bottom: 30px;
+}
+
+.wedding-contact .left li.tel span.hour {
+  width: 150px;
+}
+
+.golf.area .area-top-season .img.single img {
+  float: none;
+  height: 400px;
+  width: 830px;
+}
+
+.restaurant div.border {
+  border-bottom: 2px solid #222222;
+  margin: 40px 0px;
+}
+
+.restaurant section.region-block {
+  margin-bottom: 0px;
+  border: none;
+  padding-bottom: 20px;
+}
+
+body.golf-top .refine-list .block .middle .lead {
+  min-height: 0px !important;
+}
+
+@media screen and (max-width: 736px) {
+  .golf-info .cont li p {
+    color: #fff;
+  }
+  .golf-info a.btn-type03 {
+    background-image: url(/images/golf/golf_icon_arrow_right_02.png);
+    border: 1px solid #fff;
+    color: #fff;
+  }
+}
+
+.area-access-fun .box .base::after {
+  background-size: 0px 0px;
+}
+
+.area-access-fun .box .blank::after {
+  background: url(/images/area/icon_blank.png) 0 0 no-repeat;
+  background-size: 15px 15px;
+  content: '';
+  display: inline-block;
+  height: 15px;
+  margin-left: 8px;
+  vertical-align: middle;
+  width: 15px;
+}
+
+body.area-facility .p-article .inner {
+  width: 1250px;
+}
+
+.area-access-fun .box .link .all {
+  border-right: 0px!important;
+}
+.area-access-fun .box .link .all {
+  width: 100%!important;
+}
+
+.area-access-fun .box .link .harf li:first-child {
+  border-right: 1px;
+}
+.area-access-fun .box .link .harf li {
+  width: 50%;
+}
+
+.area-event .h3-type01 {
+  margin-top: 35px;
+}
+
+.area-event .p-header {
+  margin-bottom: 10px;
+}
+
+body.ski-course #tab-body03 .body {
+  position: relative;
+}
+
+body.ski-course #tab-body03 .body a.parklink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-indent:-999px;
+}
+
+.ski .header-login-cont a.btn.btn-type05 {
+  width: 347px;
+  height: auto;
+}
+
+.ski .header-login-cont a.btn.btn-type03 {
+  width: 347px;
+  height: auto;
+}
+
+.ski-top .mv .movie {
+  position:relative;
+  padding-bottom:0;
+  height:570px;
+  overflow:hidden;
+}
+
+.ski-top .mv .movie iframe {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  height: 100vw;
+}
+
+body.ski-course #tab-body03 .course-cont .body a:hover + .top .name {
+    text-decoration: underline;
+}
+
+.ski-area-features {
+  padding-top: 5px;
+}
+
+.golf.area .golf-reserve-area .mygolf_02 {
+  width: 49%;
+}
+
+.golf.area .golf-reserve-area .mygolf_02 .btn {
+  width: 100%;
+}
+
+.golf.area .golf-reserve-area .tel_02 {
+  width: 49%;
+}
+
+body.golf-facility .box .text a {
+ text-decoration: none;
+}
+
+.ski-top .mv-slider02 {
+  background-color: #000;
+}
+
+@media screen and (max-width: 736px) {
+  .ski-top .mv .movie {
+    height:470px !important;
+  }
+}
+
+.golf .refine-list dd .bottom p {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+@media screen and (max-width: 736px) {
+  .golf .refine-list dd .bottom .tel {
+    font-size: 12px;
+    height: 40px;
+  }
+}
+
+section.regretSec {
+  text-align: center;
+  margin: 20px 0;
+  font-family: '游明朝' , 'Yu Mincho', 'YuMincho' , 'ＭＳ Ｐ明朝' , 'ＭＳ 明朝' , Georgia;
+}
+
+section.regretSec p.regretP {
+  padding: 20px 20px;
+  margin: 5px 0;
+  display:inline-block;
+}
+
+section.regretSec p.regretBorder {
+  border: solid 1px;
+}
+
+@media screen and (min-width: 737px) {
+  div.regretDiv {
+    width: 1246px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  div.regretDiv {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+  }
+}
+
+
+@media screen and (min-width: 737px) {
+  body.home section.bnr-block li:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  body.home section.bnr-block li:nth-child(n+5) {
+    margin-top: 10px;
+  }
+}
+
+body.stay-top .room-list-cont .room-box .slick-slide:after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 130%);
+}
+
+body.stay-top .room-list-cont .room-box .slick-slide p {
+  text-shadow:1px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (min-width: 737px) {
+  .header-login-cont.status-login .bottom .btn li.seibu-btn a {
+    letter-spacing: 0;
+  }
+
+  .header-login-cont.status-login .bottom .btn li.seibu-btn a.btn-type05:after {
+    right: 5px;
+    top: 10px;
+  }
+
+  .ski.area .mv-info .term {
+    margin: 5px 0 33px;
+    padding: 0px;
+    background-color: rgba(255,255,255,0.5);
+  }
+
+  .ski.area .mv-info .term dd {
+    color: #000;
+  }
+
+  .ski.area .mv-info .term p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+  .refine-brand-bottom .refine-brand-bnr03 div {
+    display: inline-block;
+  }
+
+@media screen and (max-width: 736px) {
+  .refine-brand-bottom li {
+    margin-right: 5px;
+    width: 28vw;
+  }
+}
+
+@media screen and (min-width: 737px) {
+  body.area.res-shop header.header {
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+.golf.area .golf-reserve-area .tel_only {
+  width: 100% !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media screen and (min-width: 737px) {
+  .header-login-cont .entry li:first-child {
+    margin-right: unset !important;
+  }
+
+  .header-login-cont .entry li {
+    float: none !important;
+  }
+
+  .header-login-cont .entry a.btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.header-login-cont .entry {
+  margin-bottom: 0 !important;
+  padding-bottom: 25px !important;
+}
+
+.header-login-cont .entry .body li a.btn-type03 {
+  display:none;
+}
+
+@media screen and (max-width: 736px) {
+  .mv-msg .typesquare_option {
+    /*
+    margin-right: 2.7%;
+    margin-left: 2.7%;
+    */
+    width: auto;
+  }
+
+  h2.h2-type01 {
+    margin-right: 1.2%;
+    margin-left: 1.2%;
+  }
+}
+
+@media screen and (min-width: 737px) {
+  .ski-course-status-cont .course-cont .body .img img {
+    width: 100%;
+  }
+}
+
+.load {
+  position: relative;
+  pointer-events: none;
+}
+
+img.load-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media screen and (max-width: 736px) {
+  .golf-top .mfp-content .golf-tel-block {
+    height: auto;
+  }
+}
+
+.header-lang .lang-box {
+  height: auto;
+}
+
+.res-detail .info-detail-header {
+  height: 162px;
+}
+
+.res-detail .info-article {
+  margin-top: -82px;
+}
+
+.fontsize12 {
+  font-size: 12px;
+}
+
+body.area-top .bnr-block h3 {
+  padding-top: 0px;
+}
+
+body.area-top section.bnr-block {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 736px) {
+  body.hotel section.refine-block .refine-brand-bottom li {
+    margin-right: 1vw;
+  }
+  body.hotel section.refine-block .refine-brand-bnr01 li:nth-child(5n), body.hotel section.refine-block .refine-brand-bnr02 li:nth-child(4n) {
+    margin-right: 1vw;
+  }
+  body.hotel section.refine-block .refine-brand-bnr01 li:nth-child(5n) {
+    margin-right: 1vw;
+  }
+  body.hotel section.refine-block .refine-brand-bottom ul {
+    padding: 0 3vw 3vw;
+  }
+
+  body.wedding-top div.mv div.slick-slide div.mv-bg img {
+    object-position: 50% 50%;
+  }
+
+  .stay-detail.wedding.wedding-top.area section.wedding-menu {
+    height: 0px;
+    margin-bottom: 0px;
+  }
+
+  body.stay-detail.wedding.wedding-top.area header {
+     height: 58px;
+  }
+
+  body.area-access .area-access-map .shop-access-map .more a {
+     z-index: 10;
+  }
+
+}
+
+@media screen and (min-width: 737px) {
+  /* HOME ログイン・電話での宿泊予約 シャドウ */
+  body.home header.header-home .header-util p.open:not(:hover) {
+    background-color: rgba(102, 102, 102, 0.1)
+  }
+  /* HOME 他言語選択リンク シャドウ */
+  body.home header.header-home .header-util .header-lang .lang-active {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  header div.header-top div.header-lang div.lang-box {
+    z-index: 10;
+  }
+
+  /* luxury */
+  body.area-top .luxury .mv {
+    margin-top: 0;
+  }
+  body.area.res-shop .luxury header.header {
+    margin-bottom: 0;
+  }
+
+  /* 事業所スキー アクセスコンバージョンリンク */
+  .ski.area .header-access-link {
+    display: table;
+    float: left;
+    height: 32px;
+    margin: 0 4px 0 0;
+    position: relative;
+    table-layout: fixed;
+    margin-right: 5px;
+    width: 170px;
+  }
+  .ski.area .header-access-link > p {
+    background: url(/images/ski/ski_icon_arrow_right_16.png) 95% center no-repeat #294C8D;
+    cursor: pointer;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 22px;
+    vertical-align: middle;
+  }
+  .ski.area .header-access-link > p > a {
+    background: url(/images/ski/ski_icon_lift_01.png) 0 center no-repeat;
+    color: #fff;
+    display: block;
+    padding-left: 40px;
+    text-decoration: none;
+  }
+  .ski.area .header-access-link > p:hover {
+    opacity: .7;
+  }
+  .ski-summer.area .header-access-link > p {
+    background-color: #385417;
+  }
+
+  /*ホテルTOP 一覧のテキストを右揃え*/
+  body.hotel section.refine-block div.p-tab-block#search #tab-body02 div.block div.text {
+    width: 256px;
+    margin-left: 250px;
+  }
+
+  /*各ゴルフ場TOP 空き枠検索・予約下矢印非表示*/
+  body.golf.area div.golf-fix-block ul.golf-fix li.popup-menu p.open {
+    background: #0E7134;
+  }
+
+  /*各ゴルフ場TOP 空き枠検索・空白追加*/
+  body.golf.area div.golf-fix-block ul.golf-fix li {
+    margin-right: 5px !important;
+  }
+}
+
+.stay-detail.wedding.wedding-top.area section.wedding-menu {
+  visibility : hidden;
+}
+
+/* add 20200908 1527 */
+@media screen and (max-width: 736px) {
+  .reserve-body-input .line-break-form {
+    float: none;
+  }
+  .reserve-body-input .line-break-form > span {
+    display: block;
+    float: none;
+    width: 100%;
+    padding-bottom: 2px;
+  }
+  .reserve-body-input .line-break-form > select,
+  .reserve-body-input .line-break-form > .area,
+  .reserve-body-input .line-break-form > .hotel {
+    display: block;
+    width: 100%;
+    font-size: 14px !important;
+  }
+}
+
+/* add 1218 */
+.ski-info-weather {
+  padding: 25px 20px;
+}
+
+.ski-info-weather .top {
+  margin-bottom: 25px;
+}
+
+.ski-info-snow-condition-list {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ski-info-snow-condition-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+  height: 54px;
+}
+
+.ski-course-info .ski-info-weather .pc-fix .bottom li.snow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ski-course-info .ski-info-weather .pc-fix .bottom li.snow .fall-label {
+  margin-left: 50px;
+  margin-right: 15px;
+}
+
+.ski-course-info .ski-info-weather .pc-fix .bottom li.snow span {
+  font-size: 20px;
+}
+
+.ski-info-snow-condition-item span.fall-value,
+.ski-course-info .ski-info-weather .pc-fix .bottom li.snow span.fall-value {
+  border-bottom: 1px dotted #1F5499;
+  line-height: 29px;
+}
+
+.ski-course-info .ski-info-weather .pc-fix .bottom li.snow span.cm {
+  color: #1F5499;
+}
+
+@media screen and (max-width: 736px) {
+  .cont.ski-info-weather {
+      padding: 10px;
+  }
+
+  .ski-info-snow-condition-item span.fall-value,
+  .ski-course-info .ski-info-weather .pc-fix .bottom li.snow span.fall-value {
+    line-height: 27px;
+  }
+}
+
+/* add 1402 */
+.ski-info-time {
+  text-align: left;
+}
+
+@media screen and (max-width: 736px) {
+  .ski-info-time {
+    text-align: center;
+  }
+}
+
+/* add 1560 */
+.mv-slider, .mv-slider02 {
+  display: none;
+}
+
+/* add 1218 */
+.ski-summer.area .ski-activity-cont .wrap.cover {
+  padding: 0;
+}
+
+.ski-summer.area .ski-activity-cont .wrap.cover a {
+  display: block;
+  width: 100%;
+  height: 154px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 736px) {
+  .ski-summer.area .ski-activity-cont .wrap.cover a {
+    width: auto;
+    height: 77px;
+    padding: 10px 50px 10px 10px;
+  }
+}
+
+/* add 1634 */
+.ski-search .refine-map-body .bottom table tr.data td {
+  font-size: 13px;
+}
+@media screen and (max-width: 736px){
+  .ski-search .bottom table tr.data td,
+  .map.ski .refine-map-body table tr.data td,
+  .ski-info-course table tr.data td {
+    font-size: 13px;
+  }
+}
+
+/* sp footer add br */
+@media screen and (min-width: 737px) {
+  .footer-copy-br { display: none; }
+}
+
+/* add 1573 */
+@media screen and (max-width: 736px){
+  .res-shop .shop-lead .data ul.budget {
+    display: table-row;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (min-width: 737px){
+  .p-asset02 .middle .budget {
+    width: 274px;
+  }
+}
+
+.p-asset02 .middle .budget li {
+    float: left;
+    margin-right: 10px;
+    font-size: 13px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+@media screen and (max-width: 736px){
+  .p-asset02 .middle .data ul {
+    display: table-row;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 736px){
+  .res-top .p-asset02 .middle .data ul.tag {
+    float: none;
+  }
+}
+
+.area-home-search .refine-list dd .middle .budget {
+    width: 270px;
+}
+
+@media screen and (max-width: 736px){
+  .area-home-search .refine-list dd .middle .budget {
+    width: 240px;
+  }
+}
+
+/* concept */
+.office-concept img {
+  padding: 0% 5%;
+  width: 600px;
+}
+.office-concept .note {
+  font-size: 16px;
+  line-height: 1.61;
+  margin: 20px 0 20px;
+}
+.office-concept .more {
+  margin: 20px 0 60px;
+  text-align: center;
+}
+.luxury .office-concept .note {
+  color: #fff;
+}
+@media screen and (max-width: 736px){
+  .office-concept img {
+    max-width: 90%;
+  }
+  .office-concept .note {
+    font-size: 14px;
+  }
+}
+/* party-report wedding-logo */
+.wedding-logo img {
+  margin: auto;
+  padding: 10px 0px;
+  height: 90px;
+  width: 145px;
+}
+@media screen and (max-width: 736px){
+  .wedding-logo img {
+    height: auto;
+    width: 122px;
+  }
+}
