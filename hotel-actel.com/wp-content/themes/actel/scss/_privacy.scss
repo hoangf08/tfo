@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* -----------------------------------------------------------
+	
+	privacy style
+
+----------------------------------------------------------- */
+@import "settings";
+
+/* -----------------------------------------------------------
+	.con_privacy
+----------------------------------------------------------- */
+.privacy .con_privacy {
+	margin-top: 200px;
+	color: #000;
+	@include mq(sp) {
+		margin-top: 80px;
+	}
+	.con_inner {
+		> * {
+			margin-top: 40px;
+			@include mq(sp) {
+				margin-top: 20px;
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	.st_en {
+		margin-bottom: 30px;
+		@include mq(sp) {
+			margin-bottom: 20px;
+		}
+		img {
+			@include mq(sp) {
+				@include scale(0.7);
+				@include transform-origin(left, center);
+			} 
+		}
+	}
+	dl {
+		dt {
+			margin-bottom: 40px;
+			@include mq(sp) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

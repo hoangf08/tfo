@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* -----------------------------------------------------------
+	
+	company style
+
+----------------------------------------------------------- */
+@import "settings";
+
+/* -----------------------------------------------------------
+	.con_company
+----------------------------------------------------------- */
+.company .con_company {
+	margin-top: 200px;
+	@include mq(sp) {
+		margin-top: 80px;
+	}
+	h2 {
+		margin-bottom: 30px;
+		@include mq(sp) {
+			margin-bottom: 20px;
+		}
+		img {
+			@include mq(sp) {
+				@include scale(0.7);
+				@include transform-origin(left, center);
+			} 
+		}
+	}
+}

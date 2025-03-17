@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+
+ file name  : top.css
+=================================================================== */
+@import "settings";
+
+body, a {
+	color: #000;
+}
+
+#page {
+	padding-top: 0;
+}
+
+/* -----------------------------------------------------------
+	.con_topics
+----------------------------------------------------------- */
+.con_topics {
+	padding: 60px 0 50px 0;
+	@include mq(sp) {
+		padding: 40px 0 30px 0;
+	}
+	.wrap_post {
+		ul {
+			li {
+				a {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+.bn_open {
+	text-align: center;
+	margin-bottom: 50px;
+	@include mq(sp) {
+		margin-bottom: 30px;
+	}
+}
+
+/* -----------------------------------------------------------
+	.con_points
+----------------------------------------------------------- */
+.con_points {
+	.con_inner {
+		padding-left: 0;
+		padding-right: 0;
+		max-width: 960px;
+		min-height: 495px;
+		@include mq(sp) {
+			min-height: 0;
+			height: 150px;
+			padding: 0 6%;
+		}
+	}
+	.box_image {
+		-ms-flex: 1;
+		-webkit-flex: 1;
+		flex: 1;
+		margin-left: -150px;
+		position: relative;
+		overflow: hidden;
+		position: relative;
+		@include mq(sp) {
+			margin-left: -6%;
+		}
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 150px;
+			height: 100%;
+		    background-image: linear-gradient(to top right, #333333, #333333 50%, transparent 50.2%, transparent);
+		    @include mq(sp) {
+		    	width: 45px;
+		    }
+		}
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			right: 0;
+			width: 150px;
+			height: 100%;
+		    background-image: linear-gradient(to bottom left, #333333, #333333 50%, transparent 50.2%, transparent);
+		    @include mq(sp) {
+		    	width: 45px;
+		    }
+		}
+		.box_slide {
+			width: 100%;
+			height: 100%; 
+
+			
+			.slick-list, .slick-track {
+				height: 100%;
+			}
+			.slide {
+				position: relative;
+				img {
+					max-width: none;
+					 @include mq(sp) {
+					 	width: 100%;
+					 	height: auto;
+					 	position: relative;
+					 	top: 50%;
+					 	left: 0;
+					 	@include translateY(-50%);
+					 }
+					 @media only screen and (max-width: 380px) {
+						width: auto;
+						height: 100%;
+						top: 0;
+					 	left: 50%;
+					 	@include translateX(-50%);
+					}
+				}
+			}
+		}
+	}
+	.box_content {
+		width: 320px;
+		padding: 35px 0;
+		position: relative;
+		z-index: 3;
+		position: relative;
+		@include mq(sp) {
+			width: 38%;
+			padding-top: 20px;
+		}
+		.st_high {
+			margin-bottom: 20px;
+			text-align: right;
+			span.en {
+				position: relative;
+				height: 38px;
+				@include mq(sp) {
+					height: 15px;
+				}
+				img {
+					position: absolute;
+					right: 0; 
+					top: 0;
+					max-width: none;
+				}
+			}
+		}
+		.txt {
+			color: #fff;
+			font-size: 1.3rem;
+			@include mq(sp) {
+				display: none;
+			}
+		}
+		.btn {
+			margin-top: 20px;
+			@include mq(pc) {
+				position: absolute;
+				bottom: 35px;
+				left: 50%;
+				@include translateX(-50%);
+				a {
+					white-space: nowrap;
+				}
+			}
+			@include mq(sp) {
+				text-align: right;
+			}
+		}
+	}
+	&.guestroom {
+		background: #333333;
+		.st_high {
+			img {
+				@include mq(sp) {
+					width: 145px;
+				}
+			}
+		}
+	}
+	&.facility {
+		background: #FF5200;
+		.st_high {
+			text-align: left;
+			span.en {
+				img {
+					right: auto;
+					left: 0;
+					@include mq(sp) {
+						width: 100px;
+					}
+				}
+			}
+		}
+		.box_image {
+			margin-left: 0;
+			margin-right: -150px;
+			@include mq(sp) {
+				margin-right: -6%;
+				margin-left: 0;
+			}
+			&:before {
+				background-image: linear-gradient(to bottom right, #FF5200, #FF5200 50%, transparent 50.2%, transparent);
+			}
+			&:after {
+				background-image: linear-gradient(to top left, #FF5200, #FF5200 50%, transparent 50.2%, transparent);
+			}
+		}
+		.box_content {
+			.btn {
+				@include mq(sp) {
+					text-align: left;
+				}
+			}
+		}
+
+	}
+	&.restaurant {
+		background: #FCA162;
+		.st_high {
+			span.jp {
+				color: #754C24;
+			}
+			span.en {
+				@include mq(sp) {
+					img {
+						width: 148px;
+					}
+				}
+			}
+		}
+		.box_image {
+
+			&:before {
+			    background-image: linear-gradient(to top right, #FCA162, #FCA162 50%, transparent 50.2%, transparent);
+			}
+			&:after {
+			    background-image: linear-gradient(to bottom left, #FCA162, #FCA162 50%, transparent 50.2%, transparent);
+			}
+		}
+	}
+}
+
+/* -----------------------------------------------------------
+	.con_gallery
+----------------------------------------------------------- */
+.con_gallery {
+	margin-top: 60px;
+	@include mq(sp) {
+		margin-top: 30px;
+	}
+	.st_high {
+		span.en img {
+			@include mq(sp) {
+				width: 190px;
+			}
+		}
+	}
+	.img {
+		text-align: center;
+	}
+}
+

@@ -1,0 +1,165 @@
+<?php
+/**
+ * The template for displaying all pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package actel
+ */
+
+get_header();
+?>
+
+<div class="con_title">
+	<h2 class="ttl"><span class="en"><img src="<?php bloginfo( 'template_url' ); ?>/images/common/st_recommend.svg" alt="RECOMMEND" width="225"></span><span class="jp">おすすめポイント</span></h2>
+</div>
+
+<div class="con_facility">
+	<div class="con_inner">
+		<section class="box_facility flex">
+			<p class="img"><img src="<?php bloginfo( 'template_url' ); ?>/images/facility/img_facility01.jpg" alt="フロント"></p>	
+			<div class="content">
+				<h3 class="st_mid_ora">おすすめポイント①</h3>
+        <h3 class="st_mid">チェックインは26時まで、チェックアウトは11時までOK</h3>
+				<p class="txt">
+					チェックイン時間は１５時より２６時までご都合に合わせたチェックインが可能です。<br>
+
+					チェックイン前・チェックアウト後のお荷物一時預かりもできますのでご相談ください。<br>
+
+					チェックイン１５時　チェックアウト１１時<br>
+				</p>
+				<dl>
+					<dt>チェックイン・チェックアウト</dt>
+					<dd>
+						<table class="tbl_basic">
+							<tr>
+								<th>チェックイン</th>
+								<td>15:00</td>
+							</tr>
+							<tr>
+								<th>チェックアウト</th>
+								<td>11:00</td>
+							</tr>
+						</table>
+					</dd>
+				</dl>
+			</div>
+		</section>
+
+		<section class="box_facility flex">
+			<p class="img"><img src="<?php bloginfo( 'template_url' ); ?>/images/facility/img_facility02.jpg" alt="コーヒーサーバー"></p>	
+			<div class="content">
+				<h3 class="st_mid_ora">おすすめポイント②</h3>
+        <h3 class="st_mid">ホット・アイスの８種類のコーヒーが飲み放題</h3>
+				<p class="txt">
+					3階ロビーに無料コーヒーサーバーをご用意しております。<br>
+					チェックインからチェックアウトまでご滞在中に<br>
+					ホット又はアイスの「ブレンド」「カフェラテ」「カフェモカ」<br>
+                    「ココア」がお楽しみ頂けます。<br>
+					また、ホット用のコーヒー豆には、香りが華やかで、風味も優れる<br>
+                    高品質アラビカ種を使用しています。<br>
+                    是非、ご利用下さいませ。
+				</p>
+			</div>
+		</section>
+
+		<section class="box_facility flex">
+			<p class="img"><img src="<?php bloginfo( 'template_url' ); ?>/images/facility/img_facility03.jpg" alt="ベッド"></p>	
+			<div class="content">
+				<h3 class="st_mid_ora">おすすめポイント③</h3>
+        <h3 class="st_mid">全室シモンズベッドでワンランク上の眠り</h3>
+				<p class="txt">
+					シモンズベッド全室導入、シングルルーム140cm幅・ダブルルーム160cm幅のベッドをご用意。<br>
+					＜常に最上の眠りを追求し続けるシモンズ社＞<br>
+					シモンズ社の一つの答えが、体を点で支える「ポケットコイル」<br>
+					特殊な縫製技術で独立させ、体の軽い部分は浅く、重い部分は深く沈むことにより身体の一部への疲労蓄積をなくし心地よい睡眠をとることができます。<br>
+					当ホテルは「6.5ピロートップ」を採用、よく使用されている物より20mmクッションの厚みが増しており身体への負荷をさらに分散、一段階上の眠りをお届けします。ぜひ極上の目覚めを体験してください。
+				</p>
+			</div>
+		</section>
+
+		<section class="box_facility flex">
+			<p class="img"><img src="<?php bloginfo( 'template_url' ); ?>/images/facility/img_facility07.jpg" alt="Wi-Fi完備"></p>	
+			<div class="content">
+				<h3 class="st_mid_ora">おすすめポイント④</h3>
+        <h3 class="st_mid">大型デスク・Wi-Fi・USB完備でビジネスにも最適</h3>
+				<p class="txt">
+					広いデスクはビジネスに最適。もちろん全室Wi-Fi接続無料。USBポートも備えておりますので、モバイルバッテリーを忘れても、お休みの間にスマートフォンの充電頂けます
+				</p>
+			</div>
+		</section>
+		
+		<section class="box_facility flex">
+			<p class="img"><img src="<?php bloginfo( 'template_url' ); ?>/images/facility/img_facility06.jpg" alt="喫煙ルーム"></p>	
+			<div class="content">
+				<h3 class="st_mid_ora">おすすめポイント⑤</h3>
+        <h3 class="st_mid">喫煙者の方も安心、喫煙スペースも完備</h3>
+				<p class="txt">
+					当ホテルは、お子様連れのお客様、女性にもお気軽にお越しいただけるようなホテルを目指しており、その第一歩として、館内を全面禁煙としております。喫煙されるお客様には、３Fロビーに喫煙ルームを設置しております。
+				</p>
+			</div>
+		</section>
+
+		<section class="box_facility flex">
+			<p class="img"><img src="<?php bloginfo( 'template_url' ); ?>/images/facility/img_facility05.jpg" alt="その他設備"></p>	
+			<div class="content">
+				<h3 class="st_mid_ora">その他設備</h3>
+				<p class="txt">
+					・自動販売機・製氷機・電子レンジ
+					3階ロビーに専用コーナーがございます。<br>
+					・宅配便<br>
+					フロントにて宅配便の取り扱いを行っております。段ボールは別料金がかかります。<br>
+					・クローク<br>
+					チェックイン前・チェックアウト後のお荷物はフロントでお預かりいたします。
+				</p>
+				<dl>
+					<dt>貸し出し備品</dt>
+					<dd>
+						アイロン、アイロン台、爪切り、ヘアーアイロン、体温計、氷枕、ワインオープナー・栓抜き、ソーイングセット、充電器、電圧変換プラグ、電気スタンド
+					</dd>
+				</dl>
+			</div>
+		</section>
+
+		<section class="box_facility">
+			<div class="content">
+				<h3 class="st_mid_ora">提携駐車場</h3>
+				<p class="txt">
+					ジャンボパーキング（自走式立体駐車場）<br>
+					名古屋市中区錦3-8-5　TEL.052-972-0505　<a target="_blank" href="https://goo.gl/maps/7h7eb5qtv5r">Google map</a><br>
+					・先着順（ご予約不可）<br>
+					・ご一泊料金（15：00～翌11：00）：2,000円<br>
+					・途中出庫はその都度料金が発生します。<br>
+					・連泊でご利用時には日中時間に別料金が発生します。（11時～15時で打ち切り料金1500円）
+				</p>
+				<p class="txt_att">※1泊目・1枚目の購入券 ＞ 2日目の昼、現地支払分料金 ＞ 2泊目・2枚目の購入券</p>
+				<p class="txt">
+					・連泊でご利用のお客様へ<br>
+					日中11：00～15：00までの間も、お車をそのままお停めいただけますが、30分ごと250円の別途料金が出庫時に加算されますのでご了承ください。15：00以降は２泊目以降の宿泊駐車サービスが適用されます。
+				</p>
+				<p class="txt_att">
+					※「宿泊駐車サービス引換券」をご購入いただきますので、駐車券をフロントにてご提示ください。<br>
+					※提携駐車場が満車の場合は、近隣のコインパーキングへ駐車をお願い致します。
+				</p>
+			</div>
+		</section>
+
+		<section class="box_facility">
+			<div class="content">
+				<h3 class="st_mid_ora">客室設備・宿泊者向けサービス</h3>
+				<dl>
+					<dt>VOD（有料放送）</dt>
+					<dd>映画など約100種類のコンテンツをリモコン操作で簡単入手できるビデオオンデマンドをお楽しみください。</dd>
+				</dl>
+			</div>
+		</section>
+	</div>
+</div>
+
+<?php
+get_footer();

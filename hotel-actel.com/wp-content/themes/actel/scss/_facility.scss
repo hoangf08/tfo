@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* -----------------------------------------------------------
+	
+	facility style
+
+----------------------------------------------------------- */
+@import "settings";
+
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.facility .con_title {
+	background-image: url(../images/facility/bg_title.jpg);
+}
+
+/* -----------------------------------------------------------
+	.con_facility
+----------------------------------------------------------- */
+.facility .con_facility {
+	.box_facility {
+		margin-top: 50px;
+		@include mq(sp) {
+			margin-top: 40px;
+		}
+		&:first-child {
+			margin-top: 0;
+		}
+		&.flex {
+			.img {
+				width: 460px;
+				@include mq(sp) {
+					width: 100%;
+					img {
+						width: 100%;
+					}
+				}
+			}
+			.content {
+				padding-left: 30px;
+				-ms-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+				@include mq(sp) {
+					padding-left: 0;
+					margin-top: 20px;
+				}
+			} 
+		}
+		.content {
+			.txt {
+				a {
+					color: #0053FF;
+				}
+			}
+			dl {
+				margin-top: 35px;
+				@include mq(sp) {
+					margin-top: 20px;
+				}
+				dt {
+					margin-bottom: 10px;
+				}
+				dd {
+					.txt_att {
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+		&:not(.flex) {
+			dl {
+				margin-top: 0;
+				dt {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

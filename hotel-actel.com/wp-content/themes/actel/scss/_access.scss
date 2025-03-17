@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* -----------------------------------------------------------
+	
+	access style
+
+----------------------------------------------------------- */
+@import "settings";
+
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.access .con_title {
+	background-image: url(../images/access/bg_title.jpg);
+}
+
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.access .con_access {
+	dl {
+		color: #000; 
+		&:last-child {  
+			margin-top: 30px;
+		}
+		dd {
+			dl {
+				margin-top: 0 !important;
+				display: table;
+				width: 100%;
+				> * {
+					display: table-cell;
+				}
+				dt {
+					font-size: 1.3rem;
+					width: 5em;
+				}
+			}
+		}
+	}
+}

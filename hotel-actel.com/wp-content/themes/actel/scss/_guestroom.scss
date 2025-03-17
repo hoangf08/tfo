@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* -----------------------------------------------------------
+	
+	guestroom style
+
+----------------------------------------------------------- */
+@import "settings";
+
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.guestroom .con_title {
+	background-image: url(../images/guestroom/bg_title.jpg);
+}
+ 
+.guestroom-child.single .con_title {
+	background-image: url(../images/guestroom/single/bg_title.jpg);
+}
+
+.guestroom-child.twin .con_title {
+	background-image: url(../images/guestroom/twin/bg_title.jpg);
+}
+
+.guestroom-child.double .con_title {
+	background-image: url(../images/guestroom/double/bg_title.jpg);
+}
+
+.guestroom-child.deluxetwin .con_title {
+	background-image: url(../images/guestroom/deluxetwin/bg_title.jpg);
+}
+
+.guestroom-child.universaltwin .con_title {
+	background-image: url(../images/guestroom/universaltwin/bg_title.jpg);
+}
+
+/* -----------------------------------------------------------
+	.con_guestroom_list
+----------------------------------------------------------- */
+.guestroom .con_guestroom_list {
+	.wrp {
+		overflow: hidden;
+		margin-left: -3%;
+		margin-top: -40px;
+		@include mq(sp) {
+			margin-left: 0;
+		}
+		.box_guestroom {
+			width: 47%;
+			margin-left: 3%;
+			float: left;
+			margin-top: 40px;
+			@include mq(sp) {
+				width: 100%;
+				float: none;
+				margin-left: 0;
+			}
+			&:nth-child(odd) {
+				clear: both;
+			}
+			.img {
+				position: relative;
+
+				.en { 
+					position: absolute;
+					z-index: 2;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					img {
+
+						@include mq(sp) {
+							@include scale(0.7);
+							@include transform-origin(left, bottom);
+							max-width: none;
+						}
+						@media only screen and (max-width: 320px) {
+							@include scale(0.6);
+						}
+					}
+
+				}
+			}
+			.st_mid {
+				margin-top: 10px;
+			}
+			.btn {
+				@include mq(sp) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+/* -----------------------------------------------------------
+	.con_guestroom_detail
+----------------------------------------------------------- */
+.guestroom-child .con_guestroom_detail {
+	.box_intro {
+		.ttl {
+			font-weight: bold;
+			font-size: 2.8rem;
+			margin-bottom: 10px;
+			@include mq(sp) {
+				font-size: 1.8rem;
+			}
+		}
+		
+		.txt {
+			margin-top: 25px;
+			@include mq(sp) {
+				margin-top: 15px;
+			}
+		}
+		table {
+			margin-top: 25px;
+		}
+	}
+	.box_equip {
+		margin-top: 50px; 
+		ul {
+			li {
+				margin-top: 40px;
+				&:first-child {
+					margin-top: 0;
+				}
+				.img {
+					width: 260px;
+					@include mq(sp) {
+						width: 100%;
+						img {
+							width: 100%;
+						}
+					}
+				}
+				dl {
+					-ms-flex: 1;
+					-webkit-flex: 1;
+					flex: 1;
+					padding-left: 20px;
+					@include mq(sp) {
+						padding-left: 0;
+						margin-top: 20px;
+					}
+
+				}
+			}
+		}
+	}
+	.box_amenity {
+		margin-top: 30px;
+	}
+}

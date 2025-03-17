@@ -1,0 +1,346 @@
+/* ===================================================================
+CSS information
+
+ file name  : top.css
+=================================================================== */
+body, a {
+  color: #000;
+}
+
+#page {
+  padding-top: 0;
+}
+
+/* -----------------------------------------------------------
+	.con_topics
+----------------------------------------------------------- */
+.con_topics {
+  padding: 60px 0 50px 0;
+}
+@media only screen and (max-width: 767px) {
+  .con_topics {
+    padding: 40px 0 30px 0;
+  }
+}
+.con_topics .wrap_post ul li a {
+  color: #000;
+}
+
+.bn_open {
+  text-align: center;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .bn_open {
+    margin-bottom: 30px;
+  }
+}
+
+/* -----------------------------------------------------------
+	.con_points
+----------------------------------------------------------- */
+.con_points .con_inner {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 960px;
+  min-height: 495px;
+}
+@media only screen and (max-width: 767px) {
+  .con_points .con_inner {
+    min-height: 0;
+    height: 150px;
+    padding: 0 6%;
+  }
+}
+.con_points .box_image {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  margin-left: -150px;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .con_points .box_image {
+    margin-left: -6%;
+  }
+}
+.con_points .box_image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  background-image: linear-gradient(to top right, #333333, #333333 50%, rgba(0, 0, 0, 0) 50.2%, rgba(0, 0, 0, 0));
+}
+@media only screen and (max-width: 767px) {
+  .con_points .box_image:before {
+    width: 45px;
+  }
+}
+.con_points .box_image:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 100%;
+  background-image: linear-gradient(to bottom left, #333333, #333333 50%, rgba(0, 0, 0, 0) 50.2%, rgba(0, 0, 0, 0));
+}
+@media only screen and (max-width: 767px) {
+  .con_points .box_image:after {
+    width: 45px;
+  }
+}
+.con_points .box_image .box_slide {
+  width: 100%;
+  height: 100%;
+}
+.con_points .box_image .box_slide .slick-list, .con_points .box_image .box_slide .slick-track {
+  height: 100%;
+}
+.con_points .box_image .box_slide .slide {
+  position: relative;
+}
+.con_points .box_image .box_slide .slide img {
+  max-width: none;
+}
+@media only screen and (max-width: 767px) {
+  .con_points .box_image .box_slide .slide img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 50%;
+    left: 0;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+@media only screen and (max-width: 380px) {
+  .con_points .box_image .box_slide .slide img {
+    width: auto;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+.con_points .box_content {
+  width: 320px;
+  padding: 35px 0;
+  position: relative;
+  z-index: 3;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .con_points .box_content {
+    width: 38%;
+    padding-top: 20px;
+  }
+}
+.con_points .box_content .st_high {
+  margin-bottom: 65px;
+  text-align: right;
+}
+.con_points .box_content .st_high span.en {
+  position: relative;
+  height: 38px;
+}
+h2.st_high img {
+    width: 100%;
+
+}
+.con_topics h2.st_high img {
+    max-width: 151px ;
+}
+.con_gallery h2.st_high img {
+    max-width: 377px ;
+}
+.con_access  h2.st_high img {
+    max-width: 178px ;
+}
+@media only screen and (max-width: 767px) {
+  .con_points .box_content .st_high span.en {
+    height: 15px;
+  }
+}
+.con_points .box_content .st_high span.en img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: none;
+}
+.con_points .box_content .txt {
+  color: #fff;
+  font-size: 1.3rem;
+}
+@media only screen and (max-width: 767px) {
+  .con_points .box_content .txt {
+    display: none;
+  }
+}
+.con_points .box_content .btn {
+  margin-top: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .con_points .box_content .btn {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .con_points .box_content .btn a {
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .con_points .box_content .btn {
+    text-align: right;
+  }
+}
+.con_points.guestroom {
+  background: #333333;
+}
+@media only screen and (max-width: 767px) {
+  .con_points.guestroom .st_high img {
+    width: 145px;
+  }
+}
+.con_points.facility {
+  background: #FF5200;
+}
+.con_points.facility .st_high {
+  text-align: left;
+}
+.con_points.facility .st_high span.en img {
+  right: auto;
+  left: 0;
+}
+@media only screen and (max-width: 767px) {
+  .con_points.facility .st_high span.en img {
+    width: 100px;
+  }
+}
+.con_points.facility .box_image {
+  margin-left: 0;
+  margin-right: -150px;
+}
+@media only screen and (max-width: 767px) {
+  .con_points.facility .box_image {
+    margin-right: -6%;
+    margin-left: 0;
+  }
+}
+.con_points.facility .box_image:before {
+  background-image: linear-gradient(to bottom right, #ff5200, #ff5200 50%, rgba(0, 0, 0, 0) 50.2%, rgba(0, 0, 0, 0));
+}
+.con_points.facility .box_image:after {
+  background-image: linear-gradient(to top left, #ff5200, #ff5200 50%, rgba(0, 0, 0, 0) 50.2%, rgba(0, 0, 0, 0));
+}
+@media only screen and (max-width: 767px) {
+  .con_points.facility .box_content .btn {
+    text-align: left;
+  }
+}
+.con_points.restaurant {
+  background: #FCA162;
+}
+.con_points.restaurant .st_high span.jp {
+  color: #754C24;
+}
+@media only screen and (max-width: 767px) {
+  .con_points.restaurant .st_high span.en img {
+    width: 148px;
+  }
+}
+.con_points.restaurant .box_image:before {
+  background-image: linear-gradient(to top right, #fca162, #fca162 50%, rgba(0, 0, 0, 0) 50.2%, rgba(0, 0, 0, 0));
+}
+.con_points.restaurant .box_image:after {
+  background-image: linear-gradient(to bottom left, #fca162, #fca162 50%, rgba(0, 0, 0, 0) 50.2%, rgba(0, 0, 0, 0));
+}
+
+/* -----------------------------------------------------------
+	.con_gallery
+----------------------------------------------------------- */
+.con_gallery {
+  margin-top: 60px;
+}
+@media only screen and (max-width: 767px) {
+  .con_gallery {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .con_gallery .st_high span.en img {
+    width: 190px;
+  }
+}
+.con_gallery .img {
+  text-align: center;
+}
+
+/* ‚±‚±‚©‚ç’Ç‹L */
+div#sale-list {
+    font-size: 0;
+    position: relative;
+        text-align: center;
+}
+div#sale-list > div.element {
+    width: 32%;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: top;
+    margin-right: 1.6%;
+    text-align:left;
+    margin-bottom: 30px;
+}
+div#sale-list > div.element:nth-child( 3n ) {
+    margin-right:0;
+}
+
+div#sale-list > div.element div.sale-pic {
+    margin-bottom: 15px;
+    max-width:300px;
+    width:100%;
+    margin-right:auto;
+    margin-left:auto;
+}
+div#sale-list > div.element div.sale-pic img {
+  width:100%;
+  height:auto;
+}
+div#sale-list > div.element h4.sale-title {
+    color: #C3AF3F;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 767px) {
+div#sale-list > div.element {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+div#sale-list > div.element div.sale-pic {
+    max-width: none;
+    margin-bottom: 20px;
+}
+
+}

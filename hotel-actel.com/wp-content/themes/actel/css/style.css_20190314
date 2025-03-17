@@ -1,0 +1,607 @@
+/* ===================================================================
+CSS information
+
+ file name  : style.css
+=================================================================== */
+/* -----------------------------------------------------------
+	
+	guestroom style
+
+----------------------------------------------------------- */
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.guestroom .con_title {
+  background-image: url(../images/guestroom/bg_title.jpg);
+}
+
+.guestroom-child.single .con_title {
+  background-image: url(../images/guestroom/single/bg_title.jpg);
+}
+
+.guestroom-child.twin .con_title {
+  background-image: url(../images/guestroom/twin/bg_title.jpg);
+}
+
+.guestroom-child.double .con_title {
+  background-image: url(../images/guestroom/double/bg_title.jpg);
+}
+
+.guestroom-child.deluxetwin .con_title {
+  background-image: url(../images/guestroom/deluxetwin/bg_title.jpg);
+}
+
+.guestroom-child.universaltwin .con_title {
+  background-image: url(../images/guestroom/universaltwin/bg_title.jpg);
+}
+
+/* -----------------------------------------------------------
+	.con_guestroom_list
+----------------------------------------------------------- */
+.guestroom .con_guestroom_list .wrp {
+  overflow: hidden;
+  margin-left: -3%;
+  margin-top: -40px;
+}
+@media only screen and (max-width: 767px) {
+  .guestroom .con_guestroom_list .wrp {
+    margin-left: 0;
+  }
+}
+.guestroom .con_guestroom_list .wrp .box_guestroom {
+  width: 47%;
+  margin-left: 3%;
+  float: left;
+  margin-top: 40px;
+}
+@media only screen and (max-width: 767px) {
+  .guestroom .con_guestroom_list .wrp .box_guestroom {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
+.guestroom .con_guestroom_list .wrp .box_guestroom:nth-child(odd) {
+  clear: both;
+}
+.guestroom .con_guestroom_list .wrp .box_guestroom .img {
+  position: relative;
+}
+.guestroom .con_guestroom_list .wrp .box_guestroom .img .en {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .guestroom .con_guestroom_list .wrp .box_guestroom .img .en img {
+    -moz-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    -webkit-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
+    -moz-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    max-width: none;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .guestroom .con_guestroom_list .wrp .box_guestroom .img .en img {
+    -moz-transform: scale(0.6, 0.6);
+    -ms-transform: scale(0.6, 0.6);
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+  }
+}
+.guestroom .con_guestroom_list .wrp .box_guestroom .st_mid {
+  margin-top: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .guestroom .con_guestroom_list .wrp .box_guestroom .btn {
+    margin-top: 20px;
+  }
+}
+
+/* -----------------------------------------------------------
+	.con_guestroom_detail
+----------------------------------------------------------- */
+.guestroom-child .con_guestroom_detail .box_intro .ttl {
+  font-weight: bold;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .guestroom-child .con_guestroom_detail .box_intro .ttl {
+    font-size: 1.8rem;
+  }
+}
+.guestroom-child .con_guestroom_detail .box_intro .txt {
+  margin-top: 25px;
+}
+@media only screen and (max-width: 767px) {
+  .guestroom-child .con_guestroom_detail .box_intro .txt {
+    margin-top: 15px;
+  }
+}
+.guestroom-child .con_guestroom_detail .box_intro table {
+  margin-top: 25px;
+}
+.guestroom-child .con_guestroom_detail .box_equip {
+  margin-top: 50px;
+}
+.guestroom-child .con_guestroom_detail .box_equip ul li {
+  margin-top: 40px;
+}
+.guestroom-child .con_guestroom_detail .box_equip ul li:first-child {
+  margin-top: 0;
+}
+.guestroom-child .con_guestroom_detail .box_equip ul li .img {
+  width: 260px;
+}
+@media only screen and (max-width: 767px) {
+  .guestroom-child .con_guestroom_detail .box_equip ul li .img {
+    width: 100%;
+  }
+  .guestroom-child .con_guestroom_detail .box_equip ul li .img img {
+    width: 100%;
+  }
+}
+.guestroom-child .con_guestroom_detail .box_equip ul li dl {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding-left: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .guestroom-child .con_guestroom_detail .box_equip ul li dl {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+.guestroom-child .con_guestroom_detail .box_amenity {
+  margin-top: 30px;
+}
+
+/* -----------------------------------------------------------
+	
+	facility style
+
+----------------------------------------------------------- */
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.facility .con_title {
+  background-image: url(../images/facility/bg_title.jpg);
+}
+
+/* -----------------------------------------------------------
+	.con_facility
+----------------------------------------------------------- */
+.facility .con_facility .box_facility {
+  margin-top: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .facility .con_facility .box_facility {
+    margin-top: 40px;
+  }
+}
+.facility .con_facility .box_facility:first-child {
+  margin-top: 0;
+}
+.facility .con_facility .box_facility.flex .img {
+  width: 460px;
+}
+@media only screen and (max-width: 767px) {
+  .facility .con_facility .box_facility.flex .img {
+    width: 100%;
+  }
+  .facility .con_facility .box_facility.flex .img img {
+    width: 100%;
+  }
+}
+.facility .con_facility .box_facility.flex .content {
+  padding-left: 30px;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+@media only screen and (max-width: 767px) {
+  .facility .con_facility .box_facility.flex .content {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+.facility .con_facility .box_facility .content .txt a {
+  color: #0053FF;
+}
+.facility .con_facility .box_facility .content dl {
+  margin-top: 35px;
+}
+@media only screen and (max-width: 767px) {
+  .facility .con_facility .box_facility .content dl {
+    margin-top: 20px;
+  }
+}
+.facility .con_facility .box_facility .content dl dt {
+  margin-bottom: 10px;
+}
+.facility .con_facility .box_facility .content dl dd .txt_att {
+  font-size: 1.2rem;
+}
+.facility .con_facility .box_facility:not(.flex) dl {
+  margin-top: 0;
+}
+.facility .con_facility .box_facility:not(.flex) dl dt {
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------------------
+	
+	topics style
+
+----------------------------------------------------------- */
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.archive .con_title {
+  background-image: url(../images/topics/bg_title01.jpg);
+}
+
+.single-post .con_title {
+  background-image: url(../images/topics/bg_title02.jpg);
+}
+
+/* -----------------------------------------------------------
+	.con_topics_detail
+----------------------------------------------------------- */
+.single-post .con_topics_detail .entry-header {
+  margin-bottom: 20px;
+}
+.single-post .con_topics_detail .entry-header .date, .single-post .con_topics_detail .entry-header .cate {
+  display: inline-block;
+  vertical-align: middle;
+}
+.single-post .con_topics_detail .entry-header .date {
+  font-size: 2.0rem;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .single-post .con_topics_detail .entry-header .date {
+    margin-right: 5px;
+    font-size: 1.4rem;
+  }
+}
+.single-post .con_topics_detail .entry-header .cate {
+  font-size: 1.0rem;
+  text-align: center;
+  font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+  .single-post .con_topics_detail .entry-header .cate {
+    font-size: 0.8rem;
+  }
+}
+.single-post .con_topics_detail .entry-header .cate span {
+  display: inline-block;
+  padding: 2px;
+  min-width: 6em;
+  border: 1px solid #969696;
+  color: #969696;
+}
+.single-post .con_topics_detail .entry-header .cate.cate-important span {
+  color: #FF5200;
+  border-color: #FF5200;
+}
+.single-post .con_topics_detail .entry-header .title {
+  margin-top: 15px;
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+  .single-post .con_topics_detail .entry-header .title {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+}
+.single-post .con_topics_detail .entry-content p {
+  margin-bottom: 20px;
+}
+.single-post .con_topics_detail .entry-content p:last-child {
+  margin-bottom: 0;
+}
+.single-post .con_topics_detail .pager {
+  margin-top: 100px;
+  max-width: 255px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 767px) {
+  .single-post .con_topics_detail .pager {
+    margin-top: 60px;
+  }
+}
+.single-post .con_topics_detail .pager ul {
+  overflow: hidden;
+}
+.single-post .con_topics_detail .pager ul li {
+  width: 49%;
+}
+.single-post .con_topics_detail .pager ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  background: #F0F0F0;
+  padding: 0.5em;
+  position: relative;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  text-align: center;
+}
+.single-post .con_topics_detail .pager ul li a:hover {
+  background: #FF5200;
+  color: #fff;
+}
+.single-post .con_topics_detail .pager ul li a i {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.single-post .con_topics_detail .pager ul li.prev {
+  float: left;
+}
+.single-post .con_topics_detail .pager ul li.prev a i {
+  left: 5px;
+}
+.single-post .con_topics_detail .pager ul li.next {
+  float: right;
+}
+.single-post .con_topics_detail .pager ul li.next a i {
+  right: 5px;
+}
+.single-post .con_topics_detail .pager ul li.back {
+  width: 100%;
+  margin-top: 2%;
+  float: left;
+}
+.single-post .con_topics_detail .pager ul li.back a i {
+  left: 5px;
+}
+
+.navigation {
+  margin-top: 60px;
+}
+.navigation h2 {
+  display: none;
+}
+.navigation .nav-links {
+  overflow: hidden;
+  margin-top: -5px;
+  text-align: center;
+}
+.navigation .nav-links > * {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  text-decoration: none;
+  background: #F0F0F0;
+  padding: 0.5em;
+  position: relative;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  text-align: center;
+  margin: 0 2px;
+  margin-top: 5px;
+  min-width: 36px;
+}
+.navigation .nav-links > * i {
+  font-size: 10px;
+}
+.navigation .nav-links a:hover {
+  background: #FF5200;
+  color: #fff;
+}
+.navigation .nav-links a.prev i {
+  margin-right: 5px;
+}
+.navigation .nav-links a.next i {
+  margin-left: 5px;
+}
+
+/* -----------------------------------------------------------
+	
+	resturant style
+
+----------------------------------------------------------- */
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.restaurant .con_title {
+  background-image: url(../images/restaurant/bg_title.jpg);
+}
+
+/* -----------------------------------------------------------
+	.con_restaurant
+----------------------------------------------------------- */
+.restaurant .con_restaurant .box_restaurant {
+  margin-bottom: 60px;
+}
+@media only screen and (max-width: 767px) {
+  .restaurant .con_restaurant .box_restaurant {
+    margin-bottom: 50px;
+  }
+}
+.restaurant .con_restaurant .box_restaurant:last-child {
+  margin-bottom: 0;
+}
+.restaurant .con_restaurant .box_restaurant .ttl {
+  font-weight: bold;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .restaurant .con_restaurant .box_restaurant .ttl {
+    font-size: 1.8rem;
+  }
+}
+.restaurant .con_restaurant .box_restaurant .ttl span {
+  display: inline-block;
+  background: #FF5200;
+  color: #fff;
+  margin-left: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  padding: 0.2em 0.8em;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 767px) {
+  .restaurant .con_restaurant .box_restaurant .ttl span {
+    font-size: 1.2rem;
+  }
+}
+.restaurant .con_restaurant .box_restaurant .txt {
+  margin-top: 25px;
+}
+@media only screen and (max-width: 767px) {
+  .restaurant .con_restaurant .box_restaurant .txt {
+    margin-top: 15px;
+  }
+}
+.restaurant .con_restaurant .box_restaurant table {
+  margin-top: 25px;
+}
+
+/* -----------------------------------------------------------
+	
+	access style
+
+----------------------------------------------------------- */
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.access .con_title {
+  background-image: url(../images/access/bg_title.jpg);
+}
+
+/* -----------------------------------------------------------
+	.con_title
+----------------------------------------------------------- */
+.access .con_access dl {
+  color: #000;
+}
+.access .con_access dl:last-child {
+  margin-top: 30px;
+}
+.access .con_access dl dd dl {
+  margin-top: 0 !important;
+  display: table;
+  width: 100%;
+}
+.access .con_access dl dd dl > * {
+  display: table-cell;
+}
+.access .con_access dl dd dl dt {
+  font-size: 1.3rem;
+  width: 5em;
+}
+
+/* -----------------------------------------------------------
+	
+	company style
+
+----------------------------------------------------------- */
+/* -----------------------------------------------------------
+	.con_company
+----------------------------------------------------------- */
+.company .con_company {
+  margin-top: 200px;
+}
+@media only screen and (max-width: 767px) {
+  .company .con_company {
+    margin-top: 80px;
+  }
+}
+.company .con_company h2 {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .company .con_company h2 {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .company .con_company h2 img {
+    -moz-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    -webkit-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
+    -moz-transform-origin: left center;
+    -ms-transform-origin: left center;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+}
+
+/* -----------------------------------------------------------
+	
+	privacy style
+
+----------------------------------------------------------- */
+/* -----------------------------------------------------------
+	.con_privacy
+----------------------------------------------------------- */
+.privacy .con_privacy {
+  margin-top: 200px;
+  color: #000;
+}
+@media only screen and (max-width: 767px) {
+  .privacy .con_privacy {
+    margin-top: 80px;
+  }
+}
+.privacy .con_privacy .con_inner > * {
+  margin-top: 40px;
+}
+@media only screen and (max-width: 767px) {
+  .privacy .con_privacy .con_inner > * {
+    margin-top: 20px;
+  }
+}
+.privacy .con_privacy .con_inner > *:first-child {
+  margin-top: 0;
+}
+.privacy .con_privacy .st_en {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .privacy .con_privacy .st_en {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .privacy .con_privacy .st_en img {
+    -moz-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    -webkit-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
+    -moz-transform-origin: left center;
+    -ms-transform-origin: left center;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+}
+.privacy .con_privacy dl dt {
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 767px) {
+  .privacy .con_privacy dl dt {
+    margin-bottom: 20px;
+  }
+}

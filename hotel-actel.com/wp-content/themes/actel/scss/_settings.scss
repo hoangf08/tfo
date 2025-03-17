@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import "compass";
+$experimental-support-for-svg: true;
+
+@mixin mq($device) {
+	@if $device == sp {
+		@media only screen and (max-width: $bp_sp){@content;}
+	} @else if $device == pc {
+		@media only screen and (min-width: $bp_sp + 1){@content;}
+	}
+}
+
+//----------------------------------------------//
+// *Variable									//
+//----------------------------------------------//
+
+// メインカラム
+$bp_sp: 767px;
+
+// フォントのベースサイズ
+$baseSize: 14;
+$baseWidth: 1000px;
+
+// フォントのベーカラー
+$baseColor: #534741;
+$mainColor: #FF5200;
+
+$jp_serif: "A1明朝", "A1 Mincho", "ヒラギノ明朝 Pro W3","Hiragino Mincho Pro", "游明朝", YuMincho, "HGS明朝E", "ＭＳ Ｐ明朝","MS PMincho","Times New Roman", serif;
+$jp_default: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "メイリオ",Meiryo,sans-serif;
+ 
+//----------------------------------------------//
+// *Placeholder									//
+//----------------------------------------------//
+
+@mixin fsz($size) {
+	font-size: $size+px;
+	font-size: ($size/10)+rem;
+}
+
+@mixin hoveranime($time: .2s) {
+	-webkit-transition: $time all ease;
+	transition:         $time all ease;
+}
