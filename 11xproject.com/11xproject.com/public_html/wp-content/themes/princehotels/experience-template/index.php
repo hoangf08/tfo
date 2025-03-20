@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="名古屋プリンスホテル <br>スカイタワー,プリンスホテル,ホテル,名古屋,絶景,高層,レストラン,夜景,アフタヌーンティー,ラウンジ,パノラマビュー,記念日,ダイニング,名古屋めし,新幹線" />
+  <meta name="description" content="至便な交通アクセスと充実した観光地を誇る名古屋に位置する、煌びやかなパノラマビューを一望できる名古屋プリンスホテル スカイタワー" />
+  <title>名古屋プリンスホテル スカイタワーで体験できること</title>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="common/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="common/css/style.css" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WGDDMK3');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MZ3Z2ZS4');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Dynamic Tag Management by Adobe head -->
+  <script src="//assets.adobedtm.com/db19aef962f6cf21aa61efda5e55a418d7613c67/satelliteLib-9954c899989b16c99bd6e82bffe178382f3997e2.js"></script>
+  <!-- End Dynamic Tag Management by Adobe head -->
+</head>
+
+<body id="lp_top">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGDDMK3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZ3Z2ZS4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="header">
+    <div class="header__main">
+      <div class="header__main--nav">
+        <div class="btn__nav">
+          <div class="btn__nav--bar">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main--navtoggle">
+        <a href="#" class="closed" title="">
+          <img src="common/img/svg/icon_closed.svg" />
+        </a>
+        <nav class="lp_nav">
+          <ul class="lp_nav-list">
+            <li class="lp_nav-item">
+              <a class="lp_nav-link" href="#lp_top">Page Top</a>
+            </li>
+            <li class="lp_nav-item">
+              <a class="lp_nav-link" href="#lp_contents03">
+                <h6>Spring</h6>
+              </a>
+              <ul class="lp_subnav-item">
+                <li class="lp_subnav-link">
+                  <a href="#lp_contents03">
+                    「Strawberry Garden in Bloom」<br>
+                      花×いちご スイーツ＆ランチブッフェ
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="lp_nav-item">
+              <a class="lp_nav-link" href="#lp_contents04">
+                <h6>Summer</h6>
+              </a>
+              <ul class="lp_subnav-item">
+                <li class="lp_subnav-link">
+                  <a href="#lp_contents04">
+                    NAGOYAの夜を彩る貸し切り花火クルーズ
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="lp_nav-item">
+              <a class="lp_nav-link" href="#lp_contents05">
+                <h6>Autumn</h6>
+              </a>
+              <ul class="lp_subnav-item">
+                <li class="lp_subnav-link">
+                  <a href="#lp_contents05">
+                    ONからOFFのわたし<br>
+                    金木犀の香りに包まれて
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="lp_nav-item">
+              <a class="lp_nav-link" href="#lp_contents06">
+                <h6>Winter</h6>
+              </a>
+              <ul class="lp_subnav-item">
+                <li class="lp_subnav-link">
+                  <a href="#lp_contents06">
+                    天空に浮かぶ白銀の世界
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="lp_nav-item">
+              <a class="lp_nav-link" href="#lp_contents07">
+                <h6>All Seasons</h6>
+              </a>
+              <ul class="lp_subnav-item">
+                <li class="lp_subnav-link">
+                  <a href="#lp_contents07_1">
+                    ゆめみるリカちゃんの<br>
+                    世界にときめく
+                  </a>
+                </li>
+                <li class="lp_subnav-link">
+                  <a href="#lp_contents07_2">
+                    過ごす時間が輝き出す<br>
+                    天空のひととき
+                  </a>
+                </li>
+                <li class="lp_subnav-link">
+                  <a href="#lp_contents07_3">
+                    忘れられない<br>
+                    眺望との出会い
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <p class="mb-2"><a href="#lp_guide" class="btn-button lp_nav-link" title="ホテル概要・アクセス">ホテル概要・アクセス</a></p>
+        <p class="mb-0"><a href="https://www.princehotels.co.jp/nagoya/plan/all/" class="btn-button lp_nav-link" target="_blank"
+            title="ご予約はこちら">ご予約はこちら</a></p>
+      </div>
+    </div>
+    <div class="lp_overlay"></div>
+  </header><!-- .header -->
+  <main class="main">
+    <section id="lp_contents01" class="s__slideshow">
+      <div class="slideshow text-center">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <a href="#lp_contents03">
+              <img src="common/img/slideshow_01.jpg" class="img-fluid" alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#lp_contents07_3">
+              <img src="common/img/slideshow_03.jpg" class="img-fluid" alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#lp_contents06">
+              <img src="common/img/slideshow_04.jpg" class="img-fluid" alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#lp_contents07_1">
+              <img src="common/img/slideshow_05.jpg" class="img-fluid" alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#lp_contents07_2">
+              <img src="common/img/slideshow_07.jpg" class="img-fluid" alt="" />
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#lp_contents07_3">
+              <img src="common/img/slideshow_06.jpg" class="img-fluid" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div class="slideshow__button">
+          <!-- If we need navigation buttons -->
+          <div class="swiper_btn_box">
+            <div class="swiper-btn-prev"></div>
+              <!-- Pagination bullets -->
+              <div class="swiper-pagination"></div>
+            <div class="swiper-btn-next"></div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #lp_contents01 -->
+
+    <section id="lp_contents02" class="section">
+      <div class="container">
+        <div class="intro">
+          <div class="intro__title text-center">
+            <h1>
+              名古屋プリンスホテル スカイタワー
+            </h1>
+          </div>
+          <div class="intro__text mw-600">
+            <h4 class="text-center">
+              日常をドラマに変える<br>
+              地上140ｍの天空のホテル
+            </h4>
+            <p class="mb-0">
+              名古屋駅至近の好アクセス。ここからはじまるホテルステイを、船旅になぞらえた演出でお迎えいたします。360°のパノラマビューに心と体を解放し、五感で味わう至高の空船の旅をお楽しみください。
+            </p>
+          </div>
+          <div class="intro__experiences">
+            <h4 class="text-center mb-3">
+              季節ごとの体験
+            </h4>
+            <ul class="list-inline list__contents">
+              <li class="item color1">
+                <a href="#lp_contents03" title="春のおすすめ">
+                  <span class="badge spring">
+                    <img src="common/img/svg/icon_spring.svg" alt="春のおすすめ" />
+                  </span>
+                  <h5 class="mb-0">春のおすすめ</h5>
+                </a>
+              </li>
+              <li class="item color2">
+                <a href="#lp_contents04" title="夏のおすすめ">
+                  <span class="badge summer">
+                    <img src="common/img/svg/icon_summer.svg" alt="夏のおすすめ" />
+                  </span>
+                  <h5 class="mb-0">夏のおすすめ</h5>
+                </a>
+              </li>
+              <li class="item color3">
+                <a href="#lp_contents05" title="秋のおすすめ">
+                  <span class="badge autumn">
+                    <img src="common/img/svg/icon_autumn.svg" alt="秋のおすすめ" />
+                  </span>
+                  <h5 class="mb-0">秋のおすすめ</h5>
+                </a>
+              </li>
+              <li class="item color4">
+                <a href="#lp_contents06" title="冬のおすすめ">
+                  <span class="badge winter">
+                    <img src="common/img/svg/icon_winter.svg" alt="冬のおすすめ" />
+                  </span>
+                  <h5 class="mb-0">冬のおすすめ</h5>
+                </a>
+              </li>
+            </ul>
+            <div class="intro__experiences--allseasons">
+              <a href="#lp_contents07" class="btn btn-outline w-100 text-center" title="通年のおすすめ">
+                通年のおすすめ
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #lp_contents02 -->
+
+    <section id="lp_contents03" class="section bg-spring">
+      <div class="container">
+        <div class="lp-cont">
+          <div class="lp-cont__head text-center">
+            <p class="subhead">
+              春のおすすめ
+            </p>
+            <h2 class="h2">Spring</h2>
+          </div>
+          <div class="lp-cont__title text-center">
+            <h4 class="mb-2">
+              「Strawberry Garden in Bloom」<br />
+              花×いちご スイーツ＆ランチブッフェ
+            </h4>
+          </div>
+          <ul class="lp-cont__image">
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont50-1.jpg" class="img-fluid" alt="" />
+            </li>
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont50-2.jpg" class="img-fluid" alt="" />
+            </li>
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont50-3.jpg" class="img-fluid" alt="" />
+            </li>
+          </ul>
+          <div class="lp-cont__content mw-600">
+            <div class="lp-cont__content--text">
+              <p class="mb-3">
+                愛知県は花の生産において日本一の産出額を誇る「花の王国」。今春は「花×いちご」をモチーフにしたスイーツ＆ランチブッフェをご提供いたします。いちごをふんだんに使った色とりどりのスイーツが並ぶブッフェボードは、まるで天空のお花畑。NAGOYAの眺望とともに、見た目にも華やかなスイーツの数々を心ゆくまでお楽しみください。
+              </p>
+            </div>
+            <div class="lp-cont__content--link text-center">
+              <a href="https://www.princehotels.co.jp/nagoya/plan/skydining/2025/lunch/strawberrygarden/" class="btn btn-button w-100" target="_blank" title="ご予約はこちら">
+                ご予約はこちら
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #lp_contents03 -->
+
+    <section id="lp_contents04" class="section bg-summer">
+      <div class="container">
+        <div class="lp-cont">
+          <div class="lp-cont__head text-center">
+            <p class="subhead">
+              夏のおすすめ
+            </p>
+            <h2>Summer</h2>
+          </div>
+          <div class="lp-cont__title text-center">
+            <h4 class="mb-2">
+              NAGOYAの夜を彩る貸し切り<br />
+              花火クルーズ
+            </h4>
+          </div>
+          <ul class="lp-cont__image">
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont02-1.jpg" class="img-fluid" alt="" />
+            </li>
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont02-2.jpg" class="img-fluid" alt="" />
+            </li>
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont02-3.jpg" class="img-fluid" alt="" />
+            </li>
+          </ul>
+          <div class="lp-cont__content mw-600">
+            <div class="lp-cont__content--text">
+              <p class="mb-3">
+                「第78回海の日名古屋みなと祭」の花火を遊覧船の屋外デッキから海上鑑賞できる絶景体験をご用意いたしました。
+                迫力満点の大玉花火や、芸術性豊かな創作スターマイン、メロディー花火などが夜空を彩る名古屋みなと祭花火大会。
+                ホテル目の前の船着き場から出航する貸し切りクルーズの屋外デッキで、大切な人と一緒に優雅な花火鑑賞を。
+              </p>
+            </div>
+            <div class="lp-cont__content--link text-center">
+              <a href="#" class="btn btn-button w-100 comingsoon" target="_blank" title="ご提供は終了いたしました">
+                ご提供は終了いたしました
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #lp_contents04 -->
+
+    <section id="lp_contents05" class="section bg-autumn">
+      <div class="container">
+        <div class="lp-cont">
+          <div class="lp-cont__head text-center">
+            <p class="subhead">
+              秋のおすすめ
+            </p>
+            <h2>Autumn</h2>
+          </div>
+          <div class="lp-cont__title text-center">
+            <h4 class="h4 mb-2">
+              ONからOFFのわたし<br />
+              金木犀の香りに包まれて
+            </h4>
+          </div>
+          <ul class="lp-cont__image">
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont03-1.jpg" class="img-fluid" alt="" />
+            </li>
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont03-2.jpg" class="img-fluid" alt="" />
+            </li>
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont03-3.jpg" class="img-fluid" alt="" />
+            </li>
+          </ul>
+          <div class="lp-cont__content mw-600">
+            <div class="lp-cont__content--text">
+              <p class="mb-3">
+                日々頑張るわたしに明日への活力を。秋の花「金木犀」のアメニティ、ウェルカムスイーツで香りに癒される至福のひととき。セルフヨガで体をほぐした後は、美容ブランドReFaでのスペシャルケアもお忘れなく。煌めく夜景に包まれながら眠り、ピクチャーウィンドーから差し込む朝の光で目覚める、NAGOYAの空に浮かぶ天空のホテルだからこそ叶う「秋寝(しゅうしん)」体験。季節の変わり目に心身を癒す秋のご褒美ステイをお届けします。
+              </p>
+            </div>
+            <div class="lp-cont__content--link text-center">
+              <a href="#" class="btn btn-button w-100 comingsoon"
+                target="_blank" title="ご提供は終了いたしました">
+                ご提供は終了いたしました
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #lp_content04 -->
+
+    <section id="lp_contents06" class="section bg-winter">
+      <div class="container">
+        <div class="lp-cont">
+          <div class="lp-cont__head text-center">
+            <p class="subhead">
+              冬のおすすめ
+            </p>
+            <h2>Winter</h2>
+          </div>
+          <div class="lp-cont__title text-center">
+            <h4 class="mb-2">
+              天空に浮かぶ白銀の世界
+            </h4>
+          </div>
+          <ul class="lp-cont__image">
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont04-1.jpg" class="img-fluid" alt="" />
+            </li>
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont04-2.jpg" class="img-fluid" alt="" />
+            </li>
+            <li class="lp-cont__image--item">
+              <img src="common/img/img_cont04-3.jpg" class="img-fluid" alt="" />
+            </li>
+          </ul>
+          <div class="lp-cont__content mw-600">
+            <div class="lp-cont__content--text">
+              <p class="mb-3">
+                地上140mに浮かぶ天空のホテルで、白銀の世界に入り込める冬限定の非日常体験。 白に染まった客室は雪を連想させ、大切な人との思い出がよみがえるノスタルジックな空間に。
+                窓一面に広がる煌めく夜景はまさにイルミネーション。ふたりだけの展望席で光の海原と白銀の世界に包まれ、記憶に刻まれるひと時をお過ごしください。
+              </p>
+            </div>
+            <div class="lp-cont__content--link text-center">
+              <a href="https://www.princehotels.co.jp/nagoya/plan/whitenostalgia" class="btn btn-button w-100 comingsoon"
+                target="_blank" title="ご提供は終了いたしました">
+                ご提供は終了いたしました
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #lp_contents06 -->
+
+    <section id="lp_contents07" class="section">
+      <div class="container">
+        <div class="lp-cont">
+          <div class="lp-cont__head text-center">
+            <p class="subhead">
+              通年のおすすめ
+            </p>
+            <h2>All Seasons</h2>
+          </div>
+
+          <div class="lp-cont__list">
+            <div id="lp_contents07_1" class="lp-cont__list--item">
+              <div class="lp-cont__title text-center">
+                <h4 class="mb-2">
+                  ゆめみるリカちゃんの<br>
+                  世界にときめく
+                </h4>
+              </div>
+              <ul class="lp-cont__image">
+                <li class="lp-cont__image--item">
+                  <img src="common/img/img_cont05-1.jpg" class="img-fluid" alt="" />
+                </li>
+                <li class="lp-cont__image--item">
+                  <img src="common/img/img_cont05-2.jpg" class="img-fluid" alt="" />
+                </li>
+                <li class="lp-cont__image--item">
+                  <img src="common/img/img_cont05-3.jpg" class="img-fluid" alt="" />
+                </li>
+              </ul>
+              <div class="lp-cont__content mw-600">
+                <div class="lp-cont__content--text">
+                  <p class="mb-3">
+                    旅行が趣味のリカちゃんがホテルの宿泊スタッフに挑戦。リカちゃんのアイディアをもとにゆめみるリカちゃんのドレスデザインをモチーフにした客室を1日1室限定でご用意いたしました。本プランでご宿泊のお客さまには、当ホテルのフロントの制服を着用したリカちゃんの限定アクリルスタンドとポストカードもプレゼントいたします。名古屋の街並みを一望できる地上35階の客室でリカちゃんのこだわりが詰まった夢の世界をお楽しみください。
+                  </p>
+                </div>
+                <div class="lp-cont__content--link text-center">
+                  <a href="https://www.princehotels.co.jp/nagoya/plan/dreamingliccaroom/" class="btn btn-button w-100 mb-2" target="_blank"
+                    title="ご予約はこちら">
+                    ご予約はこちら
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="lp_contents07_2" class="lp-cont__list--item">
+              <div class="lp-cont__title text-center">
+                <h4 class="mb-2">
+                  過ごす時間が輝き出す<br>
+                  天空のひととき
+                </h4>
+              </div>
+              <ul class="lp-cont__image">
+                <li class="lp-cont__image--item">
+                  <img src="common/img/img_cont07-1.jpg" class="img-fluid" alt="" />
+                </li>
+                <li class="lp-cont__image--item">
+                  <img src="common/img/img_cont07-2.jpg" class="img-fluid" alt="" />
+                </li>
+                <li class="lp-cont__image--item">
+                  <img src="common/img/img_cont07-3.jpg" class="img-fluid" alt="" />
+                </li>
+              </ul>
+              <div class="lp-cont__content mw-600">
+                <div class="lp-cont__content--text">
+                  <p class="mb-3">
+                    落ち着いた雰囲気のレストラン「Sky Dining 天空」では、季節と時間の移ろいを感じる天空の船旅を提供します。南アルプスをはじめ、名古屋駅周辺の高層ビル群や重要文化財であるMIRAI TOWERのライトアップなどが一望できます。ライブキッチンやフォトジェニックなジェラートが人気のブッフェ、アフタヌーンティーやコース料理などが特別な一日を彩ります。
+                  </p>
+                </div>
+                <div class="lp-cont__content--link text-center">
+                  <a href="https://www.princehotels.co.jp/nagoya/restaurant/skydining/" class="btn btn-button w-100" target="_blank"
+                    title="ご予約はこちら">
+                    ご予約はこちら
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="lp_contents07_3" class="lp-cont__list--item">
+              <div class="lp-cont__title text-center">
+                <h4 class="mb-2">
+                  忘れられない<br>
+                  眺望との出会い
+                </h4>
+              </div>
+              <ul class="lp-cont__image">
+                <li class="lp-cont__image--item">
+                  <img src="common/img/img_cont06-1.jpg" class="img-fluid" alt="" />
+                </li>
+                <li class="lp-cont__image--item">
+                  <img src="common/img/img_cont06-2.jpg" class="img-fluid" alt="" />
+                </li>
+                <li class="lp-cont__image--item">
+                  <img src="common/img/img_cont06-3.jpg" class="img-fluid" alt="" />
+                </li>
+              </ul>
+              <div class="lp-cont__content mw-600">
+                <div class="lp-cont__content--text">
+                  <p class="mb-3">
+                    高層階からジオラマのような名古屋の街並みを望むホテルステイ。清々しい朝焼けから日没にかけて広がる幻想的なグラデーション、煌めく夜景と変わりゆく景色とともにゆったりと流れるプライベートな時間。方角で異なる特徴を持つトレインビュー。訪れるたびに新しい眺望や発見に出会える天空のホテルで非日常を過ごしませんか。
+                  </p>
+                </div>
+                <div class="lp-cont__content--link text-center">
+                  <a href="https://www.princehotels.co.jp/nagoya/room/" class="btn btn-button w-100" target="_blank"
+                    title="ご予約はこちら">
+                    ご予約はこちら
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #lp_contents07 -->
+
+    <section id="lp_contents08" class="section s__planlist">
+      <div class="container">
+        <div class="l__planlist mw-600 text-center">
+          <h3 class="text-white">
+            おすすめ宿泊プラン
+          </h3>
+          <p class="mb-0">
+            <a href="https://www.princehotels.co.jp/nagoya/plan/all/" class="btn btn-button bg-white w-100"
+              target="_blank" title="ご予約はこちら">
+              ご予約はこちら
+            </a>
+          </p>
+        </div>
+      </div>
+    </section><!-- #lp_contents08 -->
+
+    <section id="lp_contents09" class="section s__article">
+      <div class="container">
+        <div class="lp_spot">
+          <h4 class="text-gray-cream text-center">
+            周辺の見どころ
+          </h4>
+          <ul class="lp_spot-list">
+            <li class="lp_spot-item">
+              <img src="common/img/img_spot01.jpg" class="img-fluid" alt="グローバルゲート">
+              <dl class="lp_spot-detail">
+                <dt>グローバルゲート</dt>
+                <dd>
+                  <p>
+                    ホテルが入るグローバルゲートは、ライフスタイル雑貨、レストランやカフェなど様々なショップが49店舗出店。創業90年以上になる鰻の老舗問屋が営む「うなぎ四代目菊川」とタイアップした宿泊プランもご用意しています。
+                  </p>
+                </dd>
+              </dl>
+            </li>
+            <li class="lp_spot-item">
+              <img src="common/img/img_spot02.jpg" class="img-fluid" alt="向野橋（こうやばし）">
+              <dl class="lp_spot-detail">
+                <dt>向野橋（こうやばし）</dt>
+                <dd>
+                  <p>
+                    ホテルから徒歩で約10分。夕刻には車両基地の明かりや鉄道のヘッドライト・テールライトが輝くフォトスポット。
+                  </p>
+                </dd>
+              </dl>
+            </li>
+            <li class="lp_spot-item">
+              <img src="common/img/img_spot03.jpg" class="img-fluid" alt="レゴランド®・ジャパン・リゾート">
+              <dl class="lp_spot-detail">
+                <dt>レゴランド®・ジャパン・リゾート</dt>
+                <dd>
+                  <p>
+                    お子さま連れのご家族が1日を思いきり楽しめるテーマパーク。最寄り駅の「金城ふ頭駅」までは、乗り換えなしで約22分。
+                  </p>
+                </dd>
+              </dl>
+            </li>
+            <li class="lp_spot-item">
+              <img src="common/img/img_spot04.jpg" class="img-fluid" alt="オアシス２１＆中部電力 MIRAI TOWER （栄エリア）">
+              <dl class="lp_spot-detail">
+                <dt>オアシス２１＆中部電力 MIRAI TOWER （栄エリア）</dt>
+                <dd>
+                  <p>
+                    名古屋の人気夜景スポット。ガラスの大屋根がシンボルの「オアシス２１」と国の重要文化財「中部電力MIRAI TOWER」。
+                  </p>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section><!-- lp_contents09 -->
+  </main><!-- .main -->
+  <footer id="lp_guide" class="footer">
+    <section class="s__footertop bg-graylight">
+      <div class="container">
+        <div class="footertop text-center">
+          <div class="footertop__logo">
+            <a href="https://www.princehotels.co.jp/nagoya/" title="名古屋プリンスホテル スカイタワー" target="_blank">
+              <img src="./common/img/logo.png" width="160" alt="名古屋プリンスホテル スカイタワー" />
+            </a>
+          </div>
+          <div class="footertop__text">
+            <h4 class="mb-2">名古屋プリンスホテル スカイタワー</h4>
+            <!-- <p class="text-left mb-4">
+              ホテルの位置する「ささしまライブ24」は、名古屋駅より1駅。中川運河の船出の場所として、古くから親しまれてきました。私たちはこの地でお客さまの特別な一日に寄り添い、何度も訪れたくなるホテルを目指しています。時間帯で変わりゆく景色、滞在シーンを彩る眺望はここにしかないパノラマエクスペリエンス。思いを込めたおもてなしが、ドラマチックなご滞在をお約束いたします。
+            </p> -->
+            <p class="mb-0">
+              <a href="https://www.princehotels.co.jp/nagoya/plan/all/" target="_blank" title="ご予約はこちら"
+                class="btn btn-button bg-black w-100">
+                ご予約はこちら
+              </a>
+            </p>
+          </div>
+          <div class="footertop__map">
+            <h4>アクセス</h4>
+            <p>〒453-6131 愛知県名古屋市中村区平池町4-60-12</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13046.214762548947!2d136.87615700629868!3d35.16774994713232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003771f8d273655%3A0x95089afb35901864!2z5ZCN5Y-k5bGL44OX44Oq44Oz44K544Ob44OG44OrIOOCueOCq-OCpOOCv-ODr-ODvA!5e0!3m2!1sja!2sjp!4v1677261032254!5m2!1sja!2sjp"
+              width="780" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="footertop__link">
+              <ul class="list-inline">
+                <li>
+                  <a href="https://www.princehotels.co.jp/nagoya/" title="ホテルWebサイト" target="_blank"
+                    class="btn btn-button">ホテルWebサイト</a>
+                </li>
+                <li>
+                  <a href="https://www.princehotels.co.jp/nagoya/access/" title="アクセス詳細はこちら" target="_blank"
+                    class="btn btn-button">アクセス詳細はこちら</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- .s__footertop -->
+
+    <section class="s__footercenter">
+      <div class="container">
+        <div class="footercenter">
+          <div class="footercenter__link text-center">
+            <a href="https://www.princehotels.co.jp/experience/" class="text-center" target="_blank" title="">
+              <img src="common/img/footercenter_01.jpg" class="img-fluid pc" alt="" />
+              <img src="common/img/footercenter_01_sp.jpg" class="img-fluid sp" alt="" />
+            </a>
+          </div>
+          <div class="footercenter__text">
+            ※写真はイメージです。実際の内容と異なる場合がございます。
+          </div>
+          <div class="footercenter__listlink text-center">
+            <ul class="list-inline">
+              <li>
+                <a href="https://www.princehotels.co.jp/" target="_blank" title="西武プリンスホテルズ＆リゾーツ">西武プリンスホテルズ＆リゾーツ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- .s__footercenter -->
+    <section class="s__footercopyright">
+      <div class="container">
+        <p class="mb-0 text-center">
+          Copyright © SEIBU PRINCE HOTELS WORLDWIDE INC. <br class="sp" />All rights reserved.
+        </p>
+      </div>
+    </section><!-- .s__footercopyright -->
+  </footer><!-- .footer -->
+
+  <!-- pageTop -->
+  <div class="pageTop">
+    <a href="#">
+      <img src="common/img/svg/arrow-top.svg" class="TOP" />
+    </a>
+  </div>
+  <!-- .pageTop -->
+
+  <script src="common/js/jquery-3.7.0.min.js"></script>
+  <script src="common/js/swiper-bundle.min.js"></script>
+  <script src="common/js/script.js"></script>
+
+  <!-- Dynamic Tag Management by Adobe footer -->
+  <script type='text/javascript'>
+    var analyticsData = {
+      'events': '',
+      'eVar12': '名古屋プリンスホテル スカイタワー',
+      'eVar13': '',
+      'eVar14': ''
+    }
+  </script>
+  <script type="text/javascript">
+    _satellite.pageBottom();
+  </script>
+  <!-- End Dynamic Tag Management by Adobe footer -->
+</body>
+
+</html>
