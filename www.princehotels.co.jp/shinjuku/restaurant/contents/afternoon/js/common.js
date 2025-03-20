@@ -1,5 +1,5 @@
 // スワイパー１
-const FirstSwiper = new Swiper('.swiper', {
+const FirstSwiper = new Swiper('.swiper1', {
     // Optional parameters
     loop: true,
    
