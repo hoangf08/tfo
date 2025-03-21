@@ -68,7 +68,7 @@ Variables
 /*********************************
 Common
 *********************************/
-* {
+* { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -77,7 +77,7 @@ Common
 html {
   scroll-behavior: smooth;
 }
-
+  
 body {
   font-family: var(--font-family--primary);
   font-size: 16px;
@@ -496,7 +496,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 3rem;
     padding: 0 45px;
   }
-  .lp-cont__head h2:before,
+  .lp-cont__head h2:before, 
   .lp-cont__head h2:after {
     width: 24px;
     height: 24px;
@@ -784,12 +784,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 56.76%;
 }
 .slideshow__button .swiper-pagination {
+  position: relative;
   width: max-content;
   right: 0;
   margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   display: flex;
+  align-items: center;
+  margin: 0 40px;
 }
 .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
@@ -812,7 +814,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, 0%);
   display: flex;
   justify-content: center;
-  gap: 220px;
 }
 
 .swiper_btn_box .swiper-btn-next,
@@ -881,11 +882,10 @@ h1, h2, h3, h4, h5, h6 {
   .s__slideshow .swiper-slide img {
     border-radius: 8px;
   }
-
-  .swiper_btn_box {
-    gap: 180px;
+  .slideshow__button .swiper-pagination {
+    margin: 0 15px;
   }
-  .swiper_btn_box .swiper-btn-next,
+  .swiper_btn_box .swiper-btn-next, 
   .swiper_btn_box .swiper-btn-prev {
     width: 32px;
     height: 32px;
@@ -926,6 +926,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   gap: 30px;
   margin-bottom: 30px;
+  justify-content: center;
 }
 .list__contents > li {
   width: 25%;
@@ -1106,8 +1107,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 25px;
   }
 }
-
-
 
 /*-----------------------------
  2.9. Layout 09 - List article
@@ -1315,7 +1314,7 @@ h1, h2, h3, h4, h5, h6 {
   .footercenter__link {
     width: 100%;
   }
-
+  
   .s__footercopyright {
     font-size: 11px;
     line-height: 17px;
@@ -1380,4 +1379,9 @@ h1, h2, h3, h4, h5, h6 {
   .pageTop a img {
     width: 18px;
   }
+}
+.disabled {
+  pointer-events: none;
+  cursor: none;
+  opacity: .5;
 }
