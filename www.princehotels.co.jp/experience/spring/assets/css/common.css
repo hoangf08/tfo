@@ -1,0 +1,460 @@
+:root {
+	/* font */
+	--gothic: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	--mincho: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+
+	/* color */
+	--blk: 62, 58, 57;
+	--wht: 255, 255, 255;
+	--btnColor: 45, 115, 175;
+	--mainColor: 0, 157, 239;
+	--blu: 88, 185, 214;
+}
+
+/*
+	表示設定
+------------------------------ */
+.lp_wrap {
+	background: var(--wht);
+	line-height: 1.8;
+}
+
+.lp_wrap a {
+	text-decoration: underline;
+	transition: all 0.5s ease 0s;
+}
+
+.lp_wrap a:hover {
+	text-decoration: none;
+	opacity: 0.7;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 100%;
+	max-width: 980px;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		padding: 0 6.4vw;
+	}
+}
+
+/*
+	font
+------------------------------ */
+.lp_wrap {
+	font-family: var(--gothic);
+	font-feature-settings: "palt"1;
+	letter-spacing: 0.05em;
+}
+
+body,
+th,
+td {
+	color: var(--blk);
+	font-size: 16px;
+	font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+
+	body,
+	th,
+	td {
+		font-size: 3.73333vw;
+	}
+}
+
+/*
+	SP,PC表示切り替え
+------------------------------ */
+.pc {
+	display: block;
+}
+
+.sp {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.pc {
+		display: none;
+	}
+
+	.sp {
+		display: block;
+	}
+}
+/*
+	list
+------------------------------ */
+ul.list li {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+/* note */
+ul.note li {
+	margin-left: 1em;
+	text-indent: -1em;
+	font-size: 14px;
+}
+
+ul.note li::before {
+	content: "※";
+}
+
+@media screen and (max-width: 768px) {
+	ul.note li {
+		font-size: calc(1em - 2px);
+	}
+}
+
+/* type */
+ul.type1 li::before {
+	content: "●";
+}
+/*
+	linkBtn
+------------------------------ */
+.linkBtn a {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 480px;
+	height: 72px;
+	font-size: 19px;
+	text-decoration: none;
+	border-radius: 72px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.linkBtn a.type1 {
+	background-color: rgb(var(--mainColor));
+}
+
+.linkBtn a.type2 {
+	background-color: rgb(var(--btnColor));
+}
+
+.linkBtn a svg {
+	width: auto;
+	height: 14px;
+	fill: none;
+	stroke: rgb(var(--blk));
+	stroke-miterlimit: 10;
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	z-index: 2;
+	transform: translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+	.linkBtn a {
+		height: 13.02083vw;
+		font-size: 3.46667vw;
+		border-radius: 13.02083vw;
+	}
+
+	.linkBtn a svg {
+		height: 2.08333vw;
+	}
+}
+
+
+/* ----------------------------------------------------
+	pagetop
+---------------------------------------------------- */
+.pageTop a {
+	background: rgba(var(--mainColor), 0.9);
+	width: 64px;
+	height: 64px;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 1em;
+	bottom: calc(70px + 1em);
+	z-index: 10;
+}
+
+.pageTop a svg {
+	fill: rgb(var(--wht));
+	width: 16px;
+	height: auto;
+}
+
+/*@media screen and (max-width: 768px) {
+	.pageTop a {
+		bottom: 1em;
+	}
+}*/
+
+/* ---------------------------------------------------
+
+	search
+
+---------------------------------------------------- */
+.lp_search {
+ background: #f4f4e8;
+ text-align: center;
+}
+.lp_search--main {
+ padding: 110px 0;
+}
+.lp_search__title {
+ margin-bottom: 1em;
+ font-size: 25px;
+ font-weight: bold;
+}
+.lp_search .linkBtn a {
+ background: rgb(var(--wht));
+ color: rgb(var(--blk));
+}
+@media screen and (max-width: 768px) {
+ .lp_search--main {
+  padding: 16vw 6.4vw;
+ }
+ .lp_search__title {
+  font-size: 4.55729vw;
+ }
+ .lp_search .linkBtn a {
+  max-width: 100%;
+ }
+}
+
+/* ---------------------------------------------------
+
+	lp_search--banner
+
+---------------------------------------------------- */
+.lp_search--banner {
+ background: #fcced0;
+ padding: 100px 20px;
+}
+.lp_search--banner .banner-list {
+ margin: 0 auto;
+ max-width: 637px;
+}
+.lp_search--banner .banner-list li:not(:last-of-type) {
+ margin-bottom: 2em;
+}
+@media screen and (max-width: 768px) {
+ .lp_search--banner {
+  padding: 16vw 6.4vw;
+ }
+ .lp_search--banner .banner-list li:not(:last-of-type) {
+  margin-bottom: 1em;
+ }
+}
+/* ---------------------------------------------------
+
+	banner
+
+---------------------------------------------------- */
+.lp_banner {
+ padding: 110px 0 0;
+ text-align: center;
+}
+.lp_banner__title {
+ margin-bottom: 1em;
+ font-family: var(--mincho);
+ font-size: 32px;
+}
+.lp_banner__title img {
+ width: auto;
+ height: 28px;
+}
+.lp_banner__lead {
+ margin-bottom: 4em;
+}
+.lp_banner__list {
+ margin: 0 auto;
+ max-width: 637px;
+}
+.lp_banner__list li:not(:last-of-type) {
+ margin-bottom: 2em;
+}
+@media screen and (max-width: 768px) {
+ .lp_banner {
+  padding: 16vw 6.4vw;
+ }
+ .lp_banner__title {
+  font-size: 6.4vw;
+ }
+ .lp_banner__title img {
+  height: 6.4vw;
+ }
+ .lp_banner__lead {
+  margin-bottom: 2em;
+ }
+ .lp_banner__list li:not(:last-of-type) {
+  margin-bottom: 1em;
+ }
+}
+
+/* ---------------------------------------------------
+	footer
+---------------------------------------------------- */
+.lp_footer {
+	background: rgb(var(--wht));
+	padding-top: 100px;
+	position: relative;
+	z-index: 10;
+}
+
+.lp_footer .note {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.lp_footer .note:not(:last-of-type) li {
+	margin-right: 1em;
+}
+
+@media screen and (max-width: 768px) {
+	.lp_footer {
+		padding-top: 0;
+	}
+
+	.lp_footer .note {
+		font-size: 3.2vw;
+		justify-content: flex-start;
+	}
+}
+
+/*
+	hotelNav
+------------------------------ */
+.lp_footer .hotelNav {
+	padding: 55px 0;
+	line-height: 1;
+	color: rgb(var(--blk));
+	display: flex;
+	justify-content: center;
+}
+
+.lp_footer .hotelNav::before {
+	content: "｜";
+}
+
+.lp_footer .hotelNav li {
+	margin: 0;
+	text-indent: 0;
+	white-space: nowrap;
+}
+
+.lp_footer .hotelNav li::before {
+	content: "";
+}
+
+.lp_footer .hotelNav li::after {
+	content: "｜";
+}
+
+.lp_footer .hotelNav li a {
+	padding: 0 1em;
+	color: rgb(var(--blk));
+	text-decoration: none;
+	display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+	.lp_footer .hotelNav {
+		padding: 7.46667vw 0;
+		line-height: 3;
+		font-size: 4.26667vw;
+		text-align: center;
+		display: block;
+	}
+
+	.lp_footer .hotelNav::before {
+		content: "";
+	}
+
+	.lp_footer .hotelNav li::before {
+		content: "｜";
+	}
+
+	.lp_footer .hotelNav li a {
+		padding: 0 0.5em;
+		font-size: 3.73333vw;
+	}
+}
+
+/*
+	copy
+------------------------------ */
+.lp_footer .copy {
+	padding: 0 0 100px;
+	color: #808080;
+	font-size: 12px;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	.lp_footer .copy {
+		padding: 0 0 16vw;
+		font-size: 2.66667vw;
+	}
+}
+/*.footer-copy {
+    margin-bottom: 70px;
+}*/
+
+/*追加*/
+.comingsoon {
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+}
+.comingsoon::before {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+}
+
+.hide-sp {
+    display: block;
+}
+@media screen and (max-width: 768px) {
+    .hide-sp {
+    display: none;
+    }
+}
+/********追加********/
+.header{
+    height: auto;
+}
+a[target='_blank']:after {
+	display: none;
+}
+ul.note li::marker{content: '';}
+@media screen and (max-width: 736px) {
+.header{
+    height: 50px;
+    }
+.header-util {
+        display: none;
+    }
+}
+@media screen and (max-width: 736px) {
+    .sp-modal {
+        margin: 0;
+    }
+}
