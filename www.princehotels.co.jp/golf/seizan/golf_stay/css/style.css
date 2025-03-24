@@ -269,4 +269,28 @@ footer {
   text-align: center;
 }
 
+.ontop {
+  width: 40px;
+  height: 40px;
+  background: #7caa2d;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ontop::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(-45deg);
+  margin-top: 4px;
+}
+
+
 /* CUSTOM SETTING */
