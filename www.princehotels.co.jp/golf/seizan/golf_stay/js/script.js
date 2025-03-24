@@ -42,4 +42,27 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  // Hiển thị hoặc ẩn nút cuộn lên đầu trang dựa trên vị trí cuộn
+  window.addEventListener('scroll', function() {
+    // Lấy nút cuộn lên đầu trang
+    const backToTopButton = document.querySelector('.ontop');
+    
+    // Kiểm tra xem nút có tồn tại không
+    if (backToTopButton) {
+      // Hiển thị nút khi người dùng đã cuộn xuống ít nhất 300px
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'flex';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    }
+  });
+  
+  // Khởi tạo trạng thái ban đầu của nút (ẩn khi trang mới tải)
+  const backToTopButtonInit = document.querySelector('.ontop');
+  if (backToTopButtonInit) {
+    backToTopButtonInit.style.display = 'none';
+  }
+
 });
