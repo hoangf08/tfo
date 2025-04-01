@@ -570,6 +570,7 @@ body {
 }
 
 .event-t11 {
+  font-family: var(--font-secondary);
   font-size: 24px;
   margin-top: 16px;
 }
@@ -585,9 +586,15 @@ body {
 
 .event-t13 {
   font-size: 24px;
+  font-family: var(--font-secondary);
 }
 
 .event-t14 {
+  font-weight: 700;
+  color: var(--ac);
+}
+
+.event-t15 {
   float: right;
 }
 
@@ -696,7 +703,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 19px 40px;
+  padding: 19px 8px;
   max-width: 560px;
   
   /* Đường viền ngoài 5px */
@@ -747,6 +754,7 @@ body {
 
 .menu-text {
   margin-top: 24px;
+  padding: 0 40px;
 }
 
 .menu-l1 {
@@ -757,6 +765,7 @@ body {
 
 .menu-l1-item {
   list-style-type: disc;
+  white-space: nowrap;
 }
 
 .menu-g1 {
