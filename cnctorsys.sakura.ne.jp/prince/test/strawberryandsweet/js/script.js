@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
       dynamicBullets: false,
       renderBullet: function (index, className) {
         // Chỉ hiển thị tối đa 3 nút
+        // Chỉ hiển thị 3 nút và khi slide sang ảnh thứ 4 thì quay lại active cho pagination 1
         if (index < 3) {
           return '<span class="' + className + '"></span>';
         } else {
@@ -70,6 +71,16 @@ document.addEventListener('DOMContentLoaded', function () {
     observer: true, // Theo dõi thay đổi DOM
     observeParents: true,
     observeSlideChildren: true,
+  });
+
+
+  // Khi index >= 3, không hiển thị nút và reset về nút đầu tiên
+  swiper2.on('slideChange', function () {
+    if (swiper2.realIndex >= 3) {
+      setTimeout(() => {
+        swiper2.pagination.bullets[swiper2.realIndex%3].classList.add('swiper-pagination-bullet-active');
+      }, 10);
+    }
   });
 });
 
