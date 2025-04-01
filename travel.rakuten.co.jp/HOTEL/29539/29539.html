@@ -1049,419 +1049,312 @@ $("#RthSubAffiliate").css("display","none");
  
 <hr class="indicate"><!--**************customize page start**************--><div id="RthCustomizeW">
 <div id="RthCustomizeW">
-    <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/css/rakuten_style.css" />
-    
-    <div id="cus_page">
-    <!--▼ KV ▼-->
-    <div class="kv">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/img/kv_01.jpg"
-    alt="" />
-    <div class="title">
-    <h2>
-    川越プリンスホテルで
-    <br />
-    体験できること
-    </h2>
-    </div>
-    </div>
-    
-    <!--▼ サイドバー ▼-->
-    <a
-    href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/29539/"
-    target="_blank">
-    <div class="sidebar_btn" style="bottom: 200px">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/1_kioicho/common/rakuten_img/img_sidebar.png" />
-    </div>
-    </a>
-    
-    <!--▼ クーポンサイドバー ▼-->
-    <a
-    href="https://travel.rakuten.co.jp/select/prince/feature/#COUPON01"
-    target="_blank"
-    id="coupon"
-    style="display: none">
-    <div class="sidebar_btn">
-    <img
-    src="https://img.travel.rakuten.co.jp/share/image_up/67078/LARGE/d573ab86785c1c1fe886d01ee92854ae86cdf772.47.9.26.3.jpg" />
-    </div>
-    </a>
-    <script type="text/javascript">
-    var startday = new Date('2025/3/3 20:00:00');
-    var endday = new Date('2025/3/20 23:30:00');
-    var today = new Date();
-    if (startday < today && today < endday) {
-    document.getElementById('coupon').style.display = 'block';
-    } else if (endday < today) {
-    document.getElementById('coupon').style.display = 'none';
-    } else {
-    document.getElementById('coupon').style.display = 'none';
-    }
-    </script>
-    
-    <!--▼ クーポンサイドバー 1月 ▼-->
-    <a
-    href="https://travel.rakuten.co.jp/select/prince/feature/#COUPON"
-    target="_blank"
-    id="coupon_2401"
-    style="display: none">
-    <div class="sidebar_btn">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/rakuten/common/rakuten_img/coupon_2401.png" />
-    </div>
-    </a>
-    <script type="text/javascript">
-    var startday = new Date('2024/01/09 13:00:00');
-    var endday = new Date('2024/02/05  12:59:59');
-    var today = new Date();
-    if (startday < today && today < endday) {
-    document.getElementById('coupon_2401').style.display = 'block';
-    } else if (endday < today) {
-    document.getElementById('coupon_2401').style.display = 'none';
-    } else {
-    document.getElementById('coupon_2401').style.display = 'none';
-    }
-    </script>
-    
-    <div id="cus_contents">
-    <!--▼ キャプション ▼-->
-    <div class="caption_prince">
-    <h1>川越プリンスホテル</h1>
-    <h3>文化の融合とノスタルジー</h3>
-    <p>
-    川越プリンスホテルが位置する小江戸川越は、歴史ある街並みと新しい文化が融合した小粋な街。どこか懐かしさを覚え、不思議な感覚に浸れる、そんな川越の街歩きをお楽しみください。
-    </p>
-    </div>
-    
-    <!--▼ リード ▼-->
-    <div class="read_box">
-    <div class="read_list">
-    <div class="read_item">
-    <a href="#lp_contents01">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_lead30.jpg"
-    alt="" />
-    <div class="mask">
-    <div class="read_text">
-    小江戸春旅 <br>－ 貸切人力車で夜桜観賞 －
-    </div>
-    </div>
-    </a>
-    </div>
-    <div class="read_item">
-    <a href="#lp_contents02">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_lead16.jpg"
-    alt="" />
-    <div class="mask">
-    <div class="read_text">
-        苺の魅力を楽しむ<br>
-        不思議の国のティータイム
-    </div>
-    </div>
-    </a>
-    </div>
-    </div>
-    <div class="read_list">
-    <div class="read_item">
-    <a href="#lp_contents03">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_lead02.jpg"
-    alt="" />
-    <div class="mask">
-    <div class="read_text">
-    モダンなデザインの客室で
-    <br />
-    快適な宿泊体験
-    </div>
-    </div>
-    </a>
-    </div>
-    <div class="read_item">
-    <a href="#lp_contents04">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_lead03.jpg"
-    alt="" />
-    <div class="mask">
-    <div class="read_text">
-    その土地で
-    <br />
-    味わう
-    </div>
-    </div>
-    </a>
-    </div>
-    </div>
-    </div>
-    
-    <!--▼ コンテンツ ▼-->
-    <div class="lp_main">
-    <section id="lp_contents01" class="lp_cont fadeBlock fadeIn">
-    <div class="lp_inner">
-    <h2 class="lp_cont-title">
-    小江戸春旅 <br>－ 貸切人力車で夜桜観賞 －
-    </h2>
-    <ul class="lp_cont-image">
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont30-1.jpg"
-    alt="" />
-    </li>
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont30-2.jpg"
-    alt="" />
-    </li>
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont30-3.jpg"
-    alt="" />
-    </li>
-    </ul>
-    <div class="lp_cont-wrap">
-    <p class="lp_cont-text">
-    春の訪れとともに満開の桜の下で過ごすひととき。蔵の街を走る貸切人力車、目の前に広がる幻想的な夜桜・・・そして、ホテルに戻ったら桜の装飾が施されたカウンター席で、春をイメージした夕食をお楽しみいただけます。心を和ます小江戸の春をお楽しみください。</p>
-    </div>
-    </div>
-    </section>
-    <section id="lp_contents02" class="lp_cont fadeBlock fadeIn">
-    <div class="lp_inner">
-    <h2 class="lp_cont-title">
-        苺の魅力を楽しむ<br>
-        不思議の国のティータイム
-    </h2>
-    <ul class="lp_cont-image">
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont16-1.jpg"
-    alt="" />
-    </li>
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont16-2.jpg"
-    alt="" />
-    </li>
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont16-3.jpg"
-    alt="" />
-    </li>
-    </ul>
-    <div class="lp_cont-wrap">
-    <p class="lp_cont-text">
-        「不思議の国のアリス」から着想を得たアフタヌーンティーセット。 <br>
-        苺をふんだんに使用し「赤」や「アンティーク」を基調とした <br>
-        華やかでかわいいスイーツで優雅なひとときを。
-    </p>
-    </div>
-    </div>
-    </section>
-    <section id="lp_contents03" class="lp_cont fadeBlock fadeIn">
-    <div class="lp_inner">
-    <h2 class="lp_cont-title">
-    モダンなデザインの客室で
-    <br />
-    快適な宿泊体験
-    </h2>
-    <ul class="lp_cont-image">
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont2-1.jpg"
-    alt="" />
-    </li>
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont2-2.jpg"
-    alt="" />
-    </li>
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont2-3.jpg"
-    alt="" />
-    </li>
-    </ul>
-    <div class="lp_cont-wrap">
-    <p class="lp_cont-text">
-    ゆったりとおくつろぎいただける広さの、モダンなデザインの洋室や和室をご用意しております。和室はそれぞれ内装が異なり、3世帯家族でのご利用やご友人同士での旅の思い出づくりに最適です。
-    </p>
-    </div>
-    </div>
-    </section>
-    
-    <section id="lp_contents04" class="lp_cont fadeBlock fadeIn">
-    <div class="lp_inner">
-    <h2 class="lp_cont-title">その土地で味わう</h2>
-    <ul class="lp_cont-image">
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont3-1.jpg"
-    alt="" />
-    </li>
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont3-2.jpg"
-    alt="" />
-    </li>
-    <li class="lp_cont-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_cont3-3.jpg"
-    alt="" />
-    </li>
-    </ul>
-    <div class="lp_cont-wrap">
-    <p class="lp_cont-text">
-    当ホテルでは、地元川越で仕込まれた地酒や近年注目を集める河越抹茶など食を通して地域や文化とつながる体験をご提供いたします。
-    </p>
-    </div>
-    </div>
-    </section>
-    </div>
-    
-    <!--▼ 周辺の見どこと ▼-->
-    <section class="lp_spot">
-    <div class="lp_inner">
-    <h2 class="lp_spot-title">周辺の見どころ</h2>
-    <ul class="lp_spot-list">
-    <li class="lp_spot-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_spot01.jpg"
-    alt="時の鐘" />
-    <dl class="lp_spot-detail">
-    <dt>時の鐘</dt>
-    <dd>
-    <p>
-    江戸時代から暮らしに欠かせない「時」を告げ、現在は一日に4回、空の色や街の風景にあった音色を響かせています。
-    </p>
-    </dd>
-    </dl>
-    </li>
-    <li class="lp_spot-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_spot02.jpg"
-    alt="小江戸蔵里" />
-    <dl class="lp_spot-detail">
-    <dt>小江戸蔵里</dt>
-    <dd>
-    <p>
-    川越市の物産を楽しめる『小江戸蔵里』。その中にある『ききざけ処昭和蔵』では、埼玉県内の日本酒を飲み比べできます。
-    </p>
-    </dd>
-    </dl>
-    </li>
-    <li class="lp_spot-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_spot03.jpg"
-    alt="菓子屋横丁" />
-    <dl class="lp_spot-detail">
-    <dt>菓子屋横丁</dt>
-    <dd>
-    <p>
-    きれいな飴や駄菓子が並ぶその光景におとなは懐かしさを、こどもは新鮮さとワクワク感を体験できます。
-    </p>
-    </dd>
-    </dl>
-    </li>
-    <li class="lp_spot-item">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/img_spot04.jpg"
-    alt="氷川神社" />
-    <dl class="lp_spot-detail">
-    <dt>氷川神社</dt>
-    <dd>
-    <p>
-    縁結びの神社として知られる川越氷川神社。参拝された方が願いを込めてしたためた絵馬がずらりと並んでいます。
-    </p>
-    </dd>
-    </dl>
-    </li>
-    </ul>
-    </div>
-    </section>
-    <!--▼　202306SS　▼-->
-    <style type="text/css">
-    a.CP:hover {
-    filter: alpha(opacity=70);
-    -ms-filter: “alpha(opacity=70) ”;
-    opacity: 0.7;
-    }
-    </style>
-    <div id="cpn4">
-    <!--▼ アクセス ▼-->
-    <section id="lp_guide" class="lp_guide">
-    <div class="lp_inner">
-    <h2 class="lp_guide-logo">
-    <img
-    src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/logo.png"
-    alt="" />
-    </h2>
-    </div>
-    <dl class="lp_guide-lead">
-    <dt>川越プリンスホテル</dt>
-    <dd>
-    <p class="lp_text">
-    川越プリンスホテルは、歴史と文化が融合した小粋な街、小江戸川越に位置します。都心からもアクセスも良く、当ホテルを拠点に、人気の観光地へのおでかけがスムーズです。また、「蔵造り」や「菓子屋横丁」などの歴史ある街並みをゆっくりと眺めながらお散歩してみると、初めてであってもどこか懐かしい感覚を味わうことができます。
-    </p>
-    </dd>
-    </dl>
-    <ul class="lp_guide-linkList">
-    <li class="lp_guide-linkItem mr0">
-    <a
-    class="lp_btn _black"
-    href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/29539?f_teikei=&f_heya_su=1&f_otona_su=1&f_s1=0&f_s2=0&f_y1=0&f_y2=0&f_y3=0&f_y4=0&f_kin=&f_kin2=&f_squeezes=&f_tscm_flg=&f_tel=&f_static=1"
-    target="_blank">
-    プラン一覧はこちら
-    </a>
-    </li>
-    </ul>
-    <dl class="lp_guide-lead">
-    <dt>アクセス</dt>
-    <dd>
-    <address>〒350-8501 埼玉県川越市新富町1-22</address>
-    <div class="lp_map">
-    <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25850.86442097833!2d139.481342!3d35.913735!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018da5bf92a8199%3A0xa4aab87b9ce1e75!2z5bed6LaK44OX44Oq44Oz44K544Ob44OG44Or!5e0!3m2!1sja!2sjp!4v1678363266408!5m2!1sja!2sjp"
-    width="600"
-    height="450"
-    style="border: 0"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    </dd>
-    </dl>
-    </section>
-    
-    <!--▼ footer ▼-->
-    <!--▼　一旦非表示 ▼ --
-    <footer class="lp_footer">
-    <div class="lp_inner">
-    <div class="lp_brand-bnr">
-    <h2 class="lp_title">絶景は、プリンスにある。</h2>
-    <p class="lp_text">ひとつひとつの旅を、記憶に残る絶景体験に。</p>
-    <div class="lp_bnr-brand">
-    <a href="" target="_blank">
-    <picture>
-    <img src="https://cnctorsys.sakura.ne.jp/prince/taiken/41_kawagoe/common/rakuten_img/bnr_brand.jpg" alt="ブランドバナー">
-    </picture>
-    </a>
-    </div>
-    </div>
-    <div class="lp_note">
-    <div class="lp_inner">
-    ※写真はイメージです。実際の内容と異なる場合がございます。
-    </div>
-    </div>
-    </div>
-    </footer>
-    -->
-    </div>
-    </div>
-    </div>
-    </div>
+<base 
+href="https://cnctorsys.sakura.ne.jp/prince/new_experience/kawagoe/common/rakuten_img/">
+<link rel="stylesheet" href="https://cnctorsys.sakura.ne.jp/prince/new_experience/kawagoe/common/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cnctorsys.sakura.ne.jp/prince/new_experience/kawagoe/common/css/rakuten_style.css" />
+<a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/29539/">
+<div class="sidebar_btn" style="bottom:200px"><img src="https://cnctorsys.sakura.ne.jp/prince/taiken/1_kioicho/common/rakuten_img/img_sidebar.png"></div>
+</a><a href="https://travel.rakuten.co.jp/select/prince/feature/#COUPON01" target="_blank" id="coupon" style="display:none">
+<div class="sidebar_btn"><img src="https://img.travel.rakuten.co.jp/share/image_up/67078/LARGE/d573ab86785c1c1fe886d01ee92854ae86cdf772.47.9.26.3.jpg"></div>
+</a>
+<script type="text/javascript">var startday = new Date("2025/3/3 20:00:00"), endday = new Date("2025/3/20 23:30:00"), today = new Date; document.getElementById("coupon").style.display = startday < today && today < endday ? "block" : "none"</script>
+<main class="main">
+<section id="lp_contents01" class="s__slideshow">
+<div class="slideshow text-center">
+<ul class="swiper-wrapper">
+<li class="swiper-slide"><a onclick="getElementById('lp_contents03_1').scrollIntoView()"><img src="img_cont1-1.jpg"></a></li>
+<li class="swiper-slide"><a onclick="getElementById('lp_contents03_2').scrollIntoView()"><img src="img_cont2-1.jpg"></a></li>
+<li class="swiper-slide"><a onclick="getElementById('lp_contents07_1').scrollIntoView()"><img src="img_cont7-1.jpg"></a></li>
+<li class="swiper-slide"><a onclick="getElementById('lp_contents07_2').scrollIntoView()"><img src="img_cont8-1.jpg"></a></li>
+</ul>
+<div class="slideshow__button">
+<div class="swiper_btn_box">
+<div class="swiper-btn-prev"></div>
+<div class="swiper-pagination"></div>
+<div class="swiper-btn-next"></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lp_contents02" class="section">
+<div class="container">
+<div class="intro">
+<div class="intro__title text-center">
+<h1>川越プリンスホテル</h1>
+</div>
+<div class="intro__text mw-600">
+<h4 class="text-center">文化の融合とノスタルジー</h4>
+<p class="mb-0">川越プリンスホテルが位置する小江戸川越は、歴史ある街並みと新しい文化が融合した小粋な街。どこか懐かしさを覚え、不思議な感覚に浸れる、そんな川越の街歩きをお楽しみください。</p>
+</div>
+<div class="intro__experiences">
+<h4 class="text-center mb-3">季節ごとの体験</h4>
+<ul class="list-inline list__contents">
+<li class="item color1"><a href="#lp_contents03"><span class="badge spring"></span>
+<h5 class="mb-0">春のおすすめ</h5>
+</a></li>
+<li class="item color2"><a href="#lp_contents04"><span class="badge summer"></span>
+<h5 class="mb-0">夏のおすすめ</h5>
+</a></li>
+<li class="item color3"><a href="#lp_contents05"><span class="badge autumn"></span>
+<h5 class="mb-0">秋のおすすめ</h5>
+</a></li>
+<li class="item color4"><a href="#lp_contents06"><span class="badge winter"></span>
+<h5 class="mb-0">冬のおすすめ</h5>
+</a></li>
+</ul>
+<div class="intro__experiences--allseasons"><a href="#lp_contents07" class="btn btn-outline w-100 text-center">通年のおすすめ</a></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lp_contents03" class="section bg-spring">
+<div class="container">
+<div class="lp-cont">
+<div class="lp-cont__head text-center">
+<p class="subhead">春のおすすめ</p>
+<h2 class="h2">Spring</h2>
+</div>
+<div id="lp_contents03_1" class="lp-cont__list--item">
+<div class="lp-cont__title text-center">
+<h4 class="mb-2">小江戸春旅<br>－ 貸切人力車で夜桜観賞 －</h4>
+</div>
+<ul class="lp-cont__image">
+<li><img src="img_cont1-1.jpg"></li>
+<li><img src="img_cont1-2.jpg"></li>
+<li><img src="img_cont1-3.jpg"></li>
+</ul>
+<div class="lp-cont__content mw-600">
+<div class="lp-cont__content--text">
+<p class="mb-3">春の訪れとともに満開の桜の下で過ごすひととき。蔵の街を走る貸切人力車、目の前に広がる幻想的な夜桜・・・そして、ホテルに戻ったら桜の装飾が施されたカウンター席で、春をイメージした夕食をお楽しみいただけます。心を和ます小江戸の春をお楽しみください。</p>
+</div>
+</div>
+</div>
+<div id="lp_contents03_2" class="lp-cont__list--item">
+<div class="lp-cont__title text-center">
+<h4 class="mb-2">春の甘いひととき、<br>
+ストロベリーピンクアフタヌーンティー</h4>
+</div>
+<ul class="lp-cont__image">
+<li><img src="img_cont2-1.jpg"></li>
+<li><img src="img_cont2-2.jpg"></li>
+<li><img src="img_cont2-3.jpg"></li>
+</ul>
+<div class="lp-cont__content mw-600">
+<div class="lp-cont__content--text">
+<p class="mb-3">華やかなピンク色を基調としたスイーツと紅茶を楽しむことができ、春の爽やかな雰囲気を存分に味わえるアフタヌーンティーをご用意しました。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lp_contents04" class="section bg-summer">
+<div class="container">
+<div class="lp-cont">
+<div id="lp_contents04_1" class="lp-cont__list--item">
+<div class="lp-cont__head text-center">
+<p class="subhead">夏のおすすめ</p>
+<h2>Summer</h2>
+</div>
+<div class="lp-cont__title text-center">
+<h4 class="mb-2">小江戸夏旅<br>– 人力車で妖怪まち巡り -</h4>
+</div>
+<ul class="lp-cont__image">
+<li><img src="img_cont3-1.jpg"></li>
+</ul>
+<div class="lp-cont__content mw-600">
+<div class="lp-cont__content--text">
+<p class="mb-3">川越には「妖怪」にまつわる場所があるのをご存じですか？今年の川越は、少しひんやりと感じる「妖怪」をテーマにしたさまざまな体験をご用意。川越の古い町並みを人力車で風を切る爽快感！人力車に？お料理に？館内に？どこに妖怪が潜んでいるのかお楽しみに。暑い夏を吹き飛ばす、楽しいひんやりとした夏を親子や友人とお楽しみください</p>
+</div>
+<div class="lp-cont__content--link text-center"><a class="btn btn-button w-100 text-white comingsoon">2025年5月上旬予約開始予定</a></div>
+</div>
+</div>
+<div id="lp_contents04_2" class="lp-cont__list--item">
+<div class="lp-cont__title text-center">
+<h4 class="mb-2">宵の小江戸で<br>小粋な夕涼み</h4>
+</div>
+<ul class="lp-cont__image">
+<li><img src="img_cont4-1.jpg"></li>
+</ul>
+<div class="lp-cont__content mw-600">
+<div class="lp-cont__content--text">
+<p class="mb-3">ホテル特製のかき氷で涼んだあとは、人力車で宵の小江戸・川越へ。うちわ片手に人力車で夜風をきって、流れる水音に自然の涼を感じる、古き良き日本の夕涼み体験を。ご夕食はお部屋で、小粋な箱入りの和食弁当をお楽しみください。</p>
+</div>
+<div class="lp-cont__content--link text-center"><a class="btn btn-button w-100 text-white comingsoon">ご提供は終了いたしました</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lp_contents05" class="section bg-autumn">
+<div class="container">
+<div class="lp-cont">
+<div id="lp_contents05_1" class="lp-cont__list--item">
+<div class="lp-cont__head text-center">
+<p class="subhead">秋のおすすめ</p>
+<h2>Autumn</h2>
+</div>
+<div class="lp-cont__title text-center">
+<h4 class="h4 mb-2">ありがとうを込めて<br>夫婦おとな旅</h4>
+</div>
+<ul class="lp-cont__image">
+<li><img src="img_cont5-1.jpg"></li>
+<li><img src="img_cont5-2.jpg"></li>
+<li><img src="img_cont5-3.jpg"></li>
+</ul>
+<div class="lp-cont__content mw-600">
+<div class="lp-cont__content--text">
+<p class="mb-3">今まで育ててくれた両親、長年支えてくれた奥さまへ感謝の気持ちをこめて。 おふたりの目の前で仕上げる和食料理、思い出のカクテルを片手にバーで語らい… 翌朝は、鳥のさえずりを聞きながら貸切人力車で寺社を巡る。 小江戸の秋がおふたりの旅を華やかに彩ります。</p>
+</div>
+<div class="lp-cont__content--link text-center"><a class="btn btn-button w-100 comingsoon text-white">ご提供は終了いたしました</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lp_contents06" class="section bg-winter">
+<div class="container">
+<div class="lp-cont">
+<div id="lp_contents06_1" class="lp-cont__list--item">
+<div class="lp-cont__head text-center">
+<p class="subhead">冬のおすすめ</p>
+<h2>Winter</h2>
+</div>
+<div class="lp-cont__title text-center">
+<h4 class="h4 mb-2">小江戸冬旅<br>和室ではんなり灯り＆バーでハイティー</h4>
+</div>
+<ul class="lp-cont__image">
+<li><img src="img_cont6-1.jpg"></li>
+</ul>
+<div class="lp-cont__content mw-600">
+<div class="lp-cont__content--text">
+<p class="mb-3">街歩きを楽しんだ後は、ホテルのオーセンティックバーでハイティーを満喫。 ポットパイや可愛らしいスイーツを頬張り、みんなニッコリ♪優しい光に包まれた 和室で川越土産を広げ、ワイワイ楽しい冬夜をお過ごしください。</p>
+</div>
+<div class="lp-cont__content--link text-center"><a class="btn btn-button w-100 text-white comingsoon">ご提供は終了いたしました</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lp_contents07" class="section">
+<div class="container">
+<div class="lp-cont">
+<div class="lp-cont__head text-center">
+<p class="subhead">通年のおすすめ</p>
+<h2>All Seasons</h2>
+</div>
+<div class="lp-cont__list">
+<div id="lp_contents07_1" class="lp-cont__list--item">
+<div class="lp-cont__title text-center">
+<h4 class="mb-2">モダンなデザインの客室で<br>快適な宿泊体験</h4>
+</div>
+<ul class="lp-cont__image">
+<li><img src="img_cont7-1.jpg"></li>
+<li><img src="img_cont7-2.jpg"></li>
+<li><img src="img_cont7-3.jpg"></li>
+</ul>
+<div class="lp-cont__content mw-600">
+<div class="lp-cont__content--text">
+<p class="mb-3">川越プリンスホテルのお部屋は、洗練されたデザインと快適さを兼ね備えており、どの部屋タイプもお客様のニーズに応じた様々な設備が整っています。そして和室も完備しており、畳の床と障子がある落ち着いた空間で、ゆったりとした時間をお過ごしいただけます。</p>
+</div>
+</div>
+</div>
+<div id="lp_contents07_2" class="lp-cont__list--item">
+<div class="lp-cont__title text-center">
+<h4 class="mb-2">その土地で味わう</h4>
+</div>
+<ul class="lp-cont__image">
+<li><img src="img_cont8-1.jpg"></li>
+<li><img src="img_cont8-2.jpg"></li>
+<li><img src="img_cont8-3.jpg"></li>
+</ul>
+<div class="lp-cont__content mw-600">
+<div class="lp-cont__content--text">
+<p class="mb-3">当ホテルでは、地元川越で仕込まれた地酒や近年注目を集める河越抹茶など食を通して地域や文化とつながる食事をご用意しております。また、近年では都道府県にフィーチャーしたフェアを開催。全国さまざまな味をご堪能ください。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lp_contents08" class="section s__planlist">
+<div class="container">
+<div class="l__planlist mw-600 text-center">
+<h3 class="text-white">おすすめ宿泊プラン</h3>
+<p class="mb-0"><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/29539/" class="btn btn-button bg-white w-100" target="_blank">ご予約はこちら</a></p>
+</div>
+</div>
+</section>
+<section id="lp_contents09" class="section s__article">
+<div class="container">
+<div class="lp_spot">
+<h4 class="text-gray-cream text-center">周辺の見どころ</h4>
+<ul class="lp_spot-list">
+<li class="lp_spot-item"><img src="img_spot01.jpg">
+<dl class="lp_spot-detail">
+<dt>時の鐘</dt>
+<dd>
+<p>江戸時代から暮らしに欠かせない「時」を告げ、現在は一日に4回、空の色や街の風景にあった音色を響かせています。</p>
+</dd>
+</dl>
+</li>
+<li class="lp_spot-item"><img src="img_spot02.jpg">
+<dl class="lp_spot-detail">
+<dt>小江戸蔵里</dt>
+<dd>
+<p>川越市の物産を楽しめる『小江戸蔵里』。その中にある『ききざけ処昭和蔵』では、埼玉県内の日本酒を飲み比べできます。</p>
+</dd>
+</dl>
+</li>
+<li class="lp_spot-item"><img src="img_spot03.jpg">
+<dl class="lp_spot-detail">
+<dt>菓子屋横丁</dt>
+<dd>
+<p>きれいな飴や駄菓子が並ぶその光景におとなは懐かしさを、こどもは新鮮さとワクワク感を体験できます。</p>
+</dd>
+</dl>
+</li>
+<li class="lp_spot-item"><img src="img_spot04.jpg">
+<dl class="lp_spot-detail">
+<dt>氷川神社</dt>
+<dd>
+<p>縁結びの神社として知られる川越氷川神社。参拝された方が願いを込めてしたためた絵馬がずらりと並んでいます。<br>
+2021年には観音堂、鐘楼、山門が港区指定有形文化財に指定されました。</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<footer id="lp_guide" class="footer">
+<section class="s__footertop bg-graylight">
+<div class="container">
+<div class="footertop text-center">
+<div class="footertop__logo"><a href="#" target="_blank"><img src="logo.png" width="160"></a></div>
+<div class="footertop__text">
+<h4 class="mb-2">川越プリンスホテル</h4>
+<p class="mb-0"><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/29539/" target="_blank" class="btn btn-button bg-black text-white w-100">ご予約はこちら</a></p>
+</div>
+<div class="footertop__map">
+<h4>アクセス</h4>
+<p>〒350-8501 埼玉県川越市新富町1-22</p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12925.432292180833!2d139.4813415!3d35.9137345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018da5bf92a8199%3A0xa4aab87b9ce1e75!2z5bed6LaK44OX44Oq44Oz44K544Ob44OG44Or!5e0!3m2!1sja!2sjp!4v1676360480113!5m2!1sja!2sjp" width="780" height="450" style="border:0"></iframe>
+</div>
+</div>
+</div>
+</section>
+</footer>
+<div class="pageTop"><a 
+href="#"></a></div>
+<script 
+src="https://cnctorsys.sakura.ne.jp/prince/new_experience/kawagoe/common/js/jquery-3.7.0.min.js"></script>
+<script 
+src="https://cnctorsys.sakura.ne.jp/prince/new_experience/kawagoe/common/js/swiper-bundle.min.js"></script>
+<script 
+src="https://cnctorsys.sakura.ne.jp/prince/new_experience/kawagoe/common/js/script.js"></script>
     <!--/RthCustomizeW--></div><!--**************customize page end**************--><link type="text/css" rel="stylesheet" href="https://img.travel.rakuten.co.jp/share/themes/hotel/css/trvl_hotel_ovrride.css?_=20211216">
 <!-- landing page uses different SiteCatalyst name -->
 <script type="text/javascript" charset="Shift_JIS" src="https://trv.r10s.jp/share/wat/info/hotel_top.js"></script>
