@@ -1,0 +1,102 @@
+/* ----------------------------------------------------
+　　
+▼　【NEW】体験できることの編集_sp ▼
+
+---------------------------------------------------- */
+.main {background-color: white;font-family: '游ゴシック','Yu Gothic','YuGothic','Meiryo UI','メイリオ','Meiryo UI',sans-serif;}
+.main .container {padding: 0 10px;max-width: 1068px;width: 100%;margin: 0 auto;background-color: transparent;}
+.main section.section {padding: 50px 0 60px;}
+.img-fluid {max-width: 100%;height: auto;}
+.btn-button {font-size: 16px;font-weight: 500;color: white;background-color: #C6AB9C;padding: 20px 50px;display: inline-block;width: 100%;position: relative;}
+.btn-button:after {position: absolute;content: '';top: 50%;transform: translateY(-50%);right: 20px;width: 35px;height: 20px;
+  background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/c01dc150380ddcec96878512894ae063a370dd7c.47.9.26.3.jpg");background-position: center;background-repeat: no-repeat;
+}
+.btn-button.bg-black {background-color: #000;}
+.btn-button.bg-black:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/8a7123288100c6c49af284f707b825e4510b19ea.47.9.26.3.jpg");}
+.btn-button.bg-white {color: #222;background-color: white;}
+.btn-outline {border: 2px solid #7c7c7c;display: block;position: relative;padding: 20px 15px 52px;font-weight: 700;}
+.btn-outline:after {bottom: 10px;left: 50%;border: solid transparent;content: "";height: 0;width: 0;position: absolute;border-color: rgba(136, 183, 213, 0);
+border-top-color: #7c7c7c;border-width: 11px;margin-left: -11px;}
+.bg-spring {background: rgb(255, 246, 246);background: linear-gradient(180deg, rgba(255, 246, 246, 1) 0%, rgba(237, 236, 229, 1) 100%);}
+.bg-summer {background: rgb(238, 248, 248);background: linear-gradient(180deg, rgba(238, 248, 248, 1) 0%, rgba(226, 239, 219, 1) 100%);}
+.bg-autumn {background: rgb(241, 239, 209);background: linear-gradient(180deg, rgba(241, 239, 209, 1) 0%, rgba(236, 229, 208, 1) 100%);}
+.bg-winter {background: rgb(241, 243, 247);background: linear-gradient(180deg, rgba(241, 243, 247, 1) 0%, rgba(230, 234, 240, 1) 100%);}
+.mw-600 {width: 100%;max-width: 600px;margin: 0 auto;}
+.text-center {text-align: center;}
+.bg-graylight {background-color: #f3f3f3;}
+.bg-white {background-color: white;}
+.badge {width: 44px;height: 44px;margin: 0 auto 1.2rem;border-radius: 100%;display: block;background-repeat: no-repeat;
+background-size: auto;background-position: center;}
+.badge.spring {background-color: #ee8593;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/3c465fe1413934b11780b35648bf39147bdaa04b.47.9.26.3.jpg");}
+.badge.summer{background-color: #009def;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/aea199caad77a547e1584788818eebab1774faa0.47.9.26.3.jpg");}
+.badge.autumn{background-color: #d4832a;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/91376346b77962aee9ce5291e7a3d032213fc312.47.9.26.3.jpg");}
+.badge.winter{background-color: #718eaf;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/20828af70339652574f5292785351e22e5ea2b75.47.9.26.3.jpg");}
+/* lp-cont */
+.lp-cont {padding: 0 15px;}
+.lp-cont__head {margin-bottom: 50px;}
+.lp-cont__head .subhead {margin-bottom: 0;}
+.lp-cont__head h2 {font-weight: 500;margin-bottom: 0;position: relative;display: inline-block;font-size: 3rem;line-height: 3rem;padding: 0 45px;}
+.lp-cont__head h2:before,
+.lp-cont__head h2:after {position: absolute;content: "";top: 0;width: 24px;height: 24px;background-repeat: no-repeat;background-position: center;background-size: contain;}
+.lp-cont__head h2:before {left: 0;}
+.lp-cont__head h2:after {right: 0;}
+.lp-cont__title h4 {font-size: 18px;margin-bottom: 1rem;}
+.lp-cont__image {max-width: 890px;width: 100%;margin: 0 auto;display: flex;flex-wrap: wrap;position: relative;}
+.lp-cont__image:after {position: absolute;content: "";width: 40px;height: 40px;right: -14px;top: -1px;background-size: 22px;background-position: center;background-repeat: no-repeat;
+border-radius: 100%;-ms-border-radius: 100%;-moz-border-radius: 100%;-webkit-border-radius: 100%;z-index: 1;}
+.lp-cont__image .lp-cont__image--item {margin-top: 20px;display: inline-flex;}
+.lp-cont__image .lp-cont__image--item {    width: 48.9%;}
+.lp-cont__image .lp-cont__image--item:first-child {width: 100%;}
+.lp-cont__image .lp-cont__image--item:nth-child(2) {margin-right: 2.2%;}
+.lp-cont__content {margin-top: 30px;}
+.lp-cont__content .lp-cont__content--text {margin-bottom: 40px;}
+.lp-cont__content--text p {font-size: 14px;line-height: 1.8;}
+.lp-cont__list .lp-cont__list--item:not(:last-child) {margin-bottom: 40px;}
+/* lp_slideshow */
+section.cst-module-carousel.lp_slideshow .cst-module-carousel-images {height: 180px;}
+section.cst-module-carousel.lp_slideshow .cst-module-carousel-images img {top: 0 !important;}
+/* lp_contents02 */
+.s__contents--head {padding-top: 50px;}
+.intro__title {margin-bottom: 25px;}
+.intro__title h1 {font-size: 1.3rem;line-height: 2.3rem;}
+.intro__text {padding: 0 15px;}
+.intro__text h4 {margin-bottom: 1.5rem;}
+.intro__experiences h4 {font-size: 1.5rem;padding-top: 2.1rem;margin: 0 2% 3rem;}
+.list__contents {display: flex;flex-wrap: wrap;column-gap: 7px;row-gap: 8px;margin-bottom: 8px;}
+.list__contents > li {width: 49%;text-align: center;flex: 1 1 auto;}
+.list__contents > li a {display: block;border-width: 2px;border-style: solid;padding: 15px 15px 40px;position: relative;}
+.list__contents > li a:after {bottom: 4px;left: 50%;border: solid transparent;content: "";height: 0;width: 0;position: absolute;pointer-events: none;
+border-color: rgba(136, 183, 213, 0);border-top-color: #88b7d5;border-width: 11px;margin-left: -11px;}
+.list__contents > li.color1 a {border-color: #ee8593;}
+.list__contents > li.color2 a {border-color: #009def;}
+.list__contents > li.color3 a {border-color: #d4832a;}
+.list__contents > li.color4 a {border-color: #718eaf;}
+.list__contents > li.color1 a:after {border-top-color: #ee8593;}
+.list__contents > li.color2 a:after {border-top-color: #009def;}
+.list__contents > li.color3 a:after {border-top-color: #d4832a;}
+.list__contents > li.color4 a:after {border-top-color: #718eaf;}
+/* lp_contents03 */
+#lp_contents03 .lp-cont__head h2:before, #lp_contents03 .lp-cont__head h2:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/b2db3367a8a24e9f1d2a79e29978054476a09b31.47.9.26.3.jpg");}
+#lp_contents03 .lp-cont__image:after {background-color: #ee8593;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/3c465fe1413934b11780b35648bf39147bdaa04b.47.9.26.3.jpg");}
+/* lp_contents04 */
+#lp_contents04 .lp-cont__head h2:before, #lp_contents04 .lp-cont__head h2:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/0b4e509639b12c093ec6e617342d28b4b6c47601.47.9.26.3.jpg");}
+#lp_contents04 .lp-cont__image:after {background-color: #009def;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/aea199caad77a547e1584788818eebab1774faa0.47.9.26.3.jpg");}
+/* lp_contents05 */
+#lp_contents05 .lp-cont__head h2:before, #lp_contents05 .lp-cont__head h2:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/db580a25870e0d57a03929b98da208a6a6d50b67.47.9.26.3.jpg");}
+#lp_contents05 .lp-cont__image:after {background-color: #d4832a;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/91376346b77962aee9ce5291e7a3d032213fc312.47.9.26.3.jpg");}
+/* lp_contents06 */
+#lp_contents06 .lp-cont__head h2:before, #lp_contents06 .lp-cont__head h2:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/aad55557a8a1f2ea1460af7e6bf8df6c656369d1.47.9.26.3.jpg");}
+#lp_contents06 .lp-cont__image:after {background-color: #718eaf;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/20828af70339652574f5292785351e22e5ea2b75.47.9.26.3.jpg");}
+/* lp_contents08 */
+.s__planlist {background: rgb(215, 196, 186);background: linear-gradient(45deg, rgba(215, 196, 186, 1) 0%, rgba(144, 135, 130, 1) 100%);padding: 80px 0 110px;}
+.s__planlist h3 {margin-bottom: 50px;color:white;}
+/* Footer top */
+#lp_guide {background-color: #f3f3f3;}
+#lp_guide.footer {margin-top: 0; padding: 40px 0;}
+.s__footertop .container {background-color: transparent;}
+.footertop__text {max-width: 592px;margin: 30px auto 0;}
+.footertop__text p {font-size: 13.5px;}
+.footertop__text h4,
+.footertop__map h4 {color: #222222;font-size: 14.6px;margin-bottom: 2rem;}
+.footertop__map {margin-top: 40px;}
+.footertop__map p {color: #222222;}
