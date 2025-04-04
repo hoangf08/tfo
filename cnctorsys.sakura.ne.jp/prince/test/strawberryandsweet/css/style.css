@@ -518,6 +518,7 @@ body {
     "text image"
     "more image"
     "more attend"
+    "more space"
   ;
 }
 
@@ -543,16 +544,24 @@ body {
 }
 
 .event-i1 {
+  height: min-content;
   aspect-ratio: 55/34;
   grid-area: image;
-  background: url(../images/event-image-1.png) center center;
+  background: url(../images/event-image-1.png);
   background: url(../images/event-image-1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 24px;
   margin-top: 24px;
 }
 
 .event-attend {
   grid-area: attend;
+}
+
+.event-space {
+  grid-area: space;
 }
 
 .event-t9 {
@@ -599,7 +608,6 @@ body {
 }
 
 .event-attend {
-  margin-top: 16px;
 }
 
 /* MARK: MENU
