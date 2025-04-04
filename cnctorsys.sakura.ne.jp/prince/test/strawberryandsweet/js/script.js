@@ -1,6 +1,29 @@
 
 // Cập nhật khi trang được tải
 document.addEventListener('DOMContentLoaded', function () {
+
+  // Tạo Intersection Observer
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Thêm class 'visible' khi element xuất hiện
+        entry.target.classList.add('visible');
+        // Ngừng theo dõi sau khi hiển thị (tùy chọn)
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null, // Viewport mặc định
+    rootMargin: '0px', // Margin quanh viewport
+    threshold: 0.2 // Kích hoạt khi 20% element xuất hiện
+  });
+
+  // Chọn tất cả các section để theo dõi
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
   const swiper1 = new Swiper('.lead-slide', {
     loop: true,
     grabCursor: true,
@@ -78,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
   swiper2.on('slideChange', function () {
     if (swiper2.realIndex >= 3) {
       setTimeout(() => {
-        swiper2.pagination.bullets[swiper2.realIndex%3].classList.add('swiper-pagination-bullet-active');
+        swiper2.pagination.bullets[swiper2.realIndex % 3].classList.add('swiper-pagination-bullet-active');
       }, 10);
     }
   });
