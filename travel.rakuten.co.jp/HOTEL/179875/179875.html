@@ -1053,350 +1053,469 @@ $("#RthSubAffiliate").css("display","none");
   <input type="hidden" id="rakutenTr_hotel_no" value="179875">
  
 <hr class="indicate"><!--**************customize page start**************--><div id="RthCustomizeW">
-<table width="1190" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:20px;">
-  <tr>
-  <td style="text-align:left; padding:5px 0;"><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/179875" target="_blank"><img src="https://img.travel.rakuten.co.jp/special/sales/bnr/dh_730_90.jpg" width="590" id="ss"></a></td><!--/ss-->
-  <!--ANHAcoupon--><td style="text-align:right;"><a href="https://travel.rakuten.co.jp/select/allhotelcoupon-kin/202204/index_trvmkt.html" target="_blank"><img src="https://img.travel.rakuten.co.jp/select/allhotelcoupon-kin/202204/bnr/730_90.jpg" style="width:590px; display: none;" id="ANHAcoupon"></a></td><!--/ANHAcoupon-->
-  </tr></table>
-  <!--ss-->
-  <script type="text/javascript">
-  var startday = new Date('2023/03/01 20:00:00');
-  var endday = new Date('2023/03/15 23:59:59');
+<link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<style>
+/* MARK: RAKUTEN
+*/
+#htlContents, #htlMainContent, .travel__tab--top-page {width: 100%!important; max-width: 100%;}
 
-  var today = new Date();
-  if ( startday < today && today < endday ){
-     document.getElementById("ss").style.display="block";
-  }else if(endday < today ){
-     document.getElementById("ss").style.display="none";
-  }else{
-     document.getElementById("ss").style.display="none";
-  }
-  </script>
-  <!--/ss-->
-  <!--ANHAcoupon-->
-  <script type="text/javascript">
-  var startday = new Date('2022/04/14 10:00:00');
-  var endday = new Date('2022/05/16 12:59:59');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-size: 16px;
+text-align: center;
+}
 
-  var today = new Date();
-  if ( startday < today && today < endday ){
-     document.getElementById("ANHAcoupon").style.display="block";
-  }else if(endday < today ){
-     document.getElementById("ANHAcoupon").style.display="none";
-  }else{
-     document.getElementById("ANHAcoupon").style.display="none";
-  }
-  </script>
-  <!--/ANHAcoupon-->
-  <style>
-  html {
-    overflow-x:hidden;
-  }
-  body{
-    margin:0
-  }
-  #htlContents {
-      min-width: auto!important;
-      width: 1190px;
-      margin: 0 auto!important;
-  }
-  #htlHeader, #htlMainContent {
-      width: 1920px!important;
-      min-width: 0;
-      max-width: 100%;
-      margin: 0 auto!important;
-  }
-  #RthCustomizeW {
-    width:auto!important
-  }
-  #htlSide-A {
-      top: 1120px!important;
-      position: absolute;
-      left: 0;
-      margin-top: -25px;
-  }
-  #cus_page {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-text-size-adjust: none;
-      letter-spacing: .12em;
-    line-height:24px;
-    font-size:16px;
-    margin:0;
-    padding:0;
-    font-family: "Georgia", "Noto Serif JP" , serif;
-    color:#404040;
-    position: relative;
-      top: -8px;
-  }
-  #cus_page .slide {
-    position   : relative;
-    overflow   : hidden;
-                      /* 画像のサイズに合わせて変更ください */
-    width      : 1920px;
-    height     : 730px;
-    margin     : auto;      /* サンプルは中央寄せの背景：白 */
-    background : #fff;
-      left: 50%;
-      -webkit-transform: translate(-50%,0);
-      transform: translate(-50%,0);
-      overflow: hidden;
-  }
-   #cus_page img {
-      max-width: 100%;
-      -webkit-touch-callout: none;
-      line-height: 1;
-  }
-  #cus_page p{
-    margin: 15px 0 15px 0;
-  }
-  #cus_page .left{
-    float:left;
-  }
-  #cus_page .rigrt{
-    float:right;
-  }
-  #cus_page .clr{
-    clear:both;
-  }
-  #cus_page .bold{
-    font-weight:bold;
-    line-height:2.2em;
-  }
-  #cus_page h2{
-    font-size: 1.5em;
-    border-bottom:solid 1px #0c1d33;
-    padding-left:30px;
-    text-align:center;
-    margin-bottom:15px;
-    width:600px;
-    margin:auto;
-    display:block
-  }
-  #cus_page h3{
-    color: #0c1d33;
-      margin-top: 5px;
-      border: solid 1px #0c1d33;
-      padding: 5px 10px;
-  }
-  #cus_page h4{
-    margin: 20px 0 20px 0;
-  }
-  #cus_page .content{
-    margin-top:30px;
-    margin-bottom:60px;
-  }
-  #cus_page .planbox{
-    width:316px;
-    text-align:center;
-    margin-top:20px;
-    margin-bottom:20px;
-  }
-  #cus_page .planbox .img{
-    width:300px;
-    height:200px;
-    overflow:hidden;
-  }
-  #cus_page .planbox img{
-    display:block;
-    margin:auto;
-    height:100%;
-    object-fit: cover;
-  }
-  #cus_page .plan_ttl{
-    width:310px;
-    font-size:20px;
-    font-weight:bold;
-    margin:auto;
-    margin-bottom: 15px;
-  }
-  #cus_page .plan_txt{
-    font-size:16px;
-    text-align:left;
-    width:400px;
-    margin:auto;
-  }
-  #cus_page .btn {
-  display: inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    color: #0D2742;
-    border-bottom: solid 2px #0c1d33;
-    transition: .4s;
-   }
-  #cus_page .btn:hover {
-    background: #0D2742;
-    color: white;
-    border-radius: 3px;
+#RthCustomizeW * {
+font-family:  "Georgia", "Noto Serif JP", serif;
+}
 
-  }
-  .slide img {
-    display    : block;
-    position   : absolute;
-    width      : inherit;
-    height     : inherit;
-    opacity    : 0;
-    animation  : slideAnime 21s ease infinite;
-  }
-  .slide img:nth-of-type(1) { animation-delay: 0s }
-  .slide img:nth-of-type(2) { animation-delay: 7s }
-  .slide img:nth-of-type(3) { animation-delay: 14s }
-  @keyframes slideAnime{
-     0% { opacity: 0 }
-     8% { opacity: 1 }
-    33% { opacity: 1 }
-    41% { opacity: 0 }
-   100% { opacity: 0 }
-  }
-  #cus_page .navi {
-      left: 50%;
-      width: 1920px;
-    height:60px;
-      -webkit-transform: translate(-50%,0);
-      transform: translate(-50%,0);
-      overflow: hidden;
-      position: relative;
-      background-color: #0D2642;
-      position: relative;
-  }
-  #cus_page .navi ul {
-      width: 1190px;
-      margin: auto;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-  }
-  #cus_page .navi ul li {
-      text-align: center;
-    list-style:none;
-    line-height:60px;
-  }
-  #cus_page .navi ul li a{
-    color:#fff;
-  }
-  #cus_page a {
-      text-decoration: none;
-  }
-  #cus_contents {
-      margin-top: 5rem;
-      width: 950px!important;
-      margin: auto;
-    margin-bottom:80px;
-  }
-  #cus_page .content{
-    margin-top:30px;
-    margin-bottom:120px;
-  }
-  #cus_page #point ol{
-    margin-top:15px;
-    margin-bottom:45px;
-  }
-  #cus_page #point ol li{
-    color:#0c1d33;
-    list-style:none;
-    height:300px;
-    line-height:1.8em;
-  }
-  #cus_page #point ol #point1{
-    background:url(https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/316957b0f598ec7f1afd91fa8d0ca8cea13eaa33.47.9.26.3.jpg) no-repeat;
-    padding: 120px 460px 0px 80px;
-    margin-bottom: -120px;
-  }
-  #cus_page #point ol #point2{
-    background:url(https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/068508cd0598e1edafc3f2acf8de188c9f109452.47.9.26.3.jpg) no-repeat;
-    padding: 180px 80px 0px 460px;
-    margin-bottom: -180px;
-  }
-  #cus_page #point ol #point3{
-    background:url(https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/c1c89558ad757295c4dbf948f79c566834207a77.47.9.26.3.jpg) no-repeat;
-    padding: 140px 460px 0px 90px;
-    margin-bottom: -140px;
-  }
-  #cus_page #point ol #point4{
-    background:url(https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/a2b6bf01f986cf9cbdccf3924f3972b9964c407e.47.9.26.3.jpg) no-repeat;
-    padding: 130px 50px 0px 490px;
-    margin-bottom: -130px;
-  }
-  #cus_page #point ol #point5{
-    background:url(https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/0ea1e438b4102a7bc01a6a0914c7eb35ff4ded75.47.9.26.3.jpg) no-repeat;
-    padding: 140px 490px 0px 70px;
-    margin-bottom: -140px;
-  }
-  .hotel_bn{margin:50px auto;width: 950px;padding: 15px; color:#0c1d33;}
-  .hotel_bn h4{font-size: 20px;}
-  .hotel_bn div{display:inline-block; margin-right:45px;margin-left: 20px;}
-  .hotel_bn a img:hover { opacity: 0.5;}
-  .hotel_bn .meiryo{font-family: 'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif; color:#404040;font-size: 15px;}
-  .hotel_bn .meiryo a{color:#333 !important;}
+#RthCustomizeW img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+pointer-events: none;
+user-select: none
+}
 
-  </style>
-          <div id="cus_page">
-            <div class="slide" id="makeImg">
-            <img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/a6c158fcfedd89b1efb98c7c1e93135e919256cf.47.9.26.3.jpg">
-            <img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/f4b11b6504bf8c7da6d9580a48cafbfb8bca96c7.47.9.26.3.jpg">
-            <img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/43085aea31aa4bb59e07059cde5d0f2f915bfcf7.47.9.26.3.jpg"> </div>
-            <div class="navi">
-              <ul>
-                <li><a href="https://travel.rakuten.co.jp/HOTEL/179875/179875.html" class="btn">TOP</a></li>
-                <li><a href="https://travel.rakuten.co.jp/HOTEL/179875/CUSTOM/GW179875201008141628.html" class="btn">客室</a></li>
-                <li><a href="https://travel.rakuten.co.jp/HOTEL/179875/CUSTOM/GW179875201008141657.html" class="btn">朝食・レストラン</a></li>
-                <li><a href="https://travel.rakuten.co.jp/HOTEL/179875/CUSTOM/GW179875201008141734.html" class="btn">施設案内</a></li>
-                <li><a href="https://travel.rakuten.co.jp/HOTEL/179875/CUSTOM/GW179875201008141808.html" class="btn">アクセス</a></li>
-                <li><a href="https://travel.rakuten.co.jp/HOTEL/179875/179875_std.html" class="btn">詳細情報</a></li>
-              </ul>
-            </div>
-            <div id="cus_contents">
-              <div class="content" id="point">
-                <h2>変なホテルプレミア京都 五条烏丸　おすすめポイント</h2>
-                <ol>
-                  <li id="point1">小学生以下のお子様は添い寝無料で、ファミリーのお客様にも嬉しい畳とベッドの和モダンなお部屋でゆっくりとお過ごしいただけます。</li>
-                  <li id="point2">スイートルーム・７階以上スーペリアツイン・<br>７階以上ハリウッドツイン限定！<br>"京焼"のマグカップで香り高いドリップコーヒーが無料でお楽しみいただけます。</li>
-                  <li id="point3">地下鉄烏丸線「五条駅」から徒歩約2分。<br>「京都駅」から徒歩約15分。<br>バス停・コンビニ・烏丸四条も徒歩圏内にあり、京都観光に便利なロケーションです。</li>
-                  <li id="point4">安全の為、午前0時以降は正面玄関を施錠しており、カードキーをかざすとご入館いただけます。<br>また、エレベーターはご宿泊の客室階と共有部階のみに停止するシステムを導入しております。</li>
-                  <!--li id="point5">ご宿泊者様以外のお客様からも人気のパンを、焼きたてでご提供。パンによく合う季節のデリカテッセンもお楽しみください。</li-->
-                </ol>
-                <div class="clr"></div>
-              </div>
-  <div class="content">
-  <h2>フォトギャラリー</h2>
-  <div><br><img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/5744def169f7d99ab963c49eb9cb38fb22154378.47.9.26.3.jpg"><br></div>
-  </div>
-  <div class="content">
-  <h2>SPECIAL OFFERS<br>- おすすめ宿泊プラン -</h2>
-  <div class="left planbox">
-  <div class="img"><img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/f26e1404117eb4f80305febf63c3ddb25ea8b1fa.47.9.26.3.jpg" alt="plan_01.jpg"></div><br>
-  <p class="plan_ttl">【日本初】【室数限定】<br>47都道府県のワインから1本選べる！ワインルームプラン<br>＜朝食付＞</p>
-  <div style="text-align:right; padding-right:50px;"><a href="https://hotel.travel.rakuten.co.jp/PLAN/179875/5804769" class="btn">&gt; MORE</a></div>
-  </div>
-  <div class="left planbox">
-  <div class="img"><img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/9740fc87a208c81c35ad28dae26f62fd7a088d5d.47.9.26.3.jpg" alt="topplan_image05.jpg"></div><br>
-  <p class="plan_ttl">13時チェックイン！<br>祇園花街資料館で伝統の<br>京舞文化を楽しむ<br>往路送迎付きプラン<br>＜朝食付＞</p>
-  <div style="text-align:right; padding-right:50px;"><a href="https://hotel.travel.rakuten.co.jp/PLAN/179875/6074697" class="btn">&gt; MORE</a></div>
-  </div>
-  <div class="left planbox">
-  <div class="img"><img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/18e2dfea0a45be76ceecc16c5f14cd3db499740c.47.9.26.3.jpg" alt="topplan_image06.jpg"></div><br>
-  <p class="plan_ttl">【50歳以上限定】アーリーチェックイン2時間＆デラックスツインに無料アップグレード<br>＜朝食付＞</p>
-  <div style="text-align:right; padding-right:50px;"><a href="https://hotel.travel.rakuten.co.jp/PLAN/179875/5385822" class="btn">&gt; MORE</a></div>
-  </div>
-  <div class="con hotel_bn gray">
-  <h4>京都駅エリアにはHISグループホテルが2店舗ございます</h4>
-  <!--変なホテルバナー-->
-  <div><a href="https://travel.rakuten.co.jp/HOTEL/172683/172683.html" target="_blank"><img src="https://img.travel.rakuten.co.jp/share/image_up/172683/LARGE/15d8ef02e6764c43fe7db68c0abd8f9c732756e5.47.9.26.3.jpg" height="120">&emsp;変なホテル京都八条口駅前</a></div>
-  <!--ウォータマークホテルバナー-->
-  <div class="selif"><a href="https://travel.rakuten.co.jp/HOTEL/179875/179875.html" target="_blank"><img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/878272ab716a0b130bfbff216e2519c32c462fa1.47.9.26.3.jpg" height="120">&emsp;変なホテルプレミア京都 五条烏丸</a></div>
-  </div>
-  <div class="con row">
-  <div class="half">
-  </div>
-          </div>
-          </div>
-          </div></div><!--/RthCustomizeW--></div><!--**************customize page end**************--><link type="text/css" rel="stylesheet" href="https://img.travel.rakuten.co.jp/share/themes/hotel/css/trvl_hotel_ovrride.css?_=20211216">
+/* MARK: STYLE
+*/
+
+.container {
+width: 950px;
+margin: auto;
+}
+
+.content-container {
+background: url(https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/18d380fe166f9568e2a44202a17986a113a593c9.47.9.26.3.jpeg) no-repeat top 40px right;
+}
+
+.title {
+width: 600px;
+margin: auto;
+font-size: 24px;
+padding: 0 8px;
+border-bottom: 1px solid;
+}
+
+.reverse {
+flex-direction: row-reverse;
+}
+
+.reverse1 {
+align-items: flex-end;
+}
+
+.space {
+width: 20px;
+}
+
+/* MARK: TOP SLIDE
+*/
+
+.swiper-container {
+width: 100%;
+aspect-ratio: 192/73;
+}
+
+.swiper-slide {
+display: flex;
+justify-content: center;
+align-items: center;
+background: #ccc;
+}
+
+/* MARK: TOP NAVIGATION
+*/
+
+.top-navigation {
+}
+
+.top-l1 {
+display: flex;
+}
+
+.top-l1-item {
+width: 100%;
+}
+
+.top-u {
+background: #13366A;
+display: block;
+width: 100%;
+padding: 16px 0;
+font-size: 16px;
+color: #fff!important;
+}
+
+.top-u:hover {
+opacity: 0.7;
+text-decoration: none;
+}
+
+/* MARK: CONTENT
+*/
+
+.content {
+padding-top: 20px;
+}
+
+.content-list {
+display: flex;
+flex-direction: column;
+margin-top: 20px;
+padding: 0 32px;
+gap: 20px;
+}
+
+.content-item {
+width: 100%;
+display: flex;
+gap: 20px;
+}
+
+.content-images {
+width: 400px;
+aspect-ratio: 400/273;
+flex-shrink: 0;
+}
+
+.content-text {
+width: 100%;
+position: relative;
+}
+
+.content-text-content {
+margin-top: 16px;
+position: absolute;
+width: 100%;
+}
+
+.content-name {
+display: flex;
+flex-direction: column;
+}
+
+.content-t1 {
+margin-top: 8px;
+padding: 12px 60px;
+width: fit-content;
+background: #13366A;
+color: #fff;
+font-size: 24px;
+font-weight: 100;
+word-break: keep-all;
+}
+
+.content-t2 {
+margin-top: 20px;
+line-height: 1.6;
+text-align: left;
+}
+
+/* MARK: GALLERY
+*/
+
+.gallery {
+padding-top: 100px;
+}
+
+.gallery-list {
+margin-top: 20px;
+display: grid;
+grid-template-columns: auto auto;
+gap: 4px;
+padding: 4px;
+background: #0456BC;
+}
+
+/* MARK: OFFER
+*/
+
+.offer {
+padding-top: 100px;
+}
+
+.offer-list {
+margin-top: 20px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.offer-images {
+width: 100%;
+aspect-ratio: 3/2;
+}
+
+.offer-text {
+margin-top: 20px;
+}
+
+.offer-link {
+display: block;
+width: fit-content;
+padding: 8px;
+border-bottom: 1px solid #000;
+color: #000!important;
+margin: 12px 8px 0 auto;
+}
+
+.offer-link:hover {
+background: #000;
+color: #fff!important;
+}
+
+/* MARK: FOOTER
+*/
+
+.footer {
+padding-top: 20px;
+}
+
+.footer-list {
+margin-top: 20px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.footer-item {
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: end;
+gap: 8px;
+}
+
+.footer-item:hover {
+background: #ccc;
+}
+
+.footer-images {
+height: 120px;
+aspect-ratio: 13/10;
+}
+
+</style>
+</head>
+<body>
+<!-- MARK: TOP
+-->
+<div class="inner top">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/742720adaf136bbaea254d732625875c8460be5e.47.9.26.3.jpg" alt="Slide 1">
+</div>
+<div class="swiper-slide">
+<img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/f4b11b6504bf8c7da6d9580a48cafbfb8bca96c7.47.9.26.3.jpg" alt="Slide 2">
+</div>
+<div class="swiper-slide">
+<img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/43085aea31aa4bb59e07059cde5d0f2f915bfcf7.47.9.26.3.jpg" alt="Slide 3">
+</div>
+</div>
+<nav class="top-navigation">
+<ul class="top-l1">
+<li class="top-l1-item"><a class="top-u" href="https://travel.rakuten.co.jp/HOTEL/179875/179875.html">TOP</a></li>
+<li class="top-l1-item"><a class="top-u" href="https://travel.rakuten.co.jp/HOTEL/179875/CUSTOM/GW179875201008141628.html">客室</a></li>
+<li class="top-l1-item"><a class="top-u" href="https://travel.rakuten.co.jp/HOTEL/179875/CUSTOM/GW179875201008141657.html">朝食・レストラン</a></li>
+<li class="top-l1-item"><a class="top-u" href="https://travel.rakuten.co.jp/HOTEL/179875/CUSTOM/GW179875201008141734.html">施設案内</a></li>
+<li class="top-l1-item"><a class="top-u" href="https://travel.rakuten.co.jp/HOTEL/179875/CUSTOM/GW179875201008141808.html">アクセス</a></li>
+<li class="top-l1-item"><a class="top-u" href="https://travel.rakuten.co.jp/HOTEL/179875/179875_std.html">詳細情報</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- MARK: CONTENT
+-->
+<div class="inner content">
+<div class="container content-container">
+<h2 class="title">変なホテルプレミア京都 五条烏丸　おすすめポイント</h2>
+<div class="content-list">
+<div class="content-item reverse">
+<div class="content-images">
+<img class="content-i" src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/887bc71fbed557e8077f068b808d82723e2971fe.47.9.26.3.jpg" alt="">
+</div>
+<div class="content-text">
+<div class="content-text-content">
+<div class="content-name">
+<h5 class="content-t1">畳のお部屋でリラックス</h5>
+</div>
+<p class="content-t2">小学生以下のお子様は添い寝無料で、ファミリーのお客様にも嬉しい畳とベッドの和モダンなお部屋でゆっくりとお過ごしいただけます。</p>
+</div>
+</div>
+<div class="space"></div>
+</div>
+<div class="content-item">
+<div class="content-images">
+<img class="content-i" src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/7061c99ff2927f04224fa7d20bb99febe78147b7.47.9.26.3.jpg" alt="">
+</div>
+<div class="content-text">
+<div class="content-text-content">
+<div class="content-name reverse1">
+<h5 class="content-t1">プレミアムな水ファイテンウォーターと</h5>
+<h5 class="content-t1">京焼で味わう本格コーヒー</h5>
+</div>
+<p class="content-t2">スイートルーム・７階以上スーペリアツイン・<br>
+７階以上ハリウッドツイン限定！<br>
+"京焼"のマグカップで香り高いドリップコーヒーが<br>無料でお楽しみいただけます。</p>
+</div>
+</div>
+<div class="space"></div>
+</div>
+<div class="content-item reverse">
+<div class="content-images">
+<img class="content-i" src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/bc6697335d652368e42a72ccebcb6dd5ebc3e604.47.9.26.3.jpg" alt="">
+</div>
+<div class="content-text">
+<div class="content-text-content">
+<div class="content-name">
+<h5 class="content-t1">京都駅から一駅のベストロケーション</h5>
+</div>
+<p class="content-t2">地下鉄烏丸線「五条駅」から徒歩約2分。<br>
+「京都駅」から徒歩約15分。<br>
+バス停・コンビニ・烏丸四条も徒歩圏内にあり、<br>京都観光に便利なロケーションです。</p>
+</div>
+</div>
+<div class="space"></div>
+</div>
+<div class="content-item">
+<div class="content-images">
+<img class="content-i" src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/4b0f32f61c40a037f7fb0723ce1059747d7f3f16.47.9.26.3.jpg" alt="">
+</div>
+<div class="content-text">
+<div class="content-text-content">
+<div class="content-name reverse1">
+<h5 class="content-t1">安心のセキュリティ</h5>
+</div>
+<p class="content-t2">安全の為、午前0時以降は正面玄関を施錠しており、<br>カードキーをかざすとご入館いただけます。<br>
+また、エレベーターはご宿泊の客室階と共有部階のみに<br>停止するシステムを導入しております。</p>
+</div>
+</div>
+<div class="space"></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- MARK: GALLERY
+-->
+
+<div class="inner gallery">
+<div class="container">
+<h2 class="title">フォトギャラリー</h2>
+<div class="gallery-list">
+<img class="gallery-i" src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/32e5379c1fa096296564e13a6ff104aea47129aa.47.9.26.3.jpg" alt="">
+<img class="gallery-i" src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/32e5379c1fa096296564e13a6ff104aea47129aa.47.9.26.3.jpg" alt="">
+<img class="gallery-i" src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/32e5379c1fa096296564e13a6ff104aea47129aa.47.9.26.3.jpg" alt="">
+<img class="gallery-i" src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/32e5379c1fa096296564e13a6ff104aea47129aa.47.9.26.3.jpg" alt="">
+</div>
+</div>
+</div>
+
+<!-- MARK: OFFER
+-->
+
+<div class="inner offer">
+<div class="container">
+<h2 class="title">SPECIAL OFFERS<br>- おすすめ宿泊プラン -</h2>
+<div class="offer-list">
+<div class="offer-item">
+<div class="offer-images">
+<img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/f26e1404117eb4f80305febf63c3ddb25ea8b1fa.47.9.26.3.jpg" alt="" class="offer-i">
+</div>
+<div class="offer-text">
+<strong class="offer-title">【日本初】【室数限定】<br>
+47都道府県の<br>ワインから1本選べる！<br>ワインルームプラン<br>
+＜朝食付＞</strong>
+<a href="" class="offer-link">> MORE</a>
+</div>
+</div>
+<div class="offer-item">
+<div class="offer-images">
+<img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/9740fc87a208c81c35ad28dae26f62fd7a088d5d.47.9.26.3.jpg" alt="" class="offer-i">
+</div>
+<div class="offer-text">
+<strong class="offer-title">13時チェックイン！<br>
+祇園花街資料館で伝統の<br>
+京舞文化を楽しむ<br>
+往路送迎付きプラン<br>
+＜朝食付＞</strong>
+<a href="" class="offer-link">> MORE</a>
+</div>
+</div>
+<div class="offer-item">
+<div class="offer-images">
+<img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/18e2dfea0a45be76ceecc16c5f14cd3db499740c.47.9.26.3.jpg" alt="" class="offer-i">
+</div>
+<div class="offer-text">
+<strong class="offer-title">【50歳以上限定】<br>アーリーチェックイン2時間＆<br>デラックスツインに<br>無料アップグレード<br>
+＜朝食付＞</strong>
+<a href="" class="offer-link">> MORE</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- MARK: FOOTER
+-->
+
+<footer class="inner footer">
+<div class="container">
+<h2 class="title">京都駅エリアには<br>HISグループホテルが2店舗ございます</h2>
+<div class="footer-list">
+<a href="https://travel.rakuten.co.jp/HOTEL/172683/172683.html" class="footer-item">
+<div class="footer-images">
+<img src="https://img.travel.rakuten.co.jp/share/image_up/172683/LARGE/15d8ef02e6764c43fe7db68c0abd8f9c732756e5.47.9.26.3.jpg" alt="" class="footer-i">
+</div>
+<div class="footer-text">
+<p class="footer-t">変なホテル京都八条口駅前</p>
+</div>
+</a>
+<a href="https://travel.rakuten.co.jp/HOTEL/179875/179875.html" class="footer-item">
+<div class="footer-images">
+<img src="https://img.travel.rakuten.co.jp/share/image_up/179875/LARGE/878272ab716a0b130bfbff216e2519c32c462fa1.47.9.26.3.jpg" alt="" class="footer-i">
+</div>
+<div class="footer-text">
+<p class="footer-t">変なホテルプレミア京都 五条烏丸</p>
+</div>
+</a>
+</div>
+</div>
+</footer>
+
+<!-- MARK: JS SWIPER
+-->
+<script 
+src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script 
+type="text/javascript">
+const swiper = new Swiper('.swiper-container', {
+effect: 'fade',
+fadeEffect: {
+crossFade: true
+},
+speed: 1680,
+loop: true,
+autoplay: {
+delay: 7000,
+disableOnInteraction: false
+},
+pagination: {
+el: '.swiper-pagination',
+clickable: true
+},
+navigation: {
+nextEl: '.swiper-button-next',
+prevEl: '.swiper-button-prev'
+}
+});
+</script>
+<!--/RthCustomizeW--></div><!--**************customize page end**************--><link type="text/css" rel="stylesheet" href="https://img.travel.rakuten.co.jp/share/themes/hotel/css/trvl_hotel_ovrride.css?_=20211216">
 <!-- landing page uses different SiteCatalyst name -->
 <script type="text/javascript" charset="Shift_JIS" src="https://trv.r10s.jp/share/wat/info/hotel_top.js"></script>
     
