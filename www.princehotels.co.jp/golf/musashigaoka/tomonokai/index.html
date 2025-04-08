@@ -250,30 +250,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</tr>
 			<tr>
 				<th>入会条件</th>
-				<td class="left">Selbu Pince Gloal Rewardsのご入会が必須となります。<a href="" onclick="checkLink(event, '/golf/musashigaoka/informations/2024_uguisu/', '/golf/musashigaoka/informations/uguisu2025/');" class="btn btn--golf">入会はこちら</a></td>
-				<script>
-					function checkLink(event, primaryUrl, fallbackUrl) {
-							event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-	
-							// Tạo một đối tượng XMLHttpRequest để kiểm tra link
-							var xhr = new XMLHttpRequest();
-							xhr.open('HEAD', primaryUrl, true); // Gửi yêu cầu HEAD đến link chính
-							xhr.onload = function () {
-									if (xhr.status >= 200 && xhr.status < 400) {
-											// Nếu link chính hoạt động, mở link trong tab mới
-											window.open(primaryUrl, '_blank');
-									} else {
-											// Nếu link chính không hoạt động, mở link dự phòng trong tab mới
-											window.open(fallbackUrl, '_blank');
-									}
-							};
-							xhr.onerror = function () {
-									// Nếu có lỗi trong yêu cầu, mở link dự phòng trong tab mới
-									window.open(fallbackUrl, '_blank');
-							};
-							xhr.send();
-					}
-				</script>
+				<td class="left">Selbu Pince Gloal Rewardsのご入会が必須となります。<a href="https://www.seibuprince.com/ja/loyalty/" class="btn btn--golf">入会はこちら</a></td>
 			</tr>
 			<tr>
 				<th>お申込み</th>
