@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #ccc;
+      color: #222;
+      font-family: "Noto Serif JP", serif;
+    }
+
+    .aoft {
+      font-family: "a-otf-ryumin-pr6n", serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      padding: 26px 80px;
+    }
+
+    .logo {
+      flex-grow: 1;
+    }
+
+    .logo-item {
+      --logo-fill: #222;
+    }
+
+    .language {
+      font-family: "Playfair", serif;
+      font-size: 24px;
+    }
+
+    .reservation {
+      padding-left: 64px;
+      font-family: "a-otf-ryumin-pr6n", serif;
+      font-size: 16px;
+      font-weight: 550;
+      line-height: 100%;
+      letter-spacing: 0.96px;
+    }
+
+    .menu-btn {
+      padding: 5px 5px 5px 56px;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    #check {
+      display: none;
+    }
+
+    .hamburger {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hamburger .line {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #222;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger .line-2 {
+      width: 70%;
+    }
+
+    input[type="checkbox"]:checked~label .hamburger {
+      justify-content: center;
+    }
+
+    input[type="checkbox"]:checked~label .hamburger .line {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      margin-top: -1.5px;
+    }
+
+    input[type="checkbox"]:checked~label .hamburger .line-1 {
+      transform: rotate(45deg);
+    }
+
+    input[type="checkbox"]:checked~label .hamburger .line-2 {
+      opacity: 0;
+    }
+
+    input[type="checkbox"]:checked~label .hamburger .line-3 {
+      transform: rotate(-45deg);
+    }
+
+    .overlay {
+      display: none;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0.6;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    input[type="checkbox"]:checked~label .overlay {
+      display: block;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: #fff;
+      z-index: 2;
+    }
+
+    input[type="checkbox"]:checked~label .menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-active {}
+  </style>
+</head>
+
+<body>
+  <header class="inner header">
+    <div class="container header-container">
+      <h1 class="logo">
+        <svg class="logo-item" height="48" viewBox="0 0 411 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <use href="logo.svg#logo"></use>
+        </svg>
+      </h1>
+      <div class="language-selector">
+        <div class="language">Language</div>
+        <div class="language-box">
+          <div class="language-item">English</div>
+          <div class="language-item">日本語</div>
+          <div class="language-item">한국어</div>
+          <div class="language-item">简体中文</div>
+          <div class="language-item">繁體中文</div>
+        </div>
+      </div>
+      <a class="reservation">ご予約はこちら</a>
+      <input type="checkbox" id="check" />
+      <label class="menu-btn" for="check">
+        <div class="hamburger">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </div>
+      </label>
+      <label class="overlay" for="check"></label>
+      <div class="menu">
+        <a class="menu-item">ホーム</a>
+        <a class="menu-item">客室</a>
+        <a class="menu-item">レストラン</a>
+        <a class="menu-item">温泉・スパ</a>
+        <a class="menu-item">館内施設</a>
+        <a class="menu-item">Q&A</a>
+        <a class="menu-item">ブログ</a>
+        <a class="reservation">ご予約はこちら</a>
+        <div class="menu-item menu-contact">
+          <strong>Tel. 03-4226-8130</strong>
+          <span>受付時間　10:00 - 19:00 (平日) </span>
+        </div>
+        <div class="language-box"></div>
+      </div>
+    </div>
+  </header>
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'tsm6flx',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+</body>
+
+</html>
