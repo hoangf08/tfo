@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loop: true,
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 2,
+    slidesPerView: 1.2,
     spaceBetween: 16,
     pagination: {
       el: '.swiper-pagination',
@@ -105,5 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 10);
     }
   });
+
+  
 });
 
