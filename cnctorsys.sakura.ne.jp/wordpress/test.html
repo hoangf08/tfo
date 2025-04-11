@@ -1,97 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Button</title>
+  <title>SimpleBar Demo</title>
+
+  <!-- Thêm CSS của SimpleBar -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+
   <style>
+    html,
     body {
-      align-items: center;
-      background: #3f5ed0;
-      display: flex;
-      height: 100vh;
-      justify-content: center;
       margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
     }
 
-    .container {
-      cursor: pointer;
-      display: flex;
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0;
     }
 
-    svg {
-      transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    .main-wrapper {
+      overflow: auto;
+    }
+    
+    /* Tùy chỉnh thanh cuộn */
+    .simplebar-scrollbar::before {
+      background: #2ecc71;
+      opacity: 0.5;
+      transition: background 0.3s, opacity 0.3s, width 0.3s;
     }
 
-    .active svg {
-      transform: rotate(90deg);
+    /* Hiệu ứng khi hover vào thanh cuộn */
+    .simplebar-scrollbar:hover::before {
+      background: #e74c3c;
+      opacity: 0.8;
     }
 
-    path {
-      transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
-        stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
-        stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    .simplebar-track.simplebar-vertical {
+      width: 10px;
+      transition: width 0.3s;
     }
 
-    path:nth-child(1) {
-      transform-origin: 36% 40%;
+    .simplebar-track.simplebar-vertical:hover {
+      width: 15px;
     }
-
-    path:nth-child(2) {
-      stroke-dasharray: 29 299;
-    }
-
-    path:nth-child(3) {
-      transform-origin: 35% 63%;
-    }
-
-    path:nth-child(4) {
-      stroke-dasharray: 29 299;
-    }
-
-    path:nth-child(5) {
-      transform-origin: 61% 52%;
-    }
-
-    path:nth-child(6) {
-      transform-origin: 62% 52%;
-    }
-
-    .active path:nth-child(1) {
-      transform: translateX(9px) translateY(1px) rotate(45deg);
-    }
-
-    .active path:nth-child(2) {
-      stroke-dasharray: 225 299;
-      stroke-dashoffset: -72px;
-    }
-
-    .active path:nth-child(3) {
-      transform: translateX(9px) translateY(1px) rotate(-45deg);
-    }
-
-    .active path:nth-child(4) {
-      stroke-dasharray: 225 299;
-      stroke-dashoffset: -72px;
-    }
-
-    .active path:nth-child(5) {
-      transform: translateX(9px) translateY(1px) rotate(-45deg);
-    }
-
-    .active path:nth-child(6) {
-      transform: translateX(9px) translateY(1px) rotate(45deg);
+    
+    /* Tùy chỉnh trạng thái hoạt động */
+    .simplebar-scrollbar.simplebar-visible::before {
+      opacity: 0.7;
     }
   </style>
 </head>
 
-<body>
-  <div class="container" onclick="this.classList.toggle('active')">
-    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
-      <use href="btn-menu.svg#btn-menu"></use>
-    </svg>
-  </div>
+<body class="main-wrapper" data-simplebar>
+  <h2>Nội dung phụ</h2>
+  <p content="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="11">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="13">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="19">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+  <p content="21">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc. Sed euismod, nunc et tincidunt lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nunc.</p>
+
+  <!-- Thêm JavaScript của SimpleBar -->
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 </body>
 
 </html>

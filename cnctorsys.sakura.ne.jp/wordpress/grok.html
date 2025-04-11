@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh cuộn tùy chỉnh</title>
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Ẩn thanh cuộn mặc định */
+    html {
+      scrollbar-width: none; /* Firefox */
+    }
+    
+    body::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Edge */
+    }
+
+    /* Thanh cuộn tùy chỉnh */
+    .custom-scroll-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 10px;
+      height: 100%;
+      z-index: 9999;
+    }
+
+    /* Nút cuộn */
+    .scroll-thumb {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10px;
+      background-color: #00ffff;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: width 0.2s, background-color 0.2s;
+    }
+
+    .scroll-thumb:hover {
+      width: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Thêm một số style cơ bản để demo */
+    .inner {
+      width: 100%;
+    }
+
+    .top {
+      background: #ff0000;
+    }
+
+    .lead {
+      background: #00ff00;
+    }
+
+    .menu {
+      background: #0000ff;
+    }
+
+    .plan {
+      background: #ff00ff;
+    }
+
+    .notification {
+      background: #ffff00;
+    }
+
+    .footer {
+      background: #000000;
+    }
+    
+    
+    
+    p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="custom-scroll-bar"></div>
+  
+  <div class="inner top">
+    <!-- Nội dung demo -->
+    <p>Nội dung trang web hiển thị ở đây...</p>
+    <p>Cuộn xuống để thấy thanh cuộn tùy chỉnh hoạt động.</p>
+    <!-- Thêm nhiều đoạn văn bản để tạo cuộn -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula magna eget libero sodales, eget scelerisque neque ornare.</p>
+    <!-- Thêm 20 đoạn lorem ipsum thay vì các dòng dấu chấm dài -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque purus sit amet pellentesque.</p>
+    <!-- ... các đoạn văn bản khác ... -->
+  </div>
+  
+  <div class="inner lead">
+    <!-- Nội dung demo -->
+    <p>Nội dung trang web hiển thị ở đây...</p>
+    <p>Cuộn xuống để thấy thanh cuộn tùy chỉnh hoạt động.</p>
+    <!-- Thêm nhiều đoạn văn bản để tạo cuộn -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula magna eget libero sodales, eget scelerisque neque ornare.</p>
+    <!-- Thêm 20 đoạn lorem ipsum thay vì các dòng dấu chấm dài -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque purus sit amet pellentesque.</p>
+    <!-- ... các đoạn văn bản khác ... -->
+  </div>
+  
+  <div class="inner menu">
+    <!-- Nội dung demo -->
+    <p>Nội dung trang web hiển thị ở đây...</p>
+    <p>Cuộn xuống để thấy thanh cuộn tùy chỉnh hoạt động.</p>
+    <!-- Thêm nhiều đoạn văn bản để tạo cuộn -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula magna eget libero sodales, eget scelerisque neque ornare.</p>
+    <!-- Thêm 20 đoạn lorem ipsum thay vì các dòng dấu chấm dài -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque purus sit amet pellentesque.</p>
+    <!-- ... các đoạn văn bản khác ... -->
+  </div>
+  
+  <div class="inner plan">
+    <!-- Nội dung demo -->
+    <p>Nội dung trang web hiển thị ở đây...</p>
+    <p>Cuộn xuống để thấy thanh cuộn tùy chỉnh hoạt động.</p>
+    <!-- Thêm nhiều đoạn văn bản để tạo cuộn -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula magna eget libero sodales, eget scelerisque neque ornare.</p>
+    <!-- Thêm 20 đoạn lorem ipsum thay vì các dòng dấu chấm dài -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque purus sit amet pellentesque.</p>
+    <!-- ... các đoạn văn bản khác ... -->
+  </div>
+  
+  <div class="inner notification">
+    <!-- Nội dung demo -->
+    <p>Nội dung trang web hiển thị ở đây...</p>
+    <p>Cuộn xuống để thấy thanh cuộn tùy chỉnh hoạt động.</p>
+    <!-- Thêm nhiều đoạn văn bản để tạo cuộn -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula magna eget libero sodales, eget scelerisque neque ornare.</p>
+    <!-- Thêm 20 đoạn lorem ipsum thay vì các dòng dấu chấm dài -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque purus sit amet pellentesque.</p>
+    <!-- ... các đoạn văn bản khác ... -->
+  </div>
+  
+  <div class="inner footer">
+    <!-- Nội dung demo -->
+    <p>Nội dung trang web hiển thị ở đây...</p>
+    <p>Cuộn xuống để thấy thanh cuộn tùy chỉnh hoạt động.</p>
+    <!-- Thêm nhiều đoạn văn bản để tạo cuộn -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula magna eget libero sodales, eget scelerisque neque ornare.</p>
+    <!-- Thêm 20 đoạn lorem ipsum thay vì các dòng dấu chấm dài -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque purus sit amet pellentesque.</p>
+    <!-- ... các đoạn văn bản khác ... -->
+  </div>
+
+  <script>
+    /**
+     * Tạo và quản lý thanh cuộn tùy chỉnh
+     * Được tối ưu để cải thiện hiệu năng
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      // Lưu trữ các phần tử DOM để tránh truy vấn lặp lại
+      const body = document.body;
+      const scrollBar = document.querySelector('.custom-scroll-bar');
+      const scrollThumb = document.createElement('div');
+      
+      // Thiết lập ban đầu
+      scrollThumb.className = 'scroll-thumb';
+      scrollBar.appendChild(scrollThumb);
+
+      // Biến theo dõi trạng thái kéo
+      let isDragging = false;
+      let startY = 0;
+      let startScrollTop = 0;
+
+      // Hàm cập nhật vị trí và kích thước thanh cuộn
+      const updateScrollThumb = () => {
+        const contentHeight = body.scrollHeight;
+        const viewportHeight = window.innerHeight;
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Tính chiều cao tỷ lệ của thumb, tối thiểu 30px
+        const thumbHeight = Math.max(30, (viewportHeight / contentHeight) * viewportHeight);
+        scrollThumb.style.height = `${thumbHeight}px`;
+
+        // Tính vị trí của thumb theo tỷ lệ cuộn
+        if (contentHeight <= viewportHeight) {
+          // Ẩn thanh cuộn nếu không cần thiết
+          scrollThumb.style.display = 'none';
+        } else {
+          scrollThumb.style.display = 'block';
+          const maxScrollTop = contentHeight - viewportHeight;
+          const thumbPosition = maxScrollTop ? (scrollPosition / maxScrollTop) * (viewportHeight - thumbHeight) : 0;
+          scrollThumb.style.top = `${thumbPosition}px`;
+        }
+      };
+
+      // Xử lý kéo thanh cuộn
+      const onMouseMove = (e) => {
+        if (!isDragging) return;
+
+        const contentHeight = body.scrollHeight;
+        const viewportHeight = window.innerHeight;
+        const thumbHeight = Math.max(30, (viewportHeight / contentHeight) * viewportHeight);
+
+        const deltaY = e.clientY - startY;
+        const maxScrollTop = contentHeight - viewportHeight;
+        const scrollRatio = (viewportHeight - thumbHeight) / maxScrollTop;
+
+        const newScrollTop = startScrollTop + (deltaY / scrollRatio);
+        window.scrollTo(0, newScrollTop);
+      };
+
+      const onMouseUp = () => {
+        if (!isDragging) return;
+        
+        isDragging = false;
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+        document.body.style.userSelect = '';
+      };
+
+      // Sự kiện bắt đầu kéo
+      scrollThumb.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startY = e.clientY;
+        startScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        document.body.style.userSelect = 'none'; // Ngăn chặn chọn văn bản khi kéo
+        
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+        
+        e.preventDefault();
+      });
+
+      // Tối ưu sự kiện cuộn bằng requestAnimationFrame
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            updateScrollThumb();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // Tối ưu sự kiện thay đổi kích thước
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateScrollThumb, 100);
+      });
+
+      // Khởi tạo thanh cuộn
+      updateScrollThumb();
+    });
+  </script>
+</body>
+
+</html>
