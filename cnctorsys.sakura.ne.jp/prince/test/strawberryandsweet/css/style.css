@@ -32,6 +32,7 @@ a {
   --gold: #A07506;
   --font: "Noto Sans", sans-serif;
   --font-secondary: "Noto Serif JP", serif;
+  --ac-gold: linear-gradient(to right, #CE4D49, #A07506);
 }
 
 /* 
@@ -44,6 +45,7 @@ body {
   font-weight: 400;
   line-height: 170%;
   min-width: 1280px;
+  overflow-x: hidden;
 }
 
 .inner {
@@ -742,21 +744,51 @@ body {
   padding: 19px 8px;
   max-width: 560px;
 
-  /* Đường viền ngoài 5px */
-  border-top: 5px solid var(--gold);
-  border-bottom: 5px solid var(--gold);
-
   /* Đường viền trong 2px */
   &::before {
     content: "";
     position: absolute;
-    top: 3px;
+    width: 100%;
+    height: 15px;
+    top: 0;
     left: 0;
-    right: 0;
-    bottom: 3px;
-    border-top: 2px solid var(--gold);
-    border-bottom: 2px solid var(--gold);
-    pointer-events: none;
+    background: var(--ac-gold);
+    clip-path: polygon(0 0, 100% 0, 100% 8px, 0 8px, 0 12px, 100% 12px, 100% 100%, 0 100%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    bottom: 0;
+    left: 0;
+    background: var(--ac-gold);
+    clip-path: polygon(0 0, 100% 0, 100% 3px, 0 3px, 0 7px, 100% 7px, 100% 100%, 0 100%);
+  }
+}
+
+.menu-item:nth-of-type(1) .menu-content {
+  &::before {
+    content: "";
+    background: var(--gold);
+  }
+
+  &::after {
+    content: "";
+    background: var(--gold);
+  }
+}
+
+.menu-item:nth-of-type(2) .menu-content {
+  &::before {
+    content: "";
+    background: var(--ac);
+  }
+
+  &::after {
+    content: "";
+    background: var(--ac);
   }
 }
 
@@ -766,10 +798,6 @@ body {
 
 .menu-t2 {
   color: var(--gold)
-}
-
-.menu-t2::after {
-  background: var(--gold);
 }
 
 .menu-name {
@@ -786,6 +814,10 @@ body {
   width: 80px;
   height: 2px;
   background: var(--ac);
+}
+
+.menu-t2::after {
+  background: var(--gold);
 }
 
 .menu-text {
@@ -818,6 +850,7 @@ body {
   background: url(../images/notification-bg.png);
   background: url(../images/notification-bg.webp);
   position: relative;
+  background-size: cover;
   color: #fff;
   text-align: center;
 }
@@ -956,7 +989,7 @@ body {
 /* MARK: CAUTION
 */
 
-.cation {
+.caution {
   padding: 160px 0;
 }
 
@@ -1059,6 +1092,10 @@ body {
     min-width: 375px;
   }
 
+  .pc-only {
+    display: none;
+  }
+
   .sp-only {
     display: block;
   }
@@ -1074,6 +1111,7 @@ body {
   .text2,.text3 {
     font-size: 16px;
   }
+
 
   @keyframes shrinkHeight {
     50% {
@@ -1147,25 +1185,31 @@ body {
   }
 
   .event-overview {
-    padding: 40px 28px;
+    padding: 40px 0;
   }
-
+  
   .event-under {
     scale: 0.7;
     margin-top: 0;
   }
-
+  
   .event-t2 {
     margin-top: 20px;
   }
-
+  
   .event-t3 {
     margin: 16px 0 12px;
   }
-
-  .event-t4, .event-t5 {
+  
+  .event-t4 {
     margin-top: 20px;
+    margin-left: 2rem;
   }
+  
+  .event-t5 {
+      margin-top: 20px;
+      margin-right: 1rem;
+    }
   
   .event-plan {
     margin-top: 36px;
@@ -1221,6 +1265,7 @@ body {
 
   .menu {
     padding: 80px 16px 68px;
+    overflow: hidden;
   }
 
   .menu-list {
@@ -1241,8 +1286,12 @@ body {
   }
 
   .menu-text {
-    padding: 0 32px;
     margin-top: 10px;
+    margin-bottom: 48px;
+  }
+
+  .menu-l {
+    padding-left: 52px;
   }
 
   .menu-recommend {
@@ -1253,5 +1302,74 @@ body {
     margin-top: 10px;
     padding-bottom: 10px;
   }
+
+  .menu-o1 {
+    top: 10%;
+    transform: translate(50%);
+  }
+
+  .menu-o2 {
+    top: 25%;
+    transform: translate(-50%);
+  }
+
+  .menu-o3 {
+    top: 45%;
+    transform: translate(50%);
+  }
+
+  .menu-o4 {
+    top: 60%;
+    transform: translate(-70%);
+  }
+
+  .menu-l1-item {
+    white-space: initial;
+  }
+
+  .menu-o5 {
+    top: 85%;
+    transform: translate(50%);
+  }
+
+  .notification-t1 {
+    font-size: 16px;
+  }
+
+  .notification-t2 {
+    font-size: 30px;
+    padding-top: 20px;
+  }
   
+  .room {
+    padding: 80px 0 0;
+  }
+
+  .room-container {
+    padding: 0 16px;
+  }
+
+  .room-slide .swiper-slide {
+    transform: unset !important;
+  }
+
+  .room-slide .swiper-pagination {
+    margin-top: 20px;
+  }
+
+  .caution {
+    padding: 72px 32px 80px 16px;
+  }
+
+  .social {
+    padding: 52px 32px;
+  }
+
+  .social-list {
+    flex-direction: column;
+  }
+
+  .social-item {
+    min-width: 100%;
+  }
 }

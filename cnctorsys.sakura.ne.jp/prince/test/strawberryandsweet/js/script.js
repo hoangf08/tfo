@@ -1,4 +1,3 @@
-
 // Cập nhật khi trang được tải
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loop: true,
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 1.2,
+    slidesPerView: 2,
     spaceBetween: 16,
     pagination: {
       el: '.swiper-pagination',
@@ -37,6 +36,16 @@ document.addEventListener('DOMContentLoaded', function () {
     autoplay: {
       delay: 3000,
       pauseOnMouseEnter: true,
+    },
+    breakpoints: {
+      // Khi màn hình nhỏ hơn 768px
+      320: {
+        slidesPerView: 1.2,
+      },
+      // Khi màn hình từ 768px trở lên
+      768: {
+        slidesPerView: 2,
+      }
     },
     updateOnWindowResize: true, // Cập nhật khi thay đổi kích thước
     observer: true, // Theo dõi thay đổi DOM
@@ -89,6 +98,16 @@ document.addEventListener('DOMContentLoaded', function () {
     autoplay: {
       delay: 3000,
       pauseOnMouseEnter: true,
+    },
+    breakpoints: {
+      // Khi màn hình nhỏ hơn 768px
+      320: {
+        slidesPerView: 1.2,
+      },
+      // Khi màn hình từ 768px trở lên
+      768: {
+        slidesPerView: 2,
+      }
     },
     updateOnWindowResize: true, // Cập nhật khi thay đổi kích thước
     observer: true, // Theo dõi thay đổi DOM
