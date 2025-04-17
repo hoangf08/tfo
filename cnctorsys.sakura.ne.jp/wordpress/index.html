@@ -1,11 +1,518 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CNCTOR</title>
+
+  <!-- MARK: SEO
+  -->
+  <meta name="description" content="悠泉庵">
+  <meta name="keywords" content="悠泉庵">
+  <meta name="author" content="悠泉庵">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="google" content="notranslate">
+
+  <!-- MARK: BASE
+  -->
+  <base target="_blank" rel="noopener noreferrer" loading="lazy">
+
+  <!-- MARK: FONT
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+  <!-- MARK: CSS
+  -->
+  <link rel="stylesheet" href="css/normalize.css"> <!-- normalize.css -->
+  <link rel="stylesheet" href="css/simplebar.css" /> <!-- simplebar.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /><!-- swiper.css -->
+  <link rel="stylesheet" href="css/style.css"> <!-- style.css -->
+
+
+  <!-- MARK: TITLE
+  -->
+  <title>悠泉庵</title>
+
 </head>
+
 <body>
-  
+  <input class="hidden" type="checkbox" id="check-lang">
+  <input class="hidden" type="checkbox" id="check-menu">
+  <div class="main-wrapper" data-simplebar>
+    <label for="check-menu" class="overlay"></label>
+    <!-- MARK: HEADER
+    -->
+    <header>
+      <div class="inner header">
+        <div class="header-container">
+          <div class="header-logo">
+            <a href="#">
+              <svg class="logo-item" height="48" viewBox="0 0 411 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use href="icon/logo.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header-lang">
+            <label for="check-lang" class="lang-btn">Language<svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use href="icon/arrow.svg#arrow"></use>
+              </svg></label>
+            <div class="header-lang-box">
+              <div class="header-lang-row">
+                <span class="header-lang-item">English</span>
+                <span class="header-lang-bar">|</span>
+                <span class="header-lang-item header-lang-active">日本語</span>
+                <span class="header-lang-bar">|</span>
+                <span class="header-lang-item">한국어</span>
+              </div>
+              <div class="header-lang-row">
+                <span class="header-lang-item">繁體中文</span>
+                <span class="header-lang-bar">|</span>
+                <span class="header-lang-item">简体中文</span>
+              </div>
+            </div>
+          </div>
+          <a href="" class="header-reservation">ご予約</a>
+        </div>
+        <div class="header-menu">
+          <label for="check-menu" class="menu-btn">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+          </label>
+          <div class="header-box2">
+            <div class="menu-nav">
+              <a class="menu-nav-item" href="#">ホーム</a>
+              <a class="menu-nav-item" href="#">客室</a>
+              <a class="menu-nav-item" href="#">レストラン</a>
+              <a class="menu-nav-item" href="#">温泉・スパ</a>
+              <a class="menu-nav-item" href="#">館内施設</a>
+              <a class="menu-nav-item" href="#">Q＆A</a>
+              <a class="menu-nav-item" href="#">ブログ</a>
+            </div>
+            <a class="menu-reservation long-arrow" href="#">ご予約はこちら</a>
+            <div class="menu-tel">
+              <a href="tel:03-4226-8130">Tel. 03-4226-8130</a>
+              <span class="menu-tel-time">受付時間　10:00 - 19:00（平日）</span>
+            </div>
+            <div class="header-lang-box menu-lang">
+              <div class="header-lang-row">
+                <span class="header-lang-item">English</span>
+                <span class="header-lang-bar">|</span>
+                <span class="header-lang-item header-lang-active">日本語</span>
+                <span class="header-lang-bar">|</span>
+                <span class="header-lang-item">한국어</span>
+              </div>
+              <div class="header-lang-row">
+                <span class="header-lang-item">繁體中文</span>
+                <span class="header-lang-bar">|</span>
+                <span class="header-lang-item">简体中文</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- MARK: TOP
+      -->
+      <div class="inner top">
+        <h1 class="top-logo"><svg class="logo-item" height=197.618 viewBox="0 0 411 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="icon/logo.svg#logo"></use>
+          </svg></h1>
+        <picture>
+          <source srcset="images/img_top.webp" type="image/webp">
+          <img src="images/img_top.png" alt="" class="top-img">
+        </picture>
+      </div>
+      <!-- MARK: LEAD
+      -->
+      <div class="inner lead">
+        <div class="container lead-container">
+          <picture>
+            <source srcset="images/lead-left.webp" type="image/webp">
+            <img src="images/lead-left.png" alt="" class="lead-left">
+          </picture>
+          <picture>
+            <source srcset="images/lead-right.webp" type="image/webp">
+            <img src="images/lead-right.png" alt="" class="lead-right">
+          </picture>
+          <span class="sub-title">こころとからだを休めるひとときを。</span>
+          <span class="line"></span>
+          <span>当旅館では額縁のように切り取られた<br>
+            四季折々の景色をお届けいたします。<br>
+            ゆったりと流れる時間に身を任せ、<br>
+            他では体験できない忘れられないひとときをお約束いたします。</span>
+          <!-- MARK: LEAD SLIDER
+          -->
+        </div>
+        <div class="swiper lead-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_lead01.webp" type="image/webp">
+                <img src="images/img_lead01.png" alt="" class="lead-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_lead02.webp" type="image/webp">
+                <img src="images/img_lead02.png" alt="" class="lead-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_lead03.webp" type="image/webp">
+                <img src="images/img_lead03.png" alt="" class="lead-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_lead01.webp" type="image/webp">
+                <img src="images/img_lead01.png" alt="" class="lead-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_lead02.webp" type="image/webp">
+                <img src="images/img_lead02.png" alt="" class="lead-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_lead03.webp" type="image/webp">
+                <img src="images/img_lead03.png" alt="" class="lead-slider-img">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MARK: NOTIFICATION
+      -->
+      <div class="inner notification">
+        <div class="container notification-container">
+          <h5 class="sub-title">お知らせ</h5>
+          <span class="line"></span>
+          <div class="notification-list">
+            <div class="notification-item">
+              <span class="notification-date">2026.3.13</span>
+              <a href="#" class="notification-link">正社員・アルバイトを募集しています</a>
+            </div>
+            <div class="notification-item">
+              <span class="notification-date">2026.2.20</span>
+              <a href="#" class="notification-link link-active">休館日のご案内</a>
+            </div>
+            <div class="notification-item">
+              <span class="notification-date">2026.1.1</span>
+              <a href="#" class="notification-link">新年のご挨拶</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MARK: GUEST ROOM
+      -->
+      <div class="inner guest-room">
+        <div class="container guest-room-container">
+          <h2 class="title">Guest Room<span class="ja-title">客室</span></h2>
+          <div class="guest-room-intro">
+            <p class="guest-room-text">当旅館の客室は、豊かな緑に囲まれた静かな空間でリラックスできます。<br>
+              露天風呂付きのお部屋では自然の景色を楽しみながら温泉を堪能でき、露天風呂がないお部屋でも広々とした和室でくつろげます。</p>
+            <a href="" class="long-arrow">すべての客室を見る</a>
+          </div>
+          <div class="guest-room-list">
+            <div class="guest-room-item">
+              <picture>
+                <source srcset="images/img_room01.webp" type="image/webp">
+                <img src="images/img_room01.png" alt="" class="guest-room-item-img">
+              </picture>
+              <a href="#" class="guest-room-item-title sub-title short-arrow">スタンダード和室</a>
+              <p class="guest-room-item-text">自然に囲まれた静かな和室で、四季の景色を楽しみながらリラックス。</p>
+            </div>
+            <div class="guest-room-item">
+              <picture>
+                <source srcset="images/img_room02.webp" type="image/webp">
+                <img src="images/img_room02.png" alt="" class="guest-room-item-img">
+              </picture>
+              <a href="#" class="guest-room-item-title sub-title short-arrow">スタンダード和洋室</a>
+              <p class="guest-room-item-text">和の落ち着きと洋の快適さが調和した空間で、ゆったりと。</p>
+            </div>
+            <div class="guest-room-item">
+              <picture>
+                <source srcset="images/img_room03.webp" type="image/webp">
+                <img src="images/img_room03.png" alt="" class="guest-room-item-img">
+              </picture>
+              <a href="#" class="guest-room-item-title sub-title short-arrow">露天風呂付和室</a>
+              <p class="guest-room-item-text">露天風呂で景色を楽しみながら、広々とした空間で贅沢なひとときを</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MARK: PLAN
+      -->
+      <div class="inner plan">
+        <div class="container plan-container">
+          <h2 class="title">Plan<span class="ja-title">プラン</span></h2>
+          <div class="plan-list">
+            <div class="plan-item">
+              <picture>
+                <source srcset="images/img_plan01.webp" type="image/webp">
+                <img src="images/img_plan01.png" alt="" class="plan-item-img">
+              </picture>
+              <a href="#" class="plan-item-title sub-title short-arrow">早期予約プラン</a>
+              <p class="plan-item-text">60日前の予約でお得に! </p>
+            </div>
+            <div class="plan-item">
+              <picture>
+                <source srcset="images/img_plan02.webp" type="image/webp">
+                <img src="images/img_plan02.png" alt="" class="plan-item-img">
+              </picture>
+              <a href="#" class="plan-item-title sub-title short-arrow">ファミリープラン</a>
+              <p class="plan-item-text">大切な家族と露天風呂付きの広い部屋で癒しのひととき! </p>
+            </div>
+            <div class="plan-item">
+              <picture>
+                <source srcset="images/img_plan03.webp" type="image/webp">
+                <img src="images/img_plan03.png" alt="" class="plan-item-img">
+              </picture>
+              <a href="#" class="plan-item-title sub-title short-arrow">女子旅プラン</a>
+              <p class="plan-item-text">友達と一緒に、心も体もリフレッシュする特別な旅へ! </p>
+            </div>
+          </div>
+          <a href="#" class="plan-u1 long-arrow">すべてのプランを見る</a>
+        </div>
+      </div>
+      <!-- MARK: RESTAURANT
+      -->
+      <div class="inner restaurant">
+        <div class="container restaurant-container">
+          <h2 class="title restaurant-title">Restaurant<span class="ja-title">レストラン</span></h2>
+          <div class="restaurant-intro">
+            <p class="restaurant-text">
+              悠泉庵のレストランは、四季の景色を楽しむことができる露天風呂付きの和室です。<br>
+              お食事は、お客様のご要望に応じてお作りいたします。
+            </p>
+            <a href="" class="long-arrow">すべてのレストランを見る</a>
+          </div>
+          <div class="restaurant-images">
+            <picture>
+              <source srcset="images/img_res01.webp" type="image/webp">
+              <img src="images/img_res01.png" alt="" class="restaurant_i1">
+            </picture>
+            <picture>
+              <source srcset="images/img_res02.webp" type="image/webp">
+              <img src="images/img_res02.png" alt="" class="restaurant_i2">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <!-- MARK: HOT SPRING
+      -->
+      <div class="inner hot-spring">
+        <div class="container hot-spring-container">
+          <h2 class="title hot-spring-title">Hot Spring<span class="ja-title">温泉</span></h2>
+          <div class="hot-spring-intro">
+            <p>
+              当旅館の温泉は、源泉掛け流しで心身ともにやすらげます。
+              露天風呂では四季の風景を楽しみながらゆったりと過ごせて、大浴場や貸切風呂も完備。<br>
+              静かな環境で日常を忘れ、リラックスできるひとときをお楽しみください。
+            </p>
+            <a href="" class="long-arrow hot-spring-link">すべての温泉を見る</a>
+          </div>
+          <div class="hot-spring-images">
+            <picture>
+              <source srcset="images/img_hot-spring01.webp" type="image/webp">
+              <img src="images/img_hot-spring01.png" alt="" class="hot-spring_i1">
+            </picture>
+
+          </div>
+        </div>
+      </div>
+      <!-- MARK: FACILITIES
+      -->
+      <div class="inner facilities">
+        <div class="container facilities-container">
+          <h2 class="title facilities-title">Facilities<span class="ja-title">館内施設</span></h2>
+        </div>
+        <div class="swiper facilities-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_fac01.webp" type="image/webp">
+                <img src="images/img_fac01.png" alt="" class="facilities-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_fac02.webp" type="image/webp">
+                <img src="images/img_fac02.png" alt="" class="facilities-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_fac03.webp" type="image/webp">
+                <img src="images/img_fac03.png" alt="" class="facilities-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_fac01.webp" type="image/webp">
+                <img src="images/img_fac01.png" alt="" class="facilities-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_fac02.webp" type="image/webp">
+                <img src="images/img_fac02.png" alt="" class="facilities-slider-img">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="images/img_fac03.webp" type="image/webp">
+                <img src="images/img_fac03.png" alt="" class="facilities-slider-img">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="facilities-intro">
+          <p>
+            当旅館では、ラウンジでゆっくりとくつろぎ、温泉で身も心もリラックスいただけます。<br>
+            四季折々の美しい景色とともに、旬の食材を使った料理を楽しむ<br>
+            贅沢なひとときをお過ごしください。
+          </p>
+          <a href="" class="long-arrow">詳しくはこちら</a>
+        </div>
+      </div>
+      <!-- MARK: BLOG
+      -->
+      <div class="inner blog">
+        <div class="container blog-container">
+          <h2 class="title blog-title">Blog<span class="ja-title">ブログ</span></h2>
+          <div class="blog-list">
+            <div class="blog-item">
+              <picture>
+                <source srcset="images/img_blog01.webp" type="image/webp">
+                <img src="images/img_blog01.png" alt="" class="blog-item-img">
+              </picture>
+              <a href="#" class="blog-item-title short-arrow">当日取れたての旬の食材を使った絶品お刺身</a>
+            </div>
+            <div class="blog-item">
+              <picture>
+                <source srcset="images/img_blog02.webp" type="image/webp">
+                <img src="images/img_blog02.png" alt="" class="blog-item-img">
+              </picture>
+              <a href="#" class="blog-item-title short-arrow">当旅館の露天付き和室をご紹介</a>
+            </div>
+            <div class="blog-item">
+              <picture>
+                <source srcset="images/img_blog03.webp" type="image/webp">
+                <img src="images/img_blog03.png" alt="" class="blog-item-img">
+              </picture>
+              <a href="#" class="blog-item-title short-arrow">サウナスペースを全面リニューアルしました</a>
+            </div>
+          </div>
+          <a href="#" class="blog-u1 long-arrow">すべてのブログを見る</a>
+        </div>
+      </div>
+      <!-- MARK: SNS
+      -->
+      <div class="inner sns">
+        <div class="container sns-container">
+          <h2 class="title sns-title">SNS</h2>
+          <div class="sns-list">
+            <a href="#" class="sns-item sns-insta"></a>
+            <a href="#" class="sns-item sns-x"></a>
+            <a href="#" class="sns-item sns-fb"></a>
+          </div>
+          <div class="sns-images">
+            <div class="sns-images-box">
+              <picture>
+                <source srcset="images/img_sns_insta01.webp" type="image/webp">
+                <img src="images/img_sns_insta01.png" alt="" class="sns-image">
+              </picture>
+            </div>
+            <div class="sns-images-box">
+              <picture>
+                <source srcset="images/img_sns_x01.webp" type="image/webp">
+                <img src="images/img_sns_x01.png" alt="" class="sns-image">
+              </picture>
+            </div>
+            <div class="sns-images-box">
+              <picture>
+                <source srcset="images/img_sns_fb01.webp" type="image/webp">
+                <img src="images/img_sns_fb01.png" alt="" class="sns-image">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- MARK: CONTACT
+      -->
+      <div class="inner contact">
+        <div class="container contact-container">
+          <h2 class="title contact-title">Contact<span class="ja-title contact-ja-title">コンタクト</span></h2>
+          <a href="#" class="long-arrow dark-bg-link">ご予約はこちら</a>
+        </div>
+      </div>
+      <!-- MARK: ACCESS
+      -->
+      <div class="inner access">
+        <div class="container access-container">
+          <h2 class="title access-title">Access<span class="ja-title access-ja-title">アクセス</span></h2>
+          <table class="access-address">
+            <tr>
+              <th>住所</th>
+              <td>〒105-0004<br>東京都港区新橋5-14-10 新橋スクエアビル 9F</td>
+            </tr>
+            <tr>
+              <th>アクセス</th>
+              <td>JR他各線「新橋駅」南口より徒歩10分</td>
+            </tr>
+            <tr>
+              <th>営業時間</th>
+              <td>10:00 - 19:00 (平日) </td>
+            </tr>
+            <tr>
+              <th>定休日</th>
+              <td>土日祝</td>
+            </tr>
+            <tr>
+              <th>駐車場</th>
+              <td>無し　※近隣にコインパーキングがございます。</td>
+            </tr>
+            <tr>
+              <th>決済方法</th>
+              <td>クレジットカード可<br>
+                (VISA, Master,AMEX,JCB,Diners) </td>
+            </tr>
+          </table>
+          <div class="access-images">
+            <picture>
+              <source srcset="images/img_access01.webp" type="image/webp">
+              <img src="images/img_access01.png" alt="" class="access-image">
+            </picture>
+          </div>
+        </div>
+        <iframe class="access-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.616620682621!2d139.75353656945364!3d35.661816148813244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018895f5a2d9523%3A0x9a1099549244230d!2z5qCq5byP5Lya56S-44Kz44ON44Kv44K_44O844O744K444Oj44OR44Oz77yI5p2x5Lqs5pys56S-77yJ!5e0!3m2!1sja!2s!4v1744870163740!5m2!1sja!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <!-- MARK: COPYRIGHT
+      -->
+      <div class="inner copyright">
+        <div class="container copyright-container">
+          <h1 class="bottom-logo"><svg class="logo-item" height=56 viewBox="0 0 411 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use href="icon/logo.svg#logo"></use>
+            </svg></h1>
+          <p class="copyright-text">© 2024 CNCTOR JAPAN Inc.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/simplebar.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
