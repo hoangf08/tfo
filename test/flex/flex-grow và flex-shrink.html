@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      height: 100px;
+      background-color: #e0e0e0;
+    }
+    .item {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+    }
+    .item:nth-child(1) {
+      flex-grow: 1; /* Mở rộng gấp 1 lần */
+      flex-shrink: 1; /* Thu nhỏ khi cần */
+    }
+    .item:nth-child(2) {
+      flex-grow: 2; /* Mở rộng gấp 2 lần */
+      flex-shrink: 0; /* Không thu nhỏ */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Phần 1</div>
+    <div class="item">Phần 2</div>
+  </div>
+</body>
+</html>

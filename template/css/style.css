@@ -11,19 +11,13 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  font-family: 'Noto serif JP', serif;
+  background: #ccc;
 }
 
-.main-wrapper {
+.main-wrapper,
+.simplebar-content {
   width: 100%;
   height: 100%;
-  overflow: auto;
-  position: relative;
-}
-
-.simplebar-content {
-  position: relative;
 }
 
 a {
@@ -49,7 +43,7 @@ img {
 */
 
 :root {
-  --scrollbar-color: #ccc;
+  --scrollbar-color: #ff00ff;
   --text-color: #000;
   --background-color: #fff;
 }
@@ -57,13 +51,18 @@ img {
 /* 
 MARK: CUSTOM COMMON
 */
-body {}
 
 .inner {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.container {}
+.container {
+  width: 100%;
+  max-width: 1280px;
+}
 
 .hidden {
   display: none;
@@ -76,8 +75,6 @@ body {}
 .sp-only {
   display: none;
 }
-
-.reverse {}
 
 /* MARK: CUSTOM SCROLLBAR
 */
@@ -105,8 +102,6 @@ body {}
 /* MARK: CUSTOM TEXT
 */
 
-.text {}
-
 /* MARK: CUSTOM OTHER
 */
 
@@ -132,42 +127,12 @@ body {}
   /* 
 MARK: RESET
 */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  ul,
-  ol {
-    list-style: none;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    pointer-events: none;
-    user-select: none
-  }
 
   /* MARK: VARIABLE
 */
 
   :root {
-    --scrollbar-color: #ccc;
+    --scrollbar-color: #00ff00;
     --text-color: #000;
     --background-color: #fff;
   }
@@ -175,16 +140,9 @@ MARK: RESET
   /* 
 MARK: CUSTOM COMMON
 */
-  body {}
 
   .inner {
-    width: 100%;
-  }
-
-  .container {}
-
-  .hidden {
-    display: none;
+    padding: 0 16px;
   }
 
   .pc-only {
@@ -195,8 +153,6 @@ MARK: CUSTOM COMMON
     display: block;
   }
 
-  .reverse {}
-
   /* MARK: CUSTOM SCROLLBAR
 */
 
@@ -204,14 +160,7 @@ MARK: CUSTOM COMMON
   /* MARK: CUSTOM TEXT
 */
 
-  .text {}
-
   /* MARK: CUSTOM OTHER
 */
-
-  .list-item {}
-
-  .list-item::marker {}
-
 
 }
