@@ -1,0 +1,60 @@
+{
+  "window.commandCenter": false,
+  "workbench.colorTheme": "Monokai Dimmed",
+  "editor.wordWrap": "on",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "liveServer.settings.CustomBrowser": "firefox",
+  "git.openRepositoryInParentFolders": "never",
+  // "liveServer.settings.root": "www.princehotels.co.jp/",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "html.hover.references": false,
+  "html.hover.documentation": false,
+  "css.hover.documentation": false,
+  "css.hover.references": false,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": true,
+  "explorer.confirmPasteNative": false,
+  "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "html.format.wrapLineLength": 0,
+  "php.validate.executablePath": "",
+  "editor.accessibilitySupport": "off",
+  "intelephense.stubs": [
+  "apache",
+  "bcmath",
+  "core",
+  "wordpress"
+  ],
+  "intelephense.files.associations": [
+      "*.php",
+      "*.phtml"
+  ],
+  "intelephense.environment.includePaths": [
+      "Users/hoangf/.config/wordpress-stubs-master/"  // Thay bằng đường dẫn thư mục stubs của bạn
+  ],
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "liveServer.settings.donotVerifyTags": true,
+  "files.associations": {
+      "*.gs": "javascript"
+  },
+  "window.zoomLevel": 0, // Adjust zoom for comfortable text size
+    "editor.minimap.enabled": false, // Hide Activity Bar
+    "workbench.statusBar.visible": true, // Keep status bar for useful info
+    "workbench.sideBar.location": "left", // Move sidebar to the right
+    "workbench.sideBar.visible": false, // Hide sidebar by default (toggle with Ctrl+B)
+    "editor.lineNumbers": "relative", // Relative line numbers for faster navigation
+    "editor.fontSize": 14, // Adjust font size for readability
+    "editor.fontFamily": "'Fira Code', 'Consolas', monospace", // Use a clean, coding-friendly font
+    "editor.tabSize": 2, // Smaller tabs for compact code
+    "editor.renderWhitespace": "none", // Hide whitespace for cleaner look
+    "editor.scrollbar.horizontal": "hidden", // Hide horizontal scrollbar
+    "editor.scrollbar.vertical": "auto", // Show vertical scrollbar only when needed
+    "zenMode.centerLayout": true, // Center code in Zen Mode
+    "zenMode.hideLineNumbers": false, // Hide tabs in Zen Mode for max space
+    "breadcrumbs.enabled": false,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.activityBar.location": "hidden",
+    "zenMode.showTabs": "single" // Disable breadcrumbs to reduce clutter
+}
