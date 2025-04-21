@@ -1,0 +1,151 @@
+/* CSS Document */
+
+
+* {
+	padding:0;
+	margin:0px;
+	outline:none;
+	font-size:12px;
+	color: #431f0f;
+	}
+	
+html {
+	overflow-y:scroll;
+
+	}
+
+/* ie6 hack */
+* html body {
+	font-size:80%;
+/*	line-height: 1.6em; */
+}
+/* ie7 hack */
+*:first-child+html body {
+	font-size:80%;
+/*	line-height: 1.6em;*/
+}
+
+h1{
+	margin:0;
+	padding:0;
+	fon-size:100%;
+}
+
+h2{
+	margin:0;
+	padding:0;
+	fon-size:100%;
+}
+
+
+h3{
+	margin:0;
+	padding:0;
+	fon-size:100%;
+}
+
+
+	
+body {
+	background:url(http://www.princehotels.co.jp/common/imgs/module_parts/parts_header/bg02.gif) repeat-x;
+	text-align:center;
+	color: #ffffff; 
+	font-size: 12px; 
+/*	line-height: 140%; */
+
+	}
+ 
+img {
+	vertical-align:top;
+	border:0;
+	}
+
+#wrap {
+	text-align:center;
+	}
+
+#header {
+	width:950px;
+	height:62px;
+	text-align:left;
+	margin:0 auto;
+	}
+	
+#content {
+	width:100%;
+	}
+	
+#box {
+	width:950px;
+	margin: 0 auto;
+	}
+
+
+	
+#footer {
+	background:url(http://www.princehotels.co.jp/common/imgs/module_parts/parts_footer/bg01.gif) repeat-x;
+	padding:25px 0px 15px 0px;
+}
+	
+#copyright {
+	width:950px;
+	text-align:right;
+	margin:0 auto;
+}
+
+
+#sprite {
+	width: 950px;
+	height: 20px;
+	background-color:#ffffff;
+	margin: 0 auto;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#foot_copy {
+	font-size: 12px;
+	padding-bottom: 20px;
+}
+#foot_copy a {
+	text-decoration:none;
+}
+#foot_copy a:hover {
+	text-decoration: underline;
+}
+
+
+.clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /**//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+/* For IE 6/7 only */
+.cf {
+  *zoom: 1;
+}

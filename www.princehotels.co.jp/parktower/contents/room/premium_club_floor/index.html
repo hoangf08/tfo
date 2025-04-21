@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="ja" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="css/base_special.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+html,body {height: 100%;}
+img{vertical-align:top;}
+#content {background-color: #000 !important;}
+.box.black {background-color: #000 !important;}
+.box.gold {background-color: #c9ba74 !important;}
+.box.white {background-color: #fff !important;}
+.box, #sprite, #foot_copy {background-color: #ffffff;}
+#foot_copy p, #foot_copy a {color: #000000 !important;}
+.box {width: 100%;}
+.slide{width: 712px; height: 392px;}
+.slide.top{width: 100%; height: 488px;}
+.slide div {width: 100%; height: 100%;}
+.slide #s0 {background:url(images/s0.jpg) center center no-repeat;background-size:cover;}
+.slide #s1 {background:url(images/s1.jpg) center center no-repeat;background-size:cover;}
+.slide #s2 {background:url(images/s2.jpg) center center no-repeat;background-size:cover;}
+.slide #s3 {background:url(images/s3.jpg) center center no-repeat;background-size:cover;}
+.modalbg,.modal {display: none; z-index: 9999;}
+.modal {display: block; z-index: -1;}
+.close {position:absolute;top:0;right:0;width:35px;height:35px;cursor:pointer;}
+.modalbg {width: 100%; height: 100%; position: fixed; top: 0; left: 0; background-color: #000 !important; cursor: pointer;opacity: 0.5;filter: alpha(opacity=50);-ms-filter: "alpha(opacity=50)";-khtml-opacity: 0.5;-moz-opacity: 0.5;}
+.modal {width: 712px; height: 392px;padding:35px 35px 117px;position:fixed;top:50%;left:50%;margin:-272px 0 0 -391px;}
+.modal.dining {background:url(images/dining.jpg) center center no-repeat;}
+.modal.food {background:url(images/food.jpg) center center no-repeat;}
+.modal.lounge {background:url(images/lounge.jpg) center center no-repeat;}
+.modal.meeting {background:url(images/meeting.jpg) center center no-repeat;}
+button.slick-arrow {display:none !important;}
+ul.slick-dots {position:absolute;bottom:12px;left:0;text-align:center;width:100%;z-index:9999 !important;left:50%;}
+ul.slick-dots {width:80px;margin-left:-40px;}
+.lounge ul.slick-dots,.dining ul.slick-dots,.meeting ul.slick-dots {width:40px;margin-left:-20px;}
+ul.slick-dots li {float:left;display:block;overflow:hidden;border:0;border-radius:10px;width:10px;height:10px;color:transparent;background:url(images/blt.png) top center no-repeat;margin:0 5px;list-style-type:none;}
+.slick-dots li button{display:block;border:0;opacity: 0;filter: alpha(opacity=0);-ms-filter: "alpha(opacity=0)";-khtml-opacity: 0;-moz-opacity: 0;cursor:pointer;}
+.slick-dots li.slick-active{background:url(images/blt_active.png) top center no-repeat;}
+/* ul.slick-dots li:after {position:absolute;top:0;left:0;display:block;width:100%;height:100%;border-radius:5px;overflow:hidden;} */
+</style>
+<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+
+$('.modal').css({opacity:1,'z-index':9999}).hide();
+
+$('.slide').slick({
+  dots: true,
+  infinite: true,
+  speed: 600,
+  fade: true,
+  cssEase: 'linear',
+  autoplay: true
+});
+
+$('#map area').on('click',function(){
+ classname=$(this).attr('class');
+ $('.'+classname+' .slick-dots button').eq(0).trigger('click');
+ $('.'+classname).fadeToggle('500');
+ return false;
+});
+
+$('#map area,.left,.right').hover(
+ function(){
+ classname=$(this).attr('class');
+ select=$(this).parent().prev();
+ select.attr('src',select.attr('src').replace('off',classname))
+ },
+ function(){
+ select.attr('src',select.attr('src').replace(classname,'off'))
+ }
+);
+
+$('.modalbg,.close').on('click',function(){
+ $('.modalbg,.modal').fadeOut('500');
+ return false;
+});
+
+});
+</script>
+<!--[if lte IE 7]>
+<script>
+$(function(){
+    var setBgArea = $('.bgCover');
+    setBgArea.css({position:'relative'});
+
+    $(window).load(function(){
+        setBgArea.each(function(){
+            var targetObj = $(this),
+            thisBgImg = targetObj.css('background-image'),
+            imgPass = thisBgImg.match(/\((.+)\)/)[1];
+            targetObj.prepend('<img src=' + imgPass + ' alt="" class="bgCoverImg">');
+
+            var chdCover = targetObj.find('.bgCoverImg');
+
+            chdCover.css({top:'0',left:'50%',position:'absolute',zIndex:'0'}).each(function(){
+                var coverImg = $(this),
+                baseWidth = coverImg.width(),
+                baseHeight = coverImg.height(),
+                selfWH = baseWidth / baseHeight;
+
+                function setSize(){
+                    var wdWidth = setBgArea.width(),
+                    wdHeight = setBgArea.height(),
+                    rwdHeight = wdWidth / selfWH;
+
+                    if(rwdHeight < setBgArea.height()){
+                        rwdHeight = setBgArea.height();
+                        wdWidth = rwdHeight * selfWH;
+                    }
+                    coverImg.css({marginLeft:-wdWidth/2,marginTop:-(rwdHeight-488)/2,width:wdWidth,height:rwdHeight});
+                }
+                $(window).resize(function(){setSize();}).resize();
+            });
+        });
+    });
+});
+</script>
+<![endif]-->
+<title>PREMIUM CLUB FLOOR | ザ・プリンス パークタワー東京</title>
+<meta name="description" content="29F以上のプレミアムクラブフロアは、専任スタッフのフルサポートによる上質なご滞在を提供する特別フロア。「A Part of the PARK」をデザインコンセプトに、開放感ある客室で過ごすくつろぎのひとときを演出いたします。" />
+<meta name="keywords" content="プレミアム,宿泊,パークタワー,ホテル,東京,観光,HOTEL,東京都,港区,プリンスホテル" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WGDDMK3');</script>
+<!-- End Google Tag Manager -->
+<!-- Dynamic Tag Management by Adobe head -->
+<script src="//assets.adobedtm.com/db19aef962f6cf21aa61efda5e55a418d7613c67/satelliteLib-9954c899989b16c99bd6e82bffe178382f3997e2.js"></script>
+<!-- End Dynamic Tag Management by Adobe head -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGDDMK3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="wrap">
+<!-- **************** headerArea **************** -->
+<div id="header-wrap">
+<div id="header">
+<table width="950" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><a href="https://www.princehotels.co.jp/" style="display:block;margin-top:4px;overflow:hidden;"><img src="https://www.princehotels.co.jp/common/imgs/module_parts/parts_header/logo2.jpg" alt="ホテル予約はプリンスホテルズ＆リゾーツ" style="position:relative;top:-4px;left:0;" /></a></td>
+<td align="right"><p id="grouplogo"><a href="https://www.seibugroup.jp/" target="_blank"><img src="https://www.princehotels.co.jp/commoncms/images/layout/header/brand_seibu.gif" alt="でかける人を、ほほえむ人へ。" /></a></p></td>
+</tr>
+</table>
+</div>
+<!-- /header -->
+</div>
+<!-- /header-wrap -->
+<!-- **************** /headerArea **************** -->
+
+<!-- **************** contentArea **************** -->
+
+<div class="slide top">
+  <div id="s0" class="bgCover"></div>
+  <!--<div id="s1" class="bgCover"></div>
+  <div id="s2" class="bgCover"></div>
+  <div id="s3" class="bgCover"></div>-->
+</div>
+
+<div class="modalbg dining food lounge meeting"></div>
+
+<div class="modal dining"><div class="slide">
+  <div><img src="images/d0.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>
+  <div><img src="images/d1.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>
+</div><div class="close"></div></div>
+
+<div class="modal food"><div class="slide">
+  <!--<div><img src="images/f0.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>-->
+  <div><img src="images/f1.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>
+  <!--<div><img src="images/f2.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>-->
+  <div><img src="images/f3.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>
+</div><div class="close"></div></div>
+
+<div class="modal lounge"><div class="slide">
+  <div><img src="images/l0.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>
+  <div><img src="images/l1.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>
+</div><div class="close"></div></div>
+
+<div class="modal meeting"><div class="slide">
+  <div><img src="images/m0.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>
+  <div><img src="images/m1.jpg" alt="THE PREMIUM CLUB FLOOR" /></div>
+</div><div class="close"></div></div>
+
+<div id="content"><div class="box black">
+
+<img src="images/premium_club_floor_02_fix.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" />
+<img src="images/premium_club_floor_03.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" />
+<img src="images/premium_club_floor_04_off.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" usemap="#Map" border="0" />
+<map name="Map" id="map">
+  <area class="meeting" shape="poly" coords="723,223,725,184,811,19,889,19,911,70,876,185,877,224" href="#" alt="会議室エリア">
+  <area class="food" shape="poly" coords="426,260,424,221,452,18,553,18,580,222,581,262" href="#" alt="フードコーナー">
+  <area class="dining" shape="poly" coords="258,187,250,60,277,18,340,19,413,147,413,188" href="#" alt="ダイニングエリア">
+  <area class="lounge" shape="poly" coords="52,18,26,80,84,217,240,220,238,179,120,18" href="#" alt="ラウンジエリア">
+</map>
+<img src="images/premium_club_floor_05.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" />
+<img src="images/premium_club_floor_06.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" />
+<img src="images/premium_club_floor_07.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" />
+
+</div><div class="box gold">
+
+<img src="images/premium_club_floor_08_off.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" usemap="#Map2" border="0" />
+<map name="Map2">
+  <area class="left" shape="rect" coords="22,138,478,436" href="https://www.princehotels.co.jp/parktower/room/room09.html" alt="プレミアムキングルーム">
+  <area class="right" shape="rect" coords="516,142,976,438" href="https://www.princehotels.co.jp/parktower/room/room10.html" alt="プレミアムコーナーキングルーム">
+</map>
+<img src="images/premium_club_floor_09_off.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" usemap="#Map3" border="0" />
+<map name="Map3">
+  <area class="left" shape="rect" coords="23,20,480,319" href="https://www.princehotels.co.jp/parktower/room/room06.html" alt="プレミアムジュニアスイートルーム">
+<area class="right" shape="rect" coords="516,20,976,318" href="https://www.princehotels.co.jp/parktower/room/room07.html" alt="プレミアムジュニアスイートキングルーム">
+</map>
+<img src="images/premium_club_floor_10_off.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" usemap="#Map4" border="0" />
+<map name="Map4">
+  <area class="left" shape="rect" coords="23,17,478,316" href="https://www.princehotels.co.jp/parktower/room/room05.html" alt="プリンセススイートルーム">
+</map>
+
+</div><div class="box black">
+
+<img src="images/premium_club_floor_11.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" />
+<img src="images/premium_club_floor_13.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" usemap="#Map5" border="0" />
+<map name="Map5">
+  <area shape="rect" coords="37,187,390,225" href="https://www.princehotels.co.jp/parktower/facility/spa_fitness/" alt="スパ＆フィットネスの詳細はこちら">
+</map>
+<img src="images/premium_club_floor_14.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" />
+<img src="images/premium_club_floor_17.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" />
+
+</div><div class="box white">
+
+<img src="images/premium_club_floor_16.jpg" alt="THE PREMIUM CLUB FLOOR" width="1000" usemap="#Map6" border="0" />
+<map name="Map6">
+  <area shape="rect" coords="246,34,753,108" href="https://www.princehotels.co.jp/parktower/plan/all/?meal=&plan=%E3%82%AF%E3%83%A9%E3%83%96%E3%83%95%E3%83%AD%E3%82%A2#select" alt="宿泊プランはこちら">
+</map>
+
+<div id="sprite"><h1>ザ・プリンス パークタワー東京
+THE PREMIUM CLUB FLOOR</h1>
+
+<h2>29F以上のプレミアムクラブフロアは、専任スタッフのフルサポートによる上質なご滞在を提供する特別フロア。
+「A Part of the PARK」をデザインコンセプトに、開放感ある客室で過ごすくつろぎのひとときを演出いたします。</h2>
+
+<p>プレミアムクラブラウンジのご案内
+32Fのプレミアムクラブラウンジはロイヤルフロアとプレミアムクラブフロアにご宿泊のお客さま専用の特別な空間です。ご到着やご出発のお手続きができるほか、東京タワーを眺める特等席でそれぞれの時間帯に合わせたお料理、お飲みものをお楽しみいただけます。
+
+プレミアムクラブラウンジ内の会議室のご利用や、Wi-Fi接続も完備。
+プライベートはもとよりビジネスにも適したくつろぎのひとときをお約束いたします。
+
+ダイニングエリア ラウンジエリア フードコーナー 会議室エリア
+
+朝食／7：00A.M.～10：00A.M.
+お客さまの目の前で焼き上げる玉子料理などに加え、和の食材を使用したメニューなど、一日の活力を蓄えていただけるようバラエティー豊かなメニューをご用意いたしました。
+
+ティータイム／10：00A.M.～5：30P.M.
+2：00P.M.～5:30P. M.はオードブルやプチスイーツなどが加わりティータイムをお楽しみいただけます。新たにご提供する味わい深い上質なコーヒーもお召しあがりいただけます。
+
+カクテルタイム／5：30P.M.～7：30P.M.
+ピンチョスやタパス、シェフが目の前で調理する温かいお料理などをご用意いたします。暮れゆく景色を眺めながらシャンパンとともにお楽しみください。
+
+ナイトキャップ／7：30P.M.～9：30P.M.
+煌く東京タワーを間近に眺めるナイトタイムはここだけの特別な空間。チーズやスナック、チョコレートなどアルコールに合う一品とともにご賞味ください。
+
+ご同伴のお客さまのご利用（3名さままで）は、別途料金を頂戴いたします。※消費税・サービス料込み
+●ライトリフレッシュメント 1名さま ￥3,000　●ティータイム 1名さま ￥3,000　●カクテルタイム・ナイトキャップ 1名さま 各￥5,000
+
+会議室
+専用の会議室（A・B）をご利用いただけます。重厚感のあるミーティングテーブルとビジネスチェアを配置、高速インターネット接続無料で機能性も充実しております。
+※事前予約制（2時間まで無料：延長1時間￥5,000）
+※最大3時間までご利用いただけます。
+※会議室Aはパソコン映像をHDM I接続により58インチテレビで視聴出来ます。
+
+客室のご案内
+公園の中にいるような開放感を演出するプレミアムルーム
+
+プレミアムキングルーム［38.0㎡］
+ゆったりとした居住空間が確保されたバルコニー付き客室。
+
+プレミアムコーナーキングルーム［37.2㎡］
+外の景色が楽しめるビューバス付き客室。
+
+プレミアムジュニアスイートルーム［50.1㎡］
+ハンギングチェアが特徴のワンルームスイートツインタイプ。
+
+プレミアムジュニアスイートキングルーム［50.1㎡］
+大きな窓からパノラマが広がるキングタイプのワンルームスイート。
+
+プリンセススイートルーム［113.3㎡］
+広いリビングを備えた開放感のあるスイートルーム。
+
+客室備品とサービス
+・ターンダウンサービス
+・ネスプレッソ コーヒーメーカー
+・今治タオルと今治バスローブ
+・国産　エジプト綿100％ナイトウェア
+・Bluetooth対応BOSE音楽プレーヤー
+・インターネット接続 (有線・無線)無料
+
+サービスのご案内
+プレミアムクラブフロア特典
+
+◆プレミアムクラブラウンジのご利用
+7:00A.M.～10:00P.M.
+・時間帯に合わせた1日4回のお料理とお飲みもの
+朝食 7:00A.M.～10:00A.M.
+ティータイム 10:00A.M.～5:30P.M.
+カクテルタイム 5:30P.M.～7:30P.M.
+ナイトキャップ 7:30P.M.～9:30P.M.
+・会議室2時間無料
+・ウェルカムシャンパンサービス
+
+◆朝食無料サービス
+（プレミアムクラブラウンジまたはレストランにて）
+
+◆スパ＆フィットネスのご利用
+（20才以上の方のみ）
+※20才未満の方はボウリング2ゲーム無料となります。
+
+◆シューシャインサービス
+
+◆ランドリーサービスのご利用料金優待
+（20％引き）
+
+◆英字新聞のダウンロードサービス
+
+◆ホテルカーサービス
+（3連泊以上）
+
+◆フリータイムチェックイン
+（3連泊以上／対象者のみ）
+
+スパ＆フィットネスのご利用
+トレーニングマシンや天然温泉・サウナ、プールを完備した会員制
+スポーツクラブも滞在中利用無料。健康的にリフレッシュしていただけます。
+※規約により、ご利用は満20才以上のお客さまとさせていただきます。
+※水着・トレーニングウェア・シューズ・ソックスを無料でお貸出しいたします。
+※タトゥ、刺青のあるお客さま、泥酔されているお客さまのご入館はお断りいたします。
+スパ＆フィットネスの詳細はこちら
+
+ホテルカーサービス（3連泊以上）
+専任ドライバーが観光地やビジネスの目的地まで無料でお送りいたします。
+ご利用時間　　　10:00A.M.～8:00P.M.
+ご利用方法　　　プレミアムクラブフロアのご宿泊1泊につき1回。
+　　　　　　　　※都内近郊10km圏内、送りのみのサービスとなります。
+　　　　　　　　ご滞在中にプレミアムクラブラウンジにて承ります。
+ご予約受付時間　8:00A.M.～10:00P.M.
+※ご予約状況や交通事情により、ご利用いただけない場合がございます。
+
+フリータイムチェックイン（3連泊以上／対象者のみ）
+早朝にご到着するお客さまなどへ、すぐにお部屋でごゆっくりしていただけるサービスです。
+対象のお客さま
+・SEIBU PRINCE CLUB 会員さま
+・SEIBU PRINCE CLUB emi会員さま
+・プリファード ホテルズ＆リゾーツ会員さま
+※ご希望の方は事前にチェックイン予定時刻をお知らせください。空室状況によりご案内出来ない場合もございます。</p>
+</div>
+<div id="foot_copy">
+<p class="footlink">｜<a href="https://www.princehotels.co.jp/index.html" class="ftlnk" target="_blank">プリンスホテル</a>｜<a href="https://www.princehotels.co.jp/parktower/index.html" class="ftlnk" target="_blank">ザ・プリンス パークタワー東京</a>｜</p>
+</div>
+
+</div></div>
+
+<!-- /content -->
+<!-- **************** /contentArea **************** -->
+
+<!-- **************** footerArea **************** -->
+<div id="footer">
+<div id="copyright"><img src="https://www.princehotels.co.jp/common/imgs/module_parts/parts_footer/copy01.gif" alt="Copyright (c) PRINCE HOTELS,INC. All rights reserved." /></div>
+</div>
+<!-- /footer -->
+<!-- **************** /footerArea **************** -->
+</div>
+<!-- /wrap -->
+
+<!-- Dynamic Tag Management by Adobe footer -->
+<script>var analyticsData={"events":"","eVar12":"ザ・プリンスパークタワー東京","eVar13":"","eVar14":""}</script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+<!-- End Dynamic Tag Management by Adobe footer -->
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1923154717" async></script></body>
+</html>
