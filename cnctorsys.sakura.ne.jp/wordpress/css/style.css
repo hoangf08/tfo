@@ -1378,6 +1378,47 @@ th, td {
   transform: translate(-50%, 0);
 }
 
+/* MARK: ON TOP
+*/
+
+.on-top {
+  position: fixed;
+  bottom: 56px;
+  right: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  transform: rotate(90deg) translate(0, 100%);
+  transform-origin: bottom right;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.on-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.on-top::before {
+  content: '';
+  display: block;
+  width: 53px;
+  height: 16px;
+  background: url(../icon/icon_long_arrow.svg) no-repeat;
+  background-position: bottom;
+  transform: rotate(0deg) scaleX(-1);
+}
+
+.on-top:hover {
+  opacity: 0.8;
+  transform: rotate(90deg) translate(-20px, 100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
 @media (max-width: 768px) {
   .sp-only {

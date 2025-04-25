@@ -133,6 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const mainWrapper = document.querySelector('.main-wrapper');
   const header = document.querySelector('.header-container');
   const topImg = document.querySelector('.top');
+  const onTopButton = document.querySelector('.on-top');
+  const scrollThreshold = 500; // Ngưỡng hiển thị nút on-top (px)
   const maxMargin = 80; // margin tối đa là 80px
 
   // Lắng nghe sự kiện cuộn từ SimpleBar
@@ -152,6 +154,27 @@ document.addEventListener('DOMContentLoaded', function () {
         topImg.style.paddingRight = '0px';
       }
 
+      // Hiển thị nút on-top khi scroll xuống đủ xa
+      if (scrollElement.scrollTop > scrollThreshold) {
+        onTopButton.classList.add('visible');
+      } else {
+        onTopButton.classList.remove('visible');
+      }
+    });
+  }
+
+  // Xử lý sự kiện click vào nút on-top
+  if (onTopButton) {
+    onTopButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Cuộn lên đầu trang
+      if (simpleBar) {
+        const scrollElement = simpleBar.getScrollElement();
+        scrollElement.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     });
   }
 
