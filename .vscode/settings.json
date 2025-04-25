@@ -40,7 +40,6 @@
       "*.gs": "javascript"
   },
   "window.zoomLevel": 0, // Adjust zoom for comfortable text size
-    "editor.minimap.enabled": false, // Hide Activity Bar
     "workbench.statusBar.visible": true, // Keep status bar for useful info
     "workbench.sideBar.location": "left", // Move sidebar to the right
     "workbench.sideBar.visible": false, // Hide sidebar by default (toggle with Ctrl+B)

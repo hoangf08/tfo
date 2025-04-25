@@ -9,6 +9,96 @@
 
 // Khởi tạo SimpleBar khi trang đã tải xong
 document.addEventListener('DOMContentLoaded', function () {
+  // Khi click vào lang-box-item
+  const langBoxItems = document.querySelectorAll('.lang-box-item');
+  const langBox = document.querySelector('.lang-box');
+  langBoxItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      langBox.style.display = 'none';
+    });
+  });
+
+  // Xử lý hiệu ứng cho từng chữ trong các nút .long-arrow
+  function splitTextIntoChars() {
+    const longArrows = document.querySelectorAll('.long-arrow');
+    
+    longArrows.forEach(arrow => {
+      // Kiểm tra xem đã được xử lý chưa
+      if (arrow.querySelector('.text-wrapper-default')) {
+        return; // Bỏ qua nếu đã được xử lý
+      }
+      
+      // Tạo một bản sao của nội dung nút
+      const textContent = arrow.textContent.trim();
+      
+      // Xóa nội dung hiện tại (chỉ xóa text node, giữ lại các phần tử con khác)
+      arrow.childNodes.forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '') {
+          node.remove();
+        }
+      });
+      
+      // Tạo wrapper cho văn bản mặc định (hiển thị khi không hover)
+      const textWrapperDefault = document.createElement('span');
+      textWrapperDefault.className = 'text-wrapper-default';
+      
+      // Tách từng ký tự và tạo span cho mỗi ký tự của văn bản mặc định
+      Array.from(textContent).forEach((char, index) => {
+        if (char.trim() !== '') { // Bỏ qua khoảng trắng
+          const charSpan = document.createElement('span');
+          charSpan.className = 'char';
+          charSpan.style.setProperty('--char-index', index);
+          charSpan.textContent = char;
+          textWrapperDefault.appendChild(charSpan);
+        } else {
+          // Thêm khoảng trắng để giữ nguyên định dạng văn bản
+          const spaceSpan = document.createElement('span');
+          spaceSpan.className = 'char space';
+          spaceSpan.innerHTML = '&nbsp;';
+          textWrapperDefault.appendChild(spaceSpan);
+        }
+      });
+      
+      // Tạo wrapper cho văn bản hiển thị khi hover
+      const textWrapperHover = document.createElement('span');
+      textWrapperHover.className = 'text-wrapper-hover';
+      
+      // Kiểm tra xem có thuộc tính data-hover-text không
+      const hoverText = arrow.getAttribute('data-hover-text') || textContent;
+      
+      // Tách từng ký tự và tạo span cho mỗi ký tự của văn bản khi hover
+      Array.from(hoverText).forEach((char, index) => {
+        if (char.trim() !== '') { // Bỏ qua khoảng trắng
+          const charSpan = document.createElement('span');
+          charSpan.className = 'char';
+          charSpan.style.setProperty('--char-index', index);
+          charSpan.textContent = char;
+          textWrapperHover.appendChild(charSpan);
+        } else {
+          // Thêm khoảng trắng để giữ nguyên định dạng văn bản
+          const spaceSpan = document.createElement('span');
+          spaceSpan.className = 'char space';
+          spaceSpan.innerHTML = '&nbsp;';
+          textWrapperHover.appendChild(spaceSpan);
+        }
+      });
+      
+      // Chèn wrapper vào đầu nút
+      arrow.insertBefore(textWrapperHover, arrow.firstChild);
+      arrow.insertBefore(textWrapperDefault, arrow.firstChild);
+      
+      // Thêm phần tử icon mũi tên nếu chưa có
+      if (!arrow.querySelector('.arrow-icon')) {
+        const arrowIcon = document.createElement('span');
+        arrowIcon.className = 'arrow-icon';
+        arrow.appendChild(arrowIcon);
+      }
+    });
+  }
+  
+  // Gọi hàm khi trang đã tải xong
+  splitTextIntoChars();
+
   // Khởi tạo SimpleBar cho phần tử có thuộc tính data-simplebar
   // Nếu SimpleBar đã tự động khởi tạo, đoạn code này sẽ không làm gì
   var elements = document.querySelectorAll('[data-simplebar]');

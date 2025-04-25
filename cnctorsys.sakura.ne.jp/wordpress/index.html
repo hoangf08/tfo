@@ -41,6 +41,13 @@
 <body>
   <input class="hidden" type="checkbox" id="check-lang">
   <input class="hidden" type="checkbox" id="check-menu">
+  <div class="lang-box" style="display: none;">
+    <span class="lang-box-item">English</span>
+    <span class="lang-box-item">日本語</span>
+    <span class="lang-box-item">한국어</span>
+    <span class="lang-box-item">繁體中文</span>
+    <span class="lang-box-item">简体中文</span>
+  </div>
   <div class="main-wrapper" data-simplebar>
     <label for="check-menu" class="overlay"></label>
     <!-- MARK: HEADER
@@ -89,12 +96,12 @@
               <a class="menu-nav-item" href="#">レストラン</a>
               <a class="menu-nav-item" href="#">温泉・スパ</a>
               <a class="menu-nav-item" href="#">館内施設</a>
-              <a class="menu-nav-item" href="#">Q＆A</a>
+              <a class="menu-nav-item" href="#">FAQ</a>
               <a class="menu-nav-item" href="#">ブログ</a>
             </div>
             <a class="menu-reservation long-arrow" href="#">ご予約はこちら</a>
             <div class="menu-tel">
-              <a href="tel:03-4226-8130">Tel. 03-4226-8130</a>
+              <a href="tel:03-4226-8130">Tel. 03-4226-8130</a>
               <span class="menu-tel-time">受付時間　10:00 - 19:00（平日）</span>
             </div>
             <div class="header-lang-box menu-lang">
@@ -196,18 +203,18 @@
           <h5 class="sub-title">お知らせ</h5>
           <span class="line"></span>
           <div class="notification-list">
-            <div class="notification-item">
+            <a href="#" class="notification-item">
               <span class="notification-date">2026.3.13</span>
-              <a href="#" class="notification-link">正社員・アルバイトを募集しています</a>
-            </div>
-            <div class="notification-item">
+              <span class="notification-item-title">正社員・アルバイトを募集しています</span>
+            </a>
+            <a href="#" class="notification-item notification-item-active">
               <span class="notification-date">2026.2.20</span>
-              <a href="#" class="notification-link link-active">休館日のご案内</a>
-            </div>
-            <div class="notification-item">
+              <span class="notification-item-title">休館日のご案内</span>
+            </a>
+            <a href="#" class="notification-item">
               <span class="notification-date">2026.1.1</span>
-              <a href="#" class="notification-link">新年のご挨拶</a>
-            </div>
+              <span class="notification-item-title">新年のご挨拶</span>
+            </a>
           </div>
         </div>
       </div>
@@ -219,33 +226,39 @@
           <div class="guest-room-intro">
             <p class="guest-room-text">当旅館の客室は、豊かな緑に囲まれた静かな空間でリラックスできます。<br>
               露天風呂付きのお部屋では自然の景色を楽しみながら温泉を堪能でき、露天風呂がないお部屋でも広々とした和室でくつろげます。</p>
-            <a href="" class="long-arrow">すべての客室を見る</a>
+            <a href="" class="long-arrow" data-hover-text="客室の詳細を見る">すべての客室を見る</a>
           </div>
           <div class="guest-room-list">
-            <div class="guest-room-item">
-              <picture>
-                <source srcset="images/img_room01.webp" type="image/webp">
-                <img src="images/img_room01.png" alt="" class="guest-room-item-img">
-              </picture>
-              <a href="#" class="guest-room-item-title sub-title short-arrow">スタンダード和室</a>
+            <a href="#" class="guest-room-item">
+              <figure class="guest-room-item-figure">
+                <picture>
+                  <source srcset="images/img_room01.webp" type="image/webp">
+                  <img src="images/img_room01.png" alt="" class="guest-room-item-img">
+                </picture>
+              </figure>
+              <span class="guest-room-item-title sub-title short-arrow">スタンダード和室</span>
               <p class="guest-room-item-text">自然に囲まれた静かな和室で、四季の景色を楽しみながらリラックス。</p>
-            </div>
-            <div class="guest-room-item">
-              <picture>
-                <source srcset="images/img_room02.webp" type="image/webp">
-                <img src="images/img_room02.png" alt="" class="guest-room-item-img">
-              </picture>
-              <a href="#" class="guest-room-item-title sub-title short-arrow">スタンダード和洋室</a>
+            </a>
+            <a href="#" class="guest-room-item">
+              <figure class="guest-room-item-figure">
+                <picture>
+                  <source srcset="images/img_room02.webp" type="image/webp">
+                  <img src="images/img_room02.png" alt="" class="guest-room-item-img">
+                </picture>
+              </figure>
+              <span class="guest-room-item-title sub-title short-arrow">スタンダード和洋室</span>
               <p class="guest-room-item-text">和の落ち着きと洋の快適さが調和した空間で、ゆったりと。</p>
-            </div>
-            <div class="guest-room-item">
-              <picture>
-                <source srcset="images/img_room03.webp" type="image/webp">
-                <img src="images/img_room03.png" alt="" class="guest-room-item-img">
-              </picture>
-              <a href="#" class="guest-room-item-title sub-title short-arrow">露天風呂付和室</a>
+            </a>
+            <a href="#" class="guest-room-item">
+              <figure class="guest-room-item-figure">
+                <picture>
+                  <source srcset="images/img_room03.webp" type="image/webp">
+                  <img src="images/img_room03.png" alt="" class="guest-room-item-img">
+                </picture>
+              </figure>
+              <span class="guest-room-item-title sub-title short-arrow">露天風呂付和室</span>
               <p class="guest-room-item-text">露天風呂で景色を楽しみながら、広々とした空間で贅沢なひとときを</p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -255,30 +268,36 @@
         <div class="container plan-container">
           <h2 class="title">Plan<span class="ja-title">プラン</span></h2>
           <div class="plan-list">
-            <div class="plan-item">
-              <picture>
-                <source srcset="images/img_plan01.webp" type="image/webp">
-                <img src="images/img_plan01.png" alt="" class="plan-item-img">
-              </picture>
-              <a href="#" class="plan-item-title sub-title short-arrow">早期予約プラン</a>
+            <a href="#" class="plan-item">
+              <figure class="plan-item-figure">
+                <picture>
+                  <source srcset="images/img_plan01.webp" type="image/webp">
+                  <img src="images/img_plan01.png" alt="" class="plan-item-img">
+                </picture>
+              </figure>
+              <span class="plan-item-title sub-title short-arrow">早期予約プラン</span>
               <p class="plan-item-text">60日前の予約でお得に! </p>
-            </div>
-            <div class="plan-item">
-              <picture>
-                <source srcset="images/img_plan02.webp" type="image/webp">
-                <img src="images/img_plan02.png" alt="" class="plan-item-img">
-              </picture>
-              <a href="#" class="plan-item-title sub-title short-arrow">ファミリープラン</a>
+            </a>
+            <a href="#" class="plan-item">
+              <figure class="plan-item-figure">
+                <picture>
+                  <source srcset="images/img_plan02.webp" type="image/webp">
+                  <img src="images/img_plan02.png" alt="" class="plan-item-img">
+                </picture>
+              </figure>
+              <span class="plan-item-title sub-title short-arrow">ファミリープラン</span>
               <p class="plan-item-text">大切な家族と露天風呂付きの広い部屋で癒しのひととき! </p>
-            </div>
-            <div class="plan-item">
-              <picture>
-                <source srcset="images/img_plan03.webp" type="image/webp">
-                <img src="images/img_plan03.png" alt="" class="plan-item-img">
-              </picture>
-              <a href="#" class="plan-item-title sub-title short-arrow">女子旅プラン</a>
+            </a>
+            <a href="#" class="plan-item">
+              <figure class="plan-item-figure">
+                <picture>
+                  <source srcset="images/img_plan03.webp" type="image/webp">
+                  <img src="images/img_plan03.png" alt="" class="plan-item-img">
+                </picture>
+              </figure>
+              <span class="plan-item-title sub-title short-arrow">女子旅プラン</span>
               <p class="plan-item-text">友達と一緒に、心も体もリフレッシュする特別な旅へ! </p>
-            </div>
+            </a>
           </div>
           <a href="#" class="plan-u1 long-arrow">すべてのプランを見る</a>
         </div>
@@ -293,17 +312,21 @@
               悠泉庵のレストランは、四季の景色を楽しむことができる露天風呂付きの和室です。<br>
               お食事は、お客様のご要望に応じてお作りいたします。
             </p>
-            <a href="" class="long-arrow">すべてのレストランを見る</a>
+            <a href="" class="long-arrow" data-hover-text="料理メニューを見る">すべてのレストランを見る</a>
           </div>
           <div class="restaurant-images">
-            <picture>
-              <source srcset="images/img_res01.webp" type="image/webp">
-              <img src="images/img_res01.png" alt="" class="restaurant_i1">
-            </picture>
-            <picture>
-              <source srcset="images/img_res02.webp" type="image/webp">
-              <img src="images/img_res02.png" alt="" class="restaurant_i2">
-            </picture>
+            <figure class="restaurant-figure_i1">
+              <picture>
+                <source srcset="images/img_res01.webp" type="image/webp">
+                <img src="images/img_res01.png" alt="" class="restaurant_img">
+              </picture>
+            </figure>
+            <figure class="restaurant-figure_i2">
+              <picture>
+                <source srcset="images/img_res02.webp" type="image/webp">
+                <img src="images/img_res02.png" alt="" class="restaurant_img">
+              </picture>
+            </figure>
           </div>
         </div>
       </div>
@@ -318,14 +341,15 @@
               露天風呂では四季の風景を楽しみながらゆったりと過ごせて、大浴場や貸切風呂も完備。<br>
               静かな環境で日常を忘れ、リラックスできるひとときをお楽しみください。
             </p>
-            <a href="" class="long-arrow hot-spring-link">すべての温泉を見る</a>
+            <a href="" class="long-arrow hot-spring-link" data-hover-text="温泉施設の案内">すべての温泉を見る</a>
           </div>
           <div class="hot-spring-images">
-            <picture>
-              <source srcset="images/img_hot-spring01.webp" type="image/webp">
-              <img src="images/img_hot-spring01.png" alt="" class="hot-spring_i1">
-            </picture>
-
+            <figure class="hot-spring-figure">
+              <picture>
+                <source srcset="images/img_hot-spring01.webp" type="image/webp">
+                <img src="images/img_hot-spring01.png" alt="" class="hot-spring_i1">
+              </picture>
+            </figure>
           </div>
         </div>
       </div>
@@ -338,40 +362,52 @@
         <div class="swiper facilities-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <picture>
-                <source srcset="images/img_fac01.webp" type="image/webp">
-                <img src="images/img_fac01.png" alt="" class="facilities-slider-img">
-              </picture>
+              <figure class="facilities-figure">
+                <picture>
+                  <source srcset="images/img_fac01.webp" type="image/webp">
+                  <img src="images/img_fac01.png" alt="" class="facilities-slider-img">
+                </picture>
+              </figure>
             </div>
             <div class="swiper-slide">
-              <picture>
-                <source srcset="images/img_fac02.webp" type="image/webp">
-                <img src="images/img_fac02.png" alt="" class="facilities-slider-img">
-              </picture>
+              <figure class="facilities-figure">
+                <picture>
+                  <source srcset="images/img_fac02.webp" type="image/webp">
+                  <img src="images/img_fac02.png" alt="" class="facilities-slider-img">
+                </picture>
+              </figure>
             </div>
             <div class="swiper-slide">
-              <picture>
-                <source srcset="images/img_fac03.webp" type="image/webp">
-                <img src="images/img_fac03.png" alt="" class="facilities-slider-img">
-              </picture>
+              <figure class="facilities-figure">
+                <picture>
+                  <source srcset="images/img_fac03.webp" type="image/webp">
+                  <img src="images/img_fac03.png" alt="" class="facilities-slider-img">
+                </picture>
+              </figure>
             </div>
             <div class="swiper-slide">
-              <picture>
-                <source srcset="images/img_fac01.webp" type="image/webp">
-                <img src="images/img_fac01.png" alt="" class="facilities-slider-img">
-              </picture>
+              <figure class="facilities-figure">
+                <picture>
+                  <source srcset="images/img_fac01.webp" type="image/webp">
+                  <img src="images/img_fac01.png" alt="" class="facilities-slider-img">
+                </picture>
+              </figure>
             </div>
             <div class="swiper-slide">
-              <picture>
-                <source srcset="images/img_fac02.webp" type="image/webp">
-                <img src="images/img_fac02.png" alt="" class="facilities-slider-img">
-              </picture>
+              <figure class="facilities-figure">
+                <picture>
+                  <source srcset="images/img_fac02.webp" type="image/webp">
+                  <img src="images/img_fac02.png" alt="" class="facilities-slider-img">
+                </picture>
+              </figure>
             </div>
             <div class="swiper-slide">
-              <picture>
-                <source srcset="images/img_fac03.webp" type="image/webp">
-                <img src="images/img_fac03.png" alt="" class="facilities-slider-img">
-              </picture>
+              <figure class="facilities-figure">
+                <picture>
+                  <source srcset="images/img_fac03.webp" type="image/webp">
+                  <img src="images/img_fac03.png" alt="" class="facilities-slider-img">
+                </picture>
+              </figure>
             </div>
           </div>
         </div>
@@ -390,27 +426,33 @@
         <div class="container blog-container">
           <h2 class="title blog-title">Blog<span class="ja-title">ブログ</span></h2>
           <div class="blog-list">
-            <div class="blog-item">
-              <picture>
-                <source srcset="images/img_blog01.webp" type="image/webp">
-                <img src="images/img_blog01.png" alt="" class="blog-item-img">
-              </picture>
-              <a href="#" class="blog-item-title short-arrow">当日取れたての旬の食材を使った絶品お刺身</a>
-            </div>
-            <div class="blog-item">
-              <picture>
-                <source srcset="images/img_blog02.webp" type="image/webp">
-                <img src="images/img_blog02.png" alt="" class="blog-item-img">
-              </picture>
-              <a href="#" class="blog-item-title short-arrow">当旅館の露天付き和室をご紹介</a>
-            </div>
-            <div class="blog-item">
-              <picture>
-                <source srcset="images/img_blog03.webp" type="image/webp">
-                <img src="images/img_blog03.png" alt="" class="blog-item-img">
-              </picture>
-              <a href="#" class="blog-item-title short-arrow">サウナスペースを全面リニューアルしました</a>
-            </div>
+            <a href="#" class="blog-item">
+              <figure class="blog-item-figure">
+                <picture>
+                  <source srcset="images/img_blog01.webp" type="image/webp">
+                  <img src="images/img_blog01.png" alt="" class="blog-item-img">
+                </picture>
+              </figure>
+              <span class="blog-item-title short-arrow">当日取れたての旬の食材を使った絶品お刺身</span>
+            </a>
+            <a href="#" class="blog-item">
+              <figure class="blog-item-figure">
+                <picture>
+                  <source srcset="images/img_blog02.webp" type="image/webp">
+                  <img src="images/img_blog02.png" alt="" class="blog-item-img">
+                </picture>
+              </figure>
+              <span class="blog-item-title short-arrow">当旅館の露天付き和室をご紹介</span>
+            </a>
+            <a href="#" class="blog-item">
+              <figure class="blog-item-figure">
+                <picture>
+                  <source srcset="images/img_blog03.webp" type="image/webp">
+                  <img src="images/img_blog03.png" alt="" class="blog-item-img">
+                </picture>
+              </figure>
+              <span class="blog-item-title short-arrow">サウナスペースを全面リニューアルしました</span>
+            </a>
           </div>
           <a href="#" class="blog-u1 long-arrow">すべてのブログを見る</a>
         </div>
@@ -427,22 +469,28 @@
           </div>
           <div class="sns-images">
             <div class="sns-images-box">
-              <picture>
-                <source srcset="images/img_sns_insta01.webp" type="image/webp">
-                <img src="images/img_sns_insta01.png" alt="" class="sns-image">
-              </picture>
+              <figure class="sns-figure">
+                <picture>
+                  <source srcset="images/img_sns_insta01.webp" type="image/webp">
+                  <img src="images/img_sns_insta01.png" alt="" class="sns-image">
+                </picture>
+              </figure>
             </div>
             <div class="sns-images-box">
-              <picture>
-                <source srcset="images/img_sns_x01.webp" type="image/webp">
-                <img src="images/img_sns_x01.png" alt="" class="sns-image">
-              </picture>
+              <figure class="sns-figure">
+                <picture>
+                  <source srcset="images/img_sns_x01.webp" type="image/webp">
+                  <img src="images/img_sns_x01.png" alt="" class="sns-image">
+                </picture>
+              </figure>
             </div>
             <div class="sns-images-box">
-              <picture>
-                <source srcset="images/img_sns_fb01.webp" type="image/webp">
-                <img src="images/img_sns_fb01.png" alt="" class="sns-image">
-              </picture>
+              <figure class="sns-figure">
+                <picture>
+                  <source srcset="images/img_sns_fb01.webp" type="image/webp">
+                  <img src="images/img_sns_fb01.png" alt="" class="sns-image">
+                </picture>
+              </figure>
             </div>
           </div>
         </div>
@@ -464,29 +512,28 @@
           <h2 class="title access-title">Access<span class="ja-title access-ja-title">アクセス</span></h2>
           <table class="access-address">
             <tr>
-              <th>住所</th>
+              <th><span class="access-info-name">住所</span></th>
               <td>〒105-0004<br>東京都港区新橋5-14-10 新橋スクエアビル 9F</td>
             </tr>
             <tr>
-              <th>アクセス</th>
+              <th><span class="access-info-name">アクセス</span></th>
               <td>JR他各線「新橋駅」南口より徒歩10分</td>
             </tr>
             <tr>
-              <th>営業時間</th>
+              <th><span class="access-info-name">営業時間</span></th>
               <td>10:00 - 19:00 (平日) </td>
             </tr>
             <tr>
-              <th>定休日</th>
+              <th><span class="access-info-name">定休日</span></th>
               <td>土日祝</td>
             </tr>
             <tr>
-              <th>駐車場</th>
-              <td>無し　※近隣にコインパーキングがございます。</td>
+              <th><span class="access-info-name">駐車場</span></th>
+              <td>無し ※近隣にコインパーキングがございます。</td>
             </tr>
             <tr>
-              <th>決済方法</th>
-              <td>クレジットカード可<br>
-                (VISA, Master,AMEX,JCB,Diners) </td>
+              <th><span class="access-info-name">クレジットカード</span></th>
+              <td>可(VISA, Master,AMEX,JCB,Diners) </td>
             </tr>
           </table>
           <div class="access-images">
