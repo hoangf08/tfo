@@ -239,7 +239,7 @@ padding-top: 80px;
 
 .reservation {
   background: #D3E2CB;
-  padding: 1rem 20px 1.75rem;
+  padding: 1rem 1rem 1.75rem;
   text-align: center;
 }
 .reservation hr {
@@ -293,3 +293,46 @@ footer {
 }
 
 /* CUSTOM SETTING */
+
+
+/* MARK: RESPONSIVE
+*/
+
+@media (max-width: 768px) {
+
+  #logo {
+    margin: 0 20px;
+  }
+  
+  main, footer {
+    padding: 0 16px;
+  }
+
+  table {
+    text-wrap: wrap;
+    width: auto;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .col3 {
+    gap: 8px;
+  }
+
+  .footer-nav a {
+    display: block;
+  }
+
+  .reservation {
+    padding: 1rem 20px 1.75rem;
+  }
+
+}
+
