@@ -135,7 +135,24 @@ document.addEventListener('DOMContentLoaded', function () {
   const topImg = document.querySelector('.top');
   const onTopButton = document.querySelector('.on-top');
   const scrollThreshold = 500; // Ngưỡng hiển thị nút on-top (px)
-  const maxMargin = 80; // margin tối đa là 80px
+  
+  // Đặt giá trị topPadding dựa trên kích thước màn hình
+  let topPadding = 80; // giá trị mặc định là 80px
+  
+  // Hàm cập nhật topPadding dựa trên kích thước màn hình
+  function updateTopPadding() {
+    if (window.innerWidth < 768) {
+      topPadding = 20; // Khi màn hình dưới 768px, topPadding là 20px
+    } else {
+      topPadding = 80; // Khi màn hình lớn hơn hoặc bằng 768px, topPadding là 80px
+    }
+  }
+  
+  // Cập nhật giá trị ban đầu
+  updateTopPadding();
+  
+  // Lắng nghe sự kiện thay đổi kích thước màn hình
+  window.addEventListener('resize', updateTopPadding);
 
   // Lắng nghe sự kiện cuộn từ SimpleBar
   const simpleBar = SimpleBar.instances.get(mainWrapper);
@@ -146,8 +163,8 @@ document.addEventListener('DOMContentLoaded', function () {
       // Hiển thị header khi scroll
       if (scrollElement.scrollTop > 50) {
         header.classList.add('visible');
-        topImg.style.paddingLeft = '80px';
-        topImg.style.paddingRight = '80px';
+        topImg.style.paddingLeft = `${topPadding}px`;
+        topImg.style.paddingRight = `${topPadding}px`;
       } else {
         header.classList.remove('visible');
         topImg.style.paddingLeft = '0px';
@@ -182,13 +199,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const leadSlider = new Swiper('.lead-slider', {
     // Các tùy chọn Swiper
     loop: true,
-    slidesPerView: 1.8,
-    spaceBetween: 72,
+    slidesPerView: window.innerWidth <= 768 ? 1.2 : 1.8,
+    spaceBetween: window.innerWidth <= 768 ? 16 : 72,
     centeredSlides: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 1.8
+      }
+    }
   });
   const facilitiesSlider = new Swiper('.facilities-slider', {
     // Các tùy chọn Swiper

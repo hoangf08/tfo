@@ -41,6 +41,7 @@ body {
 
 picture {
   width: 100%;
+  height: 100%;
 }
 
 a {
@@ -425,6 +426,59 @@ th, td {
 */
 
 
+/* MARK: LANG-BOX
+*/
+
+.lang-box {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.lang-box-container {
+  height: auto;
+  padding: 76px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 32px;
+  position: relative;
+  flex-wrap: wrap;
+  row-gap: 120px;
+  z-index: 100;
+  background: url(../images/bg_lang.webp) no-repeat center center;
+  background: url(../images/bg_lang.png) no-repeat center center;
+}
+
+.lang-box-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lang-box-logo .logo-item {
+  width: auto;
+  height: 200px;
+  --logo-fill: #727272;
+}
+
+.lang-box-item {
+  border: 1px solid #222;
+  border-radius: 40px;
+  padding: 16px 40px;
+}
+
+.lang-box-item:hover {
+  background: #222;
+  cursor: pointer;
+  color: white;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* MARK: HEADER
 */
 
@@ -446,30 +500,6 @@ th, td {
 
 .header-container.visible {
   transform: translateY(0);
-}
-
-.lang-box {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  background: #D9D9D9;
-  gap: 32px;
-  position: relative;
-  z-index: 100;
-}
-
-.lang-box-item {
-  border: 1px solid #222;
-  border-radius: 40px;
-  padding: 16px 40px;
-}
-
-.lang-box-item:hover {
-  background: #FCFCFC;
-  cursor: pointer;
 }
 
 .header-logo {
@@ -774,8 +804,8 @@ th, td {
 */
 
 .top {
-  width: 100%;
-  aspect-ratio: 8/5;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -795,6 +825,12 @@ th, td {
   height: 100%;
   opacity: 0.32;
   background: radial-gradient(50% 50% at 50% 50%, #002E3B 42.47%, rgba(0, 124, 161, 0.00) 100%);
+}
+
+.top-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* MARK: LEAD
@@ -834,7 +870,7 @@ th, td {
   display: grid;
   grid-template-rows: auto;
   text-align: left;
-  width: 658px;
+  max-width: 658px;
   margin: 0 auto;
 }
 
@@ -1438,4 +1474,158 @@ th, td {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+
+  /* MARK: CUSTOM COMMON
+  */
+
+  .pc-only {
+    display: none;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: var(--font-size-large);
+  }
+
+  .ja-title {
+    margin-top: 16px;
+    font-size: var(--font-size-content);
+    gap: 16px;
+  }
+
+  .ja-title::before {
+    width: 48px;
+  }
+
+  /* MARK: LANG-BOX SP
+  */
+  .lang-box-container {
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+
+  .lang-box-logo .logo-item {
+    width: auto;
+    height: 80px;
+    margin-bottom: 56px;
+  }
+
+  /* MARK: HEADER SP
+  */
+
+  .header-container {
+    padding: 14px 20px;
+  }
+
+  .header-logo .logo-item {
+    height: 40px;
+  }
+
+  .header-box2 {
+    width: 100%;
+    padding: 16.5px 20px 48px;
+  }
+
+  .menu-logo .logo-item {
+    height: 40px;
+    --logo-fill: #222;
+    position: relative;
+    z-index: 4;
+    margin-bottom: 56px;
+  }
+
+  .menu-btn {
+    right: 20px;
+    top: 16.5px;
+  }
+
+  /* MARK: TOP SP
+  */
+
+  .top {
+    width: 100vw;
+    height: 100vh;
+    aspect-ratio: unset;
+  }
+
+  .top-logo .logo-item {
+    width: 215px;
+    height: auto;
+  }
+
+  /* MARK: LEAD SP
+  */
+
+  .lead-container {
+    padding: 56px 0 82px
+  }
+
+  .line {
+    margin: 20px auto;
+  }
+
+  .lead-left {
+    width: 172px;
+    top: 72px;
+    left: 10px;
+  }
+  
+  .lead-right {
+    width: 172px;
+    bottom: 20px;
+    right: 10px;
+  }
+
+  /* MARK: Comment
+  */
+
+  .notification {
+
+  }
+
+  .notification-item {
+    grid-template-columns: max-content min-content;
+  }
+
+  .notification-date {
+    grid-column: span 2;
+  }
+  
+  /* MARK: GUEST ROOM SP
+  */
+
+  .guest-room {
+    padding-top: 64px;
+  }
+  
+  .guest-room-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .guest-room-list {
+    grid-column: initial;
+  }
+  
+  .guest-room-intro {
+    width: 100%;
+    margin: 0;
+    gap: 40px;
+  }
+
+  .guest-room-text {
+  }
+  .guest-room-item {
+    width: 256px;
+  }
+
+  
+  
 }
