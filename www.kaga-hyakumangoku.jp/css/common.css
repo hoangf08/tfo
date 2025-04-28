@@ -1,0 +1,1758 @@
+@charset "UTF-8";
+/* ===================================================================
+CSS information
+
+ file name  : common.css
+ author     : Ability Consultant
+ style info : 基本・共通設定
+=================================================================== */
+#header .con_header .box_header .box_hea, #contents #topicpath, #footer .wrp_footer .con_footer, #footer .con_hotel, .wrp_search .con_search {
+  max-width: 1200px;
+  margin: auto;
+}
+@media only screen and (max-width: 1199px) {
+  #header .con_header .box_header .box_hea, #contents #topicpath, #footer .wrp_footer .con_footer, #footer .con_hotel, .wrp_search .con_search {
+    width: 91.66667%;
+  }
+}
+
+#header .con_header .box_header .box_hea:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* -----------------------------------------------------------
+	基本設定、リンクカラーなど
+----------------------------------------------------------- */
+html {
+  font-size: small;
+  line-height: 1.5;
+  letter-spacing: .06em;
+}
+html.openMenu {
+  overflow: hidden;
+}
+
+body {
+  color: #313131;
+  background: url(../images/common/bg_base.jpg) repeat left top;
+  -webkit-text-size-adjust: none;
+  font-size: 108%;
+}
+.ie body {
+  font-size: 105%;
+}
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 100%;
+  }
+}
+body a {
+  color: #4b4b4b;
+}
+body a:link, body a:visited, body a:active {
+  text-decoration: underline;
+}
+.mouse body a:hover, .touch body a.touchstart {
+  text-decoration: none;
+  color: #646464;
+}
+body img {
+  max-width: 100%;
+  -webkit-touch-callout: none;
+}
+
+body, pre, input, textarea, select {
+  font-family: "游ゴシック","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,sans-serif;
+}
+
+input, select, textarea {
+  font-size: 100%;
+}
+
+html.ie8 .view_tab,
+html.ie8 .view_tab_sp,
+html.ie8 .view_sp {
+  display: none !important;
+}
+html.ie8 #page {
+  min-width: 1200px !important;
+  margin: auto;
+  font-size: 100% !important;
+}
+
+@media only screen and (min-width: 1200px) {
+  body .view_tab-sp, body .view_tab {
+    display: none !important;
+  }
+}
+@media print {
+  body .view_tab-sp, body .view_tab {
+    display: none !important;
+  }
+}
+.ie8 body .view_tab-sp, .ie8 body .view_tab {
+  display: none !important;
+}
+@media only screen and (min-width: 768px) {
+  body .view_sp {
+    display: none !important;
+  }
+}
+@media print {
+  body .view_sp {
+    display: none !important;
+  }
+}
+.ie8 body .view_sp {
+  display: none !important;
+}
+@media only screen and (max-width: 1199px) {
+  body .view_pc {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body .view_pc-tab, body .view_tab {
+    display: none !important;
+  }
+}
+
+.mouse .over {
+  -moz-transition: opacity 200ms ease-in;
+  -o-transition: opacity 200ms ease-in;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+.mouse .over:hover, .touch .over.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch .over {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch .over.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+
+/* -----------------------------------------------------------
+	#page
+----------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  #page {
+    font-size: 100% !important;
+    position: relative;
+  }
+  #page .overlay {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+  .openMenu #page .overlay {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    z-index: 12;
+  }
+}
+@media print {
+  #page {
+    font-size: 100% !important;
+    position: relative;
+  }
+  #page .overlay {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+  .openMenu #page .overlay {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    z-index: 12;
+  }
+}
+.ie8 #page {
+  font-size: 100% !important;
+  position: relative;
+}
+.ie8 #page .overlay {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.openMenu .ie8 #page .overlay {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  z-index: 12;
+}
+
+/* -----------------------------------------------------------
+	#header
+----------------------------------------------------------- */
+#header .con_header .box_header {
+  width: 100%;
+  background: url(../images/common/bg_base.jpg) repeat center;
+}
+#header .con_header .box_header .box_hea {
+  padding: 15px 0;
+}
+@media only screen and (max-width: 767px) {
+  #header .con_header .box_header .box_hea {
+    padding: 3% 0;
+  }
+}
+#header .con_header .box_header .box_hea .logo {
+  vertical-align: middle;
+  display: inline-block;
+}
+#header .con_header .box_header .box_hea .logo a {
+  display: block;
+}
+.mouse #header .con_header .box_header .box_hea .logo a {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse #header .con_header .box_header .box_hea .logo a:hover, .touch #header .con_header .box_header .box_hea .logo a.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch #header .con_header .box_header .box_hea .logo a {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch #header .con_header .box_header .box_hea .logo a.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+@media only screen and (max-width: 767px) {
+  #header .con_header .box_header .box_hea .logo a img {
+    max-width: 7em;
+  }
+}
+#header .con_header .box_header .box_hea .lang_menu {
+  float: right;
+  margin-left: 20px;
+  margin-top: .4em;
+}
+#header .con_header .box_header .box_hea .lang_menu * {
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+#header .con_header .box_header .box_hea .lang_menu ul {
+  width: 100%;
+}
+#header .con_header .box_header .box_hea .lang_menu ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+}
+#header .con_header .box_header .box_hea .lang_menu ul li a, #header .con_header .box_header .box_hea .lang_menu ul li .st {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 86%;
+  color: #313131;
+  padding: .3em 1.5em;
+  letter-spacing: normal;
+}
+#header .con_header .box_header .box_hea .lang_menu ul li .st {
+  cursor: pointer;
+}
+#header .con_header .box_header .box_hea .lang_menu ul li:hover, #header .con_header .box_header .box_hea .lang_menu ul li a:hover {
+  background: #fff;
+}
+#header .con_header .box_header .box_hea .lang_menu ul li:hover ul li, #header .con_header .box_header .box_hea .lang_menu ul li a:hover ul li {
+  visibility: visible;
+  overflow: visible;
+  height: 30px;
+  z-index: 10;
+}
+#header .con_header .box_header .box_hea .lang_menu ul li ul {
+  position: absolute;
+  top: 26px;
+  width: 100%;
+  z-index: 100;
+}
+#header .con_header .box_header .box_hea .lang_menu ul li ul li {
+  visibility: hidden;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  background: #d2d2d2;
+}
+#header .con_header .box_header .box_hea .lang_menu ul li ul li a:hover {
+  opacity: .8;
+}
+#header .con_header .box_header .box_hea h1 {
+  float: right;
+  font-size: 86%;
+  font-weight: normal;
+  letter-spacing: normal;
+  margin-top: 0.8em;
+}
+@media only screen and (max-width: 767px) {
+  #header .con_header .box_header .box_hea h1 {
+    margin-top: 0;
+  }
+}
+#header .con_header .pagetitle {
+  position: relative;
+  height: 0;
+  background: url(../images/common/bg_main_tit.jpg) repeat-x left top;
+  padding-top: 147px;
+}
+@media only screen and (max-width: 767px) {
+  #header .con_header .pagetitle {
+    padding-top: 8em;
+  }
+}
+#header .con_header .pagetitle h2 {
+  text-align: center;
+  width: 100%;
+  font-weight: normal;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+  color: #fff;
+  font-size: 215%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  letter-spacing: .42em;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #header .con_header .pagetitle h2 {
+    font-size: 179%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #header .con_header .pagetitle h2 {
+    font-size: 158%;
+  }
+}
+#header .con_gnav {
+  background: #101010;
+  padding: 7px 0;
+}
+@media only screen and (max-width: 767px) {
+  #header .con_gnav {
+    display: none;
+  }
+}
+#header .con_gnav a {
+  text-decoration: none;
+  line-height: 1;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+}
+#header .con_gnav .box_gnav {
+  border-bottom: 1px solid #404040;
+  padding-bottom: 6px;
+}
+#header .con_gnav .box_gnav ul li a {
+  color: #fff;
+  padding: .6em 1.2em;
+  display: block;
+  position: relative;
+  font-size: 129%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #header .con_gnav .box_gnav ul li a {
+    font-size: 115%;
+    padding: .6em .8em;
+  }
+}
+#header .con_gnav .box_gnav ul li a:after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #76002e;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+#header .con_gnav .box_gnav ul li:last-child a {
+  background: #dd8f0e;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
+}
+#header .con_gnav .box_gnav ul li:last-child a:after {
+  content: none;
+}
+#header .con_gnav .box_gnav ul li:last-child a:hover {
+  background: #c6800c;
+}
+#header .con_gnav .box_gnav ul li:hover a:after, #header .con_gnav .box_gnav ul li.active a:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+#header .con_gnav .box_snav {
+  margin-top: 7px;
+}
+#header .con_gnav .box_snav li {
+  margin-left: .8em;
+}
+#header .con_gnav .box_snav li:before {
+  content: '-';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .3em;
+  color: #dcdcdc;
+}
+#header .con_gnav .box_snav li a {
+  color: #dcdcdc;
+}
+.mouse #header .con_gnav .box_snav li a {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse #header .con_gnav .box_snav li a:hover, .touch #header .con_gnav .box_snav li a.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch #header .con_gnav .box_snav li a {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch #header .con_gnav .box_snav li a.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+#header .con_gnav ul {
+  letter-spacing: -.4em;
+  text-align: center;
+}
+#header .con_gnav ul li {
+  letter-spacing: .06em;
+  display: inline-block;
+}
+
+/* -----------------------------------------------------------
+	#contents
+----------------------------------------------------------- */
+#contents #topicpath {
+  overflow: hidden;
+  padding: 10px 0;
+}
+@media only screen and (max-width: 767px) {
+  #contents #topicpath {
+    padding: 1% 0 2%;
+  }
+}
+#contents #topicpath li {
+  float: left;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+}
+#contents #topicpath li:before {
+  content: "";
+  margin-right: .3em;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #76002e;
+  font-size: 86%;
+  margin: 0 0.8em;
+}
+#contents #topicpath li:first-child:before {
+  content: none;
+}
+@media only screen and (max-width: 767px) {
+  #contents #topicpath li {
+    font-size: 86%;
+  }
+}
+
+/* -----------------------------------------------------------
+	#footer
+----------------------------------------------------------- */
+#footer {
+  padding-bottom: 135px;
+  margin-top: 100px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #footer {
+    padding-bottom: 14em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #footer {
+    padding-bottom: 7em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #footer {
+    margin-top: 8%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #footer {
+    margin-top: 10%;
+  }
+}
+#footer #ptop {
+  background: url(../images/common/bg01.jpg) repeat;
+}
+#footer #ptop a {
+  padding: 1em 0;
+  display: block;
+  font-size: 86%;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-align: center;
+}
+#footer #ptop a span:before {
+  content: '';
+  width: 16px;
+  height: 9px;
+  background: url(../images/footer/ic_ptop.png) no-repeat;
+  display: inline-block;
+  margin-right: 1em;
+}
+#footer .wrp_footer {
+  padding: 60px 0;
+  background: url(../images/common/bg02.jpg) repeat left top;
+}
+@media only screen and (max-width: 767px) {
+  #footer .wrp_footer {
+    padding: 6% 0;
+  }
+}
+#footer .wrp_footer .con_footer .l_nav {
+  text-align: center;
+  letter-spacing: -.4em;
+}
+#footer .wrp_footer .con_footer .l_nav li {
+  display: inline-block;
+  vertical-align: top;
+  width: 18.66667%;
+  text-align: center;
+  padding-bottom: 1px;
+  margin-right: 1.66667%;
+}
+#footer .wrp_footer .con_footer .l_nav li:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 767px) {
+  #footer .wrp_footer .con_footer .l_nav li {
+    width: 31%;
+    margin: 4% 3% 0 0;
+  }
+  #footer .wrp_footer .con_footer .l_nav li:nth-child(3) {
+    margin-right: 0;
+  }
+}
+#footer .wrp_footer .con_footer .l_nav li a {
+  display: block;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+  font-size: 129%;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #8d8d8d;
+  position: relative;
+  letter-spacing: .14em;
+}
+.mouse #footer .wrp_footer .con_footer .l_nav li a {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse #footer .wrp_footer .con_footer .l_nav li a:hover, .touch #footer .wrp_footer .con_footer .l_nav li a.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch #footer .wrp_footer .con_footer .l_nav li a {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch #footer .wrp_footer .con_footer .l_nav li a.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #footer .wrp_footer .con_footer .l_nav li a {
+    font-size: 122%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #footer .wrp_footer .con_footer .l_nav li a {
+    font-size: 108%;
+  }
+}
+#footer .wrp_footer .con_footer .l_nav li a:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 9px 9px;
+  border-color: transparent transparent #8d8d8d transparent;
+}
+#footer .wrp_footer .con_footer .l_nav li a .st {
+  padding: .5em 0;
+}
+#footer .wrp_footer .con_footer .box_sitemap {
+  text-align: center;
+  letter-spacing: -.4em;
+  margin-top: 65px;
+}
+@media only screen and (max-width: 767px) {
+  #footer .wrp_footer .con_footer .box_sitemap {
+    display: none;
+  }
+}
+#footer .wrp_footer .con_footer .box_sitemap .boxs_map {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  text-align: left;
+  margin-right: 50px;
+}
+#footer .wrp_footer .con_footer .box_sitemap .boxs_map:last-child {
+  margin-right: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #footer .wrp_footer .con_footer .box_sitemap .boxs_map {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+  }
+  #footer .wrp_footer .con_footer .box_sitemap .boxs_map:nth-child(3) {
+    margin-right: 0;
+  }
+}
+#footer .wrp_footer .con_footer .box_sitemap .boxs_map a {
+  color: #eeeeee;
+  text-decoration: none;
+}
+.mouse #footer .wrp_footer .con_footer .box_sitemap .boxs_map a {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse #footer .wrp_footer .con_footer .box_sitemap .boxs_map a:hover, .touch #footer .wrp_footer .con_footer .box_sitemap .boxs_map a.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch #footer .wrp_footer .con_footer .box_sitemap .boxs_map a {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch #footer .wrp_footer .con_footer .box_sitemap .boxs_map a.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+#footer .wrp_footer .con_footer .box_sitemap .boxs_map .st {
+  line-height: 1;
+  margin-bottom: 1.2em;
+}
+#footer .wrp_footer .con_footer .box_sitemap .boxs_map .st:before {
+  content: '-';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .3em;
+  color: #dcdcdc;
+}
+#footer .wrp_footer .con_footer .box_sitemap .boxs_map ul {
+  padding-left: .8em;
+  border-left: 1px solid #dcdcdc;
+  line-height: 1;
+}
+#footer .wrp_footer .con_footer .box_sitemap .boxs_map ul li {
+  line-height: 1;
+  margin-bottom: 1.2em;
+}
+#footer .wrp_footer .con_footer .box_sitemap .boxs_map ul li.pdf:after {
+  content: "";
+  margin-left: .3em;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-weight: 400;
+  color: #fff;
+}
+#footer .wrp_footer .con_footer .btns_plan {
+  letter-spacing: -.4em;
+  text-align: center;
+  margin-top: 65px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #footer .wrp_footer .con_footer .btns_plan {
+    margin-top: 3%;
+  }
+}
+#footer .wrp_footer .con_footer .btns_plan li {
+  margin-right: 2.16667%;
+  width: 23.33333%;
+  display: inline-block;
+}
+#footer .wrp_footer .con_footer .btns_plan li:last-child {
+  margin-right: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #footer .wrp_footer .con_footer .btns_plan li {
+    width: 30%;
+  }
+}
+#footer .wrp_footer .con_footer .btns_plan li a {
+  letter-spacing: normal;
+  text-decoration: none;
+  display: block;
+  padding: .8em 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: color 0.4s, background 0.4s;
+  -o-transition: color 0.4s, background 0.4s;
+  -webkit-transition: color 0.4s, background 0.4s;
+  transition: color 0.4s, background 0.4s;
+}
+#footer .wrp_footer .con_footer .btns_plan li a:after {
+  content: "";
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 45%;
+  width: 26px;
+  height: 5px;
+  right: 1em;
+  -moz-transform: skew(45deg);
+  -ms-transform: skew(45deg);
+  -webkit-transform: skew(45deg);
+  transform: skew(45deg);
+  -moz-transition: border-color 0.4s;
+  -o-transition: border-color 0.4s;
+  -webkit-transition: border-color 0.4s;
+  transition: border-color 0.4s;
+}
+#footer .wrp_footer .con_footer .btns_plan li a:hover {
+  background: #c9c9c9;
+  color: #313131;
+}
+#footer .wrp_footer .con_footer .btns_plan li a:hover:after {
+  border-color: #313131;
+}
+#footer .con_hotel {
+  margin-top: 40px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #footer .con_hotel {
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #footer .con_hotel {
+    margin-top: 6%;
+  }
+}
+#footer .con_hotel .logo, #footer .con_hotel .box_hotel {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 767px) {
+  #footer .con_hotel .logo, #footer .con_hotel .box_hotel {
+    display: block;
+  }
+}
+#footer .con_hotel .logo a {
+  display: block;
+}
+#footer .con_hotel .box_hotel {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+  margin-left: 15px;
+  text-align: left;
+}
+@media only screen and (max-width: 767px) {
+  #footer .con_hotel .box_hotel {
+    text-align: center;
+    margin: 0;
+  }
+  #footer .con_hotel .box_hotel p {
+    margin-top: 4%;
+  }
+}
+#footer .con_hotel .box_hotel a, #footer .con_hotel .box_hotel .tel {
+  font-size: 158%;
+  line-height: 1.2;
+  text-decoration: none;
+}
+#footer #copyright {
+  text-align: center;
+  font-size: 86%;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #footer #copyright {
+    margin-top: 3%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #footer #copyright {
+    margin-top: 4%;
+  }
+}
+
+#fix_logo {
+  position: fixed;
+  top: 5px;
+  left: 15px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  z-index: -1;
+  -moz-transition: opacity 0.8s, z-index 0.8s;
+  -o-transition: opacity 0.8s, z-index 0.8s;
+  -webkit-transition: opacity 0.8s, z-index 0.8s;
+  transition: opacity 0.8s, z-index 0.8s;
+}
+#fix_logo a {
+  display: block;
+}
+.mouse #fix_logo a {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse #fix_logo a:hover, .touch #fix_logo a.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch #fix_logo a {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch #fix_logo a.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+.fix #fix_logo {
+  z-index: 999;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+#MenuList {
+  background: #000;
+  position: relative;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  z-index: 1000;
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-transition: -moz-transform 0.8s;
+  -o-transition: -o-transform 0.8s;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  max-width: 380px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #MenuList {
+    max-width: 330px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #MenuList {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-height: 726px) {
+  #MenuList {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+  }
+}
+#MenuList .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#MenuList .inner .common_menu {
+  padding-top: 7%;
+  width: 93.42105%;
+  margin-left: auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #MenuList .inner .common_menu {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #MenuList .inner .common_menu {
+    margin: 0 auto;
+  }
+}
+#MenuList .inner .common_menu .logo {
+  display: inline-block;
+}
+#MenuList .inner .common_menu .logo a {
+  display: block;
+}
+#MenuList .inner .common_menu .box_link {
+  border-top: 1px solid #888;
+  padding-top: 7%;
+  padding-left: 7.04225%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 25px;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  #MenuList .inner .common_menu .box_link {
+    padding: 8% 1% 0 4%;
+    clear: both;
+  }
+}
+#MenuList .inner .common_menu .box_link a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+}
+@media only screen and (max-width: 767px) {
+  #MenuList .inner .common_menu .box_link .box_gnav {
+    overflow: hidden;
+  }
+}
+#MenuList .inner .common_menu .box_link .box_gnav li {
+  margin: 0 0 1.5vh;
+}
+@media only screen and (max-width: 767px) {
+  #MenuList .inner .common_menu .box_link .box_gnav li {
+    width: 50%;
+    float: left;
+  }
+}
+#MenuList .inner .common_menu .box_link .box_gnav li:before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: #dfdfdf;
+  display: inline-block;
+  vertical-align: super;
+  margin-right: .3em;
+}
+#MenuList .inner .common_menu .box_link .box_gnav li a {
+  font-size: 129%;
+}
+.mouse #MenuList .inner .common_menu .box_link .box_gnav li a {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse #MenuList .inner .common_menu .box_link .box_gnav li a:hover, .touch #MenuList .inner .common_menu .box_link .box_gnav li a.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch #MenuList .inner .common_menu .box_link .box_gnav li a {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch #MenuList .inner .common_menu .box_link .box_gnav li a.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+#MenuList .inner .common_menu .box_link .box_snav {
+  margin-top: 3.5vh;
+}
+@media only screen and (max-width: 767px) {
+  #MenuList .inner .common_menu .box_link .box_snav {
+    overflow: hidden;
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #MenuList .inner .common_menu .box_link .box_snav ul {
+    width: 50%;
+    float: left;
+  }
+}
+#MenuList .inner .common_menu .box_link .box_snav ul li {
+  line-height: 1;
+  margin-bottom: 1em;
+}
+#MenuList .inner .common_menu .box_link .box_snav ul li:before {
+  content: '-';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .3em;
+  color: #dcdcdc;
+}
+.mouse #MenuList .inner .common_menu .box_link .box_snav ul li a {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse #MenuList .inner .common_menu .box_link .box_snav ul li a:hover, .touch #MenuList .inner .common_menu .box_link .box_snav ul li a.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch #MenuList .inner .common_menu .box_link .box_snav ul li a {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch #MenuList .inner .common_menu .box_link .box_snav ul li a.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+#MenuList .inner .common_menu .box_link .box_snav ul li.nar {
+  letter-spacing: normal;
+}
+.openMenu #MenuList .inner .common_menu .box_link .box_snav {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+#MenuList .inner .common_menu .box_link .box_lang {
+  overflow: hidden;
+  margin-top: 10%;
+}
+#MenuList .inner .common_menu .box_link .box_lang li {
+  line-height: 1;
+  margin-bottom: 1.2em;
+  width: 50%;
+  float: left;
+}
+#MenuList .inner .common_menu .box_link .box_lang li:before {
+  content: "";
+  margin-right: .3em;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #dcdcdc;
+}
+.mouse #MenuList .inner .common_menu .box_link .box_lang li a {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse #MenuList .inner .common_menu .box_link .box_lang li a:hover, .touch #MenuList .inner .common_menu .box_link .box_lang li a.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch #MenuList .inner .common_menu .box_link .box_lang li a {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch #MenuList .inner .common_menu .box_link .box_lang li a.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+#MenuList .inner .common_menu .box_link .ic_inst {
+  position: absolute;
+  top: 5%;
+  right: 6%;
+  line-height: 1;
+}
+.mouse #MenuList .inner .common_menu .box_link .ic_inst {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse #MenuList .inner .common_menu .box_link .ic_inst:hover, .touch #MenuList .inner .common_menu .box_link .ic_inst.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch #MenuList .inner .common_menu .box_link .ic_inst {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch #MenuList .inner .common_menu .box_link .ic_inst.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+#MenuList .inner .common_menu .box_link .ic_inst a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+}
+#MenuList .inner .common_menu .box_link .ic_inst a:before {
+  content: "";
+  margin-right: .3em;
+  font-family: 'Font Awesome 5 Brands';
+}
+#MenuList .inner .common_menu .box_link .ic_inst a:before {
+  font-size: 200%;
+  margin: 0 auto !important;
+}
+#MenuList .inner .common_menu .box_link .fade {
+  -moz-transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+#MenuList .inner .btn_rsv {
+  margin-top: 7vh;
+}
+#MenuList .inner .btn_rsv a {
+  display: block;
+  background: #dd8f0e;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 1em 0;
+  -moz-transition: color 0.4s, background 0.4s;
+  -o-transition: color 0.4s, background 0.4s;
+  -webkit-transition: color 0.4s, background 0.4s;
+  transition: color 0.4s, background 0.4s;
+}
+#MenuList .inner .btn_rsv a:hover {
+  background: #c6800c;
+}
+@media only screen and (min-height: 726px) {
+  #MenuList .inner .btn_rsv {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+#MenuList .inner .btn_rsv a {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+  font-size: 129%;
+  padding: 2em 0;
+}
+#MenuList .inner .btns {
+  text-align: center;
+  letter-spacing: -.4em;
+  padding: 3% 0;
+}
+#MenuList .inner .btns li {
+  display: inline-block;
+  letter-spacing: normal;
+  padding: .5em;
+}
+#MenuList .inner .btns li:before {
+  content: "";
+  margin-right: .3em;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #fff;
+}
+#MenuList .inner .btns li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+#MenuList .inner .btn_close {
+  color: #ccc;
+  text-align: center;
+}
+#MenuList .inner .btn_close span {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+  line-height: 1;
+}
+#MenuList .inner .btn_close span:before {
+  content: '×';
+  font-size: 223%;
+  display: inline-block;
+  vertical-align: middle;
+}
+#MenuList .inner .btn_close.top {
+  float: right;
+  border: 1px solid #585858;
+  padding: .3em .4em;
+  margin: -.5em 0 1em;
+}
+#MenuList .inner .btn_close.top span {
+  font-size: 93%;
+}
+#MenuList .inner .btn_close.top span:before {
+  display: block;
+}
+#MenuList .inner .btn_close.bottom {
+  border-top: 1px solid #585858;
+  padding-top: .5em;
+}
+#MenuList .inner .btn_close.bottom span {
+  font-size: 129%;
+}
+.openMenu #MenuList {
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.fix_boxs {
+  position: fixed;
+  z-index: -1;
+  text-align: center;
+  background: #dd8f0e;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 0.8s, z-index 0.8s;
+  -o-transition: opacity 0.8s, z-index 0.8s;
+  -webkit-transition: opacity 0.8s, z-index 0.8s;
+  transition: opacity 0.8s, z-index 0.8s;
+}
+@media only screen and (min-width: 768px) {
+  .fix_boxs {
+    top: 0;
+    right: 0;
+  }
+}
+@media print {
+  .fix_boxs {
+    top: 0;
+    right: 0;
+  }
+}
+.ie8 .fix_boxs {
+  top: 0;
+  right: 0;
+}
+@media only screen and (max-width: 767px) {
+  .fix_boxs {
+    z-index: 1001;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    bottom: 0;
+    left: 0;
+    display: table;
+    width: 100%;
+  }
+}
+.fix_boxs .btn_gnav {
+  width: 64px;
+}
+@media only screen and (max-width: 767px) {
+  .fix_boxs .btn_gnav {
+    width: 25%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.fix_boxs .btn_gnav .inner {
+  background: #000;
+  padding: 17px 0 10px;
+  cursor: pointer;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+  color: #fff;
+}
+.fix_boxs .btn_gnav .inner .line {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  margin: auto;
+}
+.fix_boxs .btn_gnav .inner .line span {
+  display: inline-block;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+.fix_boxs .btn_gnav .inner .line span:nth-of-type(1) {
+  top: 0;
+}
+.fix_boxs .btn_gnav .inner .line span:nth-of-type(2) {
+  top: 8px;
+}
+.fix_boxs .btn_gnav .inner .line span:nth-of-type(3) {
+  top: 16px;
+}
+.fix_boxs .btn_gnav .inner .st {
+  line-height: 1;
+  font-size: 93%;
+  letter-spacing: normal;
+}
+.openMenu .fix_boxs .btn_gnav {
+  z-index: 999;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.openMenu .fix_boxs .btn_gnav .line span:nth-of-type(1) {
+  -moz-transform: translateY(8px) rotate(-45deg);
+  -ms-transform: translateY(8px) rotate(-45deg);
+  -webkit-transform: translateY(8px) rotate(-45deg);
+  transform: translateY(8px) rotate(-45deg);
+}
+.openMenu .fix_boxs .btn_gnav .line span:nth-of-type(2) {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.openMenu .fix_boxs .btn_gnav .line span:nth-of-type(3) {
+  -moz-transform: translateY(-8px) rotate(45deg);
+  -ms-transform: translateY(-8px) rotate(45deg);
+  -webkit-transform: translateY(-8px) rotate(45deg);
+  transform: translateY(-8px) rotate(45deg);
+}
+.fix_boxs #fix_rsv {
+  width: 75%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.fix_boxs #fix_rsv a {
+  display: block;
+  background: #dd8f0e;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 1em 0;
+  -moz-transition: color 0.4s, background 0.4s;
+  -o-transition: color 0.4s, background 0.4s;
+  -webkit-transition: color 0.4s, background 0.4s;
+  transition: color 0.4s, background 0.4s;
+}
+.fix_boxs #fix_rsv a:hover {
+  background: #c6800c;
+}
+.fix .fix_boxs {
+  z-index: 1001;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.openMenu .fix_boxs {
+  z-index: 1001;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+@media only screen and (max-width: 767px) {
+  .openMenu .fix_boxs {
+    z-index: 900;
+  }
+}
+
+/* -----------------------------------------------------------
+	追従空室検索
+----------------------------------------------------------- */
+.wrp_search {
+  width: 100%;
+  background: #000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  -moz-transition: bottom 0.8s;
+  -o-transition: bottom 0.8s;
+  -webkit-transition: bottom 0.8s;
+  transition: bottom 0.8s;
+}
+.wrp_search .con_search {
+  display: table;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrp_search .con_search {
+    display: block;
+  }
+}
+.wrp_search .con_search .st {
+  color: #fff;
+  text-align: center;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+  font-size: 129%;
+  letter-spacing: .12em;
+}
+.wrp_search .con_search .st:before {
+  content: "";
+  margin-right: .3em;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 84%;
+}
+@media only screen and (min-width: 1200px) {
+  .wrp_search .con_search .st {
+    width: 135px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+@media print {
+  .wrp_search .con_search .st {
+    width: 135px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.ie8 .wrp_search .con_search .st {
+  width: 135px;
+  display: table-cell;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrp_search .con_search .st {
+    padding: 1% 0;
+  }
+}
+.wrp_search .con_search .box_search {
+  overflow: hidden;
+}
+@media only screen and (min-width: 1200px) {
+  .wrp_search .con_search .box_search {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+@media print {
+  .wrp_search .con_search .box_search {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.ie8 .wrp_search .con_search .box_search {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 1200px) {
+  .wrp_search .con_search .box_search .box_ser {
+    display: table;
+  }
+}
+@media print {
+  .wrp_search .con_search .box_search .box_ser {
+    display: table;
+  }
+}
+.ie8 .wrp_search .con_search .box_search .box_ser {
+  display: table;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrp_search .con_search .box_search .box_ser {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .wrp_search .con_search .box_search .box_ser > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+@media print {
+  .wrp_search .con_search .box_search .box_ser > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.ie8 .wrp_search .con_search .box_search .box_ser > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.wrp_search .con_search .box_search .box_ser .box_data {
+  letter-spacing: -.4em;
+  width: 660px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrp_search .con_search .box_search .box_ser .box_data {
+    width: 80%;
+    float: left;
+  }
+}
+.wrp_search .con_search .box_search .box_ser .box_data > div {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+}
+.wrp_search .con_search .box_search .box_ser .box_data > div select, .wrp_search .con_search .box_search .box_ser .box_data > div input {
+  height: 5.5em;
+  line-height: 5.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_day {
+  width: 50%;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_day ul {
+  overflow: hidden;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_day ul li {
+  float: left;
+  width: 50%;
+  position: relative;
+  border-right: 1px solid #000;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_day ul li input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  background: #707070;
+  color: #fff;
+  padding-left: 3em;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_day ul li label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #707070;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: left;
+  color: #fff;
+  text-align: center;
+  line-height: 5.5em;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_per, .wrp_search .con_search .box_search .box_ser .box_data .box_roo {
+  width: 25%;
+  border-right: 1px solid #000;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_per select, .wrp_search .con_search .box_search .box_ser .box_data .box_roo select {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  color: #fff;
+  text-align: center;
+  background: #707070;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_per select option, .wrp_search .con_search .box_search .box_ser .box_data .box_roo select option {
+  background: #fff;
+  color: #313131;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_per select::-ms-expand, .wrp_search .con_search .box_search .box_ser .box_data .box_roo select::-ms-expand {
+  display: none;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_per select {
+  padding-left: 2em;
+}
+.wrp_search .con_search .box_search .box_ser .box_data .box_roo select {
+  padding-left: 4em;
+}
+@media only screen and (min-width: 1200px) {
+  .wrp_search .con_search .box_search .box_ser .btn_submit {
+    padding: 0 20px;
+  }
+}
+@media print {
+  .wrp_search .con_search .box_search .box_ser .btn_submit {
+    padding: 0 20px;
+  }
+}
+.ie8 .wrp_search .con_search .box_search .box_ser .btn_submit {
+  padding: 0 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrp_search .con_search .box_search .box_ser .btn_submit {
+    width: 20%;
+    float: left;
+  }
+}
+.wrp_search .con_search .box_search .box_ser .btn_submit p {
+  padding: 1em 0;
+  border: 1px solid #888888;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  -moz-transition: background 0.4s, color 0.4s;
+  -o-transition: background 0.4s, color 0.4s;
+  -webkit-transition: background 0.4s, color 0.4s;
+  transition: background 0.4s, color 0.4s;
+}
+@media only screen and (min-width: 1200px) {
+  .wrp_search .con_search .box_search .box_ser .btn_submit p {
+    width: 230px;
+  }
+}
+@media print {
+  .wrp_search .con_search .box_search .box_ser .btn_submit p {
+    width: 230px;
+  }
+}
+.ie8 .wrp_search .con_search .box_search .box_ser .btn_submit p {
+  width: 230px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrp_search .con_search .box_search .box_ser .btn_submit p {
+    padding: 1.95em 0;
+  }
+}
+.wrp_search .con_search .box_search .box_ser .btn_submit p:hover {
+  background: #c9c9c9;
+  color: #313131;
+}
+.wrp_search .con_search .box_search .box_ser .btns {
+  font-size: 86%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrp_search .con_search .box_search .box_ser .btns {
+    clear: both;
+    width: 64%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1em 0;
+    text-align: center;
+    letter-spacing: -.4em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrp_search .con_search .box_search .box_ser .btns p {
+    width: 18%;
+    display: inline-block;
+    padding: .2em 1em;
+    border: 1px solid #ccc;
+    text-align: center;
+    letter-spacing: .06em;
+  }
+  .wrp_search .con_search .box_search .box_ser .btns p:nth-child(1), .wrp_search .con_search .box_search .box_ser .btns p:nth-child(2) {
+    border-right: none;
+  }
+}
+.wrp_search .con_search .box_search .box_ser .btns p:before {
+  content: "";
+  margin-right: .3em;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #fff;
+}
+.wrp_search .con_search .box_search .box_ser .btns p a {
+  color: #fff;
+  text-decoration: none;
+}
+.mouse .wrp_search .con_search .box_search .box_ser .btns p a {
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.mouse .wrp_search .con_search .box_search .box_ser .btns p a:hover, .touch .wrp_search .con_search .box_search .box_ser .btns p a.touchstart {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+.touch .wrp_search .con_search .box_search .box_ser .btns p a {
+  -webkit-tap-highlight-color: transparent;
+}
+.touch .wrp_search .con_search .box_search .box_ser .btns p a.touchend {
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+
+/* -----------------------------------------------------------
+	下層共通スタイル
+----------------------------------------------------------- */
+/* -----------------------------------------------------------
+	テーブル
+----------------------------------------------------------- */
+table.tbl_basic {
+  width: 100%;
+}
+table.tbl_basic tr {
+  border-top: 1px solid #a0a0a0;
+}
+table.tbl_basic tr:last-child {
+  border-bottom: 1px solid #a0a0a0;
+}
+table.tbl_basic tr th {
+  background: url(../images/common/bg04.jpg) repeat;
+  vertical-align: top;
+  font-weight: normal;
+}
+table.tbl_basic tr th, table.tbl_basic tr td {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .8em 1em;
+}
