@@ -18,24 +18,39 @@ const bannerContainer = document.querySelector('.banner-container');
 const couponContainer = document.querySelector('.couponContainer');
 const coupon1 = document.querySelector('#coupon1');
 const coupon2 = document.querySelector('#coupon2');
-const couponGroup = document.querySelector('#couponGroup');
-// console.log(bannerContainer, couponContainer, coupon1);
+const coupon3 = document.querySelector('#coupon3');
+const coupon4 = document.querySelector('#coupon4');
+const coupon5 = document.querySelector('#coupon5');
+const coupon6 = document.querySelector('#coupon6');
+const coupon7 = document.querySelector('#coupon7');
 
-const startDate1 = new Date('2025/03/28 9:59:59');
-const startDate2 = new Date('2025/03/28 9:59:59');
-const endDate = new Date('2025/04/15 23:59:59');
+const startDate = new Date('2025/05/07 9:59:59');
+const endDate = new Date('2025/05/09 19:59:59');
+const endDate1 = new Date('2025/05/09 20:59:59');
+const endDate2 = new Date('2025/05/09 23:59:59');
+const endDate3 = new Date('2025/05/20 23:59:59');
 
-// now = new Date('2025/01/16 23:59:59'); 
+// now = new Date('2025/05/21 10:00:00'); 
 
-if (startDate1 < now && now < endDate) {
-couponContainer.style.cssText = 'width: 901px; margin: 0 auto; display:block; text-align: center;';
+if (startDate < now && now < endDate) {
+    coupon1.style.display = 'block';
+    console.log('endDate');
 }
 
-if (startDate1 < now && now < endDate) {
-coupon1.style.display = 'block';
+if (startDate < now && now < endDate1) {
+    coupon2.style.display = 'block';
+    coupon3.style.display = 'block';
+    console.log('endDate1');
 }
-if (startDate2 < now && now < endDate) {
-coupon2.style.display = 'block';
+if (startDate < now && now < endDate2) {
+    coupon4.style.display = 'block';
+    console.log('endDate2');
+}
+if (startDate < now && now < endDate3) {
+    coupon5.style.display = 'block';
+    coupon6.style.display = 'block';
+    coupon7.style.display = 'block';
+    console.log('endDate3');
 }
 
 const usu = document.querySelector('#usu')
