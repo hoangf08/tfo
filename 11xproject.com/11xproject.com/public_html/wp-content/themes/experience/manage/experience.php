@@ -322,35 +322,35 @@ function custom_meta_box_html($post)
       <h3 class="title">一般情報</h3>
       <div class="item common-description">
         <label for="common-description">SEO Description</label>
-        <input type="text" name="common-description" id="">
+        <input type="text" name="common-description" id="common-description">
       </div>
       <div class="item common-keywords">
         <label for="common-keywords">SEO Keywords</label>
-        <input type="text" name="common-keywords" id="">
+        <input type="text" name="common-keywords" id="common-keywords">
       </div>
       <div class="item common-title">
         <label for="common-title">SEO Title</label>
-        <input type="text" name="common-title" id="">
+        <input type="text" name="common-title" id="common-title">
       </div>
       <div class="item half common-name-jp">
         <label for="common-name-jp">名称（日本語）</label>
-        <input type="text" name="common-name-jp" id="">
+        <input type="text" name="common-name-jp" id="common-name-jp">
       </div>
       <div class="item half common-name-en">
         <label for="common-name-en">名称（英語）</label>
-        <input type="text" name="common-name-en" id="">
+        <input type="text" name="common-name-en" id="common-name-en">
       </div>
       <div class="item common-feature">
         <label for="common-feature">特徴</label>
-        <textarea name="common-feature" id=""></textarea>
+        <textarea name="common-feature" id="common-feature"></textarea>
       </div>
       <div class="item common-intro">
         <label for="common-intro">概要</label>
-        <textarea name="common-intro" id=""></textarea>
+        <textarea name="common-intro" id="common-intro"></textarea>
       </div>
       <div class="item common-home-url">
         <label for="common-home-url">ホームURL</label>
-        <input type="text" name="common-home-url" id="">
+        <input type="text" name="common-home-url" id="common-home-url">
       </div>
     </div>
   </div>
@@ -908,113 +908,7 @@ function custom_meta_box_html($post)
           <input type="checkbox" name="experience-recommend" id="experience-recommend">
         </div>
         <div class="item list-images-slider">
-          <div class="image-upload-container">
-            <div class="image-preview-container" style="margin-top: 10px; width: 300px; height: 200px; cursor: pointer; position: relative; border: 1px solid #ddd; border-radius: 4px; overflow: hidden;">
-              <div style="position: absolute; top: 10px; left: 10px; background-color: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 3px; z-index: 2;">
-                <label for="list-images-slider" style="margin: 0;">スライダー画像</label>
-              </div>
-              <img src="<?php echo !empty($experience_groups[0]['slide_image']) ? esc_url($experience_groups[0]['slide_image']) : 'https://via.placeholder.com/300x200?text=Chọn+ảnh'; ?>" alt="Hình ảnh slider" class="image-preview" style="width: 100%; height: 100%; object-fit: cover; pointer-events: auto;" id="slider-image-preview">
-              <div class="image-hover-controls" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); display: none; flex-direction: column; justify-content: center; align-items: center; color: white; font-weight: bold;">
-                <div class="select-image-text" style="margin-bottom: 10px; cursor: pointer; padding: 8px 15px; background-color: #0073aa; border-radius: 4px; transition: all 0.3s ease;">Chọn ảnh</div>
-                <?php if (!empty($experience_groups[0]['slide_image'])): ?>
-                <div class="delete-image-text" style="cursor: pointer; padding: 8px 15px; background-color: #d63638; border-radius: 4px; transition: all 0.3s ease;">Xóa ảnh</div>
-                <?php endif; ?>
-              </div>
-            </div>
-            <input type="hidden" name="list-images-slider-url" id="list-images-slider" value="<?php echo !empty($experience_groups[0]['slide_image']) ? esc_attr($experience_groups[0]['slide_image']) : ''; ?>">
-          </div>
-          <script>
-            jQuery(document).ready(function($) {
-              function openMediaUploader() {
-                var image_frame;
-                if(image_frame) {
-                  image_frame.open();
-                  return;
-                }
-                
-                image_frame = wp.media({
-                  title: 'Chọn ảnh slider',
-                  multiple: false,
-                  library: {
-                    type: 'image'
-                  }
-                });
-                
-                image_frame.on('select', function() {
-                  var attachment = image_frame.state().get('selection').first().toJSON();
-                  $('#slider-image-preview').attr('src', attachment.url);
-                  $('#list-images-slider').val(attachment.url);
-                  
-                  // Thêm nút xóa ảnh nếu chưa có
-                  if ($('.delete-image-text').length === 0) {
-                    $('.image-hover-controls').append('<div class="delete-image-text" style="cursor: pointer; padding: 8px 15px; background-color: #d63638; border-radius: 4px; transition: all 0.3s ease;">Xóa ảnh</div>');
-                    
-                    // Thêm lại sự kiện hover cho nút xóa
-                    $('.delete-image-text').hover(
-                      function() {
-                        $(this).css('background-color', '#e35d6a').css('transform', 'scale(1.05)');
-                      },
-                      function() {
-                        $(this).css('background-color', '#d63638').css('transform', 'scale(1)');
-                      }
-                    );
-                    
-                    // Thêm lại sự kiện click cho nút xóa
-                    $('.delete-image-text').click(function() {
-                      $('#slider-image-preview').attr('src', 'https://via.placeholder.com/300x200?text=Chọn+ảnh');
-                      $('#list-images-slider').val('');
-                      $(this).remove();
-                    });
-                  }
-                });
-                
-                image_frame.open();
-              }
-              
-              $('.image-preview-container').hover(
-                function() {
-                  $(this).find('.image-hover-controls').css('display', 'flex');
-                },
-                function() {
-                  $(this).find('.image-hover-controls').css('display', 'none');
-                }
-              );
-              
-              $('.select-image-text').hover(
-                function() {
-                  $(this).css('background-color', '#0085ba').css('transform', 'scale(1.05)');
-                },
-                function() {
-                  $(this).css('background-color', '#0073aa').css('transform', 'scale(1)');
-                }
-              );
-              
-              $('.delete-image-text').hover(
-                function() {
-                  $(this).css('background-color', '#e35d6a').css('transform', 'scale(1.05)');
-                },
-                function() {
-                  $(this).css('background-color', '#d63638').css('transform', 'scale(1)');
-                }
-              );
-              
-              $('.select-image-text').click(function() {
-                openMediaUploader();
-              });
-              
-              $('.delete-image-text').click(function() {
-                $('#slider-image-preview').attr('src', 'https://via.placeholder.com/300x200?text=Chọn+ảnh');
-                $('#list-images-slider').val('');
-                $(this).remove();
-              });
-              
-              $('.image-preview-container').click(function(e) {
-                if (!$(e.target).hasClass('select-image-text') && !$(e.target).hasClass('delete-image-text')) {
-                  openMediaUploader();
-                }
-              });
-            });
-          </script>
+          
         </div>
         <div class="item half list-title-pc">
           <label for="list-title-pc">タイトル（PC）</label>
@@ -1023,10 +917,42 @@ function custom_meta_box_html($post)
         <div class="item half list-title-sp">
           <label for="list-title-sp">タイトル（SP）</label>
           <textarea name="list-title-sp" id="list-title-sp"></textarea>
-        </div>
+            </div>
         <div class="item list-images-main">
           <label for="list-images-main">メイン画像</label>
-          <input type="file" accept="image/*" name="list-images-main" id="">
+          <div class="wp-media-buttons">
+              <button type="button" class="button add_media" id="list-images-main-button">
+                  <span class="wp-media-buttons-icon"></span> メディアを追加
+              </button>
+              <input type="hidden" name="list-images-main" id="list-images-main-input" value="">
+              <div id="list-images-main-preview" class="media-preview"></div>
+          </div>
+          <script>
+          jQuery(document).ready(function($) {
+              var mediaUploader;
+              $('#list-images-main-button').click(function(e) {
+                  e.preventDefault();
+                  if (mediaUploader) {
+                      mediaUploader.open();
+                      return;
+                  }
+                  mediaUploader = wp.media({
+                      title: 'メイン画像を選択',
+                      button: {
+                          text: '選択'
+                      },
+                      multiple: false
+                  });
+                  
+                  mediaUploader.on('select', function() {
+                      var attachment = mediaUploader.state().get('selection').first().toJSON();
+                      $('#list-images-main-input').val(attachment.id);
+                      $('#list-images-main-preview').html('<img src="' + attachment.url + '" style="max-width:100%;height:auto;">');
+                  });
+                  mediaUploader.open();
+              });
+          });
+          </script>
         </div>
         <div class="item half list-images-left">
           <label for="list-images-left">左画像</label>
