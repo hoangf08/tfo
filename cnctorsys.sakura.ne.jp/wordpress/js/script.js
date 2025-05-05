@@ -199,8 +199,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const leadSlider = new Swiper('.lead-slider', {
     // Các tùy chọn Swiper
     loop: true,
-    slidesPerView: window.innerWidth <= 768 ? 1.2 : 1.8,
-    spaceBetween: window.innerWidth <= 768 ? 16 : 72,
+    slidesPerView: 1.2,
+    spaceBetween: 16,
     centeredSlides: true,
     autoplay: {
       delay: 2500,
@@ -208,10 +208,28 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     breakpoints: {
       768: {
-        slidesPerView: 1.8
+        slidesPerView: 1.8,
+        spaceBetween: 72
       }
     }
   });
+
+  
+  let guestRoomSlider;
+  
+  if (window.innerWidth < 768) {
+    guestRoomSlider = new Swiper('.guest-room-slider', {
+      // Các tùy chọn Swiper
+      loop: true,
+      slidesPerView: 1.4,
+      slidesOffsetBefore: 0,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
+  }
+
   const facilitiesSlider = new Swiper('.facilities-slider', {
     // Các tùy chọn Swiper
     loop: true,

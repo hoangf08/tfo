@@ -946,11 +946,17 @@ th, td {
   align-items: flex-end;
 }
 
-.guest-room-list {
+.guest-room-slider {
+  width: 100%;
+  grid-column: span 2;
+  justify-content: end;
+  overflow: hidden;
+}
+
+.guest-room-swiper-wrapper {
   display: flex;
   gap: 32px;
-  grid-column: span 2;
-  justify-content: end
+  justify-content: end;
 }
 
 .guest-room-item {
@@ -1490,7 +1496,7 @@ th, td {
   }
 
   .title {
-    font-size: var(--font-size-large);
+    font-size: 48px;
   }
 
   .ja-title {
@@ -1606,8 +1612,38 @@ th, td {
   }
   
   .guest-room-container {
-    grid-template-columns: 1fr;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     gap: 40px;
+  }
+
+  .guest-room-title, .guest-room-intro {
+    padding: 0 20px;
+  }
+
+  .guest-room-slider {
+    margin-left: 20px;
+  }
+
+  .guest-room-swiper-wrapper {
+    gap: 16px;
+    justify-content: start;
+  }
+
+  .guest-room-slider > .swiper-pagination {
+    position: relative;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .guest-room-slider .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+  }
+
+  .guest-room-slider .swiper-pagination-bullet-active {
+    background: #4D3D1F;
   }
   
   .guest-room-list {
@@ -1626,6 +1662,45 @@ th, td {
     width: 256px;
   }
 
+  /* MARK: PLAN SP
+  */
+
+  .plan {
+    padding-top: 80px;
+  }
+
+  .plan-container {
+    gap: 40px;
+  }
+
+  .plan-list {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-item {
+    gap: 8px;
+  }
+  
+  .plan-u1 {
+    margin-top: 24px;
+  }
+  
+  .restaurant-container {
+    grid-template-areas: 
+    "title"
+    "intro"
+    "images"
+    ;
+  }
+
+  .restaurant-intro {
+    margin-bottom: 48px;
+  }
+
+  .restaurant-images {
+    padding-bottom: 40px;
+  }
+  
   
   
 }
