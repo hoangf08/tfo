@@ -93,7 +93,9 @@ a:link {
   text-decoration: none;
   transition: all .5s;
 }
-a:hover {
+a:hover,
+a:link:hover,
+a:visited:hover {
   color: var(--color-gray-cream);
   text-decoration: none;
 }
@@ -175,7 +177,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-bottom: 1rem;
 }
-
+p {
+  font-family: var(--font-family--primary);
+}
 .w-100 {
   width: 100%;
   max-width: 100%;
@@ -789,6 +793,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .s__slideshow .swiper-slide img {
   border-radius: 16px;
+  width: 100%;
 }
 .s__slideshow .swiper-slide:nth-child(2n) {
   width: 56.76%;
@@ -1310,7 +1315,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-family: var(--font-family--primary);
 }
-
+.footertop__logo > a {
+  pointer-events: none;
+}
 @media (max-width: 991px) {
   .s__footertop {
     padding: 50px 0;
