@@ -42,29 +42,12 @@
   <script src="/js_static/ofi.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="/js_static/script_add.js"></script>
-
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WGDDMK3');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Dynamic Tag Management by Adobe head -->
-  <script
-    src="//assets.adobedtm.com/db19aef962f6cf21aa61efda5e55a418d7613c67/satelliteLib-9954c899989b16c99bd6e82bffe178382f3997e2.js"></script>
-  <!-- End Dynamic Tag Management by Adobe head -->
-</head>
+	<!--#include virtual="/include/head_gtm_atm.inc" -->
+</head>	
 
 <body class="area room-top">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGDDMK3" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+	<!--#include virtual="/include/head_gtm.inc" -->
+	
   <!--[if lte IE 8 ]>
 <div class="lowie">お使いのブラウザには対応しておりません。ご了承ください。</div>
 <![endif]-->
@@ -770,7 +753,7 @@
                       <h3><a href="/karuizawa-west/room/cat_cottage/">キャットコテージ</a></h3>
                       <p class="copy">リビングルームにはネコちゃんが楽しめる遊具を設置しています。ネコちゃんと一緒に軽井沢の休日をお過ごしください。</p>
                       <div class="data">
-                        <p>面積:47.4㎡／定員:4名／ベッドサイズ:幅105cmｘ長さ195cmｘ高さ43cm ４台／1F</p>
+                        <p>面積:47.4㎡／定員:2名／ベッドサイズ:幅105cmｘ長さ195cmｘ高さ43cm 2台／1F</p>
                       </div>
                       <div class="link">
                         <a href="/karuizawa-west/room/cat_cottage/">詳細を見る</a>
@@ -1177,11 +1160,8 @@
           a = d.createElement('script'), m = d.getElementsByTagName('script')[0];
         a.async = true, a.src = s, m.parentNode.insertBefore(a, m);
       })();</script>
-    <!-- Dynamic Tag Management by Adobe footer -->
-    <script
-      type='text/javascript'>var analyticsData = { 'events': '', 'eVar12': '軽井沢プリンスホテル', 'eVar13': '軽井沢プリンスホテル ウェスト', 'eVar14': '宿泊' }</script>
-    <script type="text/javascript">_satellite.pageBottom();</script>
-    <!-- End Dynamic Tag Management by Adobe footer -->
+
+	<!--#include virtual="/include/dtm/adobe_karuizawa_west_room.inc" -->
 
     <!-- /.container =======-->
   </div>
