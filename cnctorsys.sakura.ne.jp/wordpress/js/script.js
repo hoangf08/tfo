@@ -233,8 +233,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const facilitiesSlider = new Swiper('.facilities-slider', {
     // Các tùy chọn Swiper
     loop: true,
-    slidesPerView: 1.8,
-    spaceBetween: 72,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+        spaceBetween: 16
+      },
+      768: {
+        slidesPerView: 1.8,
+        spaceBetween: 72
+      }
+    },
     centeredSlides: true,
     autoplay: {
       delay: 2500,

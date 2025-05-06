@@ -71,7 +71,8 @@ MARK: CUSTOM COMMON
 */
 body {}
 
-th, td {
+th,
+td {
   vertical-align: top;
   text-align: left;
   font-weight: 400;
@@ -155,7 +156,6 @@ th, td {
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s ease;
-  z-index: -1;
 }
 
 .long-arrow:hover::before {
@@ -180,7 +180,8 @@ th, td {
   overflow: visible;
   flex-wrap: wrap;
   position: absolute;
-  left: 40px; /* Giữ vị trí giống với padding của nút */
+  left: 40px;
+  /* Giữ vị trí giống với padding của nút */
   top: 50%;
   transform: translateY(30px);
   opacity: 0;
@@ -227,6 +228,7 @@ th, td {
     transform: translateY(20px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -319,6 +321,17 @@ th, td {
 .dark-bg-link:hover::after {
   background: url(../icon/icon_black_long_arrow.svg) right no-repeat;
   filter: none;
+}
+
+.dark-bg-link .text-wrapper-hover .char {
+  color: #222;
+}
+
+.dark-bg-link .arrow-icon {
+  filter: brightness(0) invert(1);
+}
+.dark-bg-link:hover .arrow-icon {
+  filter: brightness(0) invert(0);
 }
 
 
@@ -1082,33 +1095,29 @@ th, td {
   position: relative;
 }
 
+.restaurant-figure {
+  display: block;
+}
+
 .restaurant-figure_i1 {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 282px;
   aspect-ratio: 282/373;
-  transform: translateY(-56px);
+  margin-top: -56px;
 }
 
 .restaurant-figure_i2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  margin: -130px 0 0 auto;
   width: 159px;
   aspect-ratio: 159/211;
-}
-
-.restaurant-figure {
   position: relative;
-  overflow: hidden;
+  z-index: 1;
 }
 
 /* MARK: HOT SPRING
 */
 
 .hot-spring {
-  margin-top: 156px;
+  padding-top: 156px;
   background: #fff;
 }
 
@@ -1142,14 +1151,15 @@ th, td {
   align-items: center;
 }
 
-.hot-spring_i1 {
-  width: 472px;
-  aspect-ratio: 472/315;
-}
-
 .hot-spring-figure {
+  width: 472px;
   position: relative;
   overflow: hidden;
+}
+
+.hot-spring_i1 {
+  width: 100%;
+  aspect-ratio: 472/315;
 }
 
 /* MARK: FACILITIES
@@ -1169,6 +1179,13 @@ th, td {
   align-items: center;
   text-align: center;
   gap: 24px;
+}
+
+/* MARK: BLOG
+*/
+
+.blog {
+  padding-top: 128px;
 }
 
 .blog-list {
@@ -1211,6 +1228,18 @@ th, td {
 
 .blog-u1 {
   margin: 0 auto;
+}
+
+.facilities-figure {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.facilities-slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* MARK: SNS
@@ -1273,23 +1302,24 @@ th, td {
 }
 
 .sns-image {
-  width: 200px;
-  aspect-ratio: 1/1;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .sns-images-box {
+  width: 200px;
+  aspect-ratio: 1/1;
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
+
 
 .sns-images-box:hover .sns-image {
   transform: scale(1.1);
   filter: brightness(1.1);
 }
 
-.sns-images-box:before {
+.sns-figure:before {
   content: '';
   display: block;
   width: 24px;
@@ -1303,7 +1333,7 @@ th, td {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
-.sns-images-box:hover:before {
+.sns-figure:hover:before {
   transform: rotate(15deg);
   opacity: 0.8;
 }
@@ -1462,33 +1492,17 @@ th, td {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .sp-only {
-    display: block;
-  }
-
-
-}
-
-.facilities-figure {
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-}
-
-.facilities-slider-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 @media screen and (max-width: 768px) {
 
-  /* MARK: CUSTOM COMMON
+  /* MARK: CUSTOM COMMON SP
   */
 
   .pc-only {
     display: none;
+  }
+
+  .sp-only {
+    display: block;
   }
 
   .container {
@@ -1507,6 +1521,10 @@ th, td {
 
   .ja-title::before {
     width: 48px;
+  }
+
+  .long-arrow {
+    font-size: var(--font-size-small);
   }
 
   /* MARK: LANG-BOX SP
@@ -1582,7 +1600,7 @@ th, td {
     top: 72px;
     left: 10px;
   }
-  
+
   .lead-right {
     width: 172px;
     bottom: 20px;
@@ -1592,9 +1610,7 @@ th, td {
   /* MARK: Comment
   */
 
-  .notification {
-
-  }
+  .notification {}
 
   .notification-item {
     grid-template-columns: max-content min-content;
@@ -1603,22 +1619,24 @@ th, td {
   .notification-date {
     grid-column: span 2;
   }
-  
+
   /* MARK: GUEST ROOM SP
   */
 
   .guest-room {
     padding-top: 64px;
   }
-  
+
   .guest-room-container {
     padding: 0;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    overflow: hidden;
   }
 
-  .guest-room-title, .guest-room-intro {
+  .guest-room-title,
+  .guest-room-intro {
     padding: 0 20px;
   }
 
@@ -1631,7 +1649,7 @@ th, td {
     justify-content: start;
   }
 
-  .guest-room-slider > .swiper-pagination {
+  .guest-room-slider>.swiper-pagination {
     position: relative;
     text-align: left;
     margin-bottom: 8px;
@@ -1645,19 +1663,19 @@ th, td {
   .guest-room-slider .swiper-pagination-bullet-active {
     background: #4D3D1F;
   }
-  
+
   .guest-room-list {
     grid-column: initial;
   }
-  
+
   .guest-room-intro {
     width: 100%;
     margin: 0;
     gap: 40px;
   }
 
-  .guest-room-text {
-  }
+  .guest-room-text {}
+
   .guest-room-item {
     width: 256px;
   }
@@ -1680,27 +1698,212 @@ th, td {
   .plan-item {
     gap: 8px;
   }
-  
+
   .plan-u1 {
-    margin-top: 24px;
+    margin: 24px auto 0;
   }
-  
+
+  /* MARK: RESTAURANT SP
+  */
+
   .restaurant-container {
-    grid-template-areas: 
-    "title"
-    "intro"
-    "images"
+    grid-template-areas:
+      "title"
+      "intro"
+      "images"
     ;
+    grid-template-columns: 1fr;
   }
 
   .restaurant-intro {
-    margin-bottom: 48px;
+    margin-bottom: 0;
   }
 
   .restaurant-images {
     padding-bottom: 40px;
   }
+
+  .restaurant-u1 {
+    padding: 20px 24px;
+  }
+
+  .restaurant-figure_i1 {
+    width: 246px;
+    transform: translateY(0);
+    margin-top: 0;
+  }
+
+  .restaurant-figure_i2 {
+    width: 144px;
+    margin: -90px 0 0 auto;
+  }
+
+  /* MARK: HOT SPRING SP
+  */
+
+  .hot-spring-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "intro"
+      "images"
+    ;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hot-spring-intro {
+    margin-bottom: 8px;
+  }
+
+  .hot-spring-link {
+    margin: 48px auto 0;
+  }
+
+  .hot-spring-figure {
+    width: 100%;
+  }
+
+  /* MARK: FACILITIES SP
+  */
+
+  .facilities {
+    padding-top: 80px;
+  }
+
+  .facilities-slider {
+    margin: 40px 0;
+  }
+
+  .facilities-intro {
+    padding: 0 20px;
+    font-size: var(--font-size-small);
+    text-align: left;
+  }
+
+  /* MARK: BLOG SP
+  */
+
+  .blog {
+    padding-top: 80px;
+  }
+
+  .blog-list {
+    flex-direction: column;
+  }
+
+  .blog-item {
+    flex-direction: row;
+    gap: 16px;
+    font-size: var(--font-size-small);
+  }
+
+  .blog .short-arrow {
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  /* MARK: SNS SP
+  */
+
+  .sns {
+    padding: 80px 20px;
+  }
+
+  .sns-container {
+    padding: 40px 20px;
+    grid-template-areas:
+      "title list"
+      "images images"
+    ;
+    gap: 16px;
+  }
+
+  .sns-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .sns-images-box {
+    width: 100%;
+  }
+
+  /* MARK: CONTACT SP
+  */
+
+  .contact {
+    padding: 64px 20px 80px;
+  }
   
+  .contact-container {
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .contact-title {
+    align-self: start;
+  }
   
+  /* MARK: ACCESS SP
+  */
+
+  .access {
+    padding-top: 80px;
+  }
+
+  .access-container {
+    margin: 0 20px;
+    padding: 0;
+    width: auto;
+    grid-template-areas: 
+      "title"
+      "images"
+      "address"
+    ;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
   
+
+  .access-address tbody{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .access-address tr {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: var(--font-size-small);
+  }
+
+  .access-map {
+    margin-top: 56px;
+    aspect-ratio: 1/1;
+  }
+
+  /* MARK: COPYRIGHT SP
+  */
+
+  .copyright {
+    padding: 40px 0 16px;
+  }
+
+  .copyright-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .copyright-text {
+    all: initial;
+    color: #fff;
+  }
+  
+
 }
