@@ -1701,3 +1701,4 @@ border-color: rgba(136, 183, 213, 0);border-top-color: #88b7d5;border-width: 11p
 .footertop__map h4 {color: #222222;font-size: 14.6px;margin-bottom: 2rem;}
 .footertop__map {margin-top: 40px;}
 .footertop__map p {color: #222222;}
+.lp-cont__content--link .comingsoon  {background-image: none;position: relative;pointer-events: none;background-color: #9D9D9D;}
