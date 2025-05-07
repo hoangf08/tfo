@@ -1117,7 +1117,7 @@ td {
 */
 
 .hot-spring {
-  padding-top: 156px;
+  margin-top: 156px;
   background: #fff;
 }
 
@@ -1316,7 +1316,6 @@ td {
 
 .sns-images-box:hover .sns-image {
   transform: scale(1.1);
-  filter: brightness(1.1);
 }
 
 .sns-figure:before {
@@ -1641,7 +1640,6 @@ td {
   }
 
   .guest-room-slider {
-    margin-left: 20px;
   }
 
   .guest-room-swiper-wrapper {
@@ -1652,6 +1650,7 @@ td {
   .guest-room-slider>.swiper-pagination {
     position: relative;
     text-align: left;
+    margin-left: 20px;
     margin-bottom: 8px;
   }
 
@@ -1818,6 +1817,20 @@ td {
       "images images"
     ;
     gap: 16px;
+  }
+
+  .sns-title {
+    align-self: center;
+  }
+
+  .sns-list {
+    gap: 12px;
+    justify-content: end;
+  }
+
+  .sns-item {
+    width: 32px;
+    height: 32px;
   }
 
   .sns-images {
