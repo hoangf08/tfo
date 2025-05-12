@@ -27,6 +27,10 @@ img {
   margin: auto;
 }
 
+.sp-only {
+  display: none;
+}
+
 /* HTML SETTING */
 
 /* CUSTOM SETTING */
@@ -326,12 +330,20 @@ footer {
     gap: 8px;
   }
 
+  .mb-col2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .footer-nav a {
     display: block;
   }
 
   .reservation {
     padding: 1rem 20px 1.75rem;
+  }
+
+  .sp-only {
+    display: block;
   }
 
 }
