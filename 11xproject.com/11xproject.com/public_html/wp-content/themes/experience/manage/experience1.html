@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>経験管理</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #6366f1;
+      --secondary-color: #818cf8;
+      --text-color: #1f2937;
+      --border-radius: 12px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f3f4f6 0%, #fff 100%);
+      min-height: 100vh;
+      padding: 2rem;
+      color: var(--text-color);
+    }
+
+    .forms-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .container {
+      margin: 0;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                  0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .header h1 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .header p {
+      color: #6b7280;
+      font-size: 1.1rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #e5e7eb;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: white;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+      outline: none;
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .japanese-input {
+      font-family: "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .floating-label {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      transition: all 0.3s ease;
+      color: #9ca3af;
+      background: white;
+      padding: 0 0.25rem;
+      font-size: 1rem;
+    }
+
+    textarea ~ .floating-label {
+      top: 1rem;
+      transform: none;
+    }
+
+    .form-control:focus + .floating-label,
+    .form-control:not(:placeholder-shown) + .floating-label {
+      top: -0.5rem;
+      transform: translateY(0) scale(0.85);
+      color: var(--primary-color);
+    }
+
+    textarea:focus + .floating-label,
+    textarea:not(:placeholder-shown) + .floating-label {
+      top: -0.5rem;
+      transform: scale(0.85);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      .container {
+        padding: 1.5rem;
+      }
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .header h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* --- Checkbox dạng nút --- */
+    .checkbox-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    .checkbox-btn {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 2em;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .checkbox-btn input[type="checkbox"] {
+      display: none;
+    }
+    .checkbox-btn span {
+      display: inline-block;
+      padding: 0.5em 1.5em;
+      border-radius: 2em;
+      border: 2px solid #bfc6e0;
+      background: #fff;
+      color: #6366f1;
+      font-weight: 500;
+      font-size: 1.05em;
+      letter-spacing: 0.01em;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.2s;
+      box-shadow: 0 1px 2px rgba(99,102,241,0.05);
+      user-select: none;
+    }
+    .checkbox-btn input[type="checkbox"]:checked + span {
+      background: #6366f1;
+      color: #fff;
+      border-color: #6366f1;
+      box-shadow: 0 4px 16px -4px #6366f1aa;
+    }
+    .checkbox-btn input[type="checkbox"]:focus + span {
+      box-shadow: 0 0 0 4px #a5b4fc66;
+      border-color: #6366f1;
+    }
+    .checkbox-btn span:active {
+      filter: brightness(0.95);
+    }
+
+    /* Style cho title wrapper */
+    .title-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 768px) {
+      .title-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="forms-container">
+    <div class="container">
+      <div class="header">
+        <h1>経験管理</h1>
+        <p>以下の詳細を入力してください</p>
+      </div>
+      
+      <form>
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="seoTitle" placeholder=" ">
+              <span class="floating-label">SEOタイトル</span>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <div class="input-wrapper">
+              <textarea class="form-control" id="seoDescription" placeholder=" "></textarea>
+              <span class="floating-label">SEO説明</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="seoKeywords" placeholder=" ">
+              <span class="floating-label">SEOキーワード</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="url" class="form-control" id="homeUrl" placeholder=" ">
+              <span class="floating-label">ホームURL</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" class="form-control japanese-input" id="nameJp" placeholder=" ">
+              <span class="floating-label">名称 (日本語)</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="nameEn" placeholder=" ">
+              <span class="floating-label">名称 (英語)</span>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <div class="input-wrapper">
+              <textarea class="form-control japanese-input" id="features" placeholder=" "></textarea>
+              <span class="floating-label">特徴</span>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <div class="input-wrapper">
+              <textarea class="form-control japanese-input" id="summary" placeholder=" "></textarea>
+              <span class="floating-label">概要</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <div class="header">
+        <h1>追加情報フォーム</h1>
+        <p>必要な情報を入力してください</p>
+      </div>
+      <form>
+        <div class="form-grid">
+          <!-- Checkbox group -->
+          <div class="form-group full-width">
+            <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+            <div class="checkbox-btn-group">
+              <label class="checkbox-btn">
+                <input type="checkbox" name="status"> <span>ステータス</span>
+              </label>
+              <label class="checkbox-btn">
+                <input type="checkbox" name="slider"> <span>スライダー</span>
+              </label>
+              <label class="checkbox-btn">
+                <input type="checkbox" name="spring"> <span>春</span>
+              </label>
+              <label class="checkbox-btn">
+                <input type="checkbox" name="summer"> <span>夏</span>
+              </label>
+              <label class="checkbox-btn">
+                <input type="checkbox" name="autumn"> <span>秋</span>
+              </label>
+              <label class="checkbox-btn">
+                <input type="checkbox" name="winter"> <span>冬</span>
+              </label>
+              <label class="checkbox-btn">
+                <input type="checkbox" name="allseason"> <span>通年</span>
+              </label>
+              <label class="checkbox-btn">
+                <input type="checkbox" name="recommend"> <span>おすすめ</span>
+              </label>
+            </div>
+          </div>
+          <!-- Ảnh -->
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="file" class="form-control" id="slideImage" accept="image/*">
+              <span class="floating-label">スライドー画像</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="file" class="form-control" id="mainImage" accept="image/*">
+              <span class="floating-label">メイン画像</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="file" class="form-control" id="leftImage" accept="image/*">
+              <span class="floating-label">左画像</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="file" class="form-control" id="rightImage" accept="image/*">
+              <span class="floating-label">右画像</span>
+            </div>
+          </div>
+          <!-- Tiêu đề PC/SP -->
+          <div class="title-wrapper">
+            <div class="form-group">
+              <div class="input-wrapper">
+                <input type="text" class="form-control" id="titlePc" placeholder=" ">
+                <span class="floating-label">タイトル(PC)</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-wrapper">
+                <input type="text" class="form-control" id="titleSp" placeholder=" ">
+                <span class="floating-label">タイトル(SP)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Mô tả -->
+          <div class="form-group full-width">
+            <div class="input-wrapper">
+              <textarea class="form-control" id="description" placeholder=" "></textarea>
+              <span class="floating-label">説明</span>
+            </div>
+          </div>
+          <!-- Ngày -->
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="date" class="form-control" id="startDate" placeholder=" ">
+              <span class="floating-label">開始日</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="date" class="form-control" id="endDate" placeholder=" ">
+              <span class="floating-label">終了日</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="preSaleTitle" placeholder=" ">
+              <span class="floating-label">販売前のタイトル</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="url" class="form-control" id="preSaleUrl" placeholder=" ">
+              <span class="floating-label">販売前のURL</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="saleTitle" placeholder=" ">
+              <span class="floating-label">販売期間のタイトル</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="url" class="form-control" id="saleUrl" placeholder=" ">
+              <span class="floating-label">販売期間のURL</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="afterSaleTitle" placeholder=" ">
+              <span class="floating-label">販売後のタイトル</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="url" class="form-control" id="afterSaleUrl" placeholder=" ">
+              <span class="floating-label">販売後のURL</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

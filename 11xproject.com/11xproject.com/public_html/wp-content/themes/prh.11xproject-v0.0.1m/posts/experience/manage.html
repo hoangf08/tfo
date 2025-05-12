@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Slides</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        .slide-container {
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .slide-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .slide-tab {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .slide-tab.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .slide {
+            width: 100%;
+            margin: 0;
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+
+        .slide-content {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "top-items top-items"
+                "left-items forms";
+            gap: 16px;
+        }
+
+        .top-items {
+            grid-area: top-items;
+        }
+
+        .left-items {
+            grid-area: left-items;
+            width: 300px;
+            min-width: 300px;
+            max-width: 300px;
+        }
+
+        .forms {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            min-width: 520px;
+            width: 100%;
+        }
+
+        .items {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            padding: 5px;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #007bff #f0f0f0;
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            width: 100%;
+        }
+
+        .items.vertical {
+            flex-direction: column;
+            overflow-y: auto;
+            overflow-x: hidden;
+            width: 300px;
+            min-width: 300px;
+            max-width: 300px;
+        }
+
+        .items.vertical .item {
+            width: 100%;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px;
+        }
+
+        .items.vertical .item .image {
+            width: 160px;
+            height: 90px;
+            margin-bottom: 0;
+            flex-shrink: 0;
+        }
+
+        .items.vertical .item .text {
+            text-align: left;
+            flex: none;
+            width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .items:active {
+            cursor: grabbing;
+        }
+
+        /* Style cho thanh cuộn trên Chrome, Edge, và Safari */
+        .items::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .items::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .items::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 4px;
+        }
+
+        .item {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            width: 320px;
+            background: #fff;
+        }
+
+        .item .image {
+            width: 100%;
+            height: 180px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+
+        .item .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .item .image img {
+            pointer-events: none;
+        }
+
+        .item .text {
+            font-size: 14px;
+            text-align: center;
+            color: #333;
+        }
+
+        .item:hover {
+            background: #f8f9fa;
+        }
+
+        .item.active {
+            background: #007bff;
+            color: #fff;
+            border-color: #0056b3;
+        }
+
+        .item.active .text {
+            color: #fff;
+        }
+
+        .form-item {
+            margin-top: 10px;
+        }
+
+        .top-items .item {
+            width: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .top-items .item .image {
+            width: 300px;
+            height: 150px;
+            margin-bottom: 0;
+        }
+
+        .top-items .item .text {
+            width: 100%;
+            text-align: center;
+            margin-top: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .left-items,
+        .items.vertical {
+            width: 300px;
+            min-width: 300px;
+            max-width: 300px;
+        }
+
+        .items.vertical .item .text {
+            text-align: left;
+            flex: none;
+            width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: #f8fafc;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #6366f1;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .floating-label {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #64748b;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+            padding: 0 4px;
+        }
+
+        .form-control:focus+.floating-label,
+        .form-control:not(:placeholder-shown)+.floating-label {
+            top: 0;
+            font-size: 12px;
+            color: #6366f1;
+            background: #fff;
+        }
+
+        textarea.form-control+.floating-label {
+            top: 12px;
+            transform: none;
+        }
+
+        textarea.form-control:focus+.floating-label,
+        textarea.form-control:not(:placeholder-shown)+.floating-label {
+            top: -8px;
+        }
+
+        .checkbox-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .checkbox-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            background: #f1f5f9;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-btn input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkbox-btn span {
+            margin-left: 4px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .checkbox-btn:hover {
+            background: #e2e8f0;
+        }
+
+        .checkbox-btn input[type="checkbox"]:checked+span {
+            color: #6366f1;
+        }
+
+        .checkbox-btn input[type="checkbox"]:checked~span {
+            color: #6366f1;
+        }
+
+        .checkbox-btn input[type="checkbox"]:checked~.checkbox-btn {
+            background: #818cf8;
+            border-color: #6366f1;
+        }
+
+        .title-wrapper {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        input[type="file"].form-control {
+            padding: 8px;
+        }
+
+        input[type="file"].form-control::-webkit-file-upload-button {
+            padding: 8px 16px;
+            background: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        input[type="file"].form-control::file-selector-button {
+            padding: 8px 16px;
+            background: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        input[type="date"].form-control {
+            padding: 10px 16px;
+        }
+
+        .checkbox-btn:has(input[type="checkbox"]:checked) {
+            background: #007bff;
+            color: #fff;
+        }
+
+        .checkbox-btn:has(input[type="checkbox"]:checked) span {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-content">
+                <div class="top-items">
+                    <div style="font-weight: bold; font-size: 18px; margin-bottom: 8px;">全体験</div>
+                    <div class="items">
+                        <button class="item active" data-id="1">
+                            <div class="image">
+                                <img src="common/img/img_cont01-1.jpg" alt="Item 1">
+                            </div>
+                            <div class="text">Item 1</div>
+                        </button>
+                        <button class="item" data-id="2">
+                            <div class="image">
+                                <img src="common/img/img_cont01-2.jpg" alt="Item 2">
+                            </div>
+                            <div class="text">Item 2</div>
+                        </button>
+                        <button class="item" data-id="3">
+                            <div class="image">
+                                <img src="common/img/img_cont01-3.jpg" alt="Item 3">
+                            </div>
+                            <div class="text">Item 3</div>
+                        </button>
+                        <button class="item" data-id="4">
+                            <div class="image">
+                                <img src="common/img/img_cont02-1.jpg" alt="Item 4">
+                            </div>
+                            <div class="text">Item 4</div>
+                        </button>
+                        <button class="item" data-id="5">
+                            <div class="image">
+                                <img src="common/img/img_cont02-2.jpg" alt="Item 5">
+                            </div>
+                            <div class="text">Item 5</div>
+                        </button>
+                        <button class="item" data-id="6">
+                            <div class="image">
+                                <img src="common/img/img_cont02-3.jpg" alt="Item 6">
+                            </div>
+                            <div class="text">Item 6</div>
+                        </button>
+                        <button class="item" data-id="7">
+                            <div class="image">
+                                <img src="common/img/img_cont03-1.jpg" alt="Item 7">
+                            </div>
+                            <div class="text">Item 7</div>
+                        </button>
+                        <button class="item" data-id="8">
+                            <div class="image">
+                                <img src="common/img/img_cont03-2.jpg" alt="Item 8">
+                            </div>
+                            <div class="text">Item 8</div>
+                        </button>
+                        <button class="item" data-id="9">
+                            <div class="image">
+                                <img src="common/img/img_cont03-3.jpg" alt="Item 9">
+                            </div>
+                            <div class="text">Item 9</div>
+                        </button>
+                        <button class="item" data-id="10">
+                            <div class="image">
+                                <img src="common/img/img_cont04-1.jpg" alt="Item 10">
+                            </div>
+                            <div class="text">Item 10</div>
+                        </button>
+                    </div>
+                </div>
+                <div class="left-items">
+                    <div style="font-weight: bold; font-size: 16px; margin-bottom: 8px;">公開された体験</div>
+                    <div class="items vertical">
+                        <button class="item active" data-id="1">
+                            <div class="image">
+                                <img src="common/img/img_cont01-1.jpg" alt="Item 1">
+                            </div>
+                            <div class="text">Item 1</div>
+                        </button>
+                        <button class="item" data-id="2">
+                            <div class="image">
+                                <img src="common/img/img_cont01-2.jpg" alt="Item 2">
+                            </div>
+                            <div class="text">Item 2</div>
+                        </button>
+                        <button class="item" data-id="3">
+                            <div class="image">
+                                <img src="common/img/img_cont01-3.jpg" alt="Item 3">
+                            </div>
+                            <div class="text">Item 3</div>
+                        </button>
+                        <button class="item" data-id="4">
+                            <div class="image">
+                                <img src="common/img/img_cont02-1.jpg" alt="Item 4">
+                            </div>
+                            <div class="text">Item 4</div>
+                        </button>
+                        <button class="item" data-id="5">
+                            <div class="image">
+                                <img src="common/img/img_cont02-2.jpg" alt="Item 5">
+                            </div>
+                            <div class="text">Item 5</div>
+                        </button>
+                        <button class="item" data-id="6">
+                            <div class="image">
+                                <img src="common/img/img_cont02-3.jpg" alt="Item 6">
+                            </div>
+                            <div class="text">Item 6</div>
+                        </button>
+                        <button class="item" data-id="7">
+                            <div class="image">
+                                <img src="common/img/img_cont03-1.jpg" alt="Item 7">
+                            </div>
+                            <div class="text">Item 7</div>
+                        </button>
+                        <button class="item" data-id="8">
+                            <div class="image">
+                                <img src="common/img/img_cont03-2.jpg" alt="Item 8">
+                            </div>
+                            <div class="text">Item 8</div>
+                        </button>
+                        <button class="item" data-id="9">
+                            <div class="image">
+                                <img src="common/img/img_cont03-3.jpg" alt="Item 9">
+                            </div>
+                            <div class="text">Item 9</div>
+                        </button>
+                        <button class="item" data-id="10">
+                            <div class="image">
+                                <img src="common/img/img_cont04-1.jpg" alt="Item 10">
+                            </div>
+                            <div class="text">Item 10</div>
+                        </button>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div style="font-weight: bold; font-size: 16px; margin-bottom: 8px;">体験編集</div>
+                    <form class="form-item" data-id="1" style="display:block;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status1"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider1"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring1"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer1"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn1"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter1"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason1"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend1"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage1" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage1" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage1" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage1" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc1" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp1" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description1" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate1" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate1" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle1" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl1" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle1" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl1" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle1" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl1" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-item" data-id="2" style="display:none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status2"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider2"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring2"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer2"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn2"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter2"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason2"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend2"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage2" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage2" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage2" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage2" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc2" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp2" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description2" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate2" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate2" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle2" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl2" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle2" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl2" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle2" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl2" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-item" data-id="3" style="display:none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status3"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider3"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring3"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer3"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn3"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter3"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason3"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend3"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage3" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage3" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage3" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage3" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc3" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp3" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description3" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate3" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate3" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle3" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl3" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle3" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl3" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle3" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl3" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-item" data-id="4" style="display:none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status4"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider4"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring4"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer4"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn4"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter4"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason4"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend4"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage4" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage4" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage4" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage4" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc4" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp4" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description4" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate4" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate4" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle4" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl4" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle4" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl4" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle4" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl4" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-item" data-id="5" style="display:none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status5"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider5"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring5"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer5"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn5"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter5"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason5"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend5"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage5" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage5" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage5" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage5" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc5" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp5" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description5" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate5" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate5" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle5" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl5" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle5" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl5" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle5" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl5" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-item" data-id="6" style="display:none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status6"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider6"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring6"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer6"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn6"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter6"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason6"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend6"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage6" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage6" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage6" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage6" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc6" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp6" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description6" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate6" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate6" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle6" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl6" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle6" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl6" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle6" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl6" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-item" data-id="7" style="display:none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status7"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider7"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring7"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer7"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn7"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter7"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason7"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend7"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage7" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage7" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage7" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage7" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc7" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp7" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description7" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate7" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate7" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle7" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl7" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle7" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl7" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle7" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl7" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-item" data-id="8" style="display:none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status8"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider8"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring8"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer8"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn8"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter8"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason8"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend8"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage8" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage8" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage8" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage8" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc8" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp8" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description8" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate8" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate8" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle8" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl8" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle8" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl8" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle8" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl8" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-item" data-id="9" style="display:none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status9"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider9"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring9"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer9"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn9"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter9"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason9"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend9"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage9" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage9" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage9" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage9" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc9" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp9" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description9" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate9" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate9" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle9" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl9" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle9" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl9" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle9" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl9" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-item" data-id="10" style="display:none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <div style="margin-bottom: 0.5rem; color: #6366f1; font-weight: 500;">ステータス・スライダー・季節・おすすめ</div>
+                                <div class="checkbox-btn-group">
+                                    <label class="checkbox-btn"><input type="checkbox" name="status10"> <span>ステータス</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="slider10"> <span>スライダー</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="spring10"> <span>春</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="summer10"> <span>夏</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="autumn10"> <span>秋</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="winter10"> <span>冬</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="allseason10"> <span>通年</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="recommend10"> <span>おすすめ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="slideImage10" accept="image/*"><span class="floating-label">スライドー画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="mainImage10" accept="image/*"><span class="floating-label">メイン画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="leftImage10" accept="image/*"><span class="floating-label">左画像</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="file" class="form-control" id="rightImage10" accept="image/*"><span class="floating-label">右画像</span></div>
+                            </div>
+                            <div class="title-wrapper">
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titlePc10" placeholder=" "><span class="floating-label">タイトル(PC)</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrapper"><input type="text" class="form-control" id="titleSp10" placeholder=" "><span class="floating-label">タイトル(SP)</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <div class="input-wrapper"><textarea class="form-control" id="description10" placeholder=" "></textarea><span class="floating-label">説明</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="startDate10" placeholder=" "><span class="floating-label">開始日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="date" class="form-control" id="endDate10" placeholder=" "><span class="floating-label">終了日</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="preSaleTitle10" placeholder=" "><span class="floating-label">販売前のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="preSaleUrl10" placeholder=" "><span class="floating-label">販売前のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="saleTitle10" placeholder=" "><span class="floating-label">販売期間のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="saleUrl10" placeholder=" "><span class="floating-label">販売期間のURL</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="text" class="form-control" id="afterSaleTitle10" placeholder=" "><span class="floating-label">販売後のタイトル</span></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper"><input type="url" class="form-control" id="afterSaleUrl10" placeholder=" "><span class="floating-label">販売後のURL</span></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.item');
+        const forms = document.querySelectorAll('.form-item');
+        const itemsContainers = document.querySelectorAll('.items');
+
+        // Xử lý click item
+        items.forEach(item => {
+            item.addEventListener('click', function () {
+                const id = this.getAttribute('data-id');
+
+                // Bỏ active tất cả items ở cả 2 bên
+                items.forEach(i => i.classList.remove('active'));
+
+                // Active items có cùng data-id ở cả 2 bên
+                document.querySelectorAll(`.item[data-id="${id}"]`).forEach(i => {
+                    i.classList.add('active');
+                });
+
+                // Ẩn tất cả form
+                forms.forEach(f => f.style.display = 'none');
+
+                // Hiện form tương ứng
+                document.querySelector(`.form-item[data-id="${id}"]`).style.display = 'block';
+            });
+        });
+
+        // Xử lý vuốt và kéo thả cho từng container
+        itemsContainers.forEach(itemsContainer => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            itemsContainer.addEventListener('mousedown', (e) => {
+                isDown = true;
+                itemsContainer.classList.add('active');
+                startX = e.pageX - itemsContainer.offsetLeft;
+                scrollLeft = itemsContainer.scrollLeft;
+            });
+
+            itemsContainer.addEventListener('mouseleave', () => {
+                isDown = false;
+                itemsContainer.classList.remove('active');
+            });
+
+            itemsContainer.addEventListener('mouseup', () => {
+                isDown = false;
+                itemsContainer.classList.remove('active');
+            });
+
+            itemsContainer.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - itemsContainer.offsetLeft;
+                const walk = (x - startX) * 0.8;
+                itemsContainer.scrollLeft = scrollLeft - walk;
+            });
+
+            // Xử lý touch events cho thiết bị di động
+            itemsContainer.addEventListener('touchstart', (e) => {
+                isDown = true;
+                startX = e.touches[0].pageX - itemsContainer.offsetLeft;
+                scrollLeft = itemsContainer.scrollLeft;
+            });
+
+            itemsContainer.addEventListener('touchend', () => {
+                isDown = false;
+            });
+
+            itemsContainer.addEventListener('touchmove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.touches[0].pageX - itemsContainer.offsetLeft;
+                const walk = (x - startX) * 0.8;
+                itemsContainer.scrollLeft = scrollLeft - walk;
+            });
+        });
+    </script>
+</body>
+
+</html>
