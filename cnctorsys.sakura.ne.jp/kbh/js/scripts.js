@@ -44,10 +44,10 @@ if (startDate < now && now < endDate1) {
 }
 if (startDate < now && now < endDate2) {
     coupon4.style.display = 'block';
+    coupon5.style.display = 'block';
     console.log('endDate2');
 }
 if (startDate < now && now < endDate3) {
-    coupon5.style.display = 'block';
     coupon6.style.display = 'block';
     coupon7.style.display = 'block';
     console.log('endDate3');
