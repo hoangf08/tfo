@@ -1,17 +1,17 @@
 <?php
 // Thêm meta box cho post type experience
-function add_custom_meta_box()
+function add_custom_meta_box_test()
 {
   add_meta_box(
-    'custom_meta_box',
+    'custom_meta_box_test',
     'Thông tin chi tiết',
-    'custom_meta_box_html',
+    'custom_meta_box_html_test',
     'test'
   );
 }
-add_action('add_meta_boxes', 'add_custom_meta_box');
+add_action('add_meta_boxes', 'add_custom_meta_box_test');
 // HTML cho meta box
-function custom_meta_box_html($post)
+function custom_meta_box_html_test($post)
 {
   // Lấy dữ liệu common
   $common = get_post_meta($post->ID, '_common', true);
@@ -127,7 +127,7 @@ jQuery(document).ready(function($) {
   });
   
   // Hàm gắn sự kiện xóa cho các nút xóa
-  function bindDeleteEvent() {
+  function bindDeleteEvent_test() {
     $('.delete-experience').off('click').on('click', function() {
       if (confirm('Bạn có chắc chắn muốn xóa experience này?')) {
         var index = $(this).data('index');
@@ -135,14 +135,14 @@ jQuery(document).ready(function($) {
         $(this).closest('.experience-item').remove();
         
         // Cập nhật lại index cho các experience sau experience bị xóa
-        updateIndices();
+        updateIndices_test();
       }
       return false;
     });
   }
   
   // Hàm cập nhật lại indices cho các experience
-  function updateIndices() {
+  function updateIndices_test() {
     $('.experience-item').each(function(newIndex) {
       var oldIndex = $(this).data('index');
       
@@ -179,21 +179,21 @@ jQuery(document).ready(function($) {
   }
   
   // Gắn sự kiện xóa khi trang được load
-  bindDeleteEvent();
+  bindDeleteEvent_test();
 });
 </script>
 
 <?php
 }
-function save_custom_meta_box($post_id)
+function save_custom_meta_box_test($post_id)
 {
   if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
-  if (get_post_type($post_id) !== 'experience') return;
+  if (get_post_type($post_id) !== 'test') return;
   if (!current_user_can('edit_post', $post_id)) return;
 
   // Lưu experience groups nếu có
   if (isset($_POST['common'])) {
-    update_post_meta($post_id, '_common', $_POST['common']);
+    update_post_meta_test($post_id, '_common', $_POST['common']);
   }
   
   // Lưu experience groups nếu có
@@ -209,13 +209,13 @@ function save_custom_meta_box($post_id)
     // Sắp xếp lại mảng để đảm bảo các index là liên tục
     $experience_groups = array_values($experience_groups);
     
-    update_post_meta($post_id, '_experience_groups', $experience_groups);
+    update_post_meta_test($post_id, '_experience_groups', $experience_groups);
   }
 
   // Lưu area groups nếu có
   if (isset($_POST['area_groups'])) {
-    update_post_meta($post_id, '_area_groups', $_POST['area_groups']);
+    update_post_meta_test($post_id, '_area_groups', $_POST['area_groups']);
   }
 }
-add_action('save_post', 'save_custom_meta_box');
+add_action('save_post', 'save_custom_meta_box_test');
 ?>

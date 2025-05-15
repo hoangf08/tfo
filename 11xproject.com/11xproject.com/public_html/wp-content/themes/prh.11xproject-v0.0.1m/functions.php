@@ -19,7 +19,7 @@ add_filter('single_template', function ($template) {
     $post_type = $post->post_type;
 
     // Xác định đường dẫn tới tệp mẫu trong thư mục single/{post_type}/index.php
-    $custom_template = get_stylesheet_directory() . "/posts/{$post_type}/index.php";
+    $custom_template = get_stylesheet_directory() . "/posts/{$post_type}/user/index.php";
 
     // Kiểm tra xem tệp mẫu có tồn tại không
     if (file_exists($custom_template)) {
@@ -31,7 +31,7 @@ add_filter('single_template', function ($template) {
 });
 
 // Lấy tất cả các thư mục trong posts
-$post_folders = glob(get_template_directory() . '/posts/*', GLOB_ONLYDIR);
+$post_folders = glob(get_template_directory() . '/posts/*/manage', GLOB_ONLYDIR);
 
 // Duyệt qua từng thư mục và include file manage.php nếu tồn tại
 foreach ($post_folders as $folder) {
