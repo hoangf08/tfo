@@ -1,0 +1,340 @@
+@charset "utf-8";
+.cus_page, #header, .food, #rest, .description {
+    width: 950px;
+    margin: auto;
+}
+
+.logo {
+    width: 148px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.kv {
+    width: 950px;
+}
+
+#rest {
+    background-color: #9B9B9B;
+}
+
+.navi {
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+    background-color: #E7F6F7;
+    list-style: none;
+    padding-top: 23px;
+    box-sizing: border-box;
+    background: #E7F6F7;
+    vertical-align: top;
+    text-align: center;
+    list-style: none;
+    border-left: 1px dotted #fff;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    text-decoration-line: none;
+}
+
+.navi ul {
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.navi ul li a {
+    font-size: 15px;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    color: #000000;
+    display: block;
+    font-size: 15px;
+    color: #fff!important;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.navi:hover {
+    color: #494f50;
+}
+
+.charm span {
+    color: #68D0DA;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-weight: 300;
+    display: block;
+    margin: 10px auto;
+    /* text-align: center; */
+    width: 46px;
+}
+
+.charm h2 {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.charm h3 {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.charm p {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-size: 15px;
+    margin-top: 30px;
+    line-height: 1.8;
+}
+
+.charm point1 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.charm point2 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.charm point3 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.cont {
+    margin-right: 30px;
+}
+
+.charm {
+    margin-top: 50px;
+}
+
+#footer {
+    background-color: #E7F6F7;
+    height: 241px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#footer logo {
+    text-align: center;
+    color: #E7F6F7;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-size: 15px;
+}
+
+#footer p {
+    text-align: center;
+    color: #000000;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.charmpoint p {
+    margin-left: 70px;
+    margin-right: 70px;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-size: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.charmpoint h2 {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    text-align: center;
+    line-height: 1.8;
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#roomcon p {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-size: 15px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+.room {
+    margin-top: 50px;
+}
+
+.room span {
+    color: #68D0DA;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    margin: 10px auto;
+    width: 46px;
+}
+
+.room h2 {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-weight: bold;
+    margin: 10px auto;
+    font-size: 24px;
+}
+
+.room p {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    line-height: 1.8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.room_ser span {
+    color: #68D0DA;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+}
+
+.room_ser h2 {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-weight: bold;
+    margin: 10px auto;
+    font-size: 24px;
+}
+
+.room_ser p {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    line-height: 1.8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.room_ser {
+    margin-top: 70px;
+}
+
+#rest h2 {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-weight: bold;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.food p {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-size: 15px;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.food {
+    display: flex;
+}
+
+.activity {
+    background-color: antiquewhite;
+    margin: auto;
+}
+
+.act_cont h4 {
+    font-size: 24px;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    color: #CBBEAB;
+    margin: 10px auto;
+}
+
+.act_cont p {
+    font-size: 15px;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    margin-right: 30px;
+    line-height: 1.8;
+}
+
+.act_cont {
+    margin-left: 20px;
+}
+
+.div act {
+    margin-top: 50px;
+}
+
+.act_cont h2 {
+    font-size: 24px;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+}
+
+.sct_cont img {
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.access span {
+    color: #68D0DA;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-weight: 300;
+    display: block;
+    margin: 21px auto;
+    width: 216px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.access h2 {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-weight: bold;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+#loco ul {
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#loco li {
+    display: flex;
+    width: 49%;
+    list-style: none;
+    line-height: 1.8;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    width: 178px;
+    width: 225.5px!important;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+}
+
+#loco li img {
+    width: 92%;
+}
+
+#loco p ttl {
+    width: 60%;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.description li .text .exp {
+    font-size: 15px;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+    margin-top: 20px;
+    line-height: 1.8;
+}
