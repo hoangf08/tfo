@@ -1,0 +1,1 @@
+var startday = new Date("2025/5/20 10:00:00"), endday = new Date("2025/5/30 12:00:00"), startday1 = new Date("2025/6/3 20:00:00"), endday1 = new Date("2025/6/20 23:30:00"), today = new Date; document.getElementById("coupon").style.display = (startday < today && today < endday) || (startday1 < today && today < endday1) ? "block" : "none"
