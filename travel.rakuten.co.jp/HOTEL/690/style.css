@@ -1,0 +1,1476 @@
+.sp-page {
+    width: 100%;
+    background-color: #fff;
+  }
+  .sp-page * {
+    box-sizing: border-box;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  /* ▲  all  ▲ */
+  
+  /* ▼  header  ▼ */
+  .sp-page header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vw;
+    overflow: hidden;
+  }
+  .sp-page header img {
+    height: 50vw;
+  }
+  .sp-page header h1 {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 4px 20px #333;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-align: center;
+  }
+img.main {
+	display:block;
+	width:100%;
+	margin:15px 0;
+}
+
+div.detail {
+margin:20px 20px;
+padding:0 20px;
+font-size:0.98em;
+}
+.img img{
+width:100vw;
+}
+div.detail h1 {
+	color:#564e8e;
+	margin:15px 0;
+}
+
+
+div.detail div.small {
+	font-size:0.85em
+}
+
+a.navi {
+	width:90%;
+	max-width:250px;
+	display:block;
+	text-decoration:none;
+	color:#fff;
+	padding:10px 20px;
+	margin:0 auto;
+	background-color:#bfb7f9;
+	border-radius: 6px; /* CSS3 */
+	-webkit-border-radius: 6px; /* Safari,Google Chrome用 */
+	-moz-border-radius: 6px; /* Firefox用 */
+}
+
+div.detail p {
+margin:15px 0;
+}
+
+
+/* club-lounge */
+.club-lounge {
+color:#333;
+padding:10px;
+margin:0 0 15px 0;
+text-align:center;
+font-size:0.98em;
+}
+
+.club-lounge img {
+ width:100%;
+ margin:15px 0 15px 0;
+}
+
+.club-lounge .point {
+	text-align:left;
+	padding:10px 15px;
+}
+
+.club-lounge .point h4,.benefits h4 {
+	background-color:#564e8e;
+	color:#fff;
+	padding:4px 5px;
+	margin:15px 0;
+	text-align:center;
+}
+
+.club-lounge .point ul {
+	margin-left:15px;
+	padding-left:10px;
+	margin-bottom:15px;
+}
+
+.club-lounge .point ul li {
+	padding-left:10px;	
+	list-style-type:disc;
+}
+
+.club-lounge .benefits {
+	padding:10px 15px;
+	text-align:left;
+}
+
+.club-lounge .benefits strong {
+	display:block;
+	height:25px;
+	margin:10px 0 5px 0;
+	color:#564e8e;
+	overflow:hidden;
+	zoom:1;
+	font-weight:bold;
+}
+
+.club-lounge .benefits ul {
+	margin: 1em 0;
+	padding-left: 5px;
+	padding-bottom:15px;
+	list-style-type: disc;
+}
+
+.club-lounge .benefits-img {
+	text-align:center;
+	margin:10px 0 10px 0;
+}
+
+.club-lounge .benefits-img img {
+	width:153px;
+	margin:2px;
+}
+
+
+
+.club-lounge .detail {
+	text-align:center;
+	margin:0 auto;
+	width:100%;
+	overflow:hidden;
+	zoom:1;
+}
+
+
+.club-lounge .detail ul {
+	margin:15px 0;
+}
+
+.club-lounge .detail ul li {
+	width:100%;
+	height:auto;
+	display:block;
+	text-align:left;
+	margin:0 10px 0 0px;
+	float:none;
+	clear:both;
+	font-size:0.9em;
+	line-height:140%;
+}
+
+
+.club-lounge .detail ul li:nth-child(odd){
+	margin:0 10px 0 0 !important;
+}
+
+
+
+.club-lounge .detail ul li img {
+	display:block;
+	margin:0 10px 15px 0;
+	width:140px;
+	float:left;
+}
+
+.club-lounge .detail strong {
+	display:block;
+	height:auto;
+	margin:0 0 5px 0;
+	color:#564e8e;
+	overflow:hidden;
+	zoom:1;
+	font-weight:bold;
+}
+
+ul.detail-osaka {
+ margin-left:15px;
+ padding-left:10px;
+
+}
+
+ul.detail-osaka li {
+ list-style-type:disc !important;
+ margin-bottom:10px;
+}
+/* ----------------------------------------------------
+　　
+ ▼　体験できること_sp ▼
+
+---------------------------------------------------- */
+#page{margin: 0!important;  font-family: '游ゴシック','Yu Gothic','YuGothic','Meiryo UI','メイリオ','Meiryo UI',sans-serif;background-color: #fff!important;line-height: 1.6;font-size: 16px;margin: 0 auto;color: #333;letter-spacing: .02em;}
+.kv {position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #c4a193;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html, body, div, section, p, img {
+    margin: 0;
+    padding: 0;}
+.kv img{width: 100%;}
+.title {position: absolute;}
+.title h2 {color: #fff;text-align: center;font-size: 18px;margin-bottom: 0;text-shadow: 0 1px 10px #606060; letter-spacing: 1.7px;}
+p {font-size: 14px; margin: 0 18px;}
+
+/* ----------------------------------------------------
+　　キャプション
+---------------------------------------------------- */
+.caption_prince {margin: 40px auto 0; padding-bottom: 40px;}
+.caption_prince h1{font-size: 24px;color: #c6ab9c;font-weight: 600;text-align: center;}
+.caption_prince h3{color: #1a1a1a;font-size: 18px;text-align: center;font-weight: 600;margin: 16px auto 20px;}
+
+/* ----------------------------------------------------
+　　リード画像
+---------------------------------------------------- */
+.read {width: 96%; margin: 0 auto 5px; display: flex;     justify-content: center;}
+.read_box {position: relative;overflow: hidden;width: 33.3%; height: 149px; background: #c4a193;}
+.read_box img{width: 100%;}
+.read_text{position: absolute;left: 40%;width: 100%;bottom: 0;background: rgba(0, 0, 0, 0.7);text-align: left;-webkit-transform: translate(-40%,0);transform: translate(-40%,0);}
+.read_box h2 {color: #fff;text-align: left;font-size: 10px;padding: 6px;margin-bottom: 0; letter-spacing: 0.9px;}
+p {font-size: 14px; margin: 0 18px;}
+
+/* ----------------------------------------------------
+	体験できることコンテンツ
+---------------------------------------------------- */
+section {width: 100%;}
+.lp_wrap * {box-sizing: border-box;}
+.lp_main img {width: 100%; height: auto;}
+.lp_cont {
+    padding: 0 10px;
+}
+.lp_cont .lp_inner {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    max-width: 890px;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgba(198, 171, 156, 1);
+}
+.lp_cont .lp_cont-title {
+    line-height: 1.7;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.lp_cont .lp_cont-title::before {
+    height: 100px;
+    margin-top: 30px;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+}
+
+.lp_cont .lp_cont-image {
+    margin-bottom: 6.77083vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    list-style: none;
+    padding-left: 0;
+}
+.lp_cont .lp_cont-image .lp_cont-item {
+    width: 48.9%;
+}
+.lp_cont .lp_cont-image .lp_cont-item:first-child {
+    width: 100%;
+}
+.lp_cont .lp_cont-image .lp_cont-item:nth-child(2) {
+    margin-right: 2.2%;
+    width: 48.9%;
+}
+.lp_cont .lp_cont-wrap {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+.lp_cont .lp_cont-wrap .lp_cont-text {
+    line-height: 1.8;
+}
+.lp_cont .lp_cont-wrap .lp_cont-link :hover{
+    opacity: 0.7;
+    transition: all 0.5s ease 0s;
+}
+.lp_btn, .lp_btn ._black {
+    background-image: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/fd03ba2838e7451331fc3b3c0782b268ee2e375c.47.9.26.3.jpg)!important;
+    background-position: right 20px center!important;
+    background-repeat: no-repeat!important;
+    background-size: auto 20px!important;
+    padding: 1.5em 0!important;
+    color: #fff!important;
+    text-align: center!important;
+    display: block!important;
+}
+.lp_btn._black{
+    background: rgba(0, 0, 0, 1);
+}
+.toggle span, .lp_nav, .lp_btn {
+    background: rgba(198, 171, 156, 1);
+}
+.lp_lead-title, .lp_cont-title::before, .lp_spot-title {
+    color: rgba(198, 171, 156, 1);
+}
+.lp_cont .lp_cont-link .comingsoon {
+    background-image: none;
+    position: relative;
+    pointer-events: none;
+}
+.lp_cont .lp_cont-link .comingsoon::before {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+}
+.lp_main .lp_cont:nth-child(1) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/efbed63ca809f6d1794eb9fa7563b14df176f1d8.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(2) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/4623b27421f17e08aef841627764fb434afae17a.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(3) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/b3409d1cfcce40dc3358717d931e0f68040ed1fb.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(4) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/6c6b48e1be0da6567069328aeeaba086b0cc0d0a.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(5) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/01279f6791282d1eb2a9557c1e4d16d5cc201d88.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+.lp_main .lp_cont:nth-child(6) .lp_cont-title::before {
+    content: url(https://img.travel.rakuten.co.jp/share/image_up/1679/LARGE/446f6a40fb301f62795140de22bffc4ddbb441a5.47.9.26.3.jpg);
+    transform: scale(0.4);
+}
+
+/* ----------------------------------------------------
+	lp_spot　周辺の見どころ
+---------------------------------------------------- */
+.lp_spot {
+	padding: 50px 10px 0px;
+}
+.lp_spot  img {width: 100%;}
+
+.lp_spot .lp_inner {
+	margin: 0 auto;
+	max-width: 880px;
+	width: 100%;
+}
+
+.lp_spot .lp_spot-title {
+	margin-bottom: 60px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+.lp_spot .lp_spot-list {
+	display: flex;
+	flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+
+.lp_spot .lp_spot-list .lp_spot-item {
+	margin: 0 2.2% 40px 0;
+	width: 48.9%;
+}
+
+.lp_spot .lp_spot-list .lp_spot-item:nth-child(even) {
+	margin-right: 0;
+}
+
+.lp_spot .lp_spot-detail {
+	margin-top: 10px;
+}
+
+.lp_spot .lp_spot-detail dt {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.lp_spot .lp_spot-detail dd p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+.lp_spot .lp_spot-detail dd a {
+	padding-right: 1.2em;
+	text-decoration: underline;
+	position: relative;
+}
+
+.lp_spot .lp_spot-detail dd a::before {
+	content: "＞";
+}
+
+.lp_spot .lp_spot-detail dd a::after {
+	background: url(../img/icon01.png) center center no-repeat;
+	background-size: 100% auto;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	content: "";
+}
+
+/* ----------------------------------------------------
+	lp_guide アクセス
+---------------------------------------------------- */
+.lp_guide {
+	background: rgba(240, 240, 240, 0.7);
+	padding: 40px 10px 60px;
+}
+
+.lp_guide .lp_inner {
+	margin: 0 auto;
+	max-width: 1260px;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-logo {
+	margin: 0 auto 20px;
+	max-width: 140px;
+	width: 100%;
+}
+.lp_guide .lp_guide-logo img{width: 100%;}
+
+.lp_guide .lp_guide-lead {
+	margin: 0 auto 30px;
+	max-width: 780px;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-lead dt {
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.lp_guide .lp_guide-lead dd {
+	margin-bottom: 20px;
+	line-height: 1.8;
+}
+
+.lp_guide .lp_guide-lead dd .lp_text { 
+        font-size: 13.1px;
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-lead dd address {
+	margin-bottom: 20px;
+	font-style: normal;
+	text-align: center;
+	display: block;
+}
+
+.lp_guide .lp_guide-linkList {
+	margin: 0 auto 40px;
+	max-width: 780px;
+	display: flex;
+	justify-content: center;
+}
+
+.lp_guide .lp_guide-linkItem {
+	margin-right: 5%;
+	width: calc((100% - 5%) / 2);
+	text-align: center;
+}
+
+.lp_guide .lp_guide-linkItem.mr0 {
+	margin-right: 0;
+	width: 100%;
+}
+
+.lp_guide .lp_guide-linkItem:nth-child(even) {
+	margin-right: 0;
+}
+.read_text span.shorten {
+    letter-spacing: 0.5px;
+}
+/* ----------------------------------------------------
+　　
+ ▼ 施設紹介_SP ▼
+
+---------------------------------------------------- */
+
+#cus_contents {margin-left: auto;}
+#cus_page h2 {
+font-size: 18px;
+color: #222;
+border-bottom: 1px solid #222;
+margin: 0 auto 30px auto;
+padding-bottom: 15px;
+text-align: center;
+width: 220px;
+display: block;
+}
+#cus_page .row2 {
+display:flex;
+flex-wrap: wrap;
+}
+#cus_page .row2 .img {
+display:flex;
+align-items: center;
+width: 50%;
+}
+#cus_page .row2 .img img {
+width:100%;
+overflow:hidden;
+}
+.content {margin-top: 60px;}
+.content p {margin:30px 15px !important;}
+.planbox{
+margin: 40px 0 50px;
+}
+.planbox img{
+width:100%;
+}
+.planbox .plan_ttl{
+font-size: 16px;
+font-weight: bold;
+margin: 15px auto !important;
+padding: 0 15px;
+}
+.planbox .plan_txt{
+margin: 0 15px 15px!important;
+}
+.plan_more {
+text-align: center;
+background: #000;
+margin: 15px;
+padding: 15px;
+}
+.plan_more a{
+color: #fff;
+}
+#cus_page .btn2 {
+background-color: #c2ac9e;
+text-decoration: none;
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: -20px 15px 0;
+padding: 15px 30px;
+}
+footer {
+background-color: #000;
+text-align: center;
+color: #fff;
+margin-top: 100px;
+padding: 40px 15px;
+}
+footer #name{
+margin-bottom: 15px;
+}
+section.cst-module-carousel .cst-module-carousel-images img {
+    width: 100%;
+}
+
+/* ----------------------------------------------------
+　　
+▼ sp-page共有 ▼
+
+---------------------------------------------------- */
+/* ▼  all  ▼ */
+.sp-page {
+  width: 100%;
+  background-color: #fff;
+}
+.sp-page * {
+  box-sizing: border-box;
+  margin: 0;
+  letter-spacing: 1px;
+}
+/* ▲  all  ▲ */
+
+/* ▼  header  ▼ */
+.sp-page header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vw;
+  overflow: hidden;
+}
+.sp-page header img {
+  height: 50vw;
+}
+.sp-page header h1 {
+  position: absolute;
+  color: #fff;
+  text-shadow: 0 4px 20px #333;
+  letter-spacing: 4px;
+  font-size: 24px;
+  text-align: center;
+}
+/* ▲  header  ▲ */
+
+/* ▼  slider  ▼ */
+.sp-page .slider {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sp-page .images {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  touch-action: pan-y;
+  margin-top: 40px;
+}
+.sp-page .images::-webkit-scrollbar {
+  display: none;
+}
+.sp-page .images > div {
+  width: 100%;
+  flex-shrink: 0;
+  background: #eee;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.sp-page .slider img {
+  width: 100%;
+}
+
+.sp-page .slider > a {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  background: #e0e0e0;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 1rem 0.5rem;
+  position: relative;
+  margin-top: 1em;
+  font-size: 1rem;
+}
+/* ▲  slider  ▲ */
+
+/* ▼  slider_v2  ▼ */
+.sp-page .slider_v2 {
+  position: relative;
+  width: 100%;
+  min-height: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #000;
+}
+.sp-page .slider_v2 .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transition-delay: 0s;
+  z-index: 1;
+  clip-path: circle(0px);
+}
+.sp-page .slider_v2 input[type="radio"]:checked + .imgBx {
+  z-index: 10;
+  clip-path: circle(600px at center);
+  transition-delay: 0.75s;
+}
+.sp-page .slider_v2 .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sp-page .slider_v2 input[type="radio"] {
+  position: relative;
+  z-index: 1000;
+  margin: 5px;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: pointer;
+}
+/* ▲  slider_v2  ▲ */
+
+/* ▼  table  ▼ */
+.sp-page .table > table {
+  border-collapse: collapse;
+  margin: 1em auto;
+  width: 100%;
+}
+.sp-page .table > table > tbody > tr > td {
+  padding: 0.5em 1em;
+}
+.sp-page .table .bar {
+  border: solid 1px black;
+}
+/* ▲  table  ▲ */
+
+/* ▼　main　▼ */
+.sp-page main {
+  margin: 32px 16px;
+}
+
+/* ▲  main  ▲ */
+
+/* ▼　footer　▼ */
+.sp-page footer h3 {
+  margin: 16px 0;
+  letter-spacing: 3px;
+}
+/* ▲　footer　▲ */
+
+/* ----------------------------------------------------
+　　
+▼ 客室_SP ▼
+
+---------------------------------------------------- */
+.room .lead {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+.room .lead div {
+  border-bottom: solid 1px #000;
+  width: 31%;
+  text-align: center;
+  position: relative;
+}
+.room .lead div::after {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-bottom: solid 2px #707070;
+  border-right: solid 2px #707070;
+  position: absolute;
+  transform: rotate(45deg);
+  left: calc(50% - 0.5em);
+  bottom: -1em;
+}
+.room .lead a {
+  color: #000;
+  text-decoration: none;
+}
+.room .container1 h3 {
+    margin: 40px 0 0px;
+    text-align: center;
+    font-size: 20px;
+}
+.room .content1 h5 {
+  margin: 3em 0 1em;
+}
+.room .content2 h5:first-child {
+  border-bottom: solid 1px #000;
+  text-align: center;
+  margin: 16px 20%;
+  padding: 16px 0;
+}
+.room .content2 p {
+  margin: 16px 0;
+}
+.sp-page .images {
+  margin-top: 0px;
+}
+/* ----------------------------------------------------
+　　
+▼ レストラン_SP ▼
+
+---------------------------------------------------- */
+.restaurant .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.restaurant .item {
+  display: flex;
+  width: 50%;
+  height: calc(20vw);
+  margin-bottom: 16px;
+}
+.restaurant .item > img {
+  width: calc(20vw);
+}
+.restaurant .item > div {
+  width: calc(30vw);
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: solid 1px #000;
+  margin: 0 5%;
+}
+.restaurant .item > div > a > img {
+  width: 100%;
+  max-height: 100%;
+}
+.restaurant .item div::after {
+  content: "";
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border-bottom: solid 2px #707070;
+  border-right: solid 2px #707070;
+  transform: rotate(45deg);
+  left: calc(50% - 0.25em);
+  bottom: -1em;
+}
+.restaurant .item1 > img {
+  display: block;
+  width: 50%;
+  margin: 4em auto 0;
+}
+.restaurant .content1 img {
+  width: 100%;
+}
+.restaurant .content1 h5 {
+  margin: 16px 0;
+}
+.restaurant .table table table {
+  color: #666666;
+}
+.restaurant tr > td:first-child > p {
+  width: max-content;
+}
+.restaurant .content1 {
+  margin: 16px 0;
+}
+/* ----------------------------------------------------
+　　
+▼ ペット ▼
+
+---------------------------------------------------- */
+.pet .intro * {
+  text-align: center;
+  margin: 16px 0;
+}
+.pet .lead img,
+.pet .content1 img {
+  width: 100%;
+  margin: 8px 0;
+}
+.pet h5 {
+  margin: 16px 0;
+}
+.pet .container1 h3 {
+  margin: 16px 0;
+  text-align: center;
+}
+.pet .container1 h3::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  justify-content: center;
+  background-color: #000;
+  position: relative;
+  left: 25%;
+}
+.pet .slider {
+  margin-top: 0px;
+}
+.pet h5 {
+  margin-top: 3em;
+}
+/* ----------------------------------------------------
+　　
+▼ クラブラウンジ_SP ▼
+
+---------------------------------------------------- */
+.club .lead {
+  text-align: center;
+}
+.club .lead > p {
+  margin: 32px 0;
+}
+.club .slider_v2-1 {
+  position: relative;
+  width: 100%;
+  min-height: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #f6f6f6;
+  margin-bottom: 100px;
+}
+.club .slider_v2-1 .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transition-delay: 0s;
+  z-index: 1;
+  clip-path: circle(0px);
+}
+.club .slider_v2-1 input[type="radio"]:checked + .imgBx {
+  z-index: 10;
+  clip-path: circle(600px at center);
+  transition-delay: 0.75s;
+}
+.club .slider_v2-1 .imgBx div {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.club .slider_v2-1 .imgBx p {
+  background-color: #f6f6f6;
+}
+.club .slider_v2-1 .imgBx img {
+  width: 100%;
+  height: 50vw;
+  object-fit: cover;
+}
+.club .slider_v2-1 input[type="radio"] {
+  position: relative;
+  z-index: 1000;
+  margin: 5px;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: pointer;
+}
+.club .item {
+  background-color: #f6f6f6;
+  margin: 16px 0;
+}
+.club .item img {
+  width: 100%;
+}
+.club .item div {
+  padding: 32px 16px;
+  position: relative;
+}
+.club .item span {
+  position: absolute;
+  padding: 8px;
+  top: -1.5em;
+  background-color: #888888;
+  min-width: 65%;
+}
+.club .content1 h5:first-child {
+  padding: 0.5em 1.5em;
+  border-left: solid 4px #c7ba7a;
+  margin: 26px 0;
+}
+.club ul {
+  padding-left: 32px;
+}
+.club li {
+  list-style: square;
+}
+.club .waku ul {
+  margin: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: dotted 1px #c7ba7a;
+}
+.club .content1 ul li::marker {
+  color: #c7ba7a;
+  transform: rotate(45deg);
+  font-size: large;
+}
+.club .gray {
+  color: #6f6f6f;
+  margin: 16px 0;
+}
+.club .bottom {
+  border-bottom: dotted 1px #c7ba7a;
+  margin: 16px 0;
+}
+.club span {
+  color: #fff;
+}
+/* ----------------------------------------------------
+　　
+▼ アクティビティ_SP ▼
+
+---------------------------------------------------- */
+.activity input[type="radio"] {
+  display: none;
+}
+.activity input[type="radio"]:checked + div {
+  display: block;
+}
+.activity .schBox {
+  display: none;
+}
+.activity .schedule {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  color: #fff;
+}
+.activity .schedule div {
+  width: 45vw;
+  line-height: 1.5em;
+  padding: 8px;
+  opacity: 0.5;
+}
+.activity .schedule div:hover {
+  opacity: 1;
+}
+.activity .schBox h3 {
+  text-align: center;
+  margin: 16px 0;
+}
+.activity .schBox img {
+  width: 100%;
+  margin: 16px 0;
+}
+.reserve {
+    margin: 4rem auto 5.6rem;
+    max-width: 300px;
+}
+.reserve ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    gap: 1rem;}
+.reserve ul li a{
+    display: block;
+    width: 150px;
+    height: 94px;
+    border: 1px solid #283e30;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-animation: all 0.6s ease;
+    animation: all 0.6s ease;
+    padding: 0.4em 0;
+    min-height: 80px;
+}
+.reserve a {
+    color: #222222;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+.reserve ul li{
+	list-style: none;
+}
+.reserve ul li a img {
+    display: block;
+    width:70px;
+    margin-bottom: 5px;
+}
+
+/* ----------------------------------------------------
+　　
+▼ リノベーション告知_SP ▼
+
+---------------------------------------------------- */
+.renov {font-family: '游ゴシック', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;}
+.renov .img img{width: 100%;}
+.room-content {
+    background: linear-gradient(180deg, #56473f 0%, #2b221d 100%);
+    color: white;
+    font-family: "Hiragino Mincho Pro";
+  }
+  .section_header > {
+    padding: 20px;
+  }
+  
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .flex-items {
+    width: 95px;
+    height: 95px;
+    text-align: center;
+    background-color: #1b5996;
+    /* This set radius to all 4 corners */
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',serif;
+  }
+  .flex-items h3 {
+    color: #8ccffa;
+    font-size: 18px;
+  }
+  .flex-items p {
+    font-size: 16px;
+  }
+  .room-title {
+    text-align: center;
+  }
+  .room-title h3 {
+    padding: 30px 0 16px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height:150%;
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',serif;
+  }
+  .room-title p {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 30px;
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',serif;
+  }
+  
+  .room-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .room-footer p {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 150%;
+    text-align: center;
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',serif;
+}
+  .room-footer h3 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: center;
+    padding:16px 0 40px;
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',serif;
+  }
+  .room-footer_text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 160%;
+    text-align: center;
+    margin: 40px auto;
+    font-family: "Hiragino Kaku Gothic ProN";
+  }
+  
+  section {
+    position: relative;
+    /* margin-top: 80px !important; */
+  }
+  section h2 {
+    margin-top: 40px !important;
+    margin-bottom: 24px !important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 160%;
+    text-align: center;
+    font-family: "Hiragino Kaku Gothic ProN";
+  }
+  section p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25.6px;
+  }
+  /* section:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    border: 1px solid #c6ab9c;
+    width: 100%;
+    bottom: -80px;
+    margin-bottom: 40px;
+  } */
+  
+  .grid-container {
+    display: block;
+    gap: 40px;
+    grid-template-columns: 1.2fr 0.8fr;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .lp_contents02-text_p {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  .lp_contents02-text_p::before {
+    position: absolute;
+    content: '';
+    border: 2px solid #c7b97a;
+    width: 112px;
+    rotate: 90deg;
+    left: -60px;
+    top: 45px;
+  }
+  .lp_contents02-text p{
+    font-family: "Hiragino Kaku Gothic ProN";
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: 160%;
+margin: 16px auto 24px;
+  }
+  .gallery {
+    margin-top: 20px;
+    padding: 20px;
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+    background-color: rgb(245, 243, 243);
+    border-radius: 5px;
+  }
+  .gallery .img{margin-bottom: 24px;}
+  .gallery p {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: "Hiragino Kaku Gothic ProN";
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: 160%;
+margin-top: 10px;
+  }
+  .section_header .img{background:#56473f;}
+  .section_header .img img{height: 260px;object-fit: cover;}
+.section05 p{text-align: center;font-family: "Hiragino Kaku Gothic ProN";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 160%;margin-bottom: 40px;}
+.section05 .img{margin-bottom: 64px;}
+
+/* 24/09/18 CSS */
+.sec_access h3,
+.sec_nearby h3 {
+  border-bottom: none;
+}
+.way {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 0 15px;
+}
+.way h5 {
+  margin: 0 auto;
+  width: fit-content;
+}
+.text_sup {
+  margin: 10px 0;
+  text-align: center;
+}
+.way .list_nearby {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  gap: 30px;
+  justify-content: space-between;
+}
+.way .sub_title {
+  text-align: center;
+  border-bottom: none;
+  margin: 10px auto 30px;
+  font-size: 16px;
+  background-color: #fce2d5;
+  padding: 12px 0;
+  width: 100%;
+}
+.nearby_text {
+  margin-top: 10px;
+}
+.way .list_nearby li {
+  max-width: 460px;
+}
+.way .line_3 {
+  justify-content: start;
+  margin: 15px;
+  gap: 17px;
+}
+.way .line_3 li {
+  max-width: 100%;
+  margin: 0;
+}
+.way .list_nearby li img {
+  width: 100%;
+  max-width: 100%;
+}
+.way .line_3 li img{
+  max-width: 100%;
+}
+.nearby_text b {
+  color: rgba(198, 171, 156, 1);
+}
+.nearby_text b:first-child {
+  display: block;
+  text-wrap: nowrap;
+  font-size: 18px;
+  margin: 16px 0;
+}
+
+/* ----------------------------------------------------
+　　
+▼　【NEW】体験できることの編集_sp ▼
+
+---------------------------------------------------- */
+.main {background-color: white;font-family: '游ゴシック','Yu Gothic','YuGothic','Meiryo UI','メイリオ','Meiryo UI',sans-serif;}
+.main .container {padding: 0 10px;max-width: 1068px;width: 100%;margin: 0 auto;background-color: transparent;}
+.main section.section {padding: 50px 0 60px;}
+.img-fluid, .main img {max-width: 100%;height: auto;}
+.btn-button {font-size: 16px;font-weight: 500;color: white;background-color: #C6AB9C;padding: 20px 50px;display: inline-block;width: 100%;position: relative;}
+.btn-button:after {position: absolute;content: '';top: 50%;transform: translateY(-50%);right: 20px;width: 35px;height: 20px;
+  background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/c01dc150380ddcec96878512894ae063a370dd7c.47.9.26.3.jpg");background-position: center;background-repeat: no-repeat;
+}
+.btn-button.bg-black {background-color: #000;}
+.btn-button.bg-black:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/8a7123288100c6c49af284f707b825e4510b19ea.47.9.26.3.jpg");}
+.btn-button.bg-white {color: #222;background-color: white;}
+.btn-outline {border: 2px solid #7c7c7c;display: block;position: relative;padding: 20px 15px 52px;font-weight: 700;}
+.btn-outline:after {bottom: 10px;left: 50%;border: solid transparent;content: "";height: 0;width: 0;position: absolute;border-color: rgba(136, 183, 213, 0);
+border-top-color: #7c7c7c;border-width: 11px;margin-left: -11px;}
+.bg-spring {background: rgb(255, 246, 246);background: linear-gradient(180deg, rgba(255, 246, 246, 1) 0%, rgba(237, 236, 229, 1) 100%);}
+.bg-summer {background: rgb(238, 248, 248);background: linear-gradient(180deg, rgba(238, 248, 248, 1) 0%, rgba(226, 239, 219, 1) 100%);}
+.bg-autumn {background: rgb(241, 239, 209);background: linear-gradient(180deg, rgba(241, 239, 209, 1) 0%, rgba(236, 229, 208, 1) 100%);}
+.bg-winter {background: rgb(241, 243, 247);background: linear-gradient(180deg, rgba(241, 243, 247, 1) 0%, rgba(230, 234, 240, 1) 100%);}
+.mw-600 {width: 100%;max-width: 600px;margin: 0 auto;}
+.text-center {text-align: center;}
+.bg-graylight {background-color: #f3f3f3;}
+.bg-white {background-color: white;}
+.badge {width: 44px;height: 44px;margin: 0 auto 1.2rem;border-radius: 100%;display: block;background-repeat: no-repeat;
+background-size: auto;background-position: center;}
+.badge.spring {background-color: #ee8593;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/3c465fe1413934b11780b35648bf39147bdaa04b.47.9.26.3.jpg");}
+.badge.summer{background-color: #009def;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/aea199caad77a547e1584788818eebab1774faa0.47.9.26.3.jpg");}
+.badge.autumn{background-color: #d4832a;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/91376346b77962aee9ce5291e7a3d032213fc312.47.9.26.3.jpg");}
+.badge.winter{background-color: #718eaf;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/20828af70339652574f5292785351e22e5ea2b75.47.9.26.3.jpg");}
+/* lp-cont */
+.lp-cont {padding: 0 15px;}
+.lp-cont__head {margin-bottom: 50px;}
+.lp-cont__head .subhead {margin-bottom: 0;}
+.lp-cont__head h2 {font-weight: 500;margin-bottom: 0;position: relative;display: inline-block;font-size: 3rem;line-height: 3rem;padding: 0 45px;}
+.lp-cont__head h2:before,
+.lp-cont__head h2:after {position: absolute;content: "";top: 0;width: 24px;height: 24px;background-repeat: no-repeat;background-position: center;background-size: contain;}
+.lp-cont__head h2:before {left: 0;}
+.lp-cont__head h2:after {right: 0;}
+.lp-cont__title h4 {font-size: 18px;margin-bottom: 1rem;}
+.lp-cont__image {max-width: 890px;width: 100%;margin: 0 auto;display: flex;flex-wrap: wrap;position: relative;}
+.lp-cont__image:after {position: absolute;content: "";width: 40px;height: 40px;right: -14px;top: -10px;background-size: 22px;background-position: center;background-repeat: no-repeat;
+border-radius: 100%;-ms-border-radius: 100%;-moz-border-radius: 100%;-webkit-border-radius: 100%;z-index: 1;}
+.lp-cont__image .lp-cont__image--item {margin-top: 2.2%;display: inline-flex;}
+.lp-cont__image .lp-cont__image--item {    width: 48.9%;}
+.lp-cont__image .lp-cont__image--item:first-child {width: 100%; margin-top: 10px;}
+.lp-cont__image .lp-cont__image--item:nth-child(2) {margin-right: 2.2%;}
+.lp-cont__content {margin-top: 30px;}
+.lp-cont__content .lp-cont__content--text {margin-bottom: 40px;}
+.lp-cont__content--text p {font-size: 14px;line-height: 1.8;}
+.lp-cont__list .lp-cont__list--item:not(:last-child) {margin-bottom: 40px;}
+/* lp_slideshow */
+section.cst-module-carousel.lp_slideshow .cst-module-carousel-images {height: 180px;}
+section.cst-module-carousel.lp_slideshow .cst-module-carousel-images img {top: 0 !important;object-fit: cover;width: 100%;}
+/* lp_contents02 */
+.s__contents--head {padding-top: 50px;}
+.intro__title {margin-bottom: 25px;}
+.intro__title h1 {font-size: 1.3rem;line-height: 2.3rem;}
+.intro__text {padding: 0 15px;}
+.intro__text h4 {margin-bottom: 1.5rem;}
+.intro__experiences h4 {font-size: 1.5rem;padding-top: 2.1rem;margin: 0 2% 3rem;}
+.list__contents {display: flex;flex-wrap: wrap;column-gap: 7px;row-gap: 8px;margin-bottom: 8px;}
+.list__contents > li {width: 49%;text-align: center;flex: 1 1 auto;}
+.list__contents > li a {display: block;border-width: 2px;border-style: solid;padding: 15px 15px 40px;position: relative;}
+.list__contents > li a:after {bottom: 4px;left: 50%;border: solid transparent;content: "";height: 0;width: 0;position: absolute;pointer-events: none;
+border-color: rgba(136, 183, 213, 0);border-top-color: #88b7d5;border-width: 11px;margin-left: -11px;}
+.list__contents > li.color1 a {border-color: #ee8593;}
+.list__contents > li.color2 a {border-color: #009def;}
+.list__contents > li.color3 a {border-color: #d4832a;}
+.list__contents > li.color4 a {border-color: #718eaf;}
+.list__contents > li.color1 a:after {border-top-color: #ee8593;}
+.list__contents > li.color2 a:after {border-top-color: #009def;}
+.list__contents > li.color3 a:after {border-top-color: #d4832a;}
+.list__contents > li.color4 a:after {border-top-color: #718eaf;}
+/* lp_contents03 */
+#lp_contents03 .lp-cont__head h2:before, #lp_contents03 .lp-cont__head h2:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/b2db3367a8a24e9f1d2a79e29978054476a09b31.47.9.26.3.jpg");}
+#lp_contents03 .lp-cont__image:after {background-color: #ee8593;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/3c465fe1413934b11780b35648bf39147bdaa04b.47.9.26.3.jpg");}
+/* lp_contents04 */
+#lp_contents04 .lp-cont__head h2:before, #lp_contents04 .lp-cont__head h2:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/0b4e509639b12c093ec6e617342d28b4b6c47601.47.9.26.3.jpg");}
+#lp_contents04 .lp-cont__image:after {background-color: #009def;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/aea199caad77a547e1584788818eebab1774faa0.47.9.26.3.jpg");}
+/* lp_contents05 */
+#lp_contents05 .lp-cont__head h2:before, #lp_contents05 .lp-cont__head h2:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/db580a25870e0d57a03929b98da208a6a6d50b67.47.9.26.3.jpg");}
+#lp_contents05 .lp-cont__image:after {background-color: #d4832a;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/91376346b77962aee9ce5291e7a3d032213fc312.47.9.26.3.jpg");}
+/* lp_contents06 */
+#lp_contents06 .lp-cont__head h2:before, #lp_contents06 .lp-cont__head h2:after {background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/aad55557a8a1f2ea1460af7e6bf8df6c656369d1.47.9.26.3.jpg");}
+#lp_contents06 .lp-cont__image:after {background-color: #718eaf;background-image: url("https://img.travel.rakuten.co.jp/share/image_up/163007/LARGE/20828af70339652574f5292785351e22e5ea2b75.47.9.26.3.jpg");}
+/* lp_contents08 */
+.s__planlist {background: rgb(215, 196, 186);background: linear-gradient(45deg, rgba(215, 196, 186, 1) 0%, rgba(144, 135, 130, 1) 100%);padding: 80px 0 110px;}
+.s__planlist h3 {margin-bottom: 50px;color:white;}
+/* List article */
+.lp_spot h4 {margin-bottom: 1.5rem;}
+/* Footer top */
+#lp_guide {background-color: #f3f3f3;}
+#lp_guide.footer {margin-top: 0; padding: 40px 0;}
+.s__footertop .container {background-color: transparent;}
+.footertop__text {max-width: 592px;margin: 30px auto 0;}
+.footertop__text p {font-size: 13.5px;}
+.footertop__text h4,
+.footertop__map h4 {color: #222222;font-size: 14.6px;margin-bottom: 2rem;}
+.footertop__map {margin-top: 40px;}
+.footertop__map p {color: #222222;}
+.lp-cont__content--link .comingsoon {
+background: #9d9d9d;
+pointer-events: none;
+}
+.btn-button:after{
+display:none;}
