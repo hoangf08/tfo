@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/* ------------------------------------------
+
+20220819 yamamoto 追記
+
+---------------------------------------------*/
+
+#htlSide-A {
+    top: calc(553px + 110px + 263px) !important;
+    position: absolute;
+    left: 0;
+}
+
+#cus_page .kv {
+    width: 1200px;
+    margin-bottom: 80px;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+}
+
+.mv img {
+    width: 100%;
+}
+
+#cus_page h1 {
+    position: absolute;
+    right: 55px;
+    top: 86px;
+    text-align: center;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    color: #fff;
+    font-weight: normal;
+}
+
+.common_h2 {
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/plan-back.png);
+    padding: 20px 0 20px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.common_h2_en {
+    color: #B28246;
+    font-size: 14px;
+    text-align: center;
+}
+
+.con {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.roomtype {
+    display: flex;
+    width: 468px;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.roomtype h3 {
+    position: relative;
+    height: 30px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.roomtype h3::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 30px;
+    background-color: #B28246;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.roomtype p {
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.amenity,
+.furniture {
+    width: 550px;
+    margin: auto;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.amenity dd {
+    font-weight: bold;
+}
+
+.amenity h4 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline #B28246 2px;
+    text-underline-offset: 0.5em;
+}
+
+.furniture dd {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 10px;
+    height: 20px;
+}
+
+.furniture dd::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: #B28246;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

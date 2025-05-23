@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* CSS Document */
+.the-kyo-asobi {
+    font-family: YakuHanJP, 'Noto Sans JP', sans-serif !important;
+}
+.the-kyo-asobi__bb {
+    height: 100vh;
+    max-height: 800px;
+    position: relative;
+    background: url(https://kyoto.brightonhotels.co.jp/images/activity/bb-daikakuji-sakura.jpg) center center/cover no-repeat;
+}
+.the-kyo-asobi__bb:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.the-kyo-asobi__bb__container {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.the-kyo-asobi__bb__title {
+    margin: 0;
+    position: relative;
+    font-size: 16px;
+    font-family: 'Noto Serif JP', "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif !important;
+    letter-spacing: .3em;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+.the-kyo-asobi__bb__title a {
+    color: #fff !important;
+}
+.the-kyo-asobi__bb__title__img {
+    height: 360px;
+}
+.the-kyo-asobi__bb__title__catch {
+    margin: 30px 0 0;
+    display: block;
+    position: relative;
+}
+.the-kyo-asobi__bb__title__catch:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(https://kyoto.brightonhotels.co.jp/images/lp/the-kyo-asobi/hanko.png) center center/contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translate(1em, -50%);
+    transform: translate(1em, -50%);
+}
+.the-kyo-asobi__bb__logo-type {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    z-index: 10;
+    width: 100px;
+}
+.the-kyo-asobi__intro {
+    padding: 120px 50px;
+    position: relative;
+    z-index: 10;
+}
+.the-kyo-asobi__intro:before {
+    background: url(https://kyoto.brightonhotels.co.jp/images/lp/the-kyo-asobi/intro-deco01.png) center center/contain no-repeat;
+    width: 137px;
+    height: 138px;
+    -webkit-transform: translate(300px, -120%);
+    transform: translate(300px, -120%);
+}
+.the-kyo-asobi__intro:after {
+    background: url(https://kyoto.brightonhotels.co.jp/images/lp/the-kyo-asobi/intro-deco02.png) center center/contain no-repeat;
+    width: 228px;
+    height: 184px;
+    -webkit-transform: translate(-450px, 50%);
+    transform: translate(-450px, 50%);
+}
+.the-kyo-asobi__intro:before, .the-kyo-asobi__intro:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.the-kyo-asobi__intro__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.the-kyo-asobi__intro__txt {
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.the-kyo-asobi__intro__txt__row {
+    width: 20px;
+    line-height: 1.2;
+    padding: 0 0.5em;
+}
+.the-kyo-asobi__bb__logo-aca-kyoto {
+    position: absolute;
+    bottom: 90px;
+    right: 70px;
+    width: 120px;
+}
+.kakko.of-upper {
+    margin: -0.5em 0 0;
+}
+.kakko {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: block;
+    margin-bottom: -0.5em;
+}
+.kakko.of-lower {
+    -webkit-transform-origin: 40% 40%;
+    transform-origin: 40% 40%;
+}
+.kuten, .touten {
+    margin-left: 0.5em;
+    margin-top: -0.5em;
+    display: block;
+}
+.the-kyo-asobi__title {
+    font-family: ten-mincho, serif;
+    font-size: 16px;
+    letter-spacing: .2em;
+    font-weight: 500;
+    margin: 0 0 50px;
+    text-align: center;
+}
+.the-kyo-asobi__title .of-lined {
+    border-bottom: 1px solid rgba(35, 24, 21, 0.3);
+    padding: 0 60px 1em;
+    display: inline-block;
+}
+.the-kyo-asobi__plan-nav {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.the-kyo-asobi__plan-nav-item {
+    width: 33.33333%;
+    padding: 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+}
+.the-kyo-asobi__plan-nav-item:hover {
+    opacity: 1;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-box-shadow: 0 0.5em 1.5em rgb(35 24 21 / 50%);
+    box-shadow: 0 0.5em 1.5em rgb(35 24 21 / 50%);
+}
+.the-kyo-asobi__plan-list {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    position: relative;
+}
+.the-kyo-asobi__plan-list > li {
+    list-style: none;
+}
+.the-kyo-asobi__plan-item {
+    position: relative;
+    padding: 0 0 100px;
+    margin: 0 auto;
+}
+.the-kyo-asobi__plan-item__bb-box {
+    width: 100%;
+    position: relative;
+    height: 70vh;
+}
+.the-kyo-asobi__plan-item__btn-box .the-kyo-asobi__btn {
+    margin: 0 0 0 30px;
+	text-align: center;
+}
+.the-kyo-asobi__btn .of-txt-box.with-arw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.the-kyo-asobi__btn {
+    height: 60px;
+    border-radius: 30px;
+    padding: 0 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #231815;
+    border: 1px solid #b28247;
+    background: #fff;
+}
+.the-kyo-asobi__btn:hover {
+    opacity: 1;
+    background: #b28247;
+}
+.the-kyo-asobi-font-tenmincho {
+    font-family: ten-mincho, serif;
+	font-weight: bold;
+}
+.the-kyo-asobi__btn .of-txt-box.with-arw:after {
+    content: "";
+    width: 43px;
+    height: 7px;
+    background: url(https://kyoto.brightonhotels.co.jp/images/lp/the-kyo-asobi/icons/arw.svg) center center/contain no-repeat;
+    margin-left: 0.5em;
+}
+.the-kyo-asobi__btn {
+    min-width: 220px;
+	max-width: 240px;
+}
+.section__container.of-small {
+    max-width: 680px;
+	font-size:13px;
+}
+.u-align-center {
+    text-align: center;
+}
+.btn.of-gold-ghost {
+    color: #b28247 !important;
+    border: 1px solid;
+    background: #fff;
+}
+.btn {
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    border-radius: 0;
+}
+.btn:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.topics-list {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.tate-title-section__body {
+    width: 93%;
+}
+.topics-list__item {
+    list-style: none;
+    width: 33.33333%;
+    padding: 0 15px 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

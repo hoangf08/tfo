@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+#htlSide-A {
+    top: calc(600px + 110px + 263px) !important;
+    position: absolute;
+    left: 0;
+}
+
+.mv {
+    width: 1200px;
+    margin-bottom: 80px;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+    background: #57504E;
+}
+
+.mv img {
+    width: 100%;
+}
+
+.heading-block {
+    margin-top: 100px;
+    padding: 30px 0;
+    margin-bottom: 50px;
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/restaurant-heading-back.png);
+}
+
+.section-description-text {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.6em;
+}
+
+.plan-heading {
+    display: flex;
+    margin-top: 100px;
+}
+
+.plan-heading-left {
+    width: 50%;
+}
+
+.plan-heading-right {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.plan-heading-right p:first-child {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.plan-heading-right p:last-child {
+    line-height: 2em;
+    margin-top: 10px;
+}
+
+.plan-heading-right h3 {
+    font-size: 40px;
+}
+
+.plan-desctiption {
+    padding: 50px 0;
+    line-height: 1.6em;
+    text-align: center;
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/restaurant-heading-back.png);
+}
+
+.plan-detail {
+    display: flex;
+    margin: 30px 0;
+}
+
+.plan-detail-left {
+    width: 50%;
+    padding-right: 30px;
+    border-right: 1px solid #B28246;
+}
+
+.plan-detail-left h3 {
+    font-size: 20px;
+}
+
+.plan-detail-left-bottom {
+    margin-top: 20px;
+}
+
+.plan-detail-left p {
+    padding-left: 1.6em;
+    margin-top: 5px;
+}
+
+.plan-detail-right {
+    width: 50%;
+    padding-right: 10px;
+    padding-left: 50px;
+}
+
+.plan-detail-right-bottom {
+    margin-top: 30px;
+}
+
+.readmore-button-box {
+    padding: 15px 0;
+}
+
+.readmore-button-box1 {
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/to-plan-bg1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.readmore-button-box2 {
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/to-plan-bg2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.readmore-button-box3 {
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/to-plan-bg3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.readmore-button-box4 {
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/to-plan-bg4.png);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 100px;
+}

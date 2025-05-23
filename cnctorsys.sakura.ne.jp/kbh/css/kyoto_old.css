@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+#htlSide-A {
+    top: calc(600px + 110px + 263px) !important;
+    position: absolute;
+    left: 0;
+}
+
+.mv {
+    width: 1200px;
+    margin-bottom: 80px;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+    background: #57504E;
+}
+
+.mv img {
+    width: 100%;
+}
+
+.heading-block {
+    margin-top: 100px;
+    padding: 30px 0;
+    margin-bottom: 50px;
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/restaurant-heading-back.png);
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.kyoto-plan-heading {
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    width: 65%;
+    padding: 30px 0 30px 20px;
+    margin-bottom: -75px;
+    z-index: 3;
+}
+
+.kyoto-plan-heading p {
+    font-size: 20px;
+}
+
+.kyoto-plan-img {
+    position: relative;
+    z-index: 2;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 377px;
+}
+
+.kyoto-plan-img img {
+    position: relative;
+    z-index: 1;
+	width: 100%;
+}
+
+.plan-detail {
+    display: flex;
+    margin: 30px 0;
+}
+
+.plan-detail-left {
+    width: 45%;
+    padding-right: 10px;
+}
+
+.plan-detail-left h3 {
+    font-size: 20px;
+}
+
+.plan-detail-left-middle {
+    margin-top: 20px;
+}
+
+.plan-detail-left-bottom {
+    margin-top: 20px;
+}
+
+.plan-detail-left p {
+    padding-left: 1.6em;
+    margin-top: 5px;
+}
+
+.plan-detail-right {
+    width: 55%;
+    padding-right: 10px;
+    padding-left: 50px;
+}
+
+.plan-detail-right h3 {
+    font-weight: normal;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #b281465e;
+    padding: 5px 0 5px 20px;
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/concept-back.png);
+}
+
+.plan-detail-right-top {
+    padding-left: 20px;
+}
+
+.plan-detail-right-bottom {
+    margin-top: 30px;
+    border-left: 3px solid #B28246;
+    padding-left: 20px;
+}
+
+
+/* スケジュールテーブル */
+
+.schedule {
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/schedule-back.png);
+    background-size: 100%;
+    padding: 30px 0;
+	background-repeat: repeat-y;
+}
+
+.schedule h3 {
+    text-align: center;
+    color: #b2814658;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+.schedule-table {
+    width: 74%;
+    margin: 0 auto;
+}
+
+.schedule-row {
+    display: flex;
+    padding: 10px 0;
+    align-items: flex-start;
+}
+
+.schedule-row p {
+    font-size: 16px;
+}
+
+.schedule-row p.time {
+    width: 130px !important;
+}
+
+.schedule-row small{
+    font-size: 12px;
+}
+
+.schedule-row p:first-child {
+    color: #B28246;
+    font-size: 24px;
+    margin-right: 10px;
+    margin-top: -5px;
+}
+
+.schedule-border {
+    border-left: #B28246 2px solid;
+    height: 60px;
+    margin: -24px 0 -24px 11px;
+}
+
+.schedule-border-longer {
+    border-left: #B28246 2px solid;
+    height: 100px;
+    margin: -50px 0 -35px 11px;
+}
+
+.schedule-row p:last-child {
+    padding-left: 10px;
+    width: 100%;
+}
+.schedule_ttl{
+	display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid rgba(35, 24, 21, 0.3);
+	margin: 50px 0 10px 0px;;
+    font-weight: normal;
+}
+.the-kyo-asobi__plan-item__optional{
+	border: 1px solid #b28247;
+    padding: 20px;
+	font-size: 13px;
+	margin-top: 15px;
+}

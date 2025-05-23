@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+#htlSide-A {
+    top: calc(553px + 110px + 263px) !important;
+    position: absolute;
+    left: 0;
+}
+
+.mv {
+    width: 1200px;
+    margin-bottom: 80px;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+    background: #57504E;
+}
+
+.mv img {
+    width: 100%;
+}
+
+main {
+    margin-top: 50px;
+}
+
+.heading-block {
+    padding: 30px 0;
+    margin-bottom: 50px;
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/restaurant-heading-back.png);
+}
+
+.section-description-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.restaurant-heading ul {
+    display: flex;
+}
+
+.restaurant-heading ul li {
+    display: block;
+    width: 25%;
+    text-align: center;
+}
+
+.restaurant-heading ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #B28246;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.restaurant-heading ul li a:hover {
+    background-color: #B28246;
+    color: white;
+}
+
+.restaurant-heading ul li a span {
+    font-size: 20px;
+}
+
+.restaurant-box1,
+.restaurant-box3,
+.restaurant-box2,
+.restaurant-box4,
+.restaurant-box5 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.restaurant-box-left {
+    width: 55%;
+    padding-right: 50px;
+}
+
+.restaurant-box2 .restaurant-box-left,
+.restaurant-box4 .restaurant-box-left {
+    padding-left: 20px;
+}
+
+.restaurant-box-right {
+    width: 45%;
+    overflow: hidden;
+}
+
+.restaurant-box-right img {
+    height: 100%;
+    width: auto;
+}
+
+.restaurant-category {
+    color: #B28246;
+}
+
+.restaurant-sub-title {
+    color: #b2814632;
+}
+
+.restaurant-description {
+    line-height: 2em;
+    margin-top: 20px;
+}
+
+.service-list {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.service-list li span {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.restaurant-box-left .readmore-button {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.restaurant-box-left .readmore-button-box {
+    padding-bottom: 0;
+    padding-top: 20px;
+}
+
+
+/* 料理長 */
+
+.cooking-reader {
+    display: flex;
+    padding: 30px;
+    margin: 100px auto;
+    background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/reader-back.png);
+}
+
+.reader-img {
+    width: 30%;
+}
+
+.reader-img img {
+    width: 100%;
+}
+
+.reader-txt {
+    width: 70%;
+    padding-left: 30px;
+}
+
+.reader-txt h3 {
+    color: #B28246;
+    font-weight: bold;
+}
+
+.reader-txt p:first-child {
+    margin-top: 50px;
+}
+
+.reader-txt p:last-child {
+    margin-top: 30px;
+    line-height: 2;
+}
+
+.readmore-big {
+    width: 400px;
+}

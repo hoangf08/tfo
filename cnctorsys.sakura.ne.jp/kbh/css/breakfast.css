@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+#htlSide-A {
+	margin-top: -400px
+}
+header{
+	width:100%;
+	height:auto;
+}
+.subdir__header {
+    padding: 50px 100px;
+}
+.subdir__header__title-box {
+    text-align: center;
+}
+.subdir__header__title {
+    font-size: 22px;
+    width: 22px;
+    position: relative;
+    line-height: 1.2;
+    font-family: 'Noto Serif JP', "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif !important;
+    margin: 0 auto;
+    font-weight: 500;
+}
+.subdir__header__title__label {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    font-size: 12px;
+    letter-spacing: .1em;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    margin-left: 15px;
+    white-space: nowrap;
+    opacity: .5;
+}
+.subdir__header__txt-box {
+    padding: 100px 0 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.breadcrumbs-wrap {
+    background: #efefef;
+    padding: 20px 100px;
+}
+.breadcrumbs {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.breadcrumb {
+    font-size: 13px;
+    color: #727171;
+}
+.breadcrumb:after {
+    content: ">";
+    display: inline-block;
+    margin: 0 0.5em;
+}
+.breadcrumb:last-child:after {
+    display: none;
+}
+.article {
+    font-size: 14px;
+}
+.section__container.of-small {
+    max-width: 680px;
+}
+.u-mb50 {
+    margin-bottom: 50px;
+}
+.u-align-center {
+    text-align: center;
+}
+.article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
+    font-family: 'Noto Serif JP', "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif !important;
+    color: #b28247;
+    padding-top: 20px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+.article img {
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+table.simple-table {
+    margin: 0.5em 0;
+}
+table.simple-table th {
+    padding-right: 0.5em;
+}
+table.simple-table th, table.simple-table td {
+    vertical-align: top;
+    text-align: left;
+    padding: 0.5em 0.5em;
+}
+table.simple-table th, table.simple-table td {
+    vertical-align: top;
+    text-align: left;
+    padding: 0.5em 0.5em;
+}
+.btn-box.of-flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+.article a.btn {
+    text-decoration: none;
+}
+.btn.of-navy {
+    background: #0b0f38;
+    color: #fff !important;
+    border: none;
+}
+.u-with-arw, .btn.of-navy, .btn.of-gold-ghost.with-arw {
+    position: relative;
+}
+.btn.of-navy:after {
+    background: url(https://kyoto.brightonhotels.co.jp/images/icons/arw-right-white.svg) center center/auto 6px no-repeat;
+}
+.u-with-arw:after, .btn.of-navy:after, .btn.of-gold-ghost.with-arw:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-left: 0.5em;
+}
+.btn {
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    border-radius: 0;
+}
+.btn:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.btn.of-navy {
+    background: #0b0f38;
+    color: #fff;
+    border: none;
+}

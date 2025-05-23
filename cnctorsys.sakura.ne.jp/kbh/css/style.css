@@ -1,0 +1,1769 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  line-height: 1.6em;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 16px;
+  min-width: 1200px;
+  margin: 0 auto;
+  color: #333;
+  letter-spacing: 0.02em;
+  background: #fff;
+  font-family: '游明朝体', 'MS明朝', 'Noto Serif JP', 'YuGothic', '游ゴシック',
+    'Yu Gothic', sans-serif;
+}
+
+a {
+  transition: 0.3s;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+#cus_page {
+  position: relative;
+}
+
+#cus_page::before {
+  content: '';
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  z-index: -1;
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#014699', endColorstr='#ffffff', GradientType=0);
+}
+
+#htlContents {
+  min-width: auto !important;
+  width: 1200px;
+  margin: 0 auto !important;
+}
+
+#htlHeader,
+#htlMainContent {
+  width: 1920px !important;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0 auto !important;
+}
+
+div#htlContents div#htlMainContent div div#trvlHtlSubNav ul {
+  margin-bottom: 0 !important;
+}
+
+#RthCustomizeW {
+  width: auto !important;
+}
+
+#htlSide-A {
+  top: calc(655px + 110px + 263px) !important;
+  position: absolute;
+  left: 0;
+}
+
+.pagetop {
+  position: fixed;
+  top: 300px;
+  right: -2px;
+}
+
+.pagetop a {
+  display: block;
+  text-decoration: none;
+}
+
+.pagetop:hover {
+  opacity: 0.85;
+}
+
+/* ------------------------------------------
+
+TOP＿Logo
+
+---------------------------------------------*/
+
+#top {
+  align-items: center;
+  letter-spacing: 0.12em;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 0;
+  margin: 10px 0 !important;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+}
+
+.top_banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top_banner .box {
+  width: 30%;
+}
+
+.top_banner .banner_1 {
+  width: 50%;
+}
+
+.top_banner .banner_1 a {
+  text-align: center;
+}
+
+#top .box_2 p {
+  text-align: center;
+  font-size: 13px;
+  color: #2a31d1;
+}
+
+#top .box_2 img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation-name: box_2Anime;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+#top .box_2 img:nth-child(1) {
+  animation-delay: -2s;
+}
+
+#top .box_2 img:nth-child(2) {
+  animation-delay: 3s;
+}
+
+#top .box_2 img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes box_2Anime {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ------------------------------------------
+
+TOP＿KV
+
+---------------------------------------------*/
+
+#cus_page {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  letter-spacing: 0.12em;
+  line-height: 24px;
+  font-size: 16px;
+  width: 1200px;
+  margin: auto;
+  padding: 0;
+  position: relative;
+}
+
+#cus_page img {
+  max-width: 100%;
+}
+
+.slide {
+  position: relative;
+  width: 1200px;
+  margin-bottom: 80px;
+  margin: auto;
+  overflow: hidden;
+  background: #57504e;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.slide::before {
+  content: '';
+  display: block;
+  padding-bottom: calc(930 / 1920 * 100%);
+}
+
+.slide img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+.slide img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation: slideAnime 20s ease infinite;
+}
+.slide img:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.slide img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+.slide img:nth-of-type(3) {
+  animation-delay: 8s;
+}
+.slide img:nth-of-type(4) {
+  animation-delay: 12s;
+}
+.slide img:nth-of-type(5) {
+  animation-delay: 16s;
+}
+@keyframes slideAnime {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  23% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ------------------------------------------
+
+全体
+
+---------------------------------------------*/
+
+#cus_contents,
+#cus_footer {
+  width: 950px !important;
+  margin: auto;
+}
+
+.Offers_Deals a {
+  text-decoration: none !important;
+  color: #1a1a1a !important;
+}
+
+.Offers_Deals a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+  color: #00a4d8 !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+h1 a {
+  font-size: 34px !important;
+  font-weight: 200 !important;
+}
+
+h1 a img {
+  height: auto !important;
+  float: right !important;
+  margin-bottom: 5px !important;
+}
+
+h2 {
+  font-size: 36px;
+  color: #1a1a1a;
+  font-weight: 200 !important;
+}
+
+h3 {
+  color: #1a1a1a;
+  font-size: 26px;
+  font-weight: 200;
+}
+
+h5 {
+  font-size: 20px;
+  color: #b38e48;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-border {
+  display: flex;
+  align-items: center;
+}
+
+.title-border:after {
+  border-top: 5px dotted #e8e8e8;
+  content: '';
+  flex-grow: 1;
+}
+
+.title-border:after {
+  margin-left: 1rem;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.container {
+  width: 950px;
+  margin: 0 auto;
+}
+
+/* 金沢 */
+
+.readmore-button-box {
+  padding: 50px 0;
+}
+
+.readmore-button {
+  text-decoration: none;
+  display: block;
+  border: #b28246 2px solid;
+  width: 300px;
+  padding: 18px;
+  text-align: center;
+  color: #b28246 !important;
+  background-color: white;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.readmore-button:hover {
+  color: white !important;
+  background-color: #b28246;
+  text-decoration: none;
+}
+
+.section-title {
+  text-align: center;
+  line-height: 1.6em;
+}
+
+.section-sub-title {
+  text-align: center;
+  color: #b28246;
+}
+
+.section-description {
+  text-align: center;
+  margin: 50px auto;
+  line-height: 2em;
+}
+
+/* 金沢end */
+
+/* ヘッダー */
+
+.header .header_access_nav {
+  text-align: center;
+  color: #998675;
+  font-size: 14px;
+  background: #f5f4ee;
+  padding-bottom: 15px;
+}
+
+.header .header_access_nav img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.header_nav {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header_nav h1 img {
+  width: auto;
+  max-width: none;
+  height: 110px;
+}
+
+.header_title_nav {
+  height: 80px;
+  width: 1200px;
+  overflow: hidden;
+  /*金沢 */
+  background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/nav-back.png);
+  margin: auto;
+  /* 金沢end */
+}
+
+/* .header_nav a:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+} */
+
+.header_title_nav .header_nav a:hover {
+  text-decoration: none;
+}
+
+.header_title_nav .header_nav ul {
+  width: 1600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_title_nav .header_nav ul li {
+  text-align: center;
+  display: flex;
+}
+
+.header_title_nav .header_nav ul li:nth-child(1) {
+  border-left: none;
+}
+
+/* 金沢 */
+
+.header_title_nav .header_nav ul li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 30px 20px;
+  line-height: 1;
+  text-decoration: none !important;
+  color: #333 !important;
+  font-weight: 200;
+  text-align: center;
+  display: block;
+  transition: 0.3s;
+}
+
+.header_title_nav .header_nav ul li a:hover {
+  background-color: #b28246;
+  color: white !important;
+}
+
+.to-plan-button {
+  display: block;
+  text-decoration: none;
+  color: white !important;
+  background-color: #b28246;
+  padding: 30px 15px;
+  width: 200px;
+  text-align: center;
+}
+
+.to-plan-button:hover {
+  color: white !important;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+/* キャンペーン */
+
+.campaign {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 901px;
+  margin: 0 auto;
+  gap: 11px;
+}
+
+.banar-box {
+  width: 45%;
+  margin: 50px auto 0 auto;
+}
+
+.banar-box img {
+  display: block;
+  width: 100%;
+}
+
+.campaign p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.campaign p a {
+  color: #5454ed;
+  text-decoration: #5454ed underline;
+}
+
+.campaign p a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+/* ホテルの魅力 */
+
+.apeal-point {
+  margin: 100px auto;
+}
+
+.apeal-point-text {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.apeal-point-text span {
+  text-align: center;
+  color: #b28246;
+}
+
+.apeal-block-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.apeal-block {
+  width: 33%;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s;
+}
+
+.apeal-block:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: #333;
+}
+
+.apeal-slide1,
+.apeal-slide2,
+.apeal-slide3 {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  background: #57504e;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.apeal-slide1::before,
+.apeal-slide2::before,
+.apeal-slide3::before {
+  content: '';
+  display: block;
+  padding-bottom: calc(930 / 1920 * 100%);
+}
+
+.apeal-slide1 img,
+.apeal-slide2 img,
+.apeal-slide3 img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation-iteration-count: infinite;
+  animation-name: slideAnime;
+}
+
+.apeal-slide1 img {
+  animation-name: slideAnime2;
+  animation-duration: 12s;
+}
+
+.apeal-slide2 img {
+  animation-name: slideAnime3;
+  animation-duration: 18s;
+}
+
+.apeal-slide3 img {
+  animation-duration: 24s;
+}
+
+.apeal-slide1 img:nth-child(1),
+.apeal-slide2 img:nth-child(1),
+.apeal-slide3 img:nth-child(1) {
+  animation-delay: -4s;
+}
+
+.apeal-slide1 img:nth-child(2),
+.apeal-slide2 img:nth-child(2),
+.apeal-slide3 img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.apeal-slide1 img:nth-child(3),
+.apeal-slide2 img:nth-child(3),
+.apeal-slide3 img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.apeal-slide2 img:nth-child(4),
+.apeal-slide3 img:nth-child(4) {
+  animation-delay: 14s;
+}
+
+.apeal-slide3 img:nth-child(5) {
+  animation-delay: 20s;
+}
+
+@keyframes slideAnime2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideAnime3 {
+  0% {
+    opacity: 0;
+  }
+  48% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.apeal-block-content {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 0 10px 0;
+  margin-top: -20px;
+}
+
+.white-back {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #fffdfa9b;
+  margin-top: -10px;
+  padding-top: 35px;
+  padding: 50px 20px 50px 20px;
+}
+
+.apeal-block-content-right {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 20px;
+  color: #b28246;
+}
+
+.apeal-block-content-center {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  padding-top: 30px;
+  padding-right: 10px;
+  letter-spacing: 0.5em;
+  color: #333;
+}
+
+.apeal-block-content-left {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 50px;
+  padding-right: 20px;
+  padding-top: 65px;
+  color: #b28246;
+}
+
+.apeal-block-content-left a {
+  text-decoration: none;
+}
+
+.apeal-block-content-left a:hover {
+  opacity: 0.6;
+  color: #b28246;
+}
+
+/* おすすめプラン */
+
+.recommend-packages {
+  background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/plan-back.png);
+  padding: 75px 0 50px 0;
+  border-top: #b28246 15px solid;
+  border-bottom: #b28246 15px solid;
+}
+
+.recommend-packages-block-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.recommend-packages-block {
+  display: block;
+  width: 33%;
+  color: #333 !important;
+  text-decoration: none !important;
+}
+
+.recommend-packages-block:hover {
+  color: #333 !important;
+  text-decoration: none !important;
+  opacity: 0.7;
+}
+
+.recommend-packages-block-thumbnail1,
+.recommend-packages-block-thumbnail2,
+.recommend-packages-block-thumbnail3 {
+  height: 270px;
+  overflow: hidden;
+}
+
+.recommend-packages-block-thumbnail1 img,
+.recommend-packages-block-thumbnail3 img {
+  width: auto !important;
+  height: 100%;
+}
+
+.recommend-packages-block-thumbnail2 img {
+  width: 100%;
+  height: auto;
+}
+
+.recommend-packages-block-text {
+  padding: 20px 5px;
+}
+
+/* おすすめ客室 */
+
+.recommend-guest-rooms {
+  background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/background.png);
+  padding: 50px 0 30px 0;
+}
+
+.recommend-guest-rooms-block-conatiner {
+  margin-top: 50px;
+}
+
+.recommend-guest-rooms-block {
+  border-bottom: #b28246 1.5px solid;
+  margin-bottom: 30px;
+}
+
+.recommend-guest-rooms-block-content {
+  display: flex;
+  padding: 30px 0;
+}
+
+.recommend-guest-rooms-block-content div:first-child {
+  width: 45%;
+  padding-left: 50px;
+}
+
+.recommend-guest-rooms-block-content div:last-child {
+  width: 55%;
+}
+
+.recommend-guest-rooms-block-content div:last-child p:first-child {
+  margin-bottom: 7.5px;
+}
+
+.room-subittle {
+  color: #b6ac9f;
+}
+
+.recommend-guest-rooms .readmore-button-box {
+  margin: 0 auto;
+}
+
+/* レストラン */
+
+.restaurant {
+  margin: 100px auto;
+}
+
+/* 京都時間 */
+
+.how-to-spend {
+  background: white;
+  margin: 100px auto;
+}
+
+/* お客さまの声 */
+
+.customer-voices {
+  background-image: url(https://cnctorsys.sakura.ne.jp/kbh/img/background.png);
+  padding: 75px 0 50px 0;
+}
+
+.total-evaluation {
+  text-align: center;
+  width: 560px;
+  margin: 30px auto;
+  background: #ffffff7c;
+  padding: 20px 0;
+}
+
+.average {
+  color: #964141;
+  font-size: 42px;
+  line-height: 1em;
+}
+
+.voice-card-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.voice-card {
+  width: 30%;
+  padding: 5px;
+  background: white;
+}
+
+.voice-card-border {
+  border: 1px solid #b28246;
+  padding: 20px;
+  height: 620px;
+}
+
+.voice-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-self: left;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 24px;
+  color: #fde083;
+  line-height: 1em;
+}
+
+.age-sex {
+  color: #b28246;
+}
+
+/* フッターナビ */
+
+footer {
+  background-color: #2f2f2f;
+  padding-top: 50px;
+}
+
+footer div:first-child {
+  text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto 0 auto;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+}
+
+.footer-nav a:hover {
+  opacity: 0.6;
+  color: white;
+}
+
+.copy-write {
+  text-align: center;
+  color: #707070;
+  padding: 10px 0;
+  background-color: #181818;
+}
+
+/* 金沢end */
+
+/* ------------------------------------------
+
+アクセス
+
+---------------------------------------------*/
+
+#access {
+  margin-top: 60px;
+  padding: 0;
+}
+
+#access h2 {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+#access .content__row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 40px;
+}
+
+#access .content__row .column-2 {
+  width: 50%;
+}
+
+#access .content__row .column-2.__text {
+  padding: 22px 25px 0;
+}
+
+#access .content__row .column-2.__text img {
+  width: 90%;
+}
+
+#access .content__row .column-2.__text h6 {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.8;
+  padding: 30px 20px;
+  color: #767373;
+}
+
+#access .content__row .column-2.__text p {
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+#access .content__row .column-2 h3 {
+  font-size: 22px;
+  line-height: 1;
+  color: #1b3466;
+  margin-bottom: 25px;
+  padding: 0;
+  text-align: left;
+}
+
+#access .content__row .column-2 h3 .border {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+  line-height: 1.6;
+}
+
+#access .content__row .column-2 h3 .border::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #0099dd;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#access .content__row .column-2 p {
+  font-size: 16px;
+  color: #333;
+}
+
+#access .content__row .column-2 p + p {
+  margin-top: 1em;
+}
+
+/* ------------------------------------------
+
+ホテルの魅力
+
+---------------------------------------------*/
+
+#charm {
+  margin: 60px 0;
+}
+
+#charm h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#charm h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+  background-color: #b38e48;
+  padding: 10px 20px;
+  width: 500px;
+  margin: 36px 0 20px;
+}
+
+#charm .charm_list {
+  display: inline-block;
+  display: flex;
+  margin: -13px;
+}
+
+#charm .charm_box {
+  width: 33.33%;
+  padding: 20px 13px;
+}
+
+#charm .charm_box .text {
+  height: 60px !important;
+  margin-top: -58px;
+}
+
+#charm .charm_box p {
+  height: 86px;
+  font-size: 15px;
+  margin-top: -85px;
+  padding: 6px;
+  position: absolute;
+  background-color: hsla(0, 0%, 100%, 0.7);
+  width: 300px;
+}
+
+#charm ul {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+#charm .icon__list p {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ------------------------------------------
+
+ボタンのデザイン
+
+---------------------------------------------*/
+
+.plan_btn {
+  text-align: center;
+  font-size: 20px;
+  width: 340px;
+  margin: 40px auto;
+  padding: 22px 0;
+  border: 1px solid #1a1a1a;
+  box-shadow: 1px 4px 8px -1px hsl(156deg 50% 30%/50%);
+}
+
+.plan_btn:hover {
+  box-shadow: none;
+  border: 1px solid #b38e48;
+}
+
+.plan_btn a {
+  padding: 24px 10px;
+  color: #1a1a1a;
+}
+
+.plan_btn a:hover {
+  text-decoration: none;
+  color: #b38e48;
+}
+
+.btn_space {
+  margin: 0 auto 20px;
+}
+
+/* ------------------------------------------
+
+おすすめプラン
+
+---------------------------------------------*/
+
+#advice .advice__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+#advice .advice__list .box {
+  margin-top: 24px;
+}
+
+#advice .advice__list .box p {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  background-color: #b38e48;
+  padding: 20px;
+  width: 464px;
+}
+
+#advice .advice__list .box img {
+  width: 464px;
+}
+
+#advice .advice__list .box a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+/* ------------------------------------------
+
+客室
+
+---------------------------------------------*/
+
+.space {
+  margin: 40px 0;
+}
+
+.slideshow {
+  position: relative;
+  overflow: hidden;
+}
+
+input[name='slideshow'] {
+  display: none;
+}
+
+/*::::::slideContents::::::*/
+
+.slideContents {
+  display: flex;
+  position: relative;
+  width: 600%;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.slideContents section {
+  width: 16.7%;
+}
+
+.slideContents section img {
+  max-width: 100%;
+  height: auto;
+  padding: 0 50px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.slideContents p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+@media (min-width: 520px) {
+  .slideContents section img {
+    aspect-ratio: 3/1;
+    object-fit: cover;
+  }
+}
+
+/*::::::arrows::::::*/
+
+.arrow,
+.arrow label,
+.arrow .ico {
+  position: absolute;
+}
+
+.arrow {
+  top: 0;
+  margin: 0;
+  transition: background 0.3s;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.arrow,
+.arrow label {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  top: 150px;
+}
+
+.arrow label {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.prev_left {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.prev_right {
+  margin-left: -50px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid;
+  left: 50px !important;
+}
+
+.arrow .ico {
+  top: calc(50% - 6px);
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid #333333;
+}
+
+.prev .ico {
+  left: 45%;
+  top: 40%;
+  z-index: 10;
+  border-left: 2px solid #333333;
+  transform: rotate(-45deg);
+  transition: left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.3s;
+}
+
+.next .ico {
+  right: 45%;
+  top: 40%;
+  z-index: 10;
+  border-right: 2px solid #333333;
+  transform: rotate(45deg);
+  transition: right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.3s;
+}
+
+.arrow:hover .ico {
+  opacity: 0.6;
+}
+
+.prev:hover .ico {
+  left: calc(50% - 10px);
+}
+
+.next:hover .ico {
+  right: calc(50% - 10px);
+}
+
+/*::::::mechanism::::::*/
+
+#switch1:checked ~ .slideContents {
+  transform: translateX(0);
+}
+
+#switch2:checked ~ .slideContents {
+  transform: translateX(-16.7%);
+}
+
+#switch3:checked ~ .slideContents {
+  transform: translateX(-33.4%);
+}
+
+#switch4:checked ~ .slideContents {
+  transform: translateX(-50.1%);
+}
+
+#switch5:checked ~ .slideContents {
+  transform: translateX(-66.8%);
+}
+
+#switch6:checked ~ .slideContents {
+  transform: translateX(-83.5%);
+}
+
+/*::::::arrow mechanism::::::*/
+
+.arrow label {
+  pointer-events: none;
+}
+
+#switch1:checked ~ .prev label[for='switch6'],
+#switch2:checked ~ .prev label[for='switch1'],
+#switch3:checked ~ .prev label[for='switch2'],
+#switch4:checked ~ .prev label[for='switch3'],
+#switch5:checked ~ .prev label[for='switch4'],
+#switch6:checked ~ .prev label[for='switch5'],
+#switch1:checked ~ .next label[for='switch2'],
+#switch2:checked ~ .next label[for='switch3'],
+#switch3:checked ~ .next label[for='switch4'],
+#switch4:checked ~ .next label[for='switch5'],
+#switch5:checked ~ .next label[for='switch6'],
+#switch6:checked ~ .next label[for='switch1'] {
+  pointer-events: auto;
+}
+
+/* ------------------------------------------
+
+レストラン
+
+---------------------------------------------*/
+
+#restaurant .restaurant_page {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  letter-spacing: 0.12em;
+  line-height: 24px;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#restaurant .restaurant_page img {
+  max-width: 100%;
+}
+
+#restaurant .restaurant_page .slide {
+  position: relative;
+  overflow: hidden;
+  width: 950px;
+  margin-bottom: 80px;
+  margin: auto;
+  background: #57504e;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+#restaurant .restaurant_page .slide::before {
+  content: '';
+  display: block;
+  padding-bottom: calc(900 / 1920 * 100%);
+}
+
+#restaurant .restaurant_page .slide img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+#restaurant .restaurant_page .slide img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation-name: slideAnime;
+  animation-iteration-count: infinite;
+  animation-duration: 18s;
+}
+
+#restaurant .restaurant_page .slide img:nth-child(1) {
+  animation-delay: -2s;
+}
+
+#restaurant .restaurant_page .slide img:nth-child(2) {
+  animation-delay: 4s;
+}
+
+#restaurant .restaurant_page .slide img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+#restaurant h4 {
+  font-size: 26px;
+  font-weight: 100;
+  color: #b38e48;
+  margin: 20px 0;
+}
+
+#restaurant .flex {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+#restaurant .box {
+  width: 50%;
+}
+
+#restaurant .box p {
+  font-size: 14px;
+  color: #767373;
+}
+
+#restaurant .box h6 {
+  font-size: 22px;
+  color: #767373;
+  margin: 15px 0;
+  font-weight: 100;
+}
+
+#restaurant .box .store {
+  border-left: thick solid rgba(178, 130, 71, 0.3);
+  padding-left: 10px;
+}
+/**
+@keyframes slideAnime {
+    0% {
+        opacity: 0;
+    }
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1
+    }
+    38% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+**/
+
+/* ------------------------------------------
+
+お客様の声
+
+---------------------------------------------*/
+
+#review .flex__1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+#review .box {
+  widows: 50%;
+}
+
+#review .box .text {
+  text-align: right;
+  margin-right: 40px;
+  letter-spacing: 1.8px;
+  font-size: 24px;
+  font-family: YuGothic, 'Yu Gothic medium', 'Hiragino Sans', Meiryo,
+    'sans-serif';
+}
+
+#review .box .text .number {
+  font-size: 30px;
+  padding: 0 5px;
+  font-weight: 600;
+}
+
+#review .box img {
+  margin-top: -54px;
+}
+
+#review .flex_review {
+  display: flex;
+  justify-content: space-between;
+}
+
+#review li {
+  width: 32%;
+  background-color: #b38e48;
+  padding: 30px 15px;
+}
+
+#review li p {
+  color: #fff;
+  font-size: 16.8px;
+  padding-top: 20px;
+}
+
+#review .flex__2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#review .flex__2 p {
+  font-size: 26px;
+  line-height: 1.7;
+  font-family: YuGothic, 'Yu Gothic medium', 'Hiragino Sans', Meiryo,
+    'sans-serif';
+}
+
+/* ------------------------------------------
+
+周辺観光
+
+---------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* スライドする要素 */
+
+.content_slide {
+  width: 360px;
+  height: 340px;
+  margin: 0 15px;
+}
+
+.content_slide p {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 20px;
+  color: #767373;
+}
+
+.content_slide span {
+  font-size: 16px;
+  color: #767373;
+}
+
+.content_slide:nth-child(1) {
+  background-color: #fff;
+}
+
+.content_slide:nth-child(2) {
+  background-color: #fff;
+}
+
+.content_slide:nth-child(3) {
+  background-color: #fff;
+}
+
+.content_slide:nth-child(4) {
+  background-color: #fff;
+}
+
+.content_slide:nth-child(5) {
+  background-color: #fff;
+}
+
+.content_slide:nth-child(6) {
+  background-color: #fff;
+}
+
+/* スライドレールの枠 */
+
+.wrap {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 450px;
+  margin-bottom: 60px;
+}
+
+/* content4つをまとめたスライドブロック */
+
+.slideshow_2 {
+  display: flex;
+  -webkit-animation: loop-slide 30s infinite linear 1s both;
+  animation: loop-slide 30s infinite linear 1s both;
+}
+
+@-webkit-keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ホバー時に動きを止める */
+
+.slide-paused:hover .slideshow_2 {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* ------------------------------------------
+
+アクセス２
+
+---------------------------------------------*/
+
+#access_2 {
+  margin-bottom: 60px;
+}
+
+#access_2 h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+  background-color: #b38e48;
+  padding: 10px 20px;
+  margin: 15px 0 10px;
+}
+
+#access_2 p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* ------------------------------------------
+
+Footer
+
+---------------------------------------------*/
+
+#footer {
+  background-color: #e8e8e8;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#footer img {
+  width: 30%;
+  margin: 40px 0 30px;
+}
+
+#footer p {
+  font-size: 14px;
+  color: #767373;
+}
+
+#footer ul {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 30px auto 0;
+}
+
+#footer li {
+  font-size: 16px;
+  color: #b28247;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #b28247;
+}
+
+/* ------------------------------------------
+
+追従バナー　202304yamaomyo
+
+---------------------------------------------*/
+
+.fixed_bn {
+  width: 60px;
+  height: 120px;
+  writing-mode: vertical-rl;
+  align-items: center;
+  position: fixed;
+  bottom: 300px;
+  right: 0px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  letter-spacing: 10px;
+  font-weight: bold;
+  transition: 0.4s;
+  color: #fff !important;
+  z-index: 999999;
+}
+
+/* ------------------------------------------
+
+　20230615yamaomyo
+
+---------------------------------------------*/
+.bn {
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+.bn a {
+  margin: 20px auto 0 auto;
+  text-align: center;
+  display: block;
+}
+.full_size {
+  max-width: 901px;
+}
+.full_size img{
+  width: 901px;
+}
+.grcoup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+.bn_1 {
+  text-align: center;
+  width: 448px;
+}
+#SS,
+#ss-plan,
+#pre,
+#lux,
+#cou1,
+#cou2,
+#cou3,
+#cou4 {
+  display: none;
+}
+.campaign .bn {
+  width: 445px;
+  margin: 0;
+}

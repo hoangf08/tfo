@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+.subdir__header__bnr {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    height: 70px;
+}
+.stay__plans {
+    background: url(https://kyoto.brightonhotels.co.jp/images/paper01.jpg) center top/360px auto;
+	margin-top:0px;
+}
+.plan-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.plan-list__item {
+    width: 33.33333%;
+    padding: 0 15px 30px;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.plan-list a {
+    color: #231815;
+    display: block;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(35, 24, 21, 0.1);
+    position: relative;
+}
+.recommended-rooms-wrap {
+    padding-top: 0;
+    background: url(https://kyoto.brightonhotels.co.jp/images/paper03.jpg) center top/360px auto;
+}
+.recommended-rooms-wrap .section__container {
+    padding-top: 100px;
+}
+.recommended-rooms__headline {
+    padding: 0 100px 100px;
+    font-size: 24px;
+}
+.recommended-rooms__headline {
+    text-align: center;
+    margin: 0;
+    font-family: 'Noto Serif JP', "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif !important;
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+.recommended-rooms__headline__label {
+    font-size: 12px;
+    display: block;
+    opacity: .5;
+    margin-top: 0.5em;
+}
+.recommended-room-list {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1050px;
+}
+.recommended-room-list > li {
+    list-style: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+	margin-bottom: 50px;
+}
+.room-section__headline {
+    padding: 100px;
+    font-size: 24px;
+    margin-left: 7%;
+    text-align: center;
+    margin: 0;
+    font-family: 'Noto Serif JP', "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif !important;
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+.room-section__headline__label {
+    font-size: 12px;
+    display: block;
+    opacity: .5;
+    margin-top: 0.5em;
+}
+.room-section__body {
+    background: #f7f7f7;
+}
+.room-list {
+    padding: 25px 0 25px 7%;
+    margin: 0 auto;
+    max-width: 1050px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.room-list > li {
+    width: 50%;
+    padding: 25px;
+    display: flex;
+    align-items: stretch;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.room-section {
+    padding: 0;
+}
+.room-section.suite .room-section__body {
+    background: #f5f0e6;
+}
