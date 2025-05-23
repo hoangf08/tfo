@@ -59,7 +59,7 @@ main {
     width: 100%;
     height: 100%;
     color: #B28246;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     padding: 10px 0;
 }
@@ -70,7 +70,7 @@ main {
 }
 
 .restaurant-heading ul li a span {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .restaurant-box1,
@@ -181,38 +181,43 @@ main {
 body{font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;}
 #cus_contents, #cus_footer{width: 1080px !important;color:#231816;}
 .lead{text-align: center;margin: 80px auto 160px;}
-.lead h3{color:#846935;font-size: 26px;font-weight: 700;line-height: 170%;margin-bottom: 64px;}
-.lead p{writing-mode: vertical-rl;text-align: left;margin: auto;font-size: 14px;font-weight: 400;line-height: 140%;color:#231816;}
+.lead h3{color:#846935;font-size: 28px;font-weight: 700;line-height: 170%;margin-bottom: 64px;}
+.lead p{writing-mode: vertical-rl;text-align: left;margin: auto;font-size: 16px;font-weight: 400;line-height: 140%;color:#231816;}
 .index{text-align: center;margin:0 auto 160px;}
-h4{font-size: 20px;font-weight: 700;line-height: 170%;margin:0 auto 64px;}
-h4 span{font-size: 14px;font-weight: 400;line-height: 170%;}
+h4{font-size: 22px;font-weight: 700;line-height: 170%;margin:0 auto 64px;}
+h4 span{font-size: 16px;font-weight: 400;line-height: 170%;}
 .gold{color: #846935;}
 .index ul{display: flex;justify-content: space-between;align-items: flex-start;}
 .index ul li{display:block;border-bottom: 2px solid #fff;padding-bottom: 8px;}
 .index ul li a{display:block;text-decoration: none;color: #231816 !important;}
 .index ul li a img{margin-bottom: 40px;}
-.index ul li a p{text-align: left;font-size: 14px;font-weight: 400;line-height: 170%;}
-.index ul li a p span{font-size: 18px;font-weight: 700;line-height: 170%;}
+.index ul li a p{text-align: left;font-size: 16px;font-weight: 400;line-height: 170%;}
+.index ul li a p span{font-size: 20px;font-weight: 700;line-height: 170%;}
 .index ul li:hover{border-bottom: 2px solid #846935;}
 .list{display: flex;flex-wrap: wrap;justify-content: space-between;margin-bottom: 160px;}
 .list > img{width: 100%;margin-bottom: 40px;}
 .list .ttl_box{width: 460px;}
 .list .ttl_box h4{padding-bottom: 40px;border-bottom: 2px solid #D4D4D4;margin-bottom: 40px;}
-.list  h5{font-size: 18px;font-weight: 700;line-height: 170%;color: #231816;text-align: left;margin-bottom: 24px;}
-.list h5 span{margin-right: 16px;font-size: 14px;font-weight: 400;line-height: 170%;color: #846935;}
-.list .ttl_box p{font-size: 14px;font-weight: 400;line-height: 170%;letter-spacing: normal;}
-.list .ttl_box h4 span.kana{font-size: 16px;font-weight: 700;margin-left: 8px;}.list .recommend{width: 540px;position: relative;display: flex;justify-content: center;}
+.list  h5{font-size: 20px;font-weight: 700;line-height: 170%;color: #231816;text-align: left;margin-bottom: 24px;}
+.list h5 span{margin-right: 16px;font-size: 16px;font-weight: 400;line-height: 170%;color: #846935;}
+.list .ttl_box p{font-size: 16px;font-weight: 400;line-height: 170%;letter-spacing: normal;}
+.list .ttl_box h4 span.kana{font-size: 18px;font-weight: 700;margin-left: 8px;}.list .recommend{width: 540px;position: relative;display: flex;justify-content: center;}
 .list .recommend h5{margin-bottom: 16px;}
 .list .recommend img{max-width: 100%;width: auto;object-fit: cover;}
 .list .recommend img,.list .recommend .text{position: absolute;}
 .more_btn-box{width: 100%;display: flex;justify-content: center;align-items: center;margin-top: 100px;}
 .more_btn-box img{width: auto;object-fit: cover;margin-right: 40px;}
-.more_btn{font-size: 18px;font-weight: 700;line-height: 170%;border-radius: 30px;background-color: #846935;color: #fff !important;text-decoration: none;display: flex;justify-content: center;align-items: center;padding: 16px 64px;position: relative;border: 1px solid #846935;}
+.more_btn{font-size: 20px;font-weight: 700;line-height: 170%;border-radius: 30px;background-color: #846935;color: #fff !important;text-decoration: none;display: flex;justify-content: center;align-items: center;padding: 16px 64px;position: relative;border: 1px solid #846935;}
 .more_btn::after{content: "";margin: auto;position: absolute;top: 0;bottom: 0;right: 50px;width: 10px;height: 10px;border-top: 1px solid #fff;border-right: 1px solid #fff;transform: rotate(45deg);}
 .more_btn:hover::after{border-color: #846935;}
 .more_btn:hover{color: #846935 !important;background-color:#fff;border: 1px solid #846935;}
 .img_box{display: flex;justify-content: space-between;width: 100%;margin-top: 100px;}
 .img_box > .w540{width: 540px;}
 .img_box > .w500{width: 500px;}
-.img_box p{font-size: 14px;font-weight: 400;line-height: 170%;letter-spacing: normal;}
+.img_box p{font-size: 16px;font-weight: 400;line-height: 170%;letter-spacing: normal;}
 .img_box img{margin-bottom: 24px;}
+
+/* 250523 */
+.recommend .text {
+    z-index: 1;
+}
