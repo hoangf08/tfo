@@ -4,7 +4,7 @@ $(function () {
   /*===========================================================*/
 
   $('.tab>li')
-    .click(function () {
+    .on('click',function () {
       var num = $(this).parent().children('li').index(this);
       $('.tab').each(function () {
         $('>li', this).removeClass('active').eq(num).addClass('active');
@@ -12,8 +12,8 @@ $(function () {
       $('.tabcontents-list').hide().eq(num).show().addClass('is-active');
     })
     .first()
-    .click();
-  $('.tab-bottom>li').click(function () {
+    .trigger('click');
+  $('.tab-bottom>li').on('click',function () {
     var speed = 400;
     var href = $(this).attr('data-url');
     var target = $(href == '#' || href == '' ? 'html' : href);
@@ -25,7 +25,7 @@ $(function () {
   /*===========================================================*/
   /* 画面右下TOPに戻るアンカーリンボタン */
   /*===========================================================*/
-  $('a[href^="#"]').click(function () {
+  $('a[href^="#"]').on('click',function () {
     var speed = 500;
     var href = $(this).attr('href');
     var target = $(href == '#' || href == '' ? 'html' : href);
