@@ -1,20 +1,148 @@
+<?php
+
+$common = get_post_meta($post->ID, '_common', true);
+if (!is_array($common)) {
+  $common = array();
+}
+
+// Lấy dữ liệu experience groups
+$experience_groups = get_post_meta($post->ID, '_experience_groups', true);
+if (!is_array($experience_groups)) {
+  $experience_groups = array();
+}
+
+// Lấy dữ liệu spot groups 
+$spot_groups = get_post_meta($post->ID, '_spot_groups', true);
+if (!is_array($spot_groups)) {
+  $spot_groups = array();
+}
+
+// MENU
+
+$list_spring_experience_menu = array();
+$list_summer_experience_menu = array();
+$list_autumn_experience_menu = array();
+$list_winter_experience_menu = array();
+$list_all_experience_menu = array();
+$list_recommend_experience_menu = array();
+
+// SLIDE
+
+$list_experience_slide = array();
+
+// CONTENT
+
+$list_spring_experience_content = array();
+$list_summer_experience_content = array();
+$list_autumn_experience_content = array();
+$list_winter_experience_content = array();
+$list_all_experience_content = array();
+$list_recommend_experience_content = array();
+
+foreach ($experience_groups as $index => $experience) {
+  if(!$experience['status']) {
+    continue;
+  }
+
+  if($experience['slide']) {
+    $list_experience_slide[] = "
+      <li class='swiper-slide'>
+        <a href='#lp_contents".$index."'>
+          <img src='".wp_get_attachment_url($experience['slide_img'])."' class='img-fluid' alt='' />
+        </a>
+      </li>
+      ";
+  }
+
+  $menu_item = "
+    <li class='lp_subnav-link'>
+      <a href='#lp_contents".$index."'>
+        ".str_replace("\n", "<br>", $experience['title_pc'])."
+      </a>
+    </li>
+    ";
+  $content_item = "
+    <div id='lp_contents".$index."' class='lp-cont__list--item'>
+      <div class='lp-cont__title text-center'>
+        <h4 class='mb-2'>
+          ".str_replace("\n", "<br>", $experience['title_pc'])."
+        </h4>
+      </div>
+      <ul class='lp-cont__image'>
+        ".($experience['main_img'] ? "
+        <li class='lp-cont__image--item'>
+          <img src='".wp_get_attachment_url($experience['main_img'])."' class='img-fluid' alt='' />
+        </li>" : '')."
+        ".($experience['left_img'] ? "
+        <li class='lp-cont__image--item'>
+          <img src='".wp_get_attachment_url($experience['left_img'])."' class='img-fluid' alt='' />
+        </li>" : '')."
+        ".($experience['right_img'] ? "
+        <li class='lp-cont__image--item'>
+          <img src='".wp_get_attachment_url($experience['right_img'])."' class='img-fluid' alt='' />
+        </li>" : '')."
+      </ul>
+      <div class='lp-cont__content mw-600'>
+        <div class='lp-cont__content--text'>
+          <p class='mb-3'>
+            ".str_replace("\n", "<br>", $experience['content'])."
+          </p>
+        </div>
+        <div class='lp-cont__content--link text-center'>
+          <a href='".$experience['during_url']."' class='btn btn-button w-100 mb-2".($experience['during_url'] ? "" : "comingsoon")."' target='_blank'
+            title=''>
+            ".($experience['during_url'] ? $experience['during_text'] : "Coming Soon")."
+          </a>
+        </div>
+      </div>
+    </div>
+    ";
+
+  if($experience['spring']){
+    $list_spring_experience_menu[] = $menu_item;
+    $list_spring_experience_content[] = $content_item;
+  }
+  if($experience['summer']){
+    $list_summer_experience_menu[] = $menu_item;
+    $list_summer_experience_content[] = $content_item;
+  }
+  if($experience['autumn']){
+    $list_autumn_experience_menu[] = $menu_item;
+    $list_autumn_experience_content[] = $content_item;
+  }
+  if($experience['winter']){
+    $list_winter_experience_menu[] = $menu_item;
+    $list_winter_experience_content[] = $content_item;
+  }
+  if($experience['all']){
+    $list_all_experience_menu[] = $menu_item;
+    $list_all_experience_content[] = $content_item;
+  }
+  if($experience['recommend']){
+    $list_recommend_experience_menu[] = $menu_item;
+    $list_recommend_experience_content[] = $content_item;
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords"
-    content="名古屋プリンスホテルスカイタワー,プリンスホテル,ホテル,名古屋,絶景,高層,レストラン,夜景,アフタヌーンティー,ラウンジ,パノラマビュー,記念日,ダイニング,名古屋めし,新幹線" />
-  <meta name="description" content="至便な交通アクセスと充実した観光地を誇る名古屋に位置する、煌びやかなパノラマビューを一望できる名古屋プリンスホテル スカイタワー" />
-  <title>名古屋プリンスホテル スカイタワーで体験できること</title>
+  <meta name="keywords" 
+    content="<?php echo $common['seo_keyword']; ?>" />
+  <meta name="description" content="<?php echo $common['seo_description']; ?>" />
+  <title><?php echo $common['seo_title']; ?></title>
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
   <!-- stylesheet -->
-  <link rel="stylesheet" href="common/css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="common/css/style.css" />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/posts/experience/user/common/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/posts/experience/user/common/css/style.css" />
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -65,12 +193,7 @@
                 <h6>Spring</h6>
               </a>
               <ul class="lp_subnav-item">
-                <li class="lp_subnav-link">
-                  <a href="#lp_contents03">
-                    「Strawberry Garden in Bloom」<br>
-                      花×いちご スイーツ＆ランチブッフェ
-                  </a>
-                </li>
+                <?php echo implode("", $list_spring_experience_menu); ?>
               </ul>
             </li>
             <li class="lp_nav-item">
@@ -78,11 +201,7 @@
                 <h6>Summer</h6>
               </a>
               <ul class="lp_subnav-item">
-                <li class="lp_subnav-link">
-                  <a href="#lp_contents04">
-                    移ろう夏空に溶け込む<br>天空のひんやりスイーツ
-                  </a>
-                </li>
+                <?php echo implode("", $list_summer_experience_menu); ?>
               </ul>
             </li>
             <li class="lp_nav-item">
@@ -90,12 +209,7 @@
                 <h6>Autumn</h6>
               </a>
               <ul class="lp_subnav-item">
-                <li class="lp_subnav-link">
-                  <a href="#lp_contents05">
-                    ONからOFFのわたし<br>
-                    金木犀の香りに包まれて
-                  </a>
-                </li>
+                <?php echo implode("", $list_autumn_experience_menu); ?>
               </ul>
             </li>
             <li class="lp_nav-item">
@@ -103,11 +217,7 @@
                 <h6>Winter</h6>
               </a>
               <ul class="lp_subnav-item">
-                <li class="lp_subnav-link">
-                  <a href="#lp_contents06">
-                    天空に浮かぶ白銀の世界
-                  </a>
-                </li>
+                <?php echo implode("", $list_winter_experience_menu); ?>
               </ul>
             </li>
             <li class="lp_nav-item">
@@ -115,31 +225,22 @@
                 <h6>All Seasons</h6>
               </a>
               <ul class="lp_subnav-item">
-                <li class="lp_subnav-link">
-                  <a href="#lp_contents07_1">
-                    ゆめみるリカちゃんの<br>
-                    世界にときめく
-                  </a>
-                </li>
-                <li class="lp_subnav-link">
-                  <a href="#lp_contents07_2">
-                    過ごす時間が輝き出す<br>
-                    天空のひととき
-                  </a>
-                </li>
-                <li class="lp_subnav-link">
-                  <a href="#lp_contents07_3">
-                    忘れられない<br>
-                    眺望との出会い
-                  </a>
-                </li>
+                <?php echo implode("", $list_all_experience_menu); ?>
+              </ul>
+            </li>
+            <li class="lp_nav-item">
+              <a class="lp_nav-link" href="#lp_contents08">
+                <h6>Recommend</h6>
+              </a>
+              <ul class="lp_subnav-item">
+                <?php echo implode("", $list_recommend_experience_menu); ?>
               </ul>
             </li>
           </ul>
         </nav>
 
         <p class="mb-2"><a href="#lp_guide" class="btn-button lp_nav-link" title="ホテル概要・アクセス">ホテル概要・アクセス</a></p>
-        <p class="mb-0"><a href="https://www.princehotels.co.jp/nagoya/plan/all/" class="btn-button lp_nav-link" target="_blank"
+        <p class="mb-0"><a href="https://www.princehotels.co.jp/<?php echo $common['name_url']; ?>/plan/all/" class="btn-button lp_nav-link" target="_blank"
             title="ご予約はこちら">ご予約はこちら</a></p>
       </div>
     </div>
@@ -149,31 +250,7 @@
     <section id="lp_contents01" class="s__slideshow">
       <div class="slideshow text-center">
         <ul class="swiper-wrapper">
-          <li class="swiper-slide">
-            <a href="#lp_contents03">
-              <img src="common/img/slideshow_01.jpg" class="img-fluid" alt="" />
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#lp_contents04">
-              <img src="common/img/slideshow_08.jpg" class="img-fluid" alt="" />
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#lp_contents07_1">
-              <img src="common/img/slideshow_05.jpg" class="img-fluid" alt="" />
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#lp_contents07_2">
-              <img src="common/img/slideshow_07.jpg" class="img-fluid" alt="" />
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#lp_contents07_3">
-              <img src="common/img/slideshow_06.jpg" class="img-fluid" alt="" />
-            </a>
-          </li>
+          <?php echo implode("", $list_experience_slide); ?>
         </ul>
         <div class="slideshow__button">
           <!-- If we need navigation buttons -->
@@ -192,16 +269,15 @@
         <div class="intro">
           <div class="intro__title text-center">
             <h1>
-              名古屋プリンスホテル スカイタワー
+              <?php echo $common['name_jp']; ?>
             </h1>
           </div>
           <div class="intro__text mw-600">
             <h4 class="text-center">
-              日常をドラマに変える<br>
-              地上140ｍの天空のホテル
+              <?php echo $common['feature']; ?>
             </h4>
             <p class="mb-0">
-              名古屋駅至近の好アクセス。ここからはじまるホテルステイを、船旅になぞらえた演出でお迎えいたします。360°のパノラマビューに心と体を解放し、五感で味わう至高の空船の旅をお楽しみください。
+              <?php echo $common['summary']; ?>
             </p>
           </div>
           <div class="intro__experiences">
@@ -209,7 +285,7 @@
               季節ごとの体験
             </h4>
             <ul class="list-inline list__contents">
-              <li class="item color1">
+              <li class="item color1 <?php echo $list_spring_experience_menu ? "" : " disabled"; ?>">
                 <a href="#lp_contents03" title="春のおすすめ">
                   <span class="badge spring">
                     <img src="common/img/svg/icon_spring.svg" alt="春のおすすめ" />
@@ -217,7 +293,7 @@
                   <h5 class="mb-0">春のおすすめ</h5>
                 </a>
               </li>
-              <li class="item color2">
+              <li class="item color2 <?php echo $list_summer_experience_menu ? "" : " disabled"; ?>">
                 <a href="#lp_contents04" title="夏のおすすめ">
                   <span class="badge summer">
                     <img src="common/img/svg/icon_summer.svg" alt="夏のおすすめ" />
@@ -225,7 +301,7 @@
                   <h5 class="mb-0">夏のおすすめ</h5>
                 </a>
               </li>
-              <li class="item color3">
+              <li class="item color3 <?php echo $list_autumn_experience_menu ? "" : " disabled"; ?>">
                 <a href="#lp_contents05" title="秋のおすすめ">
                   <span class="badge autumn">
                     <img src="common/img/svg/icon_autumn.svg" alt="秋のおすすめ" />
@@ -233,7 +309,7 @@
                   <h5 class="mb-0">秋のおすすめ</h5>
                 </a>
               </li>
-              <li class="item color4">
+              <li class="item color4 <?php echo $list_winter_experience_menu ? "" : " disabled"; ?>">
                 <a href="#lp_contents06" title="冬のおすすめ">
                   <span class="badge winter">
                     <img src="common/img/svg/icon_winter.svg" alt="冬のおすすめ" />
@@ -242,7 +318,7 @@
                 </a>
               </li>
             </ul>
-            <div class="intro__experiences--allseasons">
+            <div class="intro__experiences--allseasons <?php echo $list_all_experience_menu ? "" : " disabled"; ?>">
               <a href="#lp_contents07" class="btn btn-outline w-100 text-center" title="通年のおすすめ">
                 通年のおすすめ
               </a>
@@ -261,34 +337,8 @@
             </p>
             <h2 class="h2">Spring</h2>
           </div>
-          <div class="lp-cont__title text-center">
-            <h4 class="mb-2">
-              「Strawberry Garden in Bloom」<br />
-              花×いちご スイーツ＆ランチブッフェ
-            </h4>
-          </div>
-          <ul class="lp-cont__image">
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont50-1.jpg" class="img-fluid" alt="" />
-            </li>
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont50-2.jpg" class="img-fluid" alt="" />
-            </li>
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont50-3.jpg" class="img-fluid" alt="" />
-            </li>
-          </ul>
-          <div class="lp-cont__content mw-600">
-            <div class="lp-cont__content--text">
-              <p class="mb-3">
-                愛知県は花の生産において日本一の産出額を誇る「花の王国」。今春は「花×いちご」をモチーフにしたスイーツ＆ランチブッフェをご提供いたします。いちごをふんだんに使った色とりどりのスイーツが並ぶブッフェボードは、まるで天空のお花畑。NAGOYAの眺望とともに、見た目にも華やかなスイーツの数々を心ゆくまでお楽しみください。
-              </p>
-            </div>
-            <div class="lp-cont__content--link text-center">
-              <a href="https://www.princehotels.co.jp/nagoya/plan/skydining/2025/lunch/strawberrygarden/" class="btn btn-button w-100" target="_blank" title="ご予約はこちら">
-                ご予約はこちら
-              </a>
-            </div>
+          <div class="lp-cont__list">
+            <?php echo implode("", $list_spring_experience_content); ?>
           </div>
         </div>
       </div>
@@ -303,34 +353,8 @@
             </p>
             <h2>Summer</h2>
           </div>
-          <div class="lp-cont__title text-center">
-            <h4 class="mb-2">
-              移ろう夏空に溶け込む<br>天空のひんやりスイーツ
-            </h4>
-          </div>
-          <ul class="lp-cont__image">
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont08-1.jpg" class="img-fluid" alt="移ろう夏空に溶け込む天空のひんやりスイーツ" />
-            </li>
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont08-2.jpg" class="img-fluid" alt="移ろう夏空に溶け込む天空のひんやりスイーツ" />
-            </li>
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont08-3.jpg" class="img-fluid" alt="移ろう夏空に溶け込む天空のひんやりスイーツ" />
-            </li>
-          </ul>
-          <div class="lp-cont__content mw-600">
-            <div class="lp-cont__content--text">
-              <p class="mb-3">
-                時間帯ごとに移りゆく空の色ととともに味わう夏の風物詩”かき氷”。<br>
-青空広がる喫茶タイムには、雲をイメージしたふわふわのかき氷と当ホテル人気の生絞りモンブランを掛け合わせた新感覚のひんやりスイーツを満喫。名古屋の夜景を望むバータイムにはグラスの中で煌めくかき氷カクテルを片手に心地よい夏の夜をお楽しみください。
-              </p>
-            </div>
-            <div class="lp-cont__content--link text-center">
-              <a href="https://www.princehotels.co.jp/nagoya/plan/skydining/2025/montblanckakigori/" class="btn btn-button w-100" target="_blank" title=" ご予約はこちら">
-                ご予約はこちら
-              </a>
-            </div>
+          <div class="lp-cont__list">
+            <?php echo implode("", $list_summer_experience_content); ?>
           </div>
         </div>
       </div>
@@ -345,35 +369,8 @@
             </p>
             <h2>Autumn</h2>
           </div>
-          <div class="lp-cont__title text-center">
-            <h4 class="h4 mb-2">
-              ONからOFFのわたし<br />
-              金木犀の香りに包まれて
-            </h4>
-          </div>
-          <ul class="lp-cont__image">
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont03-1.jpg" class="img-fluid" alt="" />
-            </li>
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont03-2.jpg" class="img-fluid" alt="" />
-            </li>
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont03-3.jpg" class="img-fluid" alt="" />
-            </li>
-          </ul>
-          <div class="lp-cont__content mw-600">
-            <div class="lp-cont__content--text">
-              <p class="mb-3">
-                日々頑張るわたしに明日への活力を。秋の花「金木犀」のアメニティ、ウェルカムスイーツで香りに癒される至福のひととき。セルフヨガで体をほぐした後は、美容ブランドReFaでのスペシャルケアもお忘れなく。煌めく夜景に包まれながら眠り、ピクチャーウィンドーから差し込む朝の光で目覚める、NAGOYAの空に浮かぶ天空のホテルだからこそ叶う「秋寝(しゅうしん)」体験。季節の変わり目に心身を癒す秋のご褒美ステイをお届けします。
-              </p>
-            </div>
-            <div class="lp-cont__content--link text-center">
-              <a href="#" class="btn btn-button w-100 comingsoon"
-                target="_blank" title="ご提供は終了いたしました">
-                ご提供は終了いたしました
-              </a>
-            </div>
+          <div class="lp-cont__list">
+            <?php echo implode("", $list_autumn_experience_content); ?>
           </div>
         </div>
       </div>
@@ -388,35 +385,8 @@
             </p>
             <h2>Winter</h2>
           </div>
-          <div class="lp-cont__title text-center">
-            <h4 class="mb-2">
-              天空に浮かぶ白銀の世界
-            </h4>
-          </div>
-          <ul class="lp-cont__image">
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont04-1.jpg" class="img-fluid" alt="" />
-            </li>
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont04-2.jpg" class="img-fluid" alt="" />
-            </li>
-            <li class="lp-cont__image--item">
-              <img src="common/img/img_cont04-3.jpg" class="img-fluid" alt="" />
-            </li>
-          </ul>
-          <div class="lp-cont__content mw-600">
-            <div class="lp-cont__content--text">
-              <p class="mb-3">
-                地上140mに浮かぶ天空のホテルで、白銀の世界に入り込める冬限定の非日常体験。 白に染まった客室は雪を連想させ、大切な人との思い出がよみがえるノスタルジックな空間に。
-                窓一面に広がる煌めく夜景はまさにイルミネーション。ふたりだけの展望席で光の海原と白銀の世界に包まれ、記憶に刻まれるひと時をお過ごしください。
-              </p>
-            </div>
-            <div class="lp-cont__content--link text-center">
-              <a href="https://www.princehotels.co.jp/nagoya/plan/whitenostalgia" class="btn btn-button w-100 comingsoon"
-                target="_blank" title="ご提供は終了いたしました">
-                ご提供は終了いたしました
-              </a>
-            </div>
+          <div class="lp-cont__list">
+            <?php echo implode("", $list_winter_experience_content); ?>
           </div>
         </div>
       </div>
@@ -431,106 +401,8 @@
             </p>
             <h2>All Seasons</h2>
           </div>
-
           <div class="lp-cont__list">
-            <div id="lp_contents07_1" class="lp-cont__list--item">
-              <div class="lp-cont__title text-center">
-                <h4 class="mb-2">
-                  ゆめみるリカちゃんの<br>
-                  世界にときめく
-                </h4>
-              </div>
-              <ul class="lp-cont__image">
-                <li class="lp-cont__image--item">
-                  <img src="common/img/img_cont05-1.jpg" class="img-fluid" alt="" />
-                </li>
-                <li class="lp-cont__image--item">
-                  <img src="common/img/img_cont05-2.jpg" class="img-fluid" alt="" />
-                </li>
-                <li class="lp-cont__image--item">
-                  <img src="common/img/img_cont05-3.jpg" class="img-fluid" alt="" />
-                </li>
-              </ul>
-              <div class="lp-cont__content mw-600">
-                <div class="lp-cont__content--text">
-                  <p class="mb-3">
-                    旅行が趣味のリカちゃんがホテルの宿泊スタッフに挑戦。リカちゃんのアイディアをもとにゆめみるリカちゃんのドレスデザインをモチーフにした客室を1日1室限定でご用意いたしました。本プランでご宿泊のお客さまには、当ホテルのフロントの制服を着用したリカちゃんの限定アクリルスタンドとポストカードもプレゼントいたします。名古屋の街並みを一望できる地上35階の客室でリカちゃんのこだわりが詰まった夢の世界をお楽しみください。
-                  </p>
-                </div>
-                <div class="lp-cont__content--link text-center">
-                  <a href="https://www.princehotels.co.jp/nagoya/plan/dreamingliccaroom/" class="btn btn-button w-100 mb-2" target="_blank"
-                    title="ご予約はこちら">
-                    ご予約はこちら
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div id="lp_contents07_2" class="lp-cont__list--item">
-              <div class="lp-cont__title text-center">
-                <h4 class="mb-2">
-                  過ごす時間が輝き出す<br>
-                  天空のひととき
-                </h4>
-              </div>
-              <ul class="lp-cont__image">
-                <li class="lp-cont__image--item">
-                  <img src="common/img/img_cont07-1.jpg" class="img-fluid" alt="" />
-                </li>
-                <li class="lp-cont__image--item">
-                  <img src="common/img/img_cont07-2.jpg" class="img-fluid" alt="" />
-                </li>
-                <li class="lp-cont__image--item">
-                  <img src="common/img/img_cont07-3.jpg" class="img-fluid" alt="" />
-                </li>
-              </ul>
-              <div class="lp-cont__content mw-600">
-                <div class="lp-cont__content--text">
-                  <p class="mb-3">
-                    落ち着いた雰囲気のレストラン「Sky Dining 天空」では、季節と時間の移ろいを感じる天空の船旅を提供します。南アルプスをはじめ、名古屋駅周辺の高層ビル群や重要文化財であるMIRAI TOWERのライトアップなどが一望できます。ライブキッチンやフォトジェニックなジェラートが人気のブッフェ、アフタヌーンティーやコース料理などが特別な一日を彩ります。
-                  </p>
-                </div>
-                <div class="lp-cont__content--link text-center">
-                  <a href="https://www.princehotels.co.jp/nagoya/restaurant/skydining/" class="btn btn-button w-100" target="_blank"
-                    title="ご予約はこちら">
-                    ご予約はこちら
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div id="lp_contents07_3" class="lp-cont__list--item">
-              <div class="lp-cont__title text-center">
-                <h4 class="mb-2">
-                  忘れられない<br>
-                  眺望との出会い
-                </h4>
-              </div>
-              <ul class="lp-cont__image">
-                <li class="lp-cont__image--item">
-                  <img src="common/img/img_cont06-1.jpg" class="img-fluid" alt="" />
-                </li>
-                <li class="lp-cont__image--item">
-                  <img src="common/img/img_cont06-2.jpg" class="img-fluid" alt="" />
-                </li>
-                <li class="lp-cont__image--item">
-                  <img src="common/img/img_cont06-3.jpg" class="img-fluid" alt="" />
-                </li>
-              </ul>
-              <div class="lp-cont__content mw-600">
-                <div class="lp-cont__content--text">
-                  <p class="mb-3">
-                    高層階からジオラマのような名古屋の街並みを望むホテルステイ。清々しい朝焼けから日没にかけて広がる幻想的なグラデーション、煌めく夜景と変わりゆく景色とともにゆったりと流れるプライベートな時間。方角で異なる特徴を持つトレインビュー。訪れるたびに新しい眺望や発見に出会える天空のホテルで非日常を過ごしませんか。
-                  </p>
-                </div>
-                <div class="lp-cont__content--link text-center">
-                  <a href="https://www.princehotels.co.jp/nagoya/room/" class="btn btn-button w-100" target="_blank"
-                    title="ご予約はこちら">
-                    ご予約はこちら
-                  </a>
-                </div>
-              </div>
-            </div>
+            <?php echo implode("", $list_all_experience_content); ?>
           </div>
         </div>
       </div>
@@ -542,12 +414,21 @@
           <h3 class="text-white">
             おすすめ宿泊プラン
           </h3>
-          <p class="mb-0">
-            <a href="https://www.princehotels.co.jp/nagoya/plan/all/" class="btn btn-button bg-white w-100"
-              target="_blank" title="ご予約はこちら">
-              ご予約はこちら
-            </a>
-          </p>
+          <div class="lp-cont__list">
+            <?php
+            if($list_all_experience_content){
+              echo implode("", $list_all_experience_content);
+            } else {
+            ?>
+              <p class="mb-0">
+                <a href="https://www.princehotels.co.jp/<?php echo $common['name_url']; ?>/plan/all/" class="btn btn-button bg-white w-100"
+                  target="_blank" title="ご予約はこちら">
+                  ご予約はこちら
+                </a>
+              </p>
+            <?php
+            }?>
+          </div>
         </div>
       </div>
     </section><!-- #lp_contents08 -->
@@ -613,7 +494,7 @@
       <div class="container">
         <div class="footertop text-center">
           <div class="footertop__logo">
-            <a href="https://www.princehotels.co.jp/nagoya/" title="名古屋プリンスホテル スカイタワー" target="_blank">
+            <a href="https://www.princehotels.co.jp/<?php echo $common['name_url']; ?>/" title="名古屋プリンスホテル スカイタワー" target="_blank">
               <img src="./common/img/logo.png" width="160" alt="名古屋プリンスホテル スカイタワー" />
             </a>
           </div>
@@ -623,7 +504,7 @@
               ホテルの位置する「ささしまライブ24」は、名古屋駅より1駅。中川運河の船出の場所として、古くから親しまれてきました。私たちはこの地でお客さまの特別な一日に寄り添い、何度も訪れたくなるホテルを目指しています。時間帯で変わりゆく景色、滞在シーンを彩る眺望はここにしかないパノラマエクスペリエンス。思いを込めたおもてなしが、ドラマチックなご滞在をお約束いたします。
             </p> -->
             <p class="mb-0">
-              <a href="https://www.princehotels.co.jp/nagoya/plan/all/" target="_blank" title="ご予約はこちら"
+              <a href="https://www.princehotels.co.jp/<?php echo $common['name_url']; ?>/plan/all/" target="_blank" title="ご予約はこちら"
                 class="btn btn-button bg-black w-100">
                 ご予約はこちら
               </a>
@@ -639,11 +520,11 @@
             <div class="footertop__link">
               <ul class="list-inline">
                 <li>
-                  <a href="https://www.princehotels.co.jp/nagoya/" title="ホテルWebサイト" target="_blank"
+                  <a href="https://www.princehotels.co.jp/<?php echo $common['name_url']; ?>/" title="ホテルWebサイト" target="_blank"
                     class="btn btn-button">ホテルWebサイト</a>
                 </li>
                 <li>
-                  <a href="https://www.princehotels.co.jp/nagoya/access/" title="アクセス詳細はこちら" target="_blank"
+                  <a href="https://www.princehotels.co.jp/<?php echo $common['name_url']; ?>/access/" title="アクセス詳細はこちら" target="_blank"
                     class="btn btn-button">アクセス詳細はこちら</a>
                 </li>
               </ul>
@@ -692,9 +573,9 @@
   </div>
   <!-- .pageTop -->
 
-  <script src="common/js/jquery-3.7.0.min.js"></script>
-  <script src="common/js/swiper-bundle.min.js"></script>
-  <script src="common/js/script.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/posts/experience/user/common/js/jquery-3.7.0.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/posts/experience/user/common/js/swiper-bundle.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/posts/experience/user/common/js/script.js"></script>
 
   <!-- Dynamic Tag Management by Adobe footer -->
   <script type='text/javascript'>
