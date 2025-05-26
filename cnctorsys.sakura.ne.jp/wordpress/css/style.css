@@ -111,7 +111,114 @@ td {
   background-color: var(--color);
 }
 
-.long-arrow,
+.long-arrow {
+  border: 1px solid #000;
+  border-radius: 40px;
+  display: flex;
+  width: fit-content;
+  padding: 8px 32px;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+  position: relative;
+  z-index: 1;
+  line-height: 140%;
+}
+
+.long-arrow:hover {
+  border-color: #474141;
+}
+
+.long-arrow.reverse {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-text {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.long-arrow:hover .btn-text span {
+  color: #fff;
+}
+
+.long-arrow.reverse:hover .btn-text span {
+  color: #222;
+}
+
+.btn-text span:nth-child(1) {
+  display: block;
+  transform: translate(0, 0);
+}
+
+.long-arrow:hover .btn-text span:nth-child(1) {
+  animation: text-anim 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes text-anim {
+  0% {
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.btn-text span:nth-child(2) {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, 0);
+  opacity: 0;
+  color: #fff;
+}
+
+.long-arrow:hover .btn-text span:nth-child(2) {
+  opacity: .4;
+  transform: translate(0, -300%);
+  transition-duration: .6s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.long-arrow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4D3D1F;
+  opacity: 0;
+  scale: .9;
+  border-radius: 32px;
+  z-index: -1;
+  transition-duration: .3s;
+  transition-property: opacity, scale;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.long-arrow:hover::before {
+  background-color: #4D3D1F;
+  scale: 1;
+  opacity: 1;
+  transition-duration: .3s;
+  transition-property: opacity, scale;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.long-arrow.reverse:hover::before {
+  background-color: #fff;
+}
+
 .short-arrow {
   display: flex;
   align-items: center;
@@ -126,7 +233,6 @@ td {
   transition: all 0.3s ease;
 }
 
-.long-arrow::after,
 .short-arrow::after {
   content: '';
   display: block;
@@ -136,133 +242,7 @@ td {
   transition: transform 0.3s ease;
 }
 
-.long-arrow {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
 
-/* Hiệu ứng background tương tự như c-button--outline c-button--inverse */
-.long-arrow::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #8D8370;
-  border-radius: 40px;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s ease;
-}
-
-.long-arrow:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-/* Wrapper cho text mặc định (hiển thị khi không hover) */
-.long-arrow .text-wrapper-default {
-  display: inline-flex;
-  overflow: visible;
-  flex-wrap: wrap;
-  position: relative;
-  transition: opacity 0.3s ease, transform 0.4s ease;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Wrapper cho text khi hover */
-.long-arrow .text-wrapper-hover {
-  display: inline-flex;
-  overflow: visible;
-  flex-wrap: wrap;
-  position: absolute;
-  left: 40px;
-  /* Giữ vị trí giống với padding của nút */
-  top: 50%;
-  transform: translateY(30px);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.4s ease;
-  pointer-events: none;
-}
-
-.long-arrow:hover .text-wrapper-default {
-  opacity: 0;
-  transform: translateY(-30px);
-}
-
-.long-arrow:hover .text-wrapper-hover {
-  opacity: 1;
-  transform: translateY(-50%);
-}
-
-/* Kiểu cho từng ký tự */
-.long-arrow .char {
-  display: inline-block;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
-  transition-delay: calc(0.02s * var(--char-index));
-}
-
-.long-arrow .text-wrapper-default .char {
-  opacity: 1;
-}
-
-.long-arrow .text-wrapper-hover .char {
-  opacity: 0;
-  transform: translateY(20px);
-  color: var(--background-color);
-}
-
-.long-arrow:hover .text-wrapper-hover .char {
-  opacity: 1;
-  transform: translateY(0);
-  animation: hoverTextAnimation 0.4s forwards;
-  animation-delay: calc(0.03s * var(--char-index));
-}
-
-@keyframes hoverTextAnimation {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.long-arrow .char.space {
-  width: 0.25em;
-}
-
-.long-arrow .arrow-icon {
-  content: '';
-  display: block;
-  width: 53px;
-  height: 10px;
-  background: url(../icon/icon_long_arrow.svg) right no-repeat;
-  transition: transform 0.5s ease, filter 0.3s ease;
-  margin-left: auto;
-}
-
-.long-arrow:hover {
-  color: var(--background-color);
-}
-
-.long-arrow:hover .arrow-icon {
-  transform: translateX(20px);
-  filter: brightness(0) invert(1);
-  transition: filter 0.3s ease;
-}
-
-/* Sửa lại phần ::after vì chúng ta đã thay thế bằng .arrow-icon */
-.long-arrow::after {
-  display: none;
-}
 
 .short-arrow {
   width: 100%;
@@ -398,14 +378,16 @@ td {
   color: #7B7B7B;
   font-weight: 400;
   width: fit-content;
+    line-height: 74%;
 }
 
 .ja-title {
-  margin-top: 24px;
+  margin-top: 16px;
   font-size: var(--font-size-medium);
   display: flex;
   align-items: center;
   gap: 24px;
+  line-height: 160%;
 }
 
 .ja-title::before {
@@ -678,6 +660,10 @@ td {
   background: var(--color);
 }
 
+.bar-1 {
+  height: 2px;
+}
+
 .bar-2 {
   width: 66.6%;
 }
@@ -779,12 +765,8 @@ td {
 }
 
 .menu-reservation {
+  width: 100%;
   margin-top: 48px;
-  padding: 24px 40px;
-  font-size: 18px;
-  border: 1px solid var(--color);
-  border-radius: 40px;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .menu-tel {
@@ -793,7 +775,6 @@ td {
   gap: 8px;
   font-size: 28px;
   margin-top: 16px;
-  letter-spacing: 1.68px;
   transition: transform 0.3s ease;
 }
 
@@ -982,6 +963,7 @@ td {
 .guest-room-item-img {
   width: 100%;
   aspect-ratio: 28/37;
+  transition: transform 0.6s ease;
 }
 
 .guest-room-item-title {
@@ -1491,6 +1473,32 @@ td {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* MARK: TAILWIND CSS
+*/
+
+.tracking-0 {
+  letter-spacing: 0;
+}
+
+.leading-100 {
+  line-height: 100%;
+}
+
+.leading-140 {
+  line-height: 140%;
+}
+
+.leading-200 {
+  line-height: 200%;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+.font-[Noto_serif_KR] {
+  font-family: 'Noto Serif KR', serif;
+}
+
 @media screen and (max-width: 768px) {
 
   /* MARK: CUSTOM COMMON SP
@@ -1723,7 +1731,7 @@ td {
   }
 
   .restaurant-u1 {
-    padding: 20px 24px;
+    z-index: 1;
   }
 
   .restaurant-figure_i1 {

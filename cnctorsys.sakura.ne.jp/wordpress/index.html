@@ -22,7 +22,7 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Noto+Serif+KR:wght@200..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
 
   <!-- MARK: CSS
   -->
@@ -52,7 +52,7 @@
       </div>
       <span class="lang-box-item">English</span>
       <span class="lang-box-item">日本語</span>
-      <span class="lang-box-item">한국어</span>
+      <span class="lang-box-item font-[Noto_serif_KR]">한국어</span>
       <span class="lang-box-item">繁體中文</span>
       <span class="lang-box-item">简体中文</span>
     </div>
@@ -72,7 +72,7 @@
             </a>
           </div>
           <div class="header-lang pc-only">
-            <label for="check-lang" class="lang-btn">Language<svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <label for="check-lang" class="lang-btn tracking-0 leading-100">Language<svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="icon/arrow.svg#arrow"></use>
               </svg></label>
             <div class="header-lang-box">
@@ -81,7 +81,7 @@
                 <span class="header-lang-bar">|</span>
                 <span class="header-lang-item header-lang-active">日本語</span>
                 <span class="header-lang-bar">|</span>
-                <span class="header-lang-item">한국어</span>
+                <span class="header-lang-item font-[Noto_serif_KR]">한국어</span>
               </div>
               <div class="header-lang-row">
                 <span class="header-lang-item">繁體中文</span>
@@ -90,7 +90,7 @@
               </div>
             </div>
           </div>
-          <a href="" class="header-reservation pc-only">ご予約</a>
+          <a href="" class="header-reservation pc-only leading-100">ご予約</a>
         </div>
         <div class="header-menu">
           <label for="check-menu" class="menu-btn">
@@ -113,7 +113,15 @@
               <a class="menu-nav-item" href="#">FAQ</a>
               <a class="menu-nav-item" href="#">ブログ</a>
             </div>
-            <a class="menu-reservation long-arrow" href="#">ご予約はこちら</a>
+            <a class="menu-reservation long-arrow leading-100" href="#">
+              <div class="btn-text">
+                <span>ご予約はこちら</span>
+                <span>ご予約はこちら</span>
+              </div>
+              <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="53" height="10" viewBox="0 0 53 10" fill="none">
+                <path d="M0 9.36694H51L40.5 0.632812" stroke="#7B7B7B" />
+              </svg>
+            </a>
             <div class="menu-tel">
               <a href="tel:03-4226-8130">Tel. 03-4226-8130</a>
               <span class="menu-tel-time">受付時間　10:00 - 19:00（平日）</span>
@@ -124,7 +132,7 @@
                 <span class="header-lang-bar">|</span>
                 <span class="header-lang-item header-lang-active">日本語</span>
                 <span class="header-lang-bar">|</span>
-                <span class="header-lang-item">한국어</span>
+                <span class="header-lang-item font-[Noto_serif_KR]">한국어</span>
               </div>
               <div class="header-lang-row">
                 <span class="header-lang-item">繁體中文</span>
@@ -160,9 +168,9 @@
             <source srcset="images/lead-right.webp" type="image/webp">
             <img src="images/lead-right.png" alt="" class="lead-right">
           </picture>
-          <span class="sub-title">こころとからだを休めるひとときを。</span>
+          <span class="sub-title tracking-6">こころとからだを休めるひとときを。</span>
           <span class="line"></span>
-          <span>当旅館では額縁のように切り取られた<br>
+          <span class="leading-200">当旅館では額縁のように切り取られた<br>
             四季折々の景色をお届けいたします。<br>
             ゆったりと流れる時間に身を任せ、<br>
             他では体験できない忘れられないひととき<br class="sp-only">をお約束いたします。</span>
@@ -214,7 +222,7 @@
       -->
       <div class="inner notification">
         <div class="container notification-container">
-          <h5 class="sub-title">お知らせ</h5>
+          <h5 class="sub-title font-bold">お知らせ</h5>
           <span class="line"></span>
           <div class="notification-list">
             <a href="#" class="notification-item">
@@ -240,7 +248,15 @@
           <div class="guest-room-intro">
             <p class="guest-room-text">当旅館の客室は、豊かな緑に囲まれた静かな空間でリラックスできます。<br>
               露天風呂付きのお部屋では自然の景色を楽しみながら温泉を堪能でき、露天風呂がないお部屋でも広々とした和室でくつろげます。</p>
-            <a href="" class="long-arrow" data-hover-text="客室の詳細を見る">すべての客室を見る</a>
+            <a class="long-arrow" href="#">
+              <div class="btn-text">
+                <span>すべての客室を見る</span>
+                <span>すべての客室を見る</span>
+              </div>
+              <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="53" height="10" viewBox="0 0 53 10" fill="none">
+                <path d="M0 9.36694H51L40.5 0.632812" stroke="#7B7B7B" />
+              </svg>
+            </a>
           </div>
           <div class="swiper guest-room-slider">
             <div class="swiper-pagination"></div>
@@ -316,7 +332,15 @@
               <p class="plan-item-text">友達と一緒に、心も体もリフレッシュする特別な旅へ! </p>
             </a>
           </div>
-          <a href="#" class="plan-u1 long-arrow">すべてのプランを見る</a>
+          <a class="plan-u1 long-arrow" href="#">
+            <div class="btn-text">
+              <span>すべてのプランを見る</span>
+              <span>すべてのプランを見る</span>
+            </div>
+            <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="53" height="10" viewBox="0 0 53 10" fill="none">
+              <path d="M0 9.36694H51L40.5 0.632812" stroke="#7B7B7B" />
+            </svg>
+          </a>
         </div>
       </div>
       <!-- MARK: RESTAURANT
@@ -329,7 +353,15 @@
               悠泉庵のレストランは、四季の景色を楽しむことができる露天風呂付きの和室です。<br>
               お食事は、お客様のご要望に応じてお作りいたします。
             </p>
-            <a href="" class="restaurant-u1 long-arrow">すべてのレストランを見る</a>
+            <a class="restaurant-u1 long-arrow" href="#">
+              <div class="btn-text">
+                <span>すべてのレストランを見る</span>
+                <span>すべてのレストランを見る</span>
+              </div>
+              <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="53" height="10" viewBox="0 0 53 10" fill="none">
+                <path d="M0 9.36694H51L40.5 0.632812" stroke="#7B7B7B" />
+              </svg>
+            </a>
           </div>
           <div class="restaurant-images">
             <figure class="restaurant-figure restaurant-figure_i1">
@@ -358,7 +390,15 @@
               露天風呂では四季の風景を楽しみながらゆったりと過ごせて、大浴場や貸切風呂も完備。<br>
               静かな環境で日常を忘れ、リラックスできるひとときをお楽しみください。
             </p>
-            <a href="" class="long-arrow hot-spring-link" data-hover-text="温泉施設の案内">すべての温泉を見る</a>
+            <a class="hot-spring-link long-arrow" href="#">
+              <div class="btn-text">
+                <span>すべての温泉を見る</span>
+                <span>すべての温泉を見る</span>
+              </div>
+              <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="53" height="10" viewBox="0 0 53 10" fill="none">
+                <path d="M0 9.36694H51L40.5 0.632812" stroke="#7B7B7B" />
+              </svg>
+            </a>
           </div>
           <div class="hot-spring-images">
             <figure class="hot-spring-figure">
@@ -434,7 +474,15 @@
             四季折々の美しい景色とともに、<br class="sp-only">旬の食材を使った料理を楽しむ<br class="pc-only">
             贅沢なひとときをお過ごしください。
           </p>
-          <a href="" class="long-arrow">詳しくはこちら</a>
+          <a class="long-arrow" href="#">
+            <div class="btn-text">
+              <span>詳しくはこちら</span>
+              <span>詳しくはこちら</span>
+            </div>
+            <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="53" height="10" viewBox="0 0 53 10" fill="none">
+              <path d="M0 9.36694H51L40.5 0.632812" stroke="#7B7B7B" />
+            </svg>
+          </a>
         </div>
       </div>
       <!-- MARK: BLOG
@@ -471,7 +519,15 @@
               <span class="blog-item-title short-arrow">サウナスペースを全面リニューアルしました</span>
             </a>
           </div>
-          <a href="#" class="blog-u1 long-arrow">すべてのブログを見る</a>
+          <a class="blog-u1 long-arrow" href="#">
+            <div class="btn-text">
+              <span>すべてのブログを見る</span>
+              <span>すべてのブログを見る</span>
+            </div>
+            <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="53" height="10" viewBox="0 0 53 10" fill="none">
+              <path d="M0 9.36694H51L40.5 0.632812" stroke="#7B7B7B" />
+            </svg>
+          </a>
         </div>
       </div>
       <!-- MARK: SNS
@@ -519,7 +575,15 @@
       <div class="inner contact">
         <div class="container contact-container">
           <h2 class="title contact-title">Contact<span class="ja-title contact-ja-title">コンタクト</span></h2>
-          <a href="#" class="long-arrow dark-bg-link">ご予約はこちら</a>
+          <a class="reverse long-arrow" href="#">
+            <div class="btn-text">
+              <span>ご予約はこちら</span>
+              <span>ご予約はこちら</span>
+            </div>
+            <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="53" height="10" viewBox="0 0 53 10" fill="none">
+              <path d="M0 9.36694H51L40.5 0.632812" stroke="#7B7B7B" />
+            </svg>
+          </a>
         </div>
       </div>
       <!-- MARK: ACCESS
@@ -549,8 +613,8 @@
               <td>無し ※近隣にコインパーキングがございます。</td>
             </tr>
             <tr>
-              <th><span class="access-info-name">クレジットカード</span></th>
-              <td>可(VISA, Master,AMEX,JCB,Diners) </td>
+              <th><span class="access-info-name">決済方法</span></th>
+              <td>クレジットカード可<br>(VISA, Master,AMEX,JCB,Diners) </td>
             </tr>
           </table>
           <div class="access-images">
@@ -574,7 +638,7 @@
       </div>
     </footer>
     <a href="#" class="on-top">
-      <span class="on-top-text">PAGE TOP</span>
+      <span class="on-top-text leading-140">PAGE TOP</span>
     </a>
   </div>
   <script src="js/simplebar.min.js"></script>
