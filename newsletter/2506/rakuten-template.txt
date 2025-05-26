@@ -1,0 +1,29 @@
+<?tfo 事業所名（R）>
+<?tfo 都道府県（R）>/<?tfo 所属エリア（R）>
+
+楽天スーパーSALE開催中
+2025年6月20日(金) 23：59まで
+特別価格のSALEプラン＆割引クーポンをご用意しています。
+お得なこの機会をお見逃しなく！
+
+＝SALEプラン＝
+<?tfo プラン名称（R）>
+https://hotel.travel.rakuten.co.jp/PLAN/<?tfo 施設番号（R）>/<?tfo プラン番号（R）>
+
+ホテル概要はこちら
+https://travel.rakuten.co.jp/HOTEL/<?tfo 施設番号（R）>/<?tfo 施設番号（R）>.html
+プラン一覧はこちら
+https://hotel.travel.rakuten.co.jp/hotelinfo/plan/<?tfo 施設番号（R）>
+
+＝<?tfo クーポンテキスト（R）>割引クーポン＝
+【枚数限定】直前予約や7月の3連休、夏休みのご宿泊も対象！
+予約対象期間：2025年6月20日(金) 23：59まで
+宿泊対象期間：<?tfo 宿泊対象期間（R）>
+詳細はこちら
+https://travel.rakuten.co.jp/select/prince/feature/#COUPON01
+
+全国の西武プリンスホテルズ＆リゾーツのSALEプラン
+https://travel.rakuten.co.jp/select/prince/feature/#COUPON01
+
+最後までお読みいただき、ありがとうございます。
+皆さまのご予約をお待ちいたしております。
