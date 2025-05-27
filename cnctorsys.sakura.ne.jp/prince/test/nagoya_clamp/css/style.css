@@ -11,7 +11,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: #ccc;
 }
 
 a {
@@ -26,7 +25,6 @@ ol {
 
 img {
   width: 100%;
-  height: auto;
   display: block;
   object-fit: cover;
   pointer-events: none;
@@ -37,23 +35,58 @@ img {
 */
 
 :root {
-  --scrollbar-color: #ff00ff;
+  --scrollbar-color: #ff5e00;
   --text-color: #000;
   --background-color: #fff;
 }
 
+@media (max-width: 1920px) {
+  :root {
+    --page-margin: calc((100vw - 1080px) / 2);
+  }
+
+}
+
+@media (max-width: 1080px) {
+  :root {
+    --page-margin: 16px;
+  }
+
+}
+
 /* 
-MARK: CUSTOM COMMON
+MARK: CUSTOM
 */
 
 .wrapper {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.inner {
+.container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1080px;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
@@ -124,38 +157,129 @@ MARK: CUSTOM COMMON
   0% {
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   }
+
   50% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
   100% {
     clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
   }
 }
 
+/* MARK: CUSTOM LAYOUT
+*/
+
+.cus-layout {
+  max-width: 1920px;
+  padding-left: var(--page-margin);
+  display: grid;
+  grid-template-columns: minmax(auto, 400px) auto;
+  gap: 40px;
+}
+
+.cus-layout img {
+  aspect-ratio: 16/9;
+}
+
+.cus-layout>div:not(:nth-child(2))>img {
+  max-width: 520px;
+}
+
+.cus-layout>div:nth-child(3) {
+  position: relative;
+}
+
+.cus-layout>div:nth-child(3)>img {
+  width: calc(400px + var(--page-margin));
+  position: absolute;
+  right: 0;
+  translate: 0 calc(-50% - 20px);
+}
+
+/* MARK: CUSTOM TITLE
+*/
+
+.cus-title {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 52px;
+  align-items: center;
+}
+
+/* MARK: CUSTOM DATE
+*/
+
+.cus-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.cus-date>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cus-date>div:nth-child(2) {
+  align-self: flex-end;
+  height: 32px;
+}
+
+.cus-date>div>div {
+  display: flex;
+}
+
+.cus-date>div>div span:not(:last-child) {
+  font-size: 32px;
+}
 
 
+.cus-date>div span:last-child {
+  writing-mode: sideways-rl;
+  text-align: center;
+}
 
-/* MARK: MAX WIDTH 768PX
+
+/* MARK: CUSTOM LINK
+*/
+
+.cus-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+  background-color: #4E5C7F;
+  padding: 20px;
+  font-size: 52px;
+}
+
+
+.gap-10 {
+  gap: 40px;
+}
+
+
+/* MARK: RESPONSIVE 768PX
+*/
+
+@media (max-width: 1370px) {
+  .cus-layout>div:nth-child(3)>img {
+    width: calc(100% + var(--page-margin) - 16px);
+  }
+}
+
+/* MARK: RESPONSIVE 768PX
 */
 
 @media (max-width: 768px) {
 
-  /* 
-MARK: RESET
-*/
-
-  /* MARK: VARIABLE
-*/
-
-  :root {
-    --scrollbar-color: #00ff00;
-    --text-color: #000;
-    --background-color: #fff;
+  .cus-layout>div:nth-child(3)>img {
+    width: 100%;
   }
-
-  /* 
-MARK: CUSTOM COMMON
-*/
 
   .pc-only {
     display: none;
@@ -164,15 +288,5 @@ MARK: CUSTOM COMMON
   .sp-only {
     display: block;
   }
-
-  /* MARK: CUSTOM SCROLLBAR
-*/
-
-
-  /* MARK: CUSTOM TEXT
-*/
-
-  /* MARK: CUSTOM OTHER
-*/
 
 }

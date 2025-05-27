@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/normalize.css"> <!-- normalize.css -->
+  <link rel="stylesheet" href="css/simplebar.css" /> <!-- simplebar.css -->
+
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background: #ccc;
+    }
+
+    @media screen and (max-width: 1080px) {
+      :root {
+        --page-margin: 16px;
+      }
+
+    }
+
+    :root {
+      --page-margin: calc((100vw - 1080px) / 2);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      user-select: none;
+    }
+
+    .container-fluid {
+      width: 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .row {
+      /* width: 100%; */
+      display: flex;
+      gap: 40px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .gap-10 {
+      gap: 40px;
+    }
+
+    .w-100 {
+      width: 400px
+    }
+
+    .w-260 {
+      width: 1040px;
+    }
+
+    .ml-\(--page-margin\) {
+      margin-left: calc((100vw - 1080px) / 2);
+    }
+
+    .w-max {
+      width: 100%;
+    }
+
+    .w-270 {
+      width: 1080px;
+    }
+    .shrink-0 {
+      flex-shrink: 0;
+    }
+
+    .translate-x-30 {
+      translate: -120px 0;
+    }
+
+    .translate-y-50 {
+      translate: 0 calc(-50% - 20px);
+    }
+  </style>
+</head>
+
+<body data-simplebar>
+  <div class="wrapper">
+    <div class="container-fluid flex gap-10 flex-col items-center">
+      <div class="row ml-(--page-margin) w-full">
+        <div class="w-100 shrink-0">
+          <h3>コラボルーム</h3>
+          <p>展覧会の5つのテーマ (COLOR、LOVE、
+            ADVENTURE、MAGIC、PHRASE) をもとにデザイ
+            ンされたコラボルーム。
+            地上140mからの眺望とともにCLAMPの世界観に
+            浸る特別な滞在を。</p>
+        </div>
+        <div class="w-max"><img class="wー260" src="https://picsum.photos/1600/900?random=1" alt=""></div>
+      </div>
+      <div class="row w-270 translate-x-30">
+        <div class="translate-y-50"><img src="https://picsum.photos/1600/900?random=1" alt=""></div>
+        <div><img src="https://picsum.photos/1600/900?random=1" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/simplebar.min.js"></script>
+</body>
+
+</html>
